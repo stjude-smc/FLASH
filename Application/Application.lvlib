@@ -1,0 +1,40 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<Library LVVersion="15008000">
+	<Property Name="NI.Lib.Icon" Type="Bin">&amp;1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(]!!!*Q(C=\&gt;7R=2MR%!81N=?"5X&lt;A91M&lt;/W-,&lt;'&amp;&lt;9+K1,7Q,&lt;)%N&lt;!NMA3X)DW?-RJ(JQ"I\%%Z,(@`BA#==ZB3RN;]28_,V7@P_W`:R`&gt;HV*SU_WE@\N_XF[3:^^TX\+2YP)D7K6;G-RV3P)R`ZS%=_]J'XP/5N&lt;XH,7V\SEJ?]Z#5P?=J4HP+5JTTFWS%0?=B$DD1G(R/.1==!IT.+D)`B':\B'2Z@9XC':XC':XBUC?%:HO%:HO&amp;R7QT0]!T0]!S0I4&lt;*&lt;)?=:XA-(]X40-X40-VDSGC?"GC4N9(&lt;)"D2,L;4ZGG?ZH%;T&gt;-]T&gt;-]T?.S.%`T.%`T.)^&lt;NF8J4@-YZ$S'C?)JHO)JHO)R&gt;"20]220]230[;*YCK=ASI2F=)1I.Z5/Z5PR&amp;)^@54T&amp;5TT&amp;5TQO&lt;5_INJ6Z;"[(H#&gt;ZEC&gt;ZEC&gt;Z$"(*ETT*ETT*9^B)HO2*HO2*(F.&amp;]C20]C2)GN4UE1:,.[:/+5A?0^NOS?UJ^3&lt;*\9B9GT@7JISVW7*NIFC&lt;)^:$D`5Q9TWE7)M@;V&amp;D,6;M29DVR]6#R],%GC47T9_/=@&gt;Z5V&gt;V57&gt;V5E&gt;V5(OV?^T[FTP?\`?YX7ZRP6\D=LH%_8S/U_E5R_-R$I&gt;$\0@\W/VW&lt;[_"&lt;Y[X&amp;],0^^+,]T_J&gt;`J@_B_]'_.T`$KO.@I"O[^NF!!!!!!</Property>
+	<Property Name="NI.Lib.SourceVersion" Type="Int">352354304</Property>
+	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
+	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Messages for this actor" Type="Folder">
+		<Item Name="Close Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Shutter Msg/Close Shutter Msg.lvclass"/>
+		<Item Name="Close Viewer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Viewer Msg/Close Viewer Msg.lvclass"/>
+		<Item Name="Finish Stream Msg.lvclass" Type="LVClass" URL="../../Application Messages/Finish Stream Msg/Finish Stream Msg.lvclass"/>
+		<Item Name="Launch Viewer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Launch Viewer Msg/Launch Viewer Msg.lvclass"/>
+		<Item Name="Live Button Off Msg.lvclass" Type="LVClass" URL="../../Application Messages/Live Button Off Msg/Live Button Off Msg.lvclass"/>
+		<Item Name="Open Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Open Shutter Msg/Open Shutter Msg.lvclass"/>
+		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
+		<Item Name="Photobleach Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Msg/Photobleach Msg.lvclass"/>
+		<Item Name="Pump Clear Volumes Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Clear Volumes Msg/Pump Clear Volumes Msg.lvclass"/>
+		<Item Name="Pump Infuse Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Infuse Msg/Pump Infuse Msg.lvclass"/>
+		<Item Name="Pump Set Volume Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Set Volume Msg/Pump Set Volume Msg.lvclass"/>
+		<Item Name="Pump Stop Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Stop Msg/Pump Stop Msg.lvclass"/>
+		<Item Name="Pump Withdraw Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Withdraw Msg/Pump Withdraw Msg.lvclass"/>
+		<Item Name="Record Button Off Msg.lvclass" Type="LVClass" URL="../../Application Messages/Record Button Off Msg/Record Button Off Msg.lvclass"/>
+		<Item Name="Set Detection Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Detection Msg/Set Detection Msg.lvclass"/>
+		<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
+		<Item Name="Set Number of Cameras Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Number of Cameras Msg/Set Number of Cameras Msg.lvclass"/>
+		<Item Name="Stage Abort Motion Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Abort Motion Msg/Stage Abort Motion Msg.lvclass"/>
+		<Item Name="Stage Back Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Back Msg/Stage Back Msg.lvclass"/>
+		<Item Name="Stage Forward Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Forward Msg/Stage Forward Msg.lvclass"/>
+		<Item Name="Stage Move Custom Step Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Move Custom Step Msg/Stage Move Custom Step Msg.lvclass"/>
+		<Item Name="Stage Move Home Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Move Home Msg/Stage Move Home Msg.lvclass"/>
+		<Item Name="Stage Next Lane Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Next Lane Msg/Stage Next Lane Msg.lvclass"/>
+		<Item Name="Stage Previous Lane Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Previous Lane Msg/Stage Previous Lane Msg.lvclass"/>
+		<Item Name="Stage Set Home Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Set Home Msg/Stage Set Home Msg.lvclass"/>
+		<Item Name="Start Focus Indicator Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Focus Indicator Msg/Start Focus Indicator Msg.lvclass"/>
+		<Item Name="Start Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Live Mode Msg/Start Live Mode Msg.lvclass"/>
+		<Item Name="Start Stream Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Stream Msg/Start Stream Msg.lvclass"/>
+		<Item Name="Stop Focus Indicator Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Focus Indicator Msg/Stop Focus Indicator Msg.lvclass"/>
+		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
+	</Item>
+	<Item Name="Application.lvclass" Type="LVClass" URL="../Application.lvclass"/>
+</Library>

@@ -1,0 +1,20 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>15.0.1f2</Version>
+<Cluster>
+<Name>Default Settings</Name>
+<NumElts>3</NumElts>
+<I32>
+<Name>Refresh Timeout (ms)</Name>
+<Val>100</Val>
+</I32>
+<String>
+<Name>Version String</Name>
+<Val>v0.6.1</Val>
+</String>
+<String>
+<Name>Hardware Configuration File</Name>
+<Val>New Microscope</Val>
+</String>
+</Cluster>
+</LVData>
