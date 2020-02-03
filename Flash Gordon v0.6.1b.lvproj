@@ -106,26 +106,25 @@
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
-				<Item Name="tm_closecamera.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_closecamera.vi"/>
-				<Item Name="tm_deinitialize.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_deinitialize.vi"/>
+				<Item Name="tm_closecamera_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_closecamera_40.vi"/>
+				<Item Name="tm_deinitialize_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_deinitialize_40.vi"/>
 				<Item Name="tm_errorreport.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_errorreport.vi"/>
-				<Item Name="tm_getcamerainfo.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_getcamerainfo.vi"/>
-				<Item Name="tm_getcaptureinfo.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_getcaptureinfo.vi"/>
-				<Item Name="tm_getframe_a.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_getframe_a.vi"/>
-				<Item Name="tm_getparameter_a.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_getparameter_a.vi"/>
+				<Item Name="tm_getcamerainfo_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getcamerainfo_40.vi"/>
+				<Item Name="tm_getcaptureinfo_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getcaptureinfo_40.vi"/>
+				<Item Name="tm_getframe16_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getframe16_40.vi"/>
+				<Item Name="tm_getparameter_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getparameter_40.vi"/>
 				<Item Name="tm_initialize.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_initialize.vi"/>
-				<Item Name="tm_opencamera.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_opencamera.vi"/>
-				<Item Name="tm_preparecapture.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_preparecapture.vi"/>
-				<Item Name="tm_setarea.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_setarea.vi"/>
-				<Item Name="tm_setinputtrigger.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_setinputtrigger.vi"/>
-				<Item Name="tm_setoutputtrigger.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_setoutputtrigger.vi"/>
-				<Item Name="tm_setparameter.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_setparameter.vi"/>
-				<Item Name="tm_setpropertyvalue.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/advanced/tm_setpropertyvalue.vi"/>
-				<Item Name="tm_startcapture_b.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_startcapture_b.vi"/>
-				<Item Name="tm_startrecorder.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_startrecorder.vi"/>
-				<Item Name="tm_stopcapture.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_stopcapture.vi"/>
-				<Item Name="tm_stoprecorder.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_stoprecorder.vi"/>
-				<Item Name="tm_unpreparecapture.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/deprecated/tm_unpreparecapture.vi"/>
+				<Item Name="tm_inputtriggersource_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/trigger/tm_inputtriggersource_40.vi"/>
+				<Item Name="tm_opencamera_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_opencamera_40.vi"/>
+				<Item Name="tm_preparecapture_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_preparecapture_40.vi"/>
+				<Item Name="tm_setarea_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_setarea_40.vi"/>
+				<Item Name="tm_setoutputtrigger_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/trigger/tm_setoutputtrigger_40.vi"/>
+				<Item Name="tm_setparameter_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_setparameter_40.vi"/>
+				<Item Name="tm_startcapture_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_startcapture_40.vi"/>
+				<Item Name="tm_startrecorder_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/dcimg/tm_startrecorder_40.vi"/>
+				<Item Name="tm_stopcapture_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_stopcapture_40.vi"/>
+				<Item Name="tm_stoprecorder_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/dcimg/tm_stoprecorder_40.vi"/>
+				<Item Name="tm_unpreparecapture_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_unpreparecapture_40.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Acquire Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Acquire Semaphore.vi"/>
