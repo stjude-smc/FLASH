@@ -111,3 +111,63 @@ EXTERN TI2WRAP_API int32_t ti2_setLightPath(const int32_t lightPath) {
 	lx_result err = MIC_DataSet(sDataIn, sDataOut, TRUE);
 	return (int32_t)err;
 }
+
+// Get X position
+EXTERN TI2WRAP_API int32_t ti2_getXPos(double* xPos_um) {
+	MIC_Data sDataX;
+	sDataX.uiDataUsageMask = MIC_DATA_MASK_XPOSITION;
+
+	lx_result err = MIC_DataGet(sDataX);
+	if (err) return (int32_t)err;
+	err = MIC_Convert_Dev2Phys(sDataX.uiDataUsageMask, sDataX.iXPOSITION, *xPos_um);
+
+	return (int32_t)err;
+}
+
+
+// Set X position
+EXTERN TI2WRAP_API int32_t ti2_setXPos(const double xPos_um, const int32_t speed) {
+	MIC_Data sDataInX, sDataOutX;
+	sDataInX.uiDataUsageMask = MIC_DATA_MASK_XPOSITION;
+	lx_int32 iDevValX;
+
+	lx_result err = MIC_Convert_Phys2Dev(sDataInX.uiDataUsageMask, xPos_um, iDevValX);
+	if (err) return (int32_t)err;
+	sDataInX.iXPOSITION = iDevValX;
+	sDataInX.iXPOSITIONSpeed = speed;
+	sDataInX.iXPOSITIONTolerance = 0;
+
+	err = MIC_DataSet(sDataInX, sDataOutX, TRUE);
+
+	return (int32_t)err;
+}
+
+// Get Y position
+EXTERN TI2WRAP_API int32_t ti2_getYPos(double* yPos_um) {
+	MIC_Data sDataY;
+	sDataY.uiDataUsageMask = MIC_DATA_MASK_YPOSITION;
+
+	lx_result err = MIC_DataGet(sDataY);
+	if (err) return (int32_t)err;
+	err = MIC_Convert_Dev2Phys(sDataY.uiDataUsageMask, sDataY.iYPOSITION, *yPos_um);
+	
+	return (int32_t)err;
+}
+
+
+// Set Y position
+EXTERN TI2WRAP_API int32_t ti2_setYPos(const double yPos_um, const int32_t speed) {
+	MIC_Data sDataInY, sDataOutY;
+	sDataInY.uiDataUsageMask = MIC_DATA_MASK_YPOSITION;
+	lx_int32 iDevValY;
+
+	lx_result err = MIC_Convert_Phys2Dev(sDataInY.uiDataUsageMask, yPos_um, iDevValY);
+	if (err) return (int32_t)err;
+	sDataInY.iYPOSITION = iDevValY;
+	sDataInY.iYPOSITIONSpeed = speed;
+	sDataInY.iYPOSITIONTolerance = 0;
+
+	err = MIC_DataSet(sDataInY, sDataOutY, TRUE);
+	return (int32_t)err;
+}
+

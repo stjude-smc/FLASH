@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
-<Version>16.0</Version>
+<Version>18.0.1</Version>
 <Cluster>
 <Name>Hardware Configuration</Name>
 <NumElts>7</NumElts>
@@ -90,7 +90,7 @@
 </Array>
 <Cluster>
 <Name>Stage Configuration</Name>
-<NumElts>4</NumElts>
+<NumElts>5</NumElts>
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
@@ -108,6 +108,12 @@
 <Name>Lane Separation (mm)</Name>
 <Val>0.80000000000000</Val>
 </DBL>
+<EW>
+<Name>Stage Type</Name>
+<Choice>ESP301</Choice>
+<Choice>Ti2</Choice>
+<Val>1</Val>
+</EW>
 </Cluster>
 <Cluster>
 <Name>Microscope Configuration</Name>

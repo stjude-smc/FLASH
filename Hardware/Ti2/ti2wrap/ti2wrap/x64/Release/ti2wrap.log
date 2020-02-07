@@ -1,8 +1,8 @@
-﻿  stdafx.cpp
-  dllmain.cpp
-  ti2wrap.cpp
-     Creating library C:\LVDEV\Flash Gordon v0.9.0\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.lib and object C:\LVDEV\Flash Gordon v0.9.0\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.exp
+﻿  ti2wrap.cpp
+     Creating library C:\LVCUR\Flash Gordon v0.6.1b\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.lib and object C:\LVCUR\Flash Gordon v0.6.1b\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.exp
   Generating code
-  All 13 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  2 of 17 functions (11.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  ti2wrap.vcxproj -> C:\LVDEV\Flash Gordon v0.9.0\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.dll
+  ti2wrap.vcxproj -> C:\LVCUR\Flash Gordon v0.6.1b\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.dll

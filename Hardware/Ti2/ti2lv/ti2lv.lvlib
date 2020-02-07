@@ -13,10 +13,17 @@
 	<Item Name="ti2_getCustomZSpeed.vi" Type="VI" URL="../ti2_getCustomZSpeed.vi"/>
 	<Item Name="ti2_getFilter.vi" Type="VI" URL="../ti2_getFilter.vi"/>
 	<Item Name="ti2_getLightPath.vi" Type="VI" URL="../ti2_getLightPath.vi"/>
+	<Item Name="ti2_getXPos.vi" Type="VI" URL="../ti2_getXPos.vi"/>
+	<Item Name="ti2_getYPos.vi" Type="VI" URL="../ti2_getYPos.vi"/>
 	<Item Name="ti2_getZPos.vi" Type="VI" URL="../ti2_getZPos.vi"/>
+	<Item Name="ti2_home_fgv.vi" Type="VI" URL="../ti2_home_fgv.vi"/>
 	<Item Name="ti2_lightPath.ctl" Type="VI" URL="../ti2_lightPath.ctl"/>
+	<Item Name="ti2_moveHome.vi" Type="VI" URL="../ti2_moveHome.vi"/>
 	<Item Name="ti2_open.vi" Type="VI" URL="../ti2_open.vi"/>
 	<Item Name="ti2_setFilter.vi" Type="VI" URL="../ti2_setFilter.vi"/>
-	<Item Name="ti2_setLightPathvi.vi" Type="VI" URL="../ti2_setLightPathvi.vi"/>
-	<Item Name="ti2_setZPosvi.vi" Type="VI" URL="../ti2_setZPosvi.vi"/>
+	<Item Name="ti2_setHome.vi" Type="VI" URL="../ti2_setHome.vi"/>
+	<Item Name="ti2_setLightPath.vi" Type="VI" URL="../ti2_setLightPath.vi"/>
+	<Item Name="ti2_setXPos.vi" Type="VI" URL="../ti2_setXPos.vi"/>
+	<Item Name="ti2_setYPos.vi" Type="VI" URL="../ti2_setYPos.vi"/>
+	<Item Name="ti2_setZPos.vi" Type="VI" URL="../ti2_setZPos.vi"/>
 </Library>

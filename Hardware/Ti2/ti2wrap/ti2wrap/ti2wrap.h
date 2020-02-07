@@ -39,3 +39,15 @@ EXTERN TI2WRAP_API int32_t ti2_getLightPath(int32_t* lightPath);
 
 // Set light path
 EXTERN TI2WRAP_API int32_t ti2_setLightPath(const int32_t lightPath);
+
+// Get X position
+EXTERN TI2WRAP_API int32_t ti2_getXPos(double* xPos_um);
+
+// Set X position
+EXTERN TI2WRAP_API int32_t ti2_setXPos(const double xPos_um, const int32_t speed);
+
+// Get Y position
+EXTERN TI2WRAP_API int32_t ti2_getYPos(double* yPos_um);
+
+// Set Y position
+EXTERN TI2WRAP_API int32_t ti2_setYPos(const double yPos_um, const int32_t speed);
