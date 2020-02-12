@@ -203,7 +203,7 @@
 <Dimsize>2</Dimsize>
 <Cluster>
 <Name>Laser Configuration</Name>
-<NumElts>2</NumElts>
+<NumElts>3</NumElts>
 <EW>
 <Name>Excitation</Name>
 <Choice>Cy2 (473 nm)</Choice>
@@ -221,10 +221,17 @@
 <RefKind>VISA</RefKind>
 <Val>COM3</Val>
 </Refnum>
+<EW>
+<Name>Laser Type</Name>
+<Choice>Disable</Choice>
+<Choice>Laser Quantum</Choice>
+<Choice>Coherent OBIS</Choice>
+<Val>1</Val>
+</EW>
 </Cluster>
 <Cluster>
 <Name>Laser Configuration</Name>
-<NumElts>2</NumElts>
+<NumElts>3</NumElts>
 <EW>
 <Name>Excitation</Name>
 <Choice>Cy2 (473 nm)</Choice>
@@ -242,6 +249,13 @@
 <RefKind>VISA</RefKind>
 <Val>COM4</Val>
 </Refnum>
+<EW>
+<Name>Laser Type</Name>
+<Choice>Disable</Choice>
+<Choice>Laser Quantum</Choice>
+<Choice>Coherent OBIS</Choice>
+<Val>1</Val>
+</EW>
 </Cluster>
 </Array>
 <Cluster>
