@@ -125,10 +125,11 @@
 </Refnum>
 <EW>
 <Name>Microscope Type</Name>
+<Choice>Disable</Choice>
 <Choice>TE2000</Choice>
 <Choice>Eclipse Ti</Choice>
 <Choice>Ti2</Choice>
-<Val>2</Val>
+<Val>3</Val>
 </EW>
 <Refnum>
 <Name>FilterBlockCassette1</Name>
