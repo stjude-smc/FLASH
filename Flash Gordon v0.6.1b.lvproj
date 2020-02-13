@@ -63,6 +63,7 @@
 				<Item Name="color map in histogram.vi" Type="VI" URL="../Resources/Testing/color map in histogram.vi"/>
 				<Item Name="events test.vi" Type="VI" URL="../Resources/Testing/events test.vi"/>
 				<Item Name="test laser.vi" Type="VI" URL="../Resources/Testing/test laser.vi"/>
+				<Item Name="Test RS232.vi" Type="VI" URL="../Resources/Testing/Test RS232.vi"/>
 				<Item Name="test shutter.vi" Type="VI" URL="../Resources/Testing/test shutter.vi"/>
 				<Item Name="Test Sync.vi" Type="VI" URL="../Resources/Testing/Test Sync.vi"/>
 				<Item Name="V-Cam Test.vi" Type="VI" URL="../Resources/Testing/V-Cam Test.vi"/>
@@ -326,6 +327,7 @@
 				<Item Name="Set Cursor.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Cursor.vi"/>
 				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
+				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
 				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
 				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>

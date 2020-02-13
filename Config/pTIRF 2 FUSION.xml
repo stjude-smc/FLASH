@@ -110,9 +110,10 @@
 </DBL>
 <EW>
 <Name>Stage Type</Name>
+<Choice>Disabled</Choice>
 <Choice>ESP301</Choice>
 <Choice>Ti2</Choice>
-<Val>1</Val>
+<Val>2</Val>
 </EW>
 </Cluster>
 <Cluster>
