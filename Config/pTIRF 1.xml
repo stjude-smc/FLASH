@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
-<Version>16.0</Version>
+<Version>18.0.1f4</Version>
 <Cluster>
 <Name>Hardware Configuration</Name>
 <NumElts>7</NumElts>
@@ -110,9 +110,10 @@
 </DBL>
 <EW>
 <Name>Stage Type</Name>
+<Choice>Disabled</Choice>
 <Choice>ESP301</Choice>
 <Choice>Ti2</Choice>
-<Val>0</Val>
+<Val>1</Val>
 </EW>
 </Cluster>
 <Cluster>
@@ -125,10 +126,11 @@
 </Refnum>
 <EW>
 <Name>Microscope Type</Name>
+<Choice>Disable</Choice>
 <Choice>TE2000</Choice>
 <Choice>Eclipse Ti</Choice>
 <Choice>Ti2</Choice>
-<Val>2</Val>
+<Val>3</Val>
 </EW>
 <Refnum>
 <Name>FilterBlockCassette1</Name>
@@ -202,7 +204,7 @@
 <Dimsize>2</Dimsize>
 <Cluster>
 <Name>Laser Configuration</Name>
-<NumElts>2</NumElts>
+<NumElts>3</NumElts>
 <EW>
 <Name>Excitation</Name>
 <Choice>Cy2 (473 nm)</Choice>
@@ -218,12 +220,19 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM6</Val>
+<Val>COM3</Val>
 </Refnum>
+<EW>
+<Name>Laser Type</Name>
+<Choice>Disable</Choice>
+<Choice>Laser Quantum</Choice>
+<Choice>Coherent OBIS</Choice>
+<Val>1</Val>
+</EW>
 </Cluster>
 <Cluster>
 <Name>Laser Configuration</Name>
-<NumElts>2</NumElts>
+<NumElts>3</NumElts>
 <EW>
 <Name>Excitation</Name>
 <Choice>Cy2 (473 nm)</Choice>
@@ -239,8 +248,15 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM9</Val>
+<Val>COM4</Val>
 </Refnum>
+<EW>
+<Name>Laser Type</Name>
+<Choice>Disable</Choice>
+<Choice>Laser Quantum</Choice>
+<Choice>Coherent OBIS</Choice>
+<Val>1</Val>
+</EW>
 </Cluster>
 </Array>
 <Cluster>
@@ -253,7 +269,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM10</Val>
+<Val>COM9</Val>
 </Refnum>
 <DBL>
 <Name>Flow rate (ul/s)</Name>
