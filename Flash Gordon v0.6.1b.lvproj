@@ -42,6 +42,7 @@
 				<Item Name="GLOBAL Time-critical.vi" Type="VI" URL="../Resources/GLOBAL/GLOBAL Time-critical.vi"/>
 			</Item>
 			<Item Name="Helper VIs" Type="Folder">
+				<Item Name="Check File Path.vi" Type="VI" URL="../Resources/Helper VIs/Check File Path.vi"/>
 				<Item Name="Color Table To Reference.vi" Type="VI" URL="../Resources/Helper VIs/Color Table To Reference.vi"/>
 				<Item Name="Cubehelix.vi" Type="VI" URL="../Resources/Helper VIs/Cubehelix.vi"/>
 				<Item Name="Custom Photobleach Length.vi" Type="VI" URL="../Resources/Helper VIs/Custom Photobleach Length.vi"/>
