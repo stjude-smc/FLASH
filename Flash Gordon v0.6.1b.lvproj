@@ -90,7 +90,7 @@
 				<Item Name="Virtual Camera Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Virtual Camera Configuration.ctl"/>
 			</Item>
 			<Item Name="Actor Framework.lvlib" Type="Library" URL="/&lt;vilib&gt;/ActorFramework/Actor Framework.lvlib"/>
-			<Item Name="BinaryTIFF.lvlib" Type="Library" URL="../../BinaryTIFF v0.4.0/BinaryTIFF.lvlib"/>
+			<Item Name="BinaryTIFF.lvlib" Type="Library" URL="../../BinaryTIFF v0.3.2b/BinaryTIFF.lvlib"/>
 		</Item>
 		<Item Name="User Interface" Type="Folder">
 			<Item Name="Change Log.lvlib" Type="Library" URL="../User Interface/Change Log/Change Log.lvlib"/>
@@ -353,12 +353,18 @@
 			</Item>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
+			<Item Name="mscorlib" Type="VI" URL="mscorlib">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="systemLogging.dll" Type="Document" URL="systemLogging.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Thorlabs.MotionControl.DeviceManagerCLI.dll" Type="Document" URL="../../../Program Files/Thorlabs/Kinesis/Thorlabs.MotionControl.DeviceManagerCLI.dll"/>
+			<Item Name="Thorlabs.MotionControl.GenericMotorCLI.dll" Type="Document" URL="../../../Program Files/Thorlabs/Kinesis/Thorlabs.MotionControl.GenericMotorCLI.dll"/>
+			<Item Name="ThorLabs.MotionControl.KCube.DCServoCLI.dll" Type="Document" URL="../../../Program Files/Thorlabs/Kinesis/ThorLabs.MotionControl.KCube.DCServoCLI.dll"/>
 			<Item Name="ti2lv.lvlib" Type="Library" URL="../Hardware/Ti2/ti2lv/ti2lv.lvlib"/>
 			<Item Name="ti2wrap.dll" Type="Document" URL="../Hardware/Ti2/ti2wrap/x64/Release/ti2wrap.dll"/>
 			<Item Name="tmcamcon.dll" Type="Document" URL="tmcamcon.dll">

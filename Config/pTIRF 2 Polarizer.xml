@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
-<Version>18.0.1</Version>
+<Version>18.0.1f4</Version>
 <Cluster>
 <Name>Hardware Configuration</Name>
 <NumElts>7</NumElts>
@@ -227,6 +227,7 @@
 <Choice>Disable</Choice>
 <Choice>Laser Quantum</Choice>
 <Choice>Coherent OBIS</Choice>
+<Choice>PRM1-Z8</Choice>
 <Val>1</Val>
 </EW>
 </Cluster>
@@ -255,7 +256,8 @@
 <Choice>Disable</Choice>
 <Choice>Laser Quantum</Choice>
 <Choice>Coherent OBIS</Choice>
-<Val>1</Val>
+<Choice>PRM1-Z8</Choice>
+<Val>3</Val>
 </EW>
 </Cluster>
 </Array>
