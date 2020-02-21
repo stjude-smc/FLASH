@@ -220,13 +220,14 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM3</Val>
+<Val>COM6</Val>
 </Refnum>
 <EW>
 <Name>Laser Type</Name>
 <Choice>Disable</Choice>
 <Choice>Laser Quantum</Choice>
 <Choice>Coherent OBIS</Choice>
+<Choice>PRM1-Z8</Choice>
 <Val>1</Val>
 </EW>
 </Cluster>
@@ -248,13 +249,14 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM4</Val>
+<Val>COM9</Val>
 </Refnum>
 <EW>
 <Name>Laser Type</Name>
 <Choice>Disable</Choice>
 <Choice>Laser Quantum</Choice>
 <Choice>Coherent OBIS</Choice>
+<Choice>PRM1-Z8</Choice>
 <Val>1</Val>
 </EW>
 </Cluster>
