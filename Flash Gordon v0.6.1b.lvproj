@@ -90,7 +90,7 @@
 				<Item Name="Virtual Camera Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Virtual Camera Configuration.ctl"/>
 			</Item>
 			<Item Name="Actor Framework.lvlib" Type="Library" URL="/&lt;vilib&gt;/ActorFramework/Actor Framework.lvlib"/>
-			<Item Name="BinaryTIFF.lvlib" Type="Library" URL="../../BinaryTIFF v0.3.2b/BinaryTIFF.lvlib"/>
+			<Item Name="BinaryTIFF.lvlib" Type="Library" URL="../../binaryTIFF/BinaryTIFF.lvlib"/>
 		</Item>
 		<Item Name="User Interface" Type="Folder">
 			<Item Name="Change Log.lvlib" Type="Library" URL="../User Interface/Change Log/Change Log.lvlib"/>
@@ -347,6 +347,8 @@
 				<Item Name="Write to XML File.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Write to XML File.vi"/>
 			</Item>
 			<Item Name="AF Debug.lvlib" Type="Library" URL="/&lt;resource&gt;/AFDebug/AF Debug.lvlib"/>
+			<Item Name="dcimg2tiff.dll" Type="Document" URL="../../BinaryTIFF v0.4.0/DCIMG2TIFF/x64/Release/dcimg2tiff.dll"/>
+			<Item Name="dcimg2tiff.dll" Type="Document" URL="../../binaryTIFF/CLib/DCIMG2TIFF/x64/Release/dcimg2tiff.dll"/>
 			<Item Name="histogram.dll" Type="Document" URL="../Resources/C Libraries/histogram/histogram.dll"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
