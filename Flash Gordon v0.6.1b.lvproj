@@ -108,6 +108,7 @@
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
+				<Item Name="QmixLib.lvlib" Type="Library" URL="/&lt;userlib&gt;/QmixLib/QmixLib.lvlib"/>
 				<Item Name="tm_closecamera_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_closecamera_40.vi"/>
 				<Item Name="tm_deinitialize_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_deinitialize_40.vi"/>
 				<Item Name="tm_errorreport.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_errorreport.vi"/>
@@ -347,12 +348,13 @@
 				<Item Name="Write to XML File.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Write to XML File.vi"/>
 			</Item>
 			<Item Name="AF Debug.lvlib" Type="Library" URL="/&lt;resource&gt;/AFDebug/AF Debug.lvlib"/>
-			<Item Name="dcimg2tiff.dll" Type="Document" URL="../../BinaryTIFF v0.4.0/DCIMG2TIFF/x64/Release/dcimg2tiff.dll"/>
 			<Item Name="dcimg2tiff.dll" Type="Document" URL="../../binaryTIFF/CLib/DCIMG2TIFF/x64/Release/dcimg2tiff.dll"/>
 			<Item Name="histogram.dll" Type="Document" URL="../Resources/C Libraries/histogram/histogram.dll"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="labbCAN_Bus_API.lvlib" Type="Library" URL="../../../Program Files/cetoni/QmixSDK/lib/labview/labbCAN_Bus_API/labbCAN_Bus_API.lvlib"/>
+			<Item Name="labbCAN_Pump_API.lvlib" Type="Library" URL="../../../Program Files/cetoni/QmixSDK/lib/labview/labbCAN_Pump_API/labbCAN_Pump_API.lvlib"/>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">

@@ -266,7 +266,7 @@
 			<NumElts>3</NumElts>
 			<Boolean>
 				<Name>Pump present</Name>
-				<Val>0</Val>
+				<Val>1</Val>
 			</Boolean>
 			<Refnum>
 				<Name>Serial Port</Name>
