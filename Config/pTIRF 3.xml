@@ -257,7 +257,7 @@
 					<Choice>Laser Quantum</Choice>
 					<Choice>Coherent OBIS</Choice>
 					<Choice>PRM1-Z8</Choice>
-					<Val>3</Val>
+					<Val>1</Val>
 				</EW>
 			</Cluster>
 		</Array>
