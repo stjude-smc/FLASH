@@ -15,9 +15,9 @@
 		<Item Name="Photobleach Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Msg/Photobleach Msg.lvclass"/>
 		<Item Name="Pump Clear Volumes Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Clear Volumes Msg/Pump Clear Volumes Msg.lvclass"/>
 		<Item Name="Pump Inject Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Infuse Msg/Pump Inject Msg.lvclass"/>
+		<Item Name="Pump Refill Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Withdraw Msg/Pump Refill Msg.lvclass"/>
 		<Item Name="Pump Set Volume Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Set Volume Msg/Pump Set Volume Msg.lvclass"/>
 		<Item Name="Pump Stop Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Stop Msg/Pump Stop Msg.lvclass"/>
-		<Item Name="Pump Withdraw Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Withdraw Msg/Pump Withdraw Msg.lvclass"/>
 		<Item Name="Record Button Off Msg.lvclass" Type="LVClass" URL="../../Application Messages/Record Button Off Msg/Record Button Off Msg.lvclass"/>
 		<Item Name="Set Detection Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Detection Msg/Set Detection Msg.lvclass"/>
 		<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
