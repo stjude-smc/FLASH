@@ -15,7 +15,7 @@
 		<Item Name="Photobleach Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Msg/Photobleach Msg.lvclass"/>
 		<Item Name="Pump Clear Volumes Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Clear Volumes Msg/Pump Clear Volumes Msg.lvclass"/>
 		<Item Name="Pump Inject Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Infuse Msg/Pump Inject Msg.lvclass"/>
-		<Item Name="Pump Refill Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Withdraw Msg/Pump Refill Msg.lvclass"/>
+		<Item Name="Pump Refill Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Refill Msg/Pump Refill Msg.lvclass"/>
 		<Item Name="Pump Set Volume Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Set Volume Msg/Pump Set Volume Msg.lvclass"/>
 		<Item Name="Pump Stop Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Stop Msg/Pump Stop Msg.lvclass"/>
 		<Item Name="Record Button Off Msg.lvclass" Type="LVClass" URL="../../Application Messages/Record Button Off Msg/Record Button Off Msg.lvclass"/>
