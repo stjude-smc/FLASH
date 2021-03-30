@@ -35,6 +35,7 @@
 		<Item Name="Start Stream Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Stream Msg/Start Stream Msg.lvclass"/>
 		<Item Name="Stop Focus Indicator Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Focus Indicator Msg/Stop Focus Indicator Msg.lvclass"/>
 		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
+		<Item Name="Switch Valve Msg.lvclass" Type="LVClass" URL="../../Application Messages/Switch Valve Msg/Switch Valve Msg.lvclass"/>
 	</Item>
 	<Item Name="Application.lvclass" Type="LVClass" URL="../Application.lvclass"/>
 </Library>

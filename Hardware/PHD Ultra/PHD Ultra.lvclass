@@ -104,6 +104,15 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
 		</Item>
+		<Item Name="Switch Valve.vi" Type="VI" URL="../Switch Valve.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">'!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;R!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$J!=!!?!!!D$V")2#"6&lt;(2S93ZM&gt;GRJ9B&amp;13%1A67RU=G%O&lt;(:D&lt;'&amp;T=Q!.5%B%)&amp;6M&gt;(*B)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!F!!Q!$='^T!$&gt;!&amp;A!$%ER06V^15E645V6326^715R721J#15R-8V:"4&amp;:&amp;#F&amp;.36B@6E&amp;-6E5!!!6W97RW:1![1(!!(A!!)Q^13%1A67RU=G%O&lt;(:M;7)25%B%)&amp;6M&gt;(*B,GRW9WRB=X-!$&amp;")2#"6&lt;(2S93"J&lt;A!!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"Q!)!!E$!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!+!!!!#A!!!*!!!!!!!1!+!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
+		</Item>
 	</Item>
 	<Item Name="Serial Port" Type="Property Definition">
 		<Property Name="NI.ClassItem.Property.LongName" Type="Str">Serial Port</Property>

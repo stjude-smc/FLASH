@@ -10,6 +10,7 @@
 		<Item Name="Run Refill Msg.lvclass" Type="LVClass" URL="../../PHD Ultra Messages/Run Withdraw Msg/Run Refill Msg.lvclass"/>
 		<Item Name="Set Volume Msg.lvclass" Type="LVClass" URL="../../PHD Ultra Messages/Set Volume Msg/Set Volume Msg.lvclass"/>
 		<Item Name="Stop Clear Msg.lvclass" Type="LVClass" URL="../../PHD Ultra Messages/Stop Clear Msg/Stop Clear Msg.lvclass"/>
+		<Item Name="Switch Valve Msg.lvclass" Type="LVClass" URL="../../PHD Ultra Messages/Switch Valve Msg/Switch Valve Msg.lvclass"/>
 	</Item>
 	<Item Name="PHD Ultra.lvclass" Type="LVClass" URL="../PHD Ultra.lvclass"/>
 </Library>
