@@ -31,7 +31,7 @@
 				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
 				<Item Name="Synchronization Device.lvlib" Type="Library" URL="../Hardware/Synchronization Device/Synchronization Device.lvlib"/>
 				<Item Name="Laser Quantum.lvlib" Type="Library" URL="../Hardware/Laser Quantum/Laser Quantum.lvlib"/>
-				<Item Name="PHD Ultra.lvlib" Type="Library" URL="../Hardware/PHD Ultra/PHD Ultra.lvlib"/>
+				<Item Name="cetoni.lvlib" Type="Library" URL="../Hardware/cetoni/cetoni.lvlib"/>
 				<Item Name="TE2000.lvlib" Type="Library" URL="../Hardware/TE2000/TE2000.lvlib"/>
 				<Item Name="Ti2.lvlib" Type="Library" URL="../Hardware/Ti2/Ti2.lvlib"/>
 			</Item>
