@@ -13,7 +13,6 @@
 		<Item Name="Open Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Open Shutter Msg/Open Shutter Msg.lvclass"/>
 		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
 		<Item Name="Photobleach Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Msg/Photobleach Msg.lvclass"/>
-		<Item Name="Pump Clear Volumes Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Clear Volumes Msg/Pump Clear Volumes Msg.lvclass"/>
 		<Item Name="Pump Inject Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Infuse Msg/Pump Inject Msg.lvclass"/>
 		<Item Name="Pump Refill Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Refill Msg/Pump Refill Msg.lvclass"/>
 		<Item Name="Pump Set Volume Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Set Volume Msg/Pump Set Volume Msg.lvclass"/>

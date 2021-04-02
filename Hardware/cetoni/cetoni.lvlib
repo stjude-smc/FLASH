@@ -5,7 +5,6 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
-		<Item Name="Clear Volumes Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Clear Volumes Msg/Clear Volumes Msg.lvclass"/>
 		<Item Name="Run Inject Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Run Infuse Msg/Run Inject Msg.lvclass"/>
 		<Item Name="Run Refill Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Run Withdraw Msg/Run Refill Msg.lvclass"/>
 		<Item Name="Set Volume Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Set Volume Msg/Set Volume Msg.lvclass"/>
