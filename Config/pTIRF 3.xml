@@ -263,20 +263,11 @@
 		</Array>
 		<Cluster>
 			<Name>Pump Configuration</Name>
-			<NumElts>3</NumElts>
+			<NumElts>1</NumElts>
 			<Boolean>
 				<Name>Pump present</Name>
 				<Val>1</Val>
 			</Boolean>
-			<Refnum>
-				<Name>Serial Port</Name>
-				<RefKind>VISA</RefKind>
-				<Val>COM9</Val>
-			</Refnum>
-			<DBL>
-				<Name>Flow rate (ul/s)</Name>
-				<Val>226.00000000000000</Val>
-			</DBL>
 		</Cluster>
 		<Array>
 			<Name>Installed Cameras</Name>
