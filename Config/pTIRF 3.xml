@@ -262,10 +262,10 @@
 			</Cluster>
 		</Array>
 		<Cluster>
-			<Name>Pump Configuration</Name>
+			<Name>Fluidics Configuration</Name>
 			<NumElts>1</NumElts>
 			<Boolean>
-				<Name>Pump present</Name>
+				<Name>Fluidics present</Name>
 				<Val>1</Val>
 			</Boolean>
 		</Cluster>
