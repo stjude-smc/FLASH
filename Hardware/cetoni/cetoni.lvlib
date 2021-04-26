@@ -5,6 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
+		<Item Name="Rinse Channel Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Rinse Channel Msg/Rinse Channel Msg.lvclass"/>
 		<Item Name="Rinse System Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Rinse System Msg/Rinse System Msg.lvclass"/>
 		<Item Name="Run Inject Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Run Infuse Msg/Run Inject Msg.lvclass"/>
 		<Item Name="Run Refill Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Run Withdraw Msg/Run Refill Msg.lvclass"/>
