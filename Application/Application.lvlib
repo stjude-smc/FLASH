@@ -5,6 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
+		<Item Name="Change Buffer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Change Buffer Msg/Change Buffer Msg.lvclass"/>
 		<Item Name="Close Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Shutter Msg/Close Shutter Msg.lvclass"/>
 		<Item Name="Close Viewer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Viewer Msg/Close Viewer Msg.lvclass"/>
 		<Item Name="Finish Stream Msg.lvclass" Type="LVClass" URL="../../Application Messages/Finish Stream Msg/Finish Stream Msg.lvclass"/>

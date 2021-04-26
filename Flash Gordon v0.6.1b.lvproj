@@ -349,6 +349,7 @@
 				<Item Name="Write to XML File.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Write to XML File.vi"/>
 			</Item>
 			<Item Name="AF Debug.lvlib" Type="Library" URL="/&lt;resource&gt;/AFDebug/AF Debug.lvlib"/>
+			<Item Name="Change Buffer Dialog.vi" Type="VI" URL="../Hardware/cetoni/Change Buffer Dialog.vi"/>
 			<Item Name="dcimg2tiff.dll" Type="Document" URL="../../binaryTIFF/CLib/DCIMG2TIFF/x64/Release/dcimg2tiff.dll"/>
 			<Item Name="histogram.dll" Type="Document" URL="../Resources/C Libraries/histogram/histogram.dll"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
