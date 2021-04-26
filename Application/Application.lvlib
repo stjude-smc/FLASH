@@ -17,6 +17,7 @@
 		<Item Name="Pump Refill Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Refill Msg/Pump Refill Msg.lvclass"/>
 		<Item Name="Pump Stop Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Stop Msg/Pump Stop Msg.lvclass"/>
 		<Item Name="Record Button Off Msg.lvclass" Type="LVClass" URL="../../Application Messages/Record Button Off Msg/Record Button Off Msg.lvclass"/>
+		<Item Name="Rinse Fluidic System Msg.lvclass" Type="LVClass" URL="../../Application Messages/Rinse Fluidic System Msg/Rinse Fluidic System Msg.lvclass"/>
 		<Item Name="Set Detection Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Detection Msg/Set Detection Msg.lvclass"/>
 		<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
 		<Item Name="Set Number of Cameras Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Number of Cameras Msg/Set Number of Cameras Msg.lvclass"/>
