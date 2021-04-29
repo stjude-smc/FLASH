@@ -6,6 +6,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
 		<Item Name="Change buffer Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Change buffer Msg/Change buffer Msg.lvclass"/>
+		<Item Name="Pressurize Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Pressurize Msg/Pressurize Msg.lvclass"/>
 		<Item Name="Rinse Channel Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Rinse Channel Msg/Rinse Channel Msg.lvclass"/>
 		<Item Name="Rinse System Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Rinse System Msg/Rinse System Msg.lvclass"/>
 		<Item Name="Run Inject Msg.lvclass" Type="LVClass" URL="../../cetoni Messages/Run Infuse Msg/Run Inject Msg.lvclass"/>
