@@ -171,3 +171,34 @@ EXTERN TI2WRAP_API int32_t ti2_setYPos(const double yPos_um, const int32_t speed
 	return (int32_t)err;
 }
 
+
+
+// Enable/disable joystick (0=disable, 1=enable)
+// [InParam] lx_uint32 val[1] = { 0:Prohibition/1:Permit }		[OutParam] None
+EXTERN TI2WRAP_API int32_t ti2_setEnableJoystick(const int32_t data) {
+	MIC_Command cmd;
+	lx_uint32 pCommandData = data;
+	cmd.pCommandData = &pCommandData;
+
+	wcscpy( (wchar_t*)cmd.wszCommandString, TI2_DEDICATED_SET_KNOB_X_ENABLE);
+	lx_result err = MIC_DedicatedCommand(cmd, NULL);
+
+	if (err == 0) {
+		wcscpy( (wchar_t*)cmd.wszCommandString, TI2_DEDICATED_SET_KNOB_Y_ENABLE);
+		err = MIC_DedicatedCommand(cmd, NULL);
+	}
+
+	return (int32_t)err;
+
+
+	/* original version
+	MIC_Command sCommand;
+	const wchar_t wszCommandString[] = TI2_DEDICATED_SET_JOY_SWITCH_ENABLE;
+	memcpy(&(sCommand.wszCommandString), wszCommandString, strlen((char*)wszCommandString) + 1);
+
+	lx_int32 pCommandData[7] = { (lx_uint32)data, 0, 0, 0, 0, 0, 0 };
+	sCommand.pCommandData = pCommandData;
+	lx_result err = MIC_DedicatedCommand(sCommand, NULL);
+	return (int32_t)err;
+	*/
+}

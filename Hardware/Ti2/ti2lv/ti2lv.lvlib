@@ -20,6 +20,7 @@
 	<Item Name="ti2_lightPath.ctl" Type="VI" URL="../ti2_lightPath.ctl"/>
 	<Item Name="ti2_moveHome.vi" Type="VI" URL="../ti2_moveHome.vi"/>
 	<Item Name="ti2_open.vi" Type="VI" URL="../ti2_open.vi"/>
+	<Item Name="ti2_setEnableJoystick.vi" Type="VI" URL="../ti2_setEnableJoystick.vi"/>
 	<Item Name="ti2_setFilter.vi" Type="VI" URL="../ti2_setFilter.vi"/>
 	<Item Name="ti2_setHome.vi" Type="VI" URL="../ti2_setHome.vi"/>
 	<Item Name="ti2_setLightPath.vi" Type="VI" URL="../ti2_setLightPath.vi"/>

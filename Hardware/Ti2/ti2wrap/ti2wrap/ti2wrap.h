@@ -51,3 +51,6 @@ EXTERN TI2WRAP_API int32_t ti2_getYPos(double* yPos_um);
 
 // Set Y position
 EXTERN TI2WRAP_API int32_t ti2_setYPos(const double yPos_um, const int32_t speed);
+
+// Enable/disable joystick (0=disable, 1=enable)
+EXTERN TI2WRAP_API int32_t ti2_setEnableJoystick(const int32_t data);

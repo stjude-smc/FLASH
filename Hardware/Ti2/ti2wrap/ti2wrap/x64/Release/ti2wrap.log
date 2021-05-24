@@ -1,8 +1,10 @@
 ﻿  ti2wrap.cpp
-     Creating library C:\LVCUR\Flash Gordon v0.6.1b\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.lib and object C:\LVCUR\Flash Gordon v0.6.1b\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.exp
+c:\lvcur\flash-gordon\hardware\ti2\ti2wrap\ti2wrap\ti2wrap.cpp(183): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\corecrt_wstring.h(123): note: see declaration of 'wcscpy'
+c:\lvcur\flash-gordon\hardware\ti2\ti2wrap\ti2wrap\ti2wrap.cpp(187): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\corecrt_wstring.h(123): note: see declaration of 'wcscpy'
+     Creating library C:\LVCUR\flash-gordon\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.lib and object C:\LVCUR\flash-gordon\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.exp
   Generating code
-  2 of 17 functions (11.8%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  All 18 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
-  ti2wrap.vcxproj -> C:\LVCUR\Flash Gordon v0.6.1b\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.dll
+  ti2wrap.vcxproj -> C:\LVCUR\flash-gordon\Hardware\Ti2\ti2wrap\x64\Release\ti2wrap.dll
