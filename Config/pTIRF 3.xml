@@ -1,4 +1,4 @@
-<?xml version='1.0' standalone='yes' ?>
+0<?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
 	<Version>18.0.1f4</Version>
 	<Cluster>
@@ -220,7 +220,7 @@
 				<Refnum>
 					<Name>Serial Port</Name>
 					<RefKind>VISA</RefKind>
-					<Val>COM3</Val>
+					<Val>COM6</Val>
 				</Refnum>
 				<EW>
 					<Name>Laser Type</Name>
@@ -266,7 +266,7 @@
 			<NumElts>1</NumElts>
 			<Boolean>
 				<Name>Fluidics present</Name>
-				<Val>1</Val>
+				<Val>0</Val>
 			</Boolean>
 		</Cluster>
 		<Array>
@@ -286,7 +286,7 @@
 				</EW>
 				<String>
 					<Name>Serial Number</Name>
-					<Val>000121</Val>
+					<Val>000117</Val>
 				</String>
 				<Boolean>
 					<Name>Flip Vertically</Name>
@@ -336,7 +336,7 @@
 				</EW>
 				<String>
 					<Name>Serial Number</Name>
-					<Val>000123</Val>
+					<Val>000113</Val>
 				</String>
 				<Boolean>
 					<Name>Flip Vertically</Name>
@@ -361,7 +361,7 @@
 				</EW>
 				<String>
 					<Name>Serial Number</Name>
-					<Val>000118</Val>
+					<Val>000115</Val>
 				</String>
 				<Boolean>
 					<Name>Flip Vertically</Name>

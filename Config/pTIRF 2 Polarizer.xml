@@ -220,7 +220,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM3</Val>
+<Val>COM10</Val>
 </Refnum>
 <EW>
 <Name>Laser Type</Name>
@@ -249,7 +249,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM4</Val>
+<Val>COM11</Val>
 </Refnum>
 <EW>
 <Name>Laser Type</Name>
@@ -261,23 +261,14 @@
 </EW>
 </Cluster>
 </Array>
-<Cluster>
-<Name>Pump Configuration</Name>
-<NumElts>3</NumElts>
-<Boolean>
-<Name>Pump present</Name>
-<Val>0</Val>
-</Boolean>
-<Refnum>
-<Name>Serial Port</Name>
-<RefKind>VISA</RefKind>
-<Val>COM9</Val>
-</Refnum>
-<DBL>
-<Name>Flow rate (ul/s)</Name>
-<Val>226.00000000000000</Val>
-</DBL>
-</Cluster>
+		<Cluster>
+			<Name>Fluidics Configuration</Name>
+			<NumElts>1</NumElts>
+			<Boolean>
+				<Name>Fluidics present</Name>
+				<Val>0</Val>
+			</Boolean>
+		</Cluster>
 <Array>
 <Name>Installed Cameras</Name>
 <Dimsize>4</Dimsize>
