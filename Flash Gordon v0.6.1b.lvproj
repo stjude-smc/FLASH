@@ -368,9 +368,9 @@
 			<Item Name="systemLogging.dll" Type="Document" URL="systemLogging.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Thorlabs.MotionControl.DeviceManagerCLI.dll" Type="Document" URL="../Hardware/Thorlabs.MotionControl.DeviceManagerCLI.dll"/>
-			<Item Name="Thorlabs.MotionControl.GenericMotorCLI.dll" Type="Document" URL="../Hardware/Thorlabs.MotionControl.GenericMotorCLI.dll"/>
-			<Item Name="Thorlabs.MotionControl.KCube.DCServoCLI.dll" Type="Document" URL="../Hardware/Thorlabs.MotionControl.KCube.DCServoCLI.dll"/>
+			<Item Name="Thorlabs.MotionControl.DeviceManagerCLI.dll" Type="Document" URL="../Thorlabs.MotionControl.DeviceManagerCLI.dll"/>
+			<Item Name="Thorlabs.MotionControl.GenericMotorCLI.dll" Type="Document" URL="../Thorlabs.MotionControl.GenericMotorCLI.dll"/>
+			<Item Name="Thorlabs.MotionControl.KCube.DCServoCLI.dll" Type="Document" URL="../Thorlabs.MotionControl.KCube.DCServoCLI.dll"/>
 			<Item Name="ti2lv.lvlib" Type="Library" URL="../Hardware/Ti2/ti2lv/ti2lv.lvlib"/>
 			<Item Name="ti2wrap.dll" Type="Document" URL="../Hardware/Ti2/ti2wrap/x64/Release/ti2wrap.dll"/>
 			<Item Name="tmcamcon.dll" Type="Document" URL="tmcamcon.dll">
