@@ -220,7 +220,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM10</Val>
+<Val>COM3</Val>
 </Refnum>
 <EW>
 <Name>Laser Type</Name>
@@ -249,7 +249,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM11</Val>
+<Val>COM4</Val>
 </Refnum>
 <EW>
 <Name>Laser Type</Name>
