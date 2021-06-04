@@ -266,7 +266,7 @@
 			<NumElts>1</NumElts>
 			<Boolean>
 				<Name>Fluidics present</Name>
-				<Val>0</Val>
+				<Val>1</Val>
 			</Boolean>
 		</Cluster>
 		<Array>
