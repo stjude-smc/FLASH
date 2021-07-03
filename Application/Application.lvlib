@@ -15,6 +15,7 @@
 		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
 		<Item Name="Photobleach Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Msg/Photobleach Msg.lvclass"/>
 		<Item Name="Pressurize fluidics Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pressurize fluidics Msg/Pressurize fluidics Msg.lvclass"/>
+		<Item Name="Pump Delayed Inject Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Delayed Inject Msg/Pump Delayed Inject Msg.lvclass"/>
 		<Item Name="Pump Inject Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Infuse Msg/Pump Inject Msg.lvclass"/>
 		<Item Name="Pump Refill Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Refill Msg/Pump Refill Msg.lvclass"/>
 		<Item Name="Pump Stop Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Stop Msg/Pump Stop Msg.lvclass"/>
