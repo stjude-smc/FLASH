@@ -204,7 +204,7 @@
 <Dimsize>2</Dimsize>
 <Cluster>
 <Name>Laser Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>5</NumElts>
 <EW>
 <Name>Excitation</Name>
 <Choice>Cy2 (473 nm)</Choice>
@@ -230,10 +230,18 @@
 <Choice>PRM1-Z8</Choice>
 <Val>1</Val>
 </EW>
+<DBL>
+<Name>Polarizer Amplitude</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Polarizer Theta Zero</Name>
+<Val>0.00000000000000</Val>
+</DBL>
 </Cluster>
 <Cluster>
 <Name>Laser Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>5</NumElts>
 <EW>
 <Name>Excitation</Name>
 <Choice>Cy2 (473 nm)</Choice>
@@ -257,26 +265,25 @@
 <Choice>Laser Quantum</Choice>
 <Choice>Coherent OBIS</Choice>
 <Choice>PRM1-Z8</Choice>
-<Val>1</Val>
+<Val>3</Val>
 </EW>
+<DBL>
+<Name>Polarizer Amplitude</Name>
+<Val>4812.17000000000007</Val>
+</DBL>
+<DBL>
+<Name>Polarizer Theta Zero</Name>
+<Val>-1.90390000000000</Val>
+</DBL>
 </Cluster>
 </Array>
 <Cluster>
-<Name>Pump Configuration</Name>
-<NumElts>3</NumElts>
+<Name>Fluidics Configuration</Name>
+<NumElts>1</NumElts>
 <Boolean>
-<Name>Pump present</Name>
+<Name>Fluidics present</Name>
 <Val>0</Val>
 </Boolean>
-<Refnum>
-<Name>Serial Port</Name>
-<RefKind>VISA</RefKind>
-<Val>COM9</Val>
-</Refnum>
-<DBL>
-<Name>Flow rate (ul/s)</Name>
-<Val>226.00000000000000</Val>
-</DBL>
 </Cluster>
 <Array>
 <Name>Installed Cameras</Name>
