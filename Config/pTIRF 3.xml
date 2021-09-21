@@ -98,7 +98,7 @@
 </Refnum>
 <DBL>
 <Name>Forward Step (mm)</Name>
-<Val>0.40000000000000</Val>
+<Val>0.45000000000000</Val>
 </DBL>
 <DBL>
 <Name>Lane Length (mm)</Name>
@@ -106,7 +106,7 @@
 </DBL>
 <DBL>
 <Name>Lane Separation (mm)</Name>
-<Val>0.80000000000000</Val>
+<Val>0.45000000000000</Val>
 </DBL>
 <EW>
 <Name>Stage Type</Name>
