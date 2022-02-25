@@ -34,6 +34,7 @@
 				<Item Name="cetoni.lvlib" Type="Library" URL="../Hardware/cetoni/cetoni.lvlib"/>
 				<Item Name="TE2000.lvlib" Type="Library" URL="../Hardware/TE2000/TE2000.lvlib"/>
 				<Item Name="Ti2.lvlib" Type="Library" URL="../Hardware/Ti2/Ti2.lvlib"/>
+				<Item Name="Tiff Writer.lvlib" Type="Library" URL="../Hardware/Tiff Writer/Tiff Writer.lvlib"/>
 			</Item>
 		</Item>
 		<Item Name="Resources" Type="Folder">
@@ -90,7 +91,7 @@
 				<Item Name="Virtual Camera Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Virtual Camera Configuration.ctl"/>
 			</Item>
 			<Item Name="Actor Framework.lvlib" Type="Library" URL="/&lt;vilib&gt;/ActorFramework/Actor Framework.lvlib"/>
-			<Item Name="BinaryTIFF.lvlib" Type="Library" URL="../../binaryTIFF/BinaryTIFF.lvlib"/>
+			<Item Name="BinaryTIFF.lvlib" Type="Library" URL="../../BinaryTIFF/BinaryTIFF.lvlib"/>
 		</Item>
 		<Item Name="User Interface" Type="Folder">
 			<Item Name="Change Log.lvlib" Type="Library" URL="../User Interface/Change Log/Change Log.lvlib"/>
@@ -350,7 +351,6 @@
 			</Item>
 			<Item Name="AF Debug.lvlib" Type="Library" URL="/&lt;resource&gt;/AFDebug/AF Debug.lvlib"/>
 			<Item Name="Change Buffer Dialog.vi" Type="VI" URL="../Hardware/cetoni/Change Buffer Dialog.vi"/>
-			<Item Name="dcimg2tiff.dll" Type="Document" URL="../../binaryTIFF/CLib/DCIMG2TIFF/x64/Release/dcimg2tiff.dll"/>
 			<Item Name="histogram.dll" Type="Document" URL="../Resources/C Libraries/histogram/histogram.dll"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
