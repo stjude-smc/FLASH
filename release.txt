@@ -1,274 +1,119 @@
 Flash Gordon
-Version 0.6.1b
-(c) Blanchard Lab, 2014-2018
-
-    "This morning's unprecedented solar eclipse 
-               is no cause for alarm."
-
-
-Content of this document
-------------------------
-Change log
-Known issues
-High-priority feature requests
-Other ideas
+Version 1.0
+(c) Cornell University and St Jude Children's Research Hospital, 2014-2022
+Created by Manuel Juette and Daniel Terry.
 
 
 
-Change log
+Change log: version 1.0
 ----------
 
-v0.6.1b
-- modified to support DCAM-API 17.11.5373 and HVC 4.2.11 (BinaryTIFF 0.3.2b)
+This version is a fork of Manuel Juette's version 0.6.1b. Manuel made several versions
+  after this, but none were stable enough to use as a foundation. He may have made a
+  version 1.0, but that is not the same as this one.
 
-v0.6.1a
-- added support for Ti2
-- fixed timing issues with (sub-)millisecond exposure times
+* User Interface:
 
-v0.6.1 (6/20/2016)
-- moved hardcoded sync device address to config file
-- added additional stage controls (set/return home, abort motion)
+    - Much faster rendering of the live window reduces lag/stutter, especially with four cameras.
 
-v0.6.0 (6/28/2016)
-- merged v0.5.5 (old microscope) and v0.5.7 (new microscope)
-- added "Virtual Microscope" actor as abstraction layer for specific microscope model
-- fixed incorrect assignment of Cy5 emission filter on new microscope
-- added support for additional multi-excitation settings
-- fixed detection setting behavior when using multi-line excitation
-- added warning when file path is too long
+	- More graceful error handling, for example with invalid configuration files.
 
-v0.5.7 (6/17/2016)
-- added support for simultaneous Cy2/Cy3 excitation
+	- Simplified block diagrams of Live Viewer and Main Window.
 
-v0.5.6 (03/05/2015)
-NOTE: this is a separate branch that works only with the new microscope
-(needs to be merged for next version)
-- added support for Nikon Eclipse-Ti (new microscope)
+	- Live Viewer: add timeout to prevent freezing if data camera never received.
 
-v0.5.5 (02/09/2015)
-- fixed bug interfering with the use of Cy5/Cy7 shutters in "show live"
+	- Disable acquisition controls during streaming to prevent file saving errors.
 
-v0.5.4 (02/03/2015)
-- improved viewer performance by replacing global variables with lossy
-single-element queue for frame data transfer and adjusting timeouts
-- added ability to disable/enable "separate live settings" on the fly
+	- Prevent Flash Gordon splash screen from hiding "Choose Configuration" diaglog.
 
-v0.5.3 (not released)
-- implemented check if enough space is available on volume
-- modified configuration files for replaced cameras
-- fixed a live viewer bug
-- fixed a bug related to saving movies
-- block "show live" while "stream acquisition" is running
-- fixed bug in syringe pump volume setting
+	- Main Window status bar for background .tif movie saving (conversion from .dcimg).
 
-v0.5.2 (not released)
-- implemented experimental focus indicator
+	- Main Window: show correct number of veritcal lines for specified time resolution.
 
-v0.5.1 (not released)
-- changed default configuration to reflect that defective Cy5 camera was
-replaced with Cy2 camera
-- improved live display when only one camera is turned on
-- using new BinaryTIFF v0.3.2 for correct saving of single-channel movies
-- improved live viewer behavior by locking time-critical global variables
-with semaphores
-- eliminated display of white blank frame or frame from previous live
-window when starting show live
-- added (default) option to turn pixel correction on for show live and
-off for stream acquisition
-- limited display range to current bit depth
-- cameras can now be turned on and off without logging out of windows
-- fixed inverted colormap bug
+	- Live Viewer: image flipping still occurs but 
 
-v0.5.0 (not released)
-- improved performance of live viewer by moving display update and running
-calculations (histogram, scaling etc.) to asynchronous loops
-- added "asylum" color map
-- set progress dialog to remain visible when LabVIEW loses focus
-- improved handling of progress bars
-- added BinaryTIFF function to reset frame counter global variable
-- added shutdown splash screen
-- fixed bug that caused LabVIEW to stay in memory in unresponsive state 
-after closing Flash Gordon (by making sure that all cameras are shut down
-before attempting to close the driver)
-- eliminated 2-second delay when saving a Tiff file
-- added a dialog during startup that displays the detected cameras (11/13)
+* Cameras:
 
-v0.4.4 (not released)
-- allow saving of partial movie when stream is canceled
-- add "custom length" button to photobleaching dialog
-- added "advanced" option to skip frames from beginning of movie (defaults 
-to one frame to remove the corrupted initial sCMOS frame)
-- use new version of BinaryTIFF (v0.3.1) to accomplish frame skipping
+	- Use Hamamatsu video capture library version 4.4. Tested with DCAM version 18.12.5685.
+	    Required for properly supporting newer Fusion cameras.
 
-v0.4.3a (11/11/2014)
-- fixed bug that led to movies being saved with all zeros
-- fixed a bug in the progress bar display
+	- Fix crash: number of lines must be divisible by 8.
 
-v0.4.3 (11/06/2014)
-- added option to cancel acquisition
-- minor code improvements
-- temporarily added a "Photobleach 3 mm" configuration file (this will be
-replaced by a custom photobleach button in a future version)
+	- Fix crash when closing Flash Gordon (trying to close camera handle after deleted).
 
-v0.4.2 (11/05/2014)
-- fixed bug that required closing and restarting program to detect cameras
-- removed zero-valued pixels from histogram to improve display/autoscale
-- corrected arrangement of channels
-- tested handling of 4 channels (after adding 4th framegrabber card to PC)
-- fixed bug that led to corrupt files when acquiring with 2 cameras
+	- Fix various triggering issues, especially for sub-ms recordings.
 
-v0.4.1 (10/23/2014)
-- added cubehelix color map (https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/)
-- improved live viewer zoom feature (and removed confusing LabVIEW graph tool)
-- improved live viewer autoscale feature by ignoring fixed percentages from
-top and bottom of histogram
-- overlay active colormap onto histogram
-- removed obsolete "focus" feature
+	- Automatically choose optimal readout mode for a given camera and time resolution.
 
-v0.4.0 (10/21/2014)
-- added support for XML-based configuration files for user-selectable 
-hardware settings
-- added support for XML-based initialization file for non-user-selectable 
-program settings; saves program state between subsequent sessions
-- added support for up to 4 cameras (Flash 4.0 v2)
-- implemented channel identification based on detected camera serial numbers
-- using new version of BinaryTIFF (v0.3.0) to handle data from up to 4 cameras
-- added support for fractional exposure times (e.g. 2.5 ms) by using the
-new "High Resolution Relative Seconds" function in LabVIEW
-- switched the output mode of the NI-DAQ device from "open collector"
-(default) to "active drive" to allow triggering a flexible number of cameras
-without modifications to the trigger circuit
-- overhauled alignment mode
-- added support for 730 nm laser shutter
-- fixed a viewer bug that caused incorrect aspect ratios when zoomed in
-- added setting for optional Flash 4.0 pixel correction ("Advanced" tab)
-- added support for Flash 4.0 "Fast Synchronous Readout" (slightly faster
-external trigger mode)
-- changed Flash 4.0 output trigger source from "Read End" to "VSync"
-for better oscilloscope display
-- added "About This Version" dialog
-- added "Suggest Feature or Report Bug" dialog
-- provided a "Reset View" button to reset to full field (and work around a bug
-in the zoom/scaling functionality)
+	- Fix variable delay between end of stream acquisition and .tif file conversion caused by
+	    pile-up of "Get Most Recent Frame" messages with short refresh time.
 
-v0.3.0 (09/30/2014)
-- added support for the PHD Ultra pump
-- added a timed, automated injection mode for real-time delivery experiments
+* Stage:
 
-v0.2.2 (09/16/2014)
-- fixed bug in the "100 um back" function
-- handled case when no file name or invalid path is entered
+	- Support for Ti2 stage movement. Allow "Disabled" as a valid microscope configuration.
+	    Stage moves in 100 um increments to avoid freezing control pad and allow stopping movement early.
 
-v0.2.1 (09/05/2014)
-- prevent user from trying to cancel "Stream Acquisition" (which is
-currently unsupported)
-- fixed bug in "Auto-Increment File Name"
+	- Disable stage "Move Home" unless user has pressed "Set Home" first to prevent undefined behavior.
 
-v0.2.0 (09/04/2014)
-- implemented "Auto-Increment File Name" and "Auto-Advance Field Of View"
-- several minor improvements
+	- If Ti2 stage not detected, give an error instead of silently failing or crashing.
 
-v0.1.7
-- added injection countdown timer
-- fixed a bug that prevented standalone (.exe) version from running
+	- Disable Ti2 control pad joystick while photobleaching to prevent erratic behavior.
 
-v0.1.6
-- fixed an error caused by the "File Name" field accepting multi-line input
-- enabled changing exposure time while live mode is running
-- renamed "Live Preview" to "Show Live" to match MetaMorph
-- moved "Scan Mode" to advanced tab
-- fixed a bug that occurred when trying to run "Stream Acquisition" while 
-"Show Live" is running
-- temporarily disabled sizing of live viewer until improved scaling behavior
-is implemented
-- fixed a bug that caused some movies to be saved incorrectly (with frames
-containing all zeros)
-- improved alignment mode
-
-v0.1.5
-- fixed several bugs that occasionally led to files not being saved or stream
-acquisition being terminated right after start of acquisition
-- added more elegant handling of the case when the user tries to save to a file
-that already exists
-- using new, little-endian version of BinaryTIFF (v0.2.0) to increase write speed
-(about 1.5x faster)
-- added focus and pan buttons for live viewer
+	- Detect when stage reaches hardware limit, show a warning, and gracefully recovery.
 
 
-Known issues
-------------
-- parallel loops in viewer are not completely independent, leading to choppy
-performance
-? number of cameras can be increased, but not decreased without logging off
-and back on
-- live mode sometimes gets stuck/takes a long time to start cameras
-- changing exposure time in live mode responds very slowly
-? focus indicator stays open when live preview is closed
-? "stream acquisition" and "show live" not locked while movie is being saved
-- program crashes with no message if expected hardware is not turned on
-- waiting for cameras may get stuck in endless loop if cameras turned off
-- built (.exe) version is not functional
-? auto-increment may not work in certain cases when file name already exists
-? pixel correction gets turned off randomly (usually noticed after photobleaching)
-(apparently this happens when exposure time is changed without restarting 
-show live)
-- injection timing may have changed over the last few updates
-- long file names should be possible by renaming final files
-- "reset view" needs to be used frequently in multi-color mode
+* Lasers:
+
+	- LaserQuantum: if user tries to set power for a laser not configured, give a warning rather than crash.
+
+	- Add support for rapid laser power tuning with a rotating polarizer (Thorlabs PRM1Z8).
+
+	- LaserQuantum: include cases for supported lasers including OBIS (RS232) and "Disabled".
+	    This should be renamed to "Virtual Laser" in the future.
+
+* Fluidics:
+
+	- Early implementation of Cetoni device (not enabled yet).
+
+* BinaryTIFF:
+
+	- Support for new .dcimg file format with newer DCAM/cameras.
+
+	- "Rescue Raw Data" no longer tries to read proprietary .dcimg fields for image size,
+	    which changes between library versions. Instead, get parameters from "Max Lines.vi".
+
+	- Create TiffWriter class to convert .dcimg to .tif files in the backrgound.
+	    This allows user to Show Live or start next acquisition without delay.
 
 
-High-priority feature requests
-------------------------------
-- proper error handling (in application actor?)
-- allow count-down timer to finish after beginning of movie
-- new folders are not automatically created
-- stack function
-- enable binning and trigger mode selectors
-- limit laser power for "Laser to Eyes"
-- implement snapshot feature (currently possible by doing 1-frame acquisition)
-- verify that hardware is actually initiated (not just actors launched) when
-main window opens
-- pump flow rate from config file
-- mouse-over to show coordinates and value of current pixel in live viewer
-- choose "correct" readout mode based on exposure time
-- store channel information in metadata
-- improve viewer performance by eliminating multiple flipping (3/4 channels)
-- generally improve viewer performance (c-based histogram etc.)
-- clean up handling of camera channels (too many hardcoded settings)
-- clean up block diagrams
-- improve hardware abstraction layer for future changes; add simulated devices
-(refactor into strictly virtual and strictly physical layer)
+
+Known issues:
+----------
+
+- Main window stage "STOP" button does not appear to work for Ti2.
+
+- Changing time resolution or other camera settings during live display will cause
+   pixel correction to be turned off unexpectedly.
+
+- The progress bar for file saving (conversion to .tif) can have erratic behavior or
+   stall if the user either acquires a new movies with a different number of frames
+   while the previous one is saving or cancels the acquisition early. This does not
+   affect the saved files, only the status bar appearance.
+
+- Errors in Actors only give a generic Actor Framework message. 
+
+- Live Viewer color map bar is often reversed and scale limits can go be out of range.
 
 
-Other ideas
------------
-- multiple time resolutions
-- RTD indicator should be visible on main tab
-- add a little graph to "fluidics" tab to show expected injection timecourse
-- add calibration feature to "fluidics" tab (auto-update the little graph)
-- learn how to use "last ack" for safe termination of actors
-- display MB/s when saving data
-- up and down arrows for laser power
-- populate available excitation and detection settings from hardware configuration
-- integrated photon conversion (global factor for display, pixel-by-pixel
-factor for saving files)
-- separate LUT scaling (or separate LUT) for each channel
-- time lapse
-- pass all keyboard shortcuts through to main window instead of handling multiple
-cases in live viewer
-- read current laser power, use conversion factors, and implement 
-"scale laser power" feature; provide support for all lasers (not just 532)
-- keep viewer windows open after acquisition/live preview; allow multiple
-viewer instances
-- keep stack in memory or reload for acquisition review feature (difficulty with
-first approach: DCIMG approach is using "sequence" instead of "snap" mode, which
-makes preparing acquisitions much faster, but provides no direct access to frames
-after acquisition is finished; second approach may not be fast/responsive enough?)
-- save the earth in only 14 hours
-- auto-stop live mode for stream acquisition (currently throws error)
-- Main Window.lvlib:Main Window.lvclass:Actor Core.vi should be cleaned up by
-creating SubVIs to more clearly group functionality
-- eliminate some globals by sending messages with control references instead
-(or use queues, notifiers, semaphores)
-- autofocus
-- on-the-fly camera selection
+
+
+Testing platforms verified to work:
+----------
+ - Windows 10 Enterprise (20H2; build 19042.1526) 64-bit
+ - Hamamatsu HVC 4.4 and DCAM 18.12.5685
+ - Hamamatsu Fusion (C14440-20UP) with USB 3.0 interface.
+ - Hamamatsu Flash 4.0v2 (C11440-22CU) with CoaXPress cards. Flash v3 probably also works.
+ - Nikon Ti2 stand with build-in stage and filter turret.
+ - Newport ESP301 stage driver
+ - LaserQuantum Ciel 473nm and Opus 532 lasers
+ - Thorlabs PRM1Z8 rotation stage for laser attenuation polarizer.

@@ -10,11 +10,11 @@
 </I32>
 <String>
 <Name>Version String</Name>
-<Val>v0.6.1</Val>
+<Val>v1.0</Val>
 </String>
 <String>
 <Name>Hardware Configuration File</Name>
-<Val>pTIRF 3</Val>
+<Val>pTIRF 2</Val>
 </String>
 </Cluster>
 </LVData>
