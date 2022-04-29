@@ -94,7 +94,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM3</Val>
+<Val>COM4</Val>
 </Refnum>
 <DBL>
 <Name>Forward Step (mm)</Name>
@@ -113,7 +113,7 @@
 <Choice>Disabled</Choice>
 <Choice>ESP301</Choice>
 <Choice>Ti2</Choice>
-<Val>2</Val>
+<Val>1</Val>
 </EW>
 </Cluster>
 <Cluster>
