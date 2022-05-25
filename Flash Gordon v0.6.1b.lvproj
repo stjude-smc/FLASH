@@ -67,6 +67,7 @@
 				<Item Name="test laser.vi" Type="VI" URL="../Resources/Testing/test laser.vi"/>
 				<Item Name="Test RS232.vi" Type="VI" URL="../Resources/Testing/Test RS232.vi"/>
 				<Item Name="test shutter.vi" Type="VI" URL="../Resources/Testing/test shutter.vi"/>
+				<Item Name="Test Sync Device.vi" Type="VI" URL="../Application/Test Sync Device.vi"/>
 				<Item Name="Test Sync.vi" Type="VI" URL="../Resources/Testing/Test Sync.vi"/>
 				<Item Name="V-Cam Test.vi" Type="VI" URL="../Resources/Testing/V-Cam Test.vi"/>
 				<Item Name="viewer test.vi" Type="VI" URL="../Hardware/Virtual Camera/viewer test.vi"/>
@@ -221,6 +222,7 @@
 				<Item Name="DAQmx Create Channel (TEDS-AI-Voltage-Custom with Excitation).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (TEDS-AI-Voltage-Custom with Excitation).vi"/>
 				<Item Name="DAQmx Create Virtual Channel.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Virtual Channel.vi"/>
 				<Item Name="DAQmx Fill In Error Info.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/miscellaneous.llb/DAQmx Fill In Error Info.vi"/>
+				<Item Name="DAQmx Flatten Channel String.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/miscellaneous.llb/DAQmx Flatten Channel String.vi"/>
 				<Item Name="DAQmx Reset Device.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/system.llb/DAQmx Reset Device.vi"/>
 				<Item Name="DAQmx Start Task.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Start Task.vi"/>
 				<Item Name="DAQmx Stop Task.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Stop Task.vi"/>
