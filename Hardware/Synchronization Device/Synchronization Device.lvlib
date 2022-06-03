@@ -4,7 +4,10 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">402685952</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Set ALEX Msg.lvclass" Type="LVClass" URL="../../Synchronization Device Messages/Set ALEX Msg/Set ALEX Msg.lvclass"/>
+	<Item Name="Set Duty Cycle Msg.lvclass" Type="LVClass" URL="../../Synchronization Device Messages/Set Duty Cycle Msg/Set Duty Cycle Msg.lvclass"/>
 	<Item Name="Set Interval Msg.lvclass" Type="LVClass" URL="../../Synchronization Device Messages/Set Interval Msg/Set Interval Msg.lvclass"/>
 	<Item Name="Set Shutter Enable Msg.lvclass" Type="LVClass" URL="../../Synchronization Device Messages/Set Shutter Enable Msg/Set Shutter Enable Msg.lvclass"/>
+	<Item Name="Set Streaming Msg.lvclass" Type="LVClass" URL="../../Synchronization Device Messages/Set Streaming Msg/Set Streaming Msg.lvclass"/>
 	<Item Name="Synchronization Device.lvclass" Type="LVClass" URL="../Synchronization Device.lvclass"/>
 </Library>
