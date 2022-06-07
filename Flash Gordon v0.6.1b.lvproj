@@ -40,6 +40,7 @@
 		<Item Name="Resources" Type="Folder">
 			<Item Name="GLOBAL" Type="Folder">
 				<Item Name="GLOBAL Debug.vi" Type="VI" URL="../Resources/GLOBAL/GLOBAL Debug.vi"/>
+				<Item Name="GLOBAL Experiment Metadata.vi" Type="VI" URL="../Resources/GLOBAL/GLOBAL Experiment Metadata.vi"/>
 				<Item Name="GLOBAL Time-critical.vi" Type="VI" URL="../Resources/GLOBAL/GLOBAL Time-critical.vi"/>
 			</Item>
 			<Item Name="Helper VIs" Type="Folder">
