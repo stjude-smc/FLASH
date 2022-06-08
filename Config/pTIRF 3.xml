@@ -200,7 +200,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM3</Val>
+<Val>COM6</Val>
 </Refnum>
 <EW>
 <Name>Laser Type</Name>
@@ -229,7 +229,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM4</Val>
+<Val>COM5</Val>
 </Refnum>
 <EW>
 <Name>Laser Type</Name>
@@ -237,7 +237,7 @@
 <Choice>Laser Quantum</Choice>
 <Choice>Coherent OBIS</Choice>
 <Choice>PRM1-Z8</Choice>
-<Val>1</Val>
+<Val>3</Val>
 </EW>
 <DBL>
 <Name>Polarizer Amplitude</Name>
