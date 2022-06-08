@@ -43,5 +43,4 @@
 		<Item Name="Switch Valve Msg.lvclass" Type="LVClass" URL="../../Application Messages/Switch Valve Msg/Switch Valve Msg.lvclass"/>
 	</Item>
 	<Item Name="Application.lvclass" Type="LVClass" URL="../Application.lvclass"/>
-	<Item Name="Shutter Enum to binary.vi" Type="VI" URL="../Shutter Enum to binary.vi"/>
 </Library>

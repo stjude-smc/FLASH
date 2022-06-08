@@ -27,7 +27,6 @@
 			<Item Name="Hardware Devices" Type="Folder">
 				<Item Name="Eclipse TI.lvlib" Type="Library" URL="../Hardware/Eclipse TI/Eclipse TI.lvlib"/>
 				<Item Name="Orca-Flash 4.0 V2.lvlib" Type="Library" URL="../Hardware/Orca-Flash 4.0 V2/Orca-Flash 4.0 V2.lvlib"/>
-				<Item Name="Uniblitz Shutter.lvlib" Type="Library" URL="../Hardware/Uniblitz Shutter/Uniblitz Shutter.lvlib"/>
 				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
 				<Item Name="Synchronization Device.lvlib" Type="Library" URL="../Hardware/Synchronization Device/Synchronization Device.lvlib"/>
 				<Item Name="Laser Quantum.lvlib" Type="Library" URL="../Hardware/Laser Quantum/Laser Quantum.lvlib"/>
@@ -67,7 +66,6 @@
 				<Item Name="events test.vi" Type="VI" URL="../Resources/Testing/events test.vi"/>
 				<Item Name="test laser.vi" Type="VI" URL="../Resources/Testing/test laser.vi"/>
 				<Item Name="Test RS232.vi" Type="VI" URL="../Resources/Testing/Test RS232.vi"/>
-				<Item Name="test shutter.vi" Type="VI" URL="../Resources/Testing/test shutter.vi"/>
 				<Item Name="Test Sync Device.vi" Type="VI" URL="../Application/Test Sync Device.vi"/>
 				<Item Name="Test Sync.vi" Type="VI" URL="../Resources/Testing/Test Sync.vi"/>
 				<Item Name="V-Cam Test.vi" Type="VI" URL="../Resources/Testing/V-Cam Test.vi"/>
@@ -81,7 +79,6 @@
 				<Item Name="Color Table Enum.ctl" Type="VI" URL="../Resources/Type Defs/Color Table Enum.ctl"/>
 				<Item Name="Default Settings.ctl" Type="VI" URL="../Resources/Type Defs/Default Settings.ctl"/>
 				<Item Name="Detection.ctl" Type="VI" URL="../Resources/Type Defs/Detection.ctl"/>
-				<Item Name="Excitation.ctl" Type="VI" URL="../Resources/Type Defs/Excitation.ctl"/>
 				<Item Name="Hardware Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Hardware Configuration.ctl"/>
 				<Item Name="Laser Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Laser Configuration.ctl"/>
 				<Item Name="Microscope Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Microscope Configuration.ctl"/>
