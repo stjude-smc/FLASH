@@ -102,7 +102,7 @@
 </Cluster>
 <Cluster>
 <Name>Microscope Configuration</Name>
-<NumElts>5</NumElts>
+<NumElts>6</NumElts>
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
@@ -140,6 +140,106 @@
 </ActiveXType>
 <Val>0x00000000</Val>
 </Refnum>
+<Array>
+<Name>Detection Settings</Name>
+<Dimsize>6</Dimsize>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy2 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>1</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy3 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>2</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy5 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>3</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy7 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>4</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>No Filter (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>5</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Lasers to Eyes</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>6</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>1</Val>
+</U16>
+</Cluster>
+</Array>
 </Cluster>
 <Cluster>
 <Name>Virtual Camera Configuration</Name>
