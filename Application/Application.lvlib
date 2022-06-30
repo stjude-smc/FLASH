@@ -32,10 +32,8 @@
 		<Item Name="Stage Next Lane Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Next Lane Msg/Stage Next Lane Msg.lvclass"/>
 		<Item Name="Stage Previous Lane Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Previous Lane Msg/Stage Previous Lane Msg.lvclass"/>
 		<Item Name="Stage Set Home Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Set Home Msg/Stage Set Home Msg.lvclass"/>
-		<Item Name="Start Focus Indicator Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Focus Indicator Msg/Start Focus Indicator Msg.lvclass"/>
 		<Item Name="Start Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Live Mode Msg/Start Live Mode Msg.lvclass"/>
 		<Item Name="Start Stream Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Stream Msg/Start Stream Msg.lvclass"/>
-		<Item Name="Stop Focus Indicator Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Focus Indicator Msg/Stop Focus Indicator Msg.lvclass"/>
 		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
 		<Item Name="Switch Valve Msg.lvclass" Type="LVClass" URL="../../Application Messages/Switch Valve Msg/Switch Valve Msg.lvclass"/>
 	</Item>

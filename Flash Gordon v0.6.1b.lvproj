@@ -91,7 +91,6 @@
 			<Item Name="Change Log.lvlib" Type="Library" URL="../User Interface/Change Log/Change Log.lvlib"/>
 			<Item Name="Countdown Timer.lvlib" Type="Library" URL="../User Interface/Countdown Timer/Countdown Timer.lvlib"/>
 			<Item Name="Feedback Dialog.lvlib" Type="Library" URL="../User Interface/Feedback Dialog/Feedback Dialog.lvlib"/>
-			<Item Name="Focus Indicator.lvlib" Type="Library" URL="../User Interface/Focus Indicator/Focus Indicator.lvlib"/>
 			<Item Name="Main Window.lvlib" Type="Library" URL="../User Interface/Main Window/Main Window.lvlib"/>
 			<Item Name="Progress Window.lvlib" Type="Library" URL="../User Interface/Progress Window/Progress Window.lvlib"/>
 			<Item Name="Splash Screen.lvlib" Type="Library" URL="../User Interface/Splash Screen/Splash Screen.lvlib"/>
@@ -300,7 +299,6 @@
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
-				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="NI_SystemLogging.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/SystemLogging/NI_SystemLogging.lvlib"/>
