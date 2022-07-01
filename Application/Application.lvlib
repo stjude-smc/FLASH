@@ -5,7 +5,6 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
-		<Item Name="Change Buffer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Change Buffer Msg/Change Buffer Msg.lvclass"/>
 		<Item Name="Close Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Shutter Msg/Close Shutter Msg.lvclass"/>
 		<Item Name="Close Viewer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Viewer Msg/Close Viewer Msg.lvclass"/>
 		<Item Name="Finish Stream Msg.lvclass" Type="LVClass" URL="../../Application Messages/Finish Stream Msg/Finish Stream Msg.lvclass"/>
@@ -14,14 +13,7 @@
 		<Item Name="Open Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Open Shutter Msg/Open Shutter Msg.lvclass"/>
 		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
 		<Item Name="Photobleach Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Msg/Photobleach Msg.lvclass"/>
-		<Item Name="Pressurize fluidics Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pressurize fluidics Msg/Pressurize fluidics Msg.lvclass"/>
-		<Item Name="Pump Delayed Inject Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Delayed Inject Msg/Pump Delayed Inject Msg.lvclass"/>
-		<Item Name="Pump Inject Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Infuse Msg/Pump Inject Msg.lvclass"/>
-		<Item Name="Pump Refill Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Refill Msg/Pump Refill Msg.lvclass"/>
-		<Item Name="Pump Stop Msg.lvclass" Type="LVClass" URL="../../Application Messages/Pump Stop Msg/Pump Stop Msg.lvclass"/>
 		<Item Name="Record Button Off Msg.lvclass" Type="LVClass" URL="../../Application Messages/Record Button Off Msg/Record Button Off Msg.lvclass"/>
-		<Item Name="Rinse Channel Msg.lvclass" Type="LVClass" URL="../../Application Messages/Rinse Channel Msg/Rinse Channel Msg.lvclass"/>
-		<Item Name="Rinse Fluidic System Msg.lvclass" Type="LVClass" URL="../../Application Messages/Rinse Fluidic System Msg/Rinse Fluidic System Msg.lvclass"/>
 		<Item Name="Set Detection Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Detection Msg/Set Detection Msg.lvclass"/>
 		<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
 		<Item Name="Stage Abort Motion Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Abort Motion Msg/Stage Abort Motion Msg.lvclass"/>
@@ -35,7 +27,6 @@
 		<Item Name="Start Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Live Mode Msg/Start Live Mode Msg.lvclass"/>
 		<Item Name="Start Stream Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Stream Msg/Start Stream Msg.lvclass"/>
 		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
-		<Item Name="Switch Valve Msg.lvclass" Type="LVClass" URL="../../Application Messages/Switch Valve Msg/Switch Valve Msg.lvclass"/>
 	</Item>
 	<Item Name="Application.lvclass" Type="LVClass" URL="../Application.lvclass"/>
 </Library>

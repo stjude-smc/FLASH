@@ -29,7 +29,6 @@
 				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
 				<Item Name="Synchronization Device.lvlib" Type="Library" URL="../Hardware/Synchronization Device/Synchronization Device.lvlib"/>
 				<Item Name="Laser Quantum.lvlib" Type="Library" URL="../Hardware/Laser Quantum/Laser Quantum.lvlib"/>
-				<Item Name="cetoni.lvlib" Type="Library" URL="../Hardware/cetoni/cetoni.lvlib"/>
 				<Item Name="Ti2.lvlib" Type="Library" URL="../Hardware/Ti2/Ti2.lvlib"/>
 				<Item Name="Tiff Writer.lvlib" Type="Library" URL="../Hardware/Tiff Writer/Tiff Writer.lvlib"/>
 			</Item>
@@ -102,7 +101,6 @@
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
-				<Item Name="QmixLib.lvlib" Type="Library" URL="/&lt;userlib&gt;/QmixLib/QmixLib.lvlib"/>
 				<Item Name="tm_closecamera_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_closecamera_40.vi"/>
 				<Item Name="tm_deinitialize_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_deinitialize_40.vi"/>
 				<Item Name="tm_errorreport.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_errorreport.vi"/>
@@ -325,7 +323,6 @@
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
 				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
-				<Item Name="subTimeDelay.vi" Type="VI" URL="/&lt;vilib&gt;/express/express execution control/TimeDelayBlock.llb/subTimeDelay.vi"/>
 				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
 				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
 				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
@@ -343,14 +340,11 @@
 				<Item Name="Write to XML File.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Write to XML File.vi"/>
 			</Item>
 			<Item Name="AF Debug.lvlib" Type="Library" URL="/&lt;resource&gt;/AFDebug/AF Debug.lvlib"/>
-			<Item Name="Change Buffer Dialog.vi" Type="VI" URL="../Hardware/cetoni/Change Buffer Dialog.vi"/>
 			<Item Name="dcimg2tiff.dll" Type="Document" URL="../../BinaryTIFF/CLib/DCIMG2TIFF/x64/Release/dcimg2tiff.dll"/>
 			<Item Name="histogram.dll" Type="Document" URL="../Resources/C Libraries/histogram/histogram.dll"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="labbCAN_Bus_API.lvlib" Type="Library" URL="../../../Program Files/cetoni/QmixSDK/lib/labview/labbCAN_Bus_API/labbCAN_Bus_API.lvlib"/>
-			<Item Name="labbCAN_Pump_API.lvlib" Type="Library" URL="../../../Program Files/cetoni/QmixSDK/lib/labview/labbCAN_Pump_API/labbCAN_Pump_API.lvlib"/>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
