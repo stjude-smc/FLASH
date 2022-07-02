@@ -243,49 +243,12 @@
 </Cluster>
 <Cluster>
 <Name>Virtual Camera Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>2</NumElts>
 <EW>
 <Name>Camera Type</Name>
 <Choice>Orca-Flash 4.0 V2</Choice>
 <Val>0</Val>
 </EW>
-<Array>
-<Name>Active Cameras</Name>
-<Dimsize>0</Dimsize>
-<Cluster>
-<Name>Physical Camera Assignment</Name>
-<NumElts>7</NumElts>
-<String>
-<Name>Channel Name</Name>
-<Val></Val>
-</String>
-<EW>
-<Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
-<Val></Val>
-</EW>
-<String>
-<Name>Serial Number</Name>
-<Val></Val>
-</String>
-<Boolean>
-<Name>Flip Vertically</Name>
-<Val></Val>
-</Boolean>
-<Boolean>
-<Name>Flip Horizontally</Name>
-<Val></Val>
-</Boolean>
-<DBL>
-<Name>photonsPerCount</Name>
-<Val></Val>
-</DBL>
-<I16>
-<Name>wavelength</Name>
-<Val></Val>
-</I16>
-</Cluster>
-</Array>
 <DAQChannel>
 <Name>Sync Line</Name>
 <Val>Dev1/port2/line7</Val>
