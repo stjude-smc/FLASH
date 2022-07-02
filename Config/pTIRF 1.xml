@@ -246,7 +246,7 @@
 <NumElts>2</NumElts>
 <EW>
 <Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
+<Choice>Hamamatsu</Choice>
 <Val>0</Val>
 </EW>
 <DAQChannel>
@@ -336,7 +336,7 @@
 </String>
 <EW>
 <Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
+<Choice>Hamamatsu</Choice>
 <Val>0</Val>
 </EW>
 <String>
@@ -369,7 +369,7 @@
 </String>
 <EW>
 <Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
+<Choice>Hamamatsu</Choice>
 <Val>0</Val>
 </EW>
 <String>
@@ -402,7 +402,7 @@
 </String>
 <EW>
 <Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
+<Choice>Hamamatsu</Choice>
 <Val>0</Val>
 </EW>
 <String>
@@ -435,7 +435,7 @@
 </String>
 <EW>
 <Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
+<Choice>Hamamatsu</Choice>
 <Val>0</Val>
 </EW>
 <String>
