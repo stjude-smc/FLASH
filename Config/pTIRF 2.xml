@@ -9,7 +9,7 @@
 <Dimsize>4</Dimsize>
 <Cluster>
 <Name>Shutter Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>4</NumElts>
 <DAQChannel>
 <Name>IO Line</Name>
 <Val>Dev1/port1/line0</Val>
@@ -22,10 +22,14 @@
 <Name>Wavelength</Name>
 <Val>473</Val>
 </U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
 </Cluster>
 <Cluster>
 <Name>Shutter Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>4</NumElts>
 <DAQChannel>
 <Name>IO Line</Name>
 <Val>Dev1/port1/line1</Val>
@@ -38,10 +42,14 @@
 <Name>Wavelength</Name>
 <Val>532</Val>
 </U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
 </Cluster>
 <Cluster>
 <Name>Shutter Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>4</NumElts>
 <DAQChannel>
 <Name>IO Line</Name>
 <Val>Dev1/port1/line2</Val>
@@ -54,10 +62,14 @@
 <Name>Wavelength</Name>
 <Val>640</Val>
 </U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
 </Cluster>
 <Cluster>
 <Name>Shutter Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>4</NumElts>
 <DAQChannel>
 <Name>IO Line</Name>
 <Val>Dev1/port1/line3</Val>
@@ -70,6 +82,10 @@
 <Name>Wavelength</Name>
 <Val>721</Val>
 </U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
 </Cluster>
 </Array>
 <Cluster>
@@ -102,7 +118,7 @@
 </Cluster>
 <Cluster>
 <Name>Microscope Configuration</Name>
-<NumElts>5</NumElts>
+<NumElts>3</NumElts>
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
@@ -116,76 +132,115 @@
 <Choice>Ti2</Choice>
 <Val>3</Val>
 </EW>
-<Refnum>
-<Name>FilterBlockCassette1</Name>
-<RefKind>ActiveX</RefKind>
-<ActiveXType>
-<GUID>{BD408A4B-5824-4218-9D34-E3B9C12B7633}</GUID>
-</ActiveXType>
-<Val>0x00000000</Val>
-</Refnum>
-<Refnum>
-<Name>LightPathDrive</Name>
-<RefKind>ActiveX</RefKind>
-<ActiveXType>
-<GUID>{FF537FC1-36BC-4DBD-AA5A-AD5FA45916C0}</GUID>
-</ActiveXType>
-<Val>0x00000000</Val>
-</Refnum>
-<Refnum>
-<Name>INikonTI</Name>
-<RefKind>ActiveX</RefKind>
-<ActiveXType>
-<GUID>{8E5C3167-1EFF-4414-ADA6-C06FA644F197}</GUID>
-</ActiveXType>
-<Val>0x00000000</Val>
-</Refnum>
+<Array>
+<Name>Detection Settings</Name>
+<Dimsize>6</Dimsize>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy2 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>1</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy3 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>2</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy5 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>3</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy7 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>4</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>No Filter (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>5</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Lasers to Eyes</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>6</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>1</Val>
+</U16>
+</Cluster>
+</Array>
 </Cluster>
 <Cluster>
 <Name>Virtual Camera Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>2</NumElts>
 <EW>
 <Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
+<Choice>Hamamatsu</Choice>
 <Val>0</Val>
 </EW>
-<Array>
-<Name>Active Cameras</Name>
-<Dimsize>0</Dimsize>
-<Cluster>
-<Name>Physical Camera Assignment</Name>
-<NumElts>7</NumElts>
-<String>
-<Name>Channel Name</Name>
-<Val></Val>
-</String>
-<EW>
-<Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
-<Val></Val>
-</EW>
-<String>
-<Name>Serial Number</Name>
-<Val></Val>
-</String>
-<Boolean>
-<Name>Flip Vertically</Name>
-<Val></Val>
-</Boolean>
-<Boolean>
-<Name>Flip Horizontally</Name>
-<Val></Val>
-</Boolean>
-<DBL>
-<Name>photonsPerCount</Name>
-<Val></Val>
-</DBL>
-<I16>
-<Name>wavelength</Name>
-<Val></Val>
-</I16>
-</Cluster>
-</Array>
 <DAQChannel>
 <Name>Sync Line</Name>
 <Val>Dev1/port2/line7</Val>
@@ -241,7 +296,7 @@
 </EW>
 <DBL>
 <Name>Polarizer Amplitude</Name>
-<Val>4812.17000000000007</Val>
+<Val>481216.99999999999900</Val>
 </DBL>
 <DBL>
 <Name>Polarizer Theta Zero</Name>
@@ -273,7 +328,7 @@
 </String>
 <EW>
 <Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
+<Choice>Hamamatsu</Choice>
 <Val>0</Val>
 </EW>
 <String>
@@ -306,7 +361,7 @@
 </String>
 <EW>
 <Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
+<Choice>Hamamatsu</Choice>
 <Val>0</Val>
 </EW>
 <String>
@@ -339,7 +394,7 @@
 </String>
 <EW>
 <Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
+<Choice>Hamamatsu</Choice>
 <Val>0</Val>
 </EW>
 <String>
@@ -372,7 +427,7 @@
 </String>
 <EW>
 <Name>Camera Type</Name>
-<Choice>Orca-Flash 4.0 V2</Choice>
+<Choice>Hamamatsu</Choice>
 <Val>0</Val>
 </EW>
 <String>
