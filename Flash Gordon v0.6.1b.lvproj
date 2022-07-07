@@ -113,11 +113,11 @@
 			<Item Name="Countdown Timer.lvlib" Type="Library" URL="../User Interface/Countdown Timer/Countdown Timer.lvlib"/>
 			<Item Name="Feedback Dialog.lvlib" Type="Library" URL="../User Interface/Feedback Dialog/Feedback Dialog.lvlib"/>
 			<Item Name="Main Window.lvlib" Type="Library" URL="../User Interface/Main Window/Main Window.lvlib"/>
-			<Item Name="Progress Window.lvlib" Type="Library" URL="../User Interface/Progress Window/Progress Window.lvlib"/>
 			<Item Name="Splash Screen.lvlib" Type="Library" URL="../User Interface/Splash Screen/Splash Screen.lvlib"/>
 			<Item Name="UI Window.lvlib" Type="Library" URL="../User Interface/UI Window/UI Window.lvlib"/>
 			<Item Name="Viewer.lvlib" Type="Library" URL="../User Interface/Viewer/Viewer.lvlib"/>
 		</Item>
+		<Item Name="Create Hardware Configuration UI.vi" Type="VI" URL="../Create Hardware Configuration UI.vi"/>
 		<Item Name="Create Hardware Configuration.vi" Type="VI" URL="../Application/Create Hardware Configuration.vi"/>
 		<Item Name="Create Initialization File.vi" Type="VI" URL="../Application/Create Initialization File.vi"/>
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
@@ -396,7 +396,7 @@
 				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{4E198746-E233-4A40-BF3C-4074437E612C}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{5481B59E-46DD-4CAE-8E6E-74E2209769FB}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
