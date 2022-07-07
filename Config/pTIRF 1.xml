@@ -118,7 +118,7 @@
 </Cluster>
 <Cluster>
 <Name>Microscope Configuration</Name>
-<NumElts>6</NumElts>
+<NumElts>3</NumElts>
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
@@ -132,30 +132,6 @@
 <Choice>Ti2</Choice>
 <Val>3</Val>
 </EW>
-<Refnum>
-<Name>FilterBlockCassette1</Name>
-<RefKind>ActiveX</RefKind>
-<ActiveXType>
-<GUID>{BD408A4B-5824-4218-9D34-E3B9C12B7633}</GUID>
-</ActiveXType>
-<Val>0x00000000</Val>
-</Refnum>
-<Refnum>
-<Name>LightPathDrive</Name>
-<RefKind>ActiveX</RefKind>
-<ActiveXType>
-<GUID>{FF537FC1-36BC-4DBD-AA5A-AD5FA45916C0}</GUID>
-</ActiveXType>
-<Val>0x00000000</Val>
-</Refnum>
-<Refnum>
-<Name>INikonTI</Name>
-<RefKind>ActiveX</RefKind>
-<ActiveXType>
-<GUID>{8E5C3167-1EFF-4414-ADA6-C06FA644F197}</GUID>
-</ActiveXType>
-<Val>0x00000000</Val>
-</Refnum>
 <Array>
 <Name>Detection Settings</Name>
 <Dimsize>6</Dimsize>
