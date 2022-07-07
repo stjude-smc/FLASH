@@ -1,0 +1,46 @@
+Hamamatsu DCIMG format
+======================
+(reverse-engineered, errors possible)
+
+HEADER
+------
+Offset	Type		Length	Content
+-------------------------------------------------------------------------
+0		char		5		"DCIMG"
+36		UInt32		1		number of frames
+48		UInt64		1		file size
+64		UInt64		1		file size
+120		UInt64		1		file size without header
+152		UInt32		1		number of frames
+156		UInt32		1		bytes per pixel(?)
+164		UInt32		1		width in pixels
+172		UInt32		1		height in pixels
+176		UInt32(?)	1		frame size in bytes
+192		UInt64		1		file size without header and appendix
+208		UInt32(?)	1		frame size in bytes
+232		UInt8		1		last byte of header (0)
+
+
+EACH FRAME
+----------
+line 1
+line 2
+...
+line (nLines/2)-1
+line (nLines/2) with first 4 pixels replaced by "0 MAX 0 MAX"
+line (nLines/2)+1
+...
+line nLines
+
+
+APPENDIX
+--------
+Offset				Type	Length		Content
+-------------------------------------------------------------------------
+(counted from the last pixel of the last frame)
+0										???
+272					UInt32	nFrames		frame numbers (0,1,...,nFrames-1)
+272+( 4*nFrames)	64bit	nFrames		time stamps?
+272+(12*nFrames)	UInt16	nFrames*4	missing pixels (see above)
+272+(20*nFrames)	256bit	nFrames		??? (constant value)
+272+(52*mFrames)			112 bytes	0

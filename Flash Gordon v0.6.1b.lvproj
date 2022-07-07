@@ -396,7 +396,7 @@
 				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{5481B59E-46DD-4CAE-8E6E-74E2209769FB}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{A9322029-7E7B-4CA1-8A92-6AD4CE1BCBA6}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>

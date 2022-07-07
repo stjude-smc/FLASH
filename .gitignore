@@ -1,1 +1,6 @@
-build/*
+build/
+BinaryTIFF/DCIMG2TIFF/.vs/
+BinaryTIFF/DCIMG2TIFF/dcimg2tiff/x64/
+BinaryTIFF/DCIMG2TIFF/dcimg2tiff_debug/x64/
+BinaryTIFF/DCIMG2TIFF/x64/
+BinaryTIFF/DCIMG2TIFF/dcimg2tiff_debug/.vs/

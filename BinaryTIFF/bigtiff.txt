@@ -1,0 +1,86 @@
+BigTIFF as written by BinaryTIFF routine
+========================================
+Useful TIFF file format reference with comprehensive list of tags: 
+http://www.awaresystems.be/imaging/tiff.html
+
+Official (outdated) TIFF specification:
+http://partners.adobe.com/public/developer/en/tiff/TIFF6.pdf
+
+There is no official BigTIFF specification, but common packages, including 
+BioFormats, Fiji, MATLAB, and the most recent version of LibTIFF can read
+the standard proposed in http://www.awaresystems.be/imaging/tiff/bigtiff.html.
+BinaryTIFF implements this proposed standard.
+
+HEADER
+------
+(Bytes)	(Type)	(Value)	(Description)
+0-1		U16		4949.H	little-endian byte order (4D4D.H for big-endian)
+2-3		U16		43		BigTIFF format
+4-5		U16		8		64bit (8B) offsets
+6-7		U16		0		constant
+8-15	U64				1st IFD offset
+
+
+EACH IFD
+--------
+0-7		U64				number of entries
+
+		EACH ENTRY
+		----------
+		0-1		U16		one of the following tag numbers (in ascending order within IFD):
+						(with the exception of 33434, this is the minimally required set of tags
+						according to the old specification)
+						(Tag)	(Type)	(Value)	(Description)
+						256		LONG			Image Width (in pixels)
+						257		LONG			Image Height (in pixels)
+						258		SHORT	16		Bits per Sample
+						259		SHORT	1		Compression ('1' = none)
+						262		SHORT	1		Photometric Interpretation ('1' = 0 is black)
+						273		IFD8			Strip Offsets (use single strip per frame)
+						278		LONG			Rows per Strip ( = Image Height)
+						279		LONG(8)			Strip Byte Counts ( = Image Height x Image Width x 2)
+						282		FRACTION		X Resolution (in pixels per centimeter)
+						283		FRACTION		Y Resolution (in pixels per centimeter)
+						296		SHORT	3		Resolution Unit (cm)
+						33434	FRACTION		EXIF Exposure Time (technically, this does not follow
+												the specification for including EXIF tags in TIFFs, see
+									http://www.awaresystems.be/imaging/tiff/tifftags/privateifd/exif.html,
+												but it is recognized correctly by imfinfo() in MATLAB)
+					
+						Potential future additions:
+						270		ASCII			Image Description (free-form metadata, 
+												also used for OME-TIFF xml data)
+						271		ASCII			Make (of camera)
+						272		ASCII			Model (of camera)
+						274		SHORT	1-8		Orientation
+						305		ASCII			Software
+						306		ASCII			Date/Time (file or frame?)
+						
+		2-3		U16		one of the following data type specifiers (corresponding to the tag):
+						(No.)	(Type)	(Type Name)
+						1		U8		BYTE
+						2		char	ASCII (NULL terminated, C style string)
+						3		U16		SHORT
+						4		U32		LONG
+						5		2*U32	FRACTION
+						6		I8		SBYTE
+						7		8bit	UNDEFINED
+						8		I16		SSHORT	
+						9		I32		SLONG
+						10		2*I32	SFRACTION
+						11		F32		FLOAT
+						12		F64		DOUBLE
+						13		U32		IFD	
+						16		U64		LONG8	
+						17		I64		SLONG8
+						18		U64		IFD8
+						
+		4-11	U64		number of values
+		12-19	U64		data (or offset, if size*number > 8 bytes; but this is not implemented yet)
+
+20*n+8	U64		next IFD offset (0 if this is the last IFD)
+
+
+IMAGE DATA
+----------
+		U16				one contiguous block
