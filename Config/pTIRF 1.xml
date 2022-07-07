@@ -9,7 +9,7 @@
 <Dimsize>4</Dimsize>
 <Cluster>
 <Name>Shutter Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>4</NumElts>
 <DAQChannel>
 <Name>IO Line</Name>
 <Val>Dev1/port1/line0</Val>
@@ -22,10 +22,14 @@
 <Name>Wavelength</Name>
 <Val>473</Val>
 </U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
 </Cluster>
 <Cluster>
 <Name>Shutter Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>4</NumElts>
 <DAQChannel>
 <Name>IO Line</Name>
 <Val>Dev1/port1/line1</Val>
@@ -38,10 +42,14 @@
 <Name>Wavelength</Name>
 <Val>532</Val>
 </U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
 </Cluster>
 <Cluster>
 <Name>Shutter Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>4</NumElts>
 <DAQChannel>
 <Name>IO Line</Name>
 <Val>Dev1/port1/line2</Val>
@@ -54,10 +62,14 @@
 <Name>Wavelength</Name>
 <Val>640</Val>
 </U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
 </Cluster>
 <Cluster>
 <Name>Shutter Configuration</Name>
-<NumElts>3</NumElts>
+<NumElts>4</NumElts>
 <DAQChannel>
 <Name>IO Line</Name>
 <Val>Dev1/port1/line3</Val>
@@ -70,6 +82,10 @@
 <Name>Wavelength</Name>
 <Val>721</Val>
 </U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
 </Cluster>
 </Array>
 <Cluster>
