@@ -394,7 +394,7 @@
 				<Property Name="Destination[1].path" Type="Path">../Stand-Alone/dll</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{87AD132E-3537-4D4F-A6E3-8CBA307C3B66}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{44E15C47-F798-4EE6-AEB5-E7A8F032D247}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
