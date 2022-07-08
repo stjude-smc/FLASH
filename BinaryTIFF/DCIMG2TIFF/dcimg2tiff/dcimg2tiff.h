@@ -5,6 +5,15 @@
 #define DCIMG2TIFFDLL_API __declspec(dllimport) 
 #endif
 
+//TIRF2-3, Fusion, DCAM 22
+/*
+#define DCIMG_OFFSET	912		// Hamamatsu DCIMG header size was 912
+#define FRAME_OFFSET	16		// bytes between frames was 16
+#define MISSING_OFFSET	12		// byte offset to missing pixels between frames
+#define MISSING_PIXELS	4		// number of missing pixels
+*/
+
+//TIRF1, Flash, DCAM 17.11
 #define DCIMG_OFFSET	864		// Hamamatsu DCIMG header size was 912
 #define FRAME_OFFSET	32		// bytes between frames was 16
 #define MISSING_OFFSET	12		// byte offset to missing pixels between frames
