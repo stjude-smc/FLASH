@@ -1,6 +1,6 @@
 Flash Gordon
 Version 1.0
-(c) Cornell University and St Jude Children's Research Hospital, 2014-2022
+Copyright (c) Cornell University and St Jude Children's Research Hospital, 2014-2022
 Created by Manuel Juette and Daniel Terry.
 
 
@@ -8,111 +8,99 @@ Created by Manuel Juette and Daniel Terry.
 Change log: version 1.0
 ----------
 
-This version is a fork of Manuel Juette's version 0.6.1b. Manuel made several versions
-  after this, but none were stable enough to use as a foundation. He may have made a
-  version 1.0, but that is not the same as this one.
+This version is a fork of Manuel Juette's version 0.6.1b (last stable version).
 
 * User Interface:
 
     - Much faster rendering of the live window reduces lag/stutter, especially with four cameras.
 
-	- More graceful error handling, for example with invalid configuration files.
+    - More graceful error handling, for example with invalid configuration files.
 
-	- Simplified block diagrams of Live Viewer and Main Window.
+    - Simplified block diagrams of Live Viewer and Main Window.
 
-	- Live Viewer: add timeout to prevent freezing if data camera never received.
+    - Live Viewer: add timeout to prevent freezing if data camera never received.
 
-	- Disable acquisition controls during streaming to prevent file saving errors.
+    - Disable acquisition controls during streaming to prevent file saving errors.
 
-	- Prevent Flash Gordon splash screen from hiding "Choose Configuration" diaglog.
+    - Prevent Flash Gordon splash screen from hiding "Choose Configuration" diaglog.
 
-	- Main Window status bar for background .tif movie saving (conversion from .dcimg).
+    - Main Window status bar for background .tif movie saving (conversion from .dcimg).
 
-	- Main Window: show correct number of veritcal lines for specified time resolution.
-
-	- Live Viewer: image flipping still occurs but 
+    - Main Window: show correct number of veritcal lines for specified time resolution.
 
 * Cameras:
 
-	- Use Hamamatsu video capture library version 4.4. Tested with DCAM version 18.12.5685.
-	    Required for properly supporting newer Fusion cameras.
+    - Use Hamamatsu video capture library version 4.4.
+        Required for properly supporting newer Fusion cameras.
 
-	- Fix crash: number of lines must be divisible by 8.
+    - Fix crash: number of lines must be divisible by 8.
 
-	- Fix crash when closing Flash Gordon (trying to close camera handle after deleted).
+    - Fix crash when closing Flash Gordon (trying to close camera handle after deleted).
 
-	- Fix various triggering issues, especially for sub-ms recordings.
+    - Fix various triggering issues, especially for sub-ms recordings.
 
-	- Automatically choose optimal readout mode for a given camera and time resolution.
+    - Automatically choose optimal readout mode for a given camera and time resolution.
 
-	- Fix variable delay between end of stream acquisition and .tif file conversion caused by
-	    pile-up of "Get Most Recent Frame" messages with short refresh time.
+    - Fix variable delay between end of stream acquisition and .tif file conversion caused by
+        pile-up of "Get Most Recent Frame" messages with short refresh time.
 
 * Stage:
 
-	- Support for Ti2 stage movement. Allow "Disabled" as a valid microscope configuration.
-	    Stage moves in 100 um increments to avoid freezing control pad and allow stopping movement early.
+    - Support for Ti2 stage movement. Allow "Disabled" as a valid microscope configuration.
+        Photobleach command stage movements are in 100 um increments to avoid
+        freezing control pad and allow stopping movement early.
 
-	- Disable stage "Move Home" unless user has pressed "Set Home" first to prevent undefined behavior.
+    - Disable stage "Move Home" unless user has pressed "Set Home" first to prevent undefined behavior.
 
-	- If Ti2 stage not detected, give an error instead of silently failing or crashing.
+    - If Ti2 stage not detected, give an error instead of silently failing or crashing.
 
-	- Disable Ti2 control pad joystick while photobleaching to prevent erratic behavior.
+    - Disable Ti2 control pad joystick while photobleaching to prevent erratic behavior.
 
-	- Detect when stage reaches hardware limit, show a warning, and gracefully recovery.
+    - Detect when stage reaches hardware limit, show a warning, and gracefully recovery.
 
 
 * Lasers:
 
-	- LaserQuantum: if user tries to set power for a laser not configured, give a warning rather than crash.
+    - LaserQuantum: if user tries to set power for a laser not configured, give a warning rather than crash.
 
-	- Add support for rapid laser power tuning with a rotating polarizer (Thorlabs PRM1Z8).
+    - Add support for rapid laser power tuning with a rotating polarizer (Thorlabs PRM1Z8).
 
-	- LaserQuantum: include cases for supported lasers including OBIS (RS232) and "Disabled".
-	    This should be renamed to "Virtual Laser" in the future.
-
-* Fluidics:
-
-	- Early implementation of Cetoni device (not enabled yet).
+    - LaserQuantum: include cases for supported lasers including OBIS (RS232) and "Disabled".
+        This should be renamed to "Virtual Laser" in the future.
 
 * BinaryTIFF:
 
-	- Support for new .dcimg file format with newer DCAM/cameras.
+    - Use dcimgapi.dll to read .dcimg files. This will enable support for any DCAM version
+        and camera model. It is slightly faster in many cases than the previous version that
+        directly read the files. Single-channel is significantly faster.
 
-	- "Rescue Raw Data" no longer tries to read proprietary .dcimg fields for image size,
-	    which changes between library versions. Instead, get parameters from "Max Lines.vi".
+    - "Rescue Raw Data" no longer tries to read proprietary .dcimg fields for image size,
+        which changes between library versions. Instead, get parameters from "Max Lines.vi".
 
-	- Create TiffWriter class to convert .dcimg to .tif files in the backrgound.
-	    This allows user to Show Live or start next acquisition without delay.
+    - Create TiffWriter class to convert .dcimg to .tif files in the backrgound.
+        This allows user to Show Live or start next acquisition without delay.
 
 
 
 Known issues:
 ----------
 
-- Main window stage "STOP" button does not appear to work for Ti2.
+ - Invalid Init.xml file will cause the Flash Gordon to crash without the
+    configuration selection dialog ever appearing.
 
-- Changing time resolution or other camera settings during live display will cause
-   pixel correction to be turned off unexpectedly.
-
-- The progress bar for file saving (conversion to .tif) can have erratic behavior or
-   stall if the user either acquires a new movies with a different number of frames
-   while the previous one is saving or cancels the acquisition early. This does not
-   affect the saved files, only the status bar appearance.
-
-- Errors in Actors only give a generic Actor Framework message. 
-
-- Live Viewer color map bar is often reversed and scale limits can go be out of range.
-
+ - If any device, such as a camera, is disconnected while running,
+    Flash Gordon may freeze or crash.
 
 
 
 Testing platforms verified to work:
 ----------
  - Windows 10 Enterprise (20H2; build 19042.1526) 64-bit
- - Hamamatsu HVC 4.4 and DCAM 18.12.5685
+ - Hamamatsu HVC 4.4.23 and DCAM 22.2.6391
  - Hamamatsu Fusion (C14440-20UP) with USB 3.0 interface.
- - Hamamatsu Flash 4.0v2 (C11440-22CU) with CoaXPress cards. Flash v3 probably also works.
+ - Hamamatsu Flash 4.0v2 (C11440-22CU) with CoaXPress cards.
+ - Nation Instruments USB-6501 DAQ.
+ - Tektronix TDS 2014C oscilloscope.
  - Nikon Ti2 stand with build-in stage and filter turret.
  - Newport ESP301 stage driver
  - LaserQuantum Ciel 473nm and Opus 532 lasers
