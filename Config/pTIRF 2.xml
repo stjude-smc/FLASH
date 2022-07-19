@@ -337,11 +337,11 @@
 </String>
 <Boolean>
 <Name>Flip Vertically</Name>
-<Val>0</Val>
+<Val>1</Val>
 </Boolean>
 <Boolean>
 <Name>Flip Horizontally</Name>
-<Val>1</Val>
+<Val>0</Val>
 </Boolean>
 <DBL>
 <Name>photonsPerCount</Name>
@@ -436,11 +436,11 @@
 </String>
 <Boolean>
 <Name>Flip Vertically</Name>
-<Val>0</Val>
+<Val>1</Val>
 </Boolean>
 <Boolean>
 <Name>Flip Horizontally</Name>
-<Val>1</Val>
+<Val>0</Val>
 </Boolean>
 <DBL>
 <Name>photonsPerCount</Name>
