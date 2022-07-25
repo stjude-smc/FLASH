@@ -5,7 +5,10 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="driver VIs" Type="Folder">
+		<Item Name="ASI TG-1000.lvlib" Type="Library" URL="/&lt;instrlib&gt;/ASI TG-1000/ASI TG-1000.lvlib"/>
+		<Item Name="Initialization.vi" Type="VI" URL="../driver VIs/Initialization.vi"/>
 		<Item Name="IOMAC5000.vi" Type="VI" URL="../driver VIs/IOMAC5000.vi"/>
+		<Item Name="MAC6000_test.vi" Type="VI" URL="../driver VIs/MAC6000_test.vi"/>
 	</Item>
 	<Item Name="Messages for this actor" Type="Folder">
 		<Item Name="Abort Motion Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Abort Motion Msg/Abort Motion Msg.lvclass"/>
