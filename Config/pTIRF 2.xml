@@ -113,6 +113,8 @@
 <Choice>Disabled</Choice>
 <Choice>ESP301</Choice>
 <Choice>Ti2</Choice>
+<Choice>Ludl</Choice>
+<Choice>ASI</Choice>
 <Val>2</Val>
 </EW>
 </Cluster>
