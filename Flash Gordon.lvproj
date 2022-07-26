@@ -110,7 +110,7 @@
 		</Item>
 		<Item Name="User Interface" Type="Folder">
 			<Item Name="Change Log.lvlib" Type="Library" URL="../User Interface/Change Log/Change Log.lvlib"/>
-			<Item Name="Countdown Timer.lvlib" Type="Library" URL="../User Interface/Countdown Timer/Countdown Timer.lvlib"/>
+			<Item Name="Countdown.vi" Type="VI" URL="../User Interface/Countdown.vi"/>
 			<Item Name="Feedback Dialog.lvlib" Type="Library" URL="../User Interface/Feedback Dialog/Feedback Dialog.lvlib"/>
 			<Item Name="Main Window.lvlib" Type="Library" URL="../User Interface/Main Window/Main Window.lvlib"/>
 			<Item Name="Splash Screen.lvlib" Type="Library" URL="../User Interface/Splash Screen/Splash Screen.lvlib"/>
@@ -122,9 +122,6 @@
 		<Item Name="Create Initialization File.vi" Type="VI" URL="../Application/Create Initialization File.vi"/>
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
-			<Item Name="instr.lib" Type="Folder">
-				<Item Name="ASI TG-1000.lvlib" Type="Library" URL="/&lt;instrlib&gt;/ASI TG-1000/ASI TG-1000.lvlib"/>
-			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="tm_closecamera_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_closecamera_40.vi"/>
 				<Item Name="tm_deinitialize_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_deinitialize_40.vi"/>
