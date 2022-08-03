@@ -21,8 +21,8 @@ extern "C" DCIMG2TIFFDLL_API void cancelConversion();
 
 extern "C" DCIMG2TIFFDLL_API uint32_t dcimg2tiff(
 	char* tiffPath, 						// TIFF file (prepared by BinaryTIFF.lvproj)
-	uint32_t frameWidth,					// frame width (single channel)
-	uint32_t frameHeight, 					// frame height (single channel)
+	uint32_t _frameWidth,					// frame width (single channel)
+	uint32_t _frameHeight, 					// frame height (single channel)
 	uint32_t nFrames, 						// number of frames
 	uint32_t skipFrames,					// number of frames to skip from beginning of movie
 	uint32_t nChannels,						// number of channels (2 to 4)

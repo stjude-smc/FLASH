@@ -80,8 +80,8 @@ void debugPrintf(const char *fmt, ...)
 //
 extern "C" uint32_t dcimg2tiff(
 	char* tiffPath, 						// TIFF file (prepared by BinaryTIFF.lvproj)
-	uint32_t frameWidth,					// frame width in pixels (single channel)
-	uint32_t frameHeight, 					// frame height in pixels (single channel)
+	uint32_t _frameWidth,					// frame width in pixels (single channel)
+	uint32_t _frameHeight, 					// frame height in pixels (single channel)
 	uint32_t nFrames, 						// number of frames (excluding skipFrames)
 	uint32_t skipFrames,					// number of frames to skip from beginning of movie
 	uint32_t nChannels,						// number of channels (1 to 4)
@@ -97,7 +97,7 @@ extern "C" uint32_t dcimg2tiff(
 {
 	// initializations
 	remove(LOGFILE);
-	clock_t startTime = clock();
+	//clock_t startTime = clock();
 	//debugPrintf("START: %s", dcimgPath1);
 	resetCurrentFrame();
 	canceled = 0;
@@ -130,16 +130,16 @@ extern "C" uint32_t dcimg2tiff(
 
 	// Verify input arguments match the dcimg file
 	// FIXME: we assume these parameters all match (they should)
-	int32 width, height, rowbytes, pixeltype;
-	if ( !get_image_information(hdcimg[0], width, height, rowbytes, pixeltype) )
+	int32 frameWidth, frameHeight, rowbytes, pixeltype;
+	if ( !get_image_information(hdcimg[0], frameWidth, frameHeight, rowbytes, pixeltype) )
 		cancelConversion();
 
 	DCIMG_FRAME	frame;
 	memset(&frame, 0, sizeof(frame));
 	frame.size = sizeof(frame);
-	frame.width = width;
-	frame.height = height;
-	frame.rowbytes = rowbytes;
+	//frame.width = frameWidth;
+	//frame.height = frameHeight;
+	//frame.rowbytes = rowbytes;  //seems these are only used by dcimg_copyframe
 
 
 	// allocate frame buffers for reading and writing
@@ -152,7 +152,7 @@ extern "C" uint32_t dcimg2tiff(
 	uint16_t* writeBuffer = (uint16_t*)malloc(movieWidth*movieHeight*frameLength);
 
 
-	for (i=skipFrames; i<nFrames+skipFrames; i++)  // loop over frames
+	for (i=skipFrames; i<nFrames+skipFrames; ++i)  // loop over frames
 	{
 		if (canceled) break; // abort if cancelConversion() was executed
 		frame.iFrame = i;
@@ -181,7 +181,7 @@ extern "C" uint32_t dcimg2tiff(
 			err = dcimg_lockframe(hdcimg[ch], &frame);
 			if (failed(err))  {
 				cancelConversion();
-				dcimgcon_show_dcimgerr(err, "dcimg_copyframe()", "frame #%d", i);
+				dcimgcon_show_dcimgerr(err, "dcimg_lockframe()", "frame #%d", i);
 				break;
 			}
 			newbuf = (uint16_t*)frame.buf;
@@ -361,10 +361,22 @@ BOOL get_image_information(HDCIMG hdcimg, int32& width, int32& height, int32& ro
 		return FALSE;
 	}
 
+	/* DCIMG_IDPARAML_NUMBEROF_TOTALFRAME = all sessions?
+	int32 input_nFrames;
+	// get pixel type
+	err = dcimg_getparaml(hdcimg, DCIMG_IDPARAML_NUMBEROF_FRAME, &input_nFrames);
+	if (failed(err))
+	{
+		dcimgcon_show_dcimgerr(err, "dcimg_getparaml(DCIMG_IDPARAML_NUMBEROF_FRAME)");
+		return FALSE;
+	}
+	*/
+
 	width = nWidth;
 	height = nHeight;
 	rowbytes = nRowbytes;
 	pixeltype = nPixeltype;
+	//nFrames = input_nFrames;
 
 	return TRUE;
 }
