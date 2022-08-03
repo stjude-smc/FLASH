@@ -94,7 +94,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM4</Val>
+<Val>COM14</Val>
 </Refnum>
 <DBL>
 <Name>Forward Step (mm)</Name>
