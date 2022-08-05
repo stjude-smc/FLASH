@@ -250,7 +250,7 @@
 </Cluster>
 <Array>
 <Name>Laser Configuration</Name>
-<Dimsize>2</Dimsize>
+<Dimsize>3</Dimsize>
 <Cluster>
 <Name>Laser Configuration</Name>
 <NumElts>5</NumElts>
@@ -265,6 +265,7 @@
 <Choice>Laser Quantum</Choice>
 <Choice>Coherent OBIS</Choice>
 <Choice>PRM1-Z8</Choice>
+<Choice>Coherent HOPS</Choice>
 <Val>1</Val>
 </EW>
 <DBL>
@@ -294,6 +295,7 @@
 <Choice>Laser Quantum</Choice>
 <Choice>Coherent OBIS</Choice>
 <Choice>PRM1-Z8</Choice>
+<Choice>Coherent HOPS</Choice>
 <Val>1</Val>
 </EW>
 <DBL>
@@ -307,6 +309,36 @@
 <U16>
 <Name>Wavelength</Name>
 <Val>532</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Laser Configuration</Name>
+<NumElts>5</NumElts>
+<Refnum>
+<Name>Serial Port</Name>
+<RefKind>VISA</RefKind>
+<Val></Val>
+</Refnum>
+<EW>
+<Name>Laser Type</Name>
+<Choice>Disable</Choice>
+<Choice>Laser Quantum</Choice>
+<Choice>Coherent OBIS</Choice>
+<Choice>PRM1-Z8</Choice>
+<Choice>Coherent HOPS</Choice>
+<Val>4</Val>
+</EW>
+<DBL>
+<Name>Polarizer Amplitude</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Polarizer Theta Zero</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<U16>
+<Name>Wavelength</Name>
+<Val>640</Val>
 </U16>
 </Cluster>
 </Array>

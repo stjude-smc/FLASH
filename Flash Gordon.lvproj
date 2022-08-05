@@ -73,6 +73,13 @@
 				<Item Name="Resize Graph.vi" Type="VI" URL="../Resources/Helper VIs/Resize Graph.vi"/>
 				<Item Name="Set Title Bar Icon.vi" Type="VI" URL="../Resources/Helper VIs/Set Title Bar Icon.vi"/>
 			</Item>
+			<Item Name="HOPS" Type="Folder">
+				<Item Name="CheckForDevices.vi" Type="VI" URL="../Resources/HOPS/CheckForDevices.vi"/>
+				<Item Name="close.vi" Type="VI" URL="../Resources/HOPS/close.vi"/>
+				<Item Name="Error Handler.vi" Type="VI" URL="../Resources/HOPS/Error Handler.vi"/>
+				<Item Name="GetDLLVersion.vi" Type="VI" URL="../Resources/HOPS/GetDLLVersion.vi"/>
+				<Item Name="SendCommand.vi" Type="VI" URL="../Resources/HOPS/SendCommand.vi"/>
+			</Item>
 			<Item Name="Images" Type="Folder">
 				<Item Name="Icon.gif" Type="Document" URL="../Resources/Images/Icon.gif"/>
 				<Item Name="Icon.ico" Type="Document" URL="../Resources/Images/Icon.ico"/>
