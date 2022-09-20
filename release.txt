@@ -2,7 +2,7 @@ Flash Gordon
 Version 1.0
 Copyright (c) Cornell University and St Jude Children's Research Hospital, 2014-2022
 Created by Manuel Juette and Daniel Terry.
-
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 
 Change log: version 1.0
@@ -12,74 +12,76 @@ This version is a fork of Manuel Juette's version 0.6.1b (last stable version).
 
 * User Interface:
 
-    - Much faster rendering of the live window reduces lag/stutter, especially with four cameras.
+  - Much faster rendering of the live window reduces lag/stutter.
 
-    - More graceful error handling, for example with invalid configuration files.
+  - More graceful error handling, for example with invalid configuration files.
 
-    - Simplified block diagrams of Live Viewer and Main Window.
+  - Simplified block diagrams of Live Viewer and Main Window.
 
-    - Live Viewer: add timeout to prevent freezing if data camera never received.
+  - Live Viewer: add timeout to prevent freezing if data camera never received.
 
-    - Disable acquisition controls during streaming to prevent file saving errors.
+  - Disable acquisition controls during streaming to prevent file saving errors.
 
-    - Prevent Flash Gordon splash screen from hiding "Choose Configuration" diaglog.
+  - Prevent Flash Gordon splash screen from hiding "Choose Configuration" diaglog.
 
-    - Main Window status bar for background .tif movie saving (conversion from .dcimg).
+  - Main Window status bar for background .tif movie saving (conversion from .dcimg).
 
-    - Main Window: show correct number of veritcal lines for specified time resolution.
+  - Main Window: show correct number of veritcal lines for specified time resolution.
+
+ - Countdown Timer: improved synchronization with actual movie start.
+
 
 * Cameras:
 
-    - Use Hamamatsu video capture library version 4.4.
-        Required for properly supporting newer Fusion cameras.
+  - Support for Fusion cameras by upgrading to HVC version 4.4.
 
-    - Fix crash: number of lines must be divisible by 8.
+  - Fix crash: number of lines must be divisible by 8.
 
-    - Fix crash when closing Flash Gordon (trying to close camera handle after deleted).
+  - Fix crash when closing Flash Gordon (trying to close camera handle after deleted).
 
-    - Fix various triggering issues, especially for sub-ms recordings.
+  - Fix various triggering issues, especially for sub-ms recordings.
 
-    - Automatically choose optimal readout mode for a given camera and time resolution.
+  - Automatically choose optimal readout mode for a given camera and time resolution.
 
-    - Fix variable delay between end of stream acquisition and .tif file conversion caused by
-        pile-up of "Get Most Recent Frame" messages with short refresh time.
+  - Fix delay between end of stream acquisition and .tif file conversion caused by
+      pile-up of "Get Most Recent Frame" messages with short refresh time.
+
 
 * Stage:
 
-    - Support for Ti2 stage movement. Allow "Disabled" as a valid microscope configuration.
-        Photobleach command stage movements are in 100 um increments to avoid
-        freezing control pad and allow stopping movement early.
+  - Support for Ludl, ASI, and Ti2 stages, as well as "Disabled" mode.
 
-    - Disable stage "Move Home" unless user has pressed "Set Home" first to prevent undefined behavior.
+  - Disable "Move Home" button before "Set Home" to prevent undefined behavior.
 
-    - If Ti2 stage not detected, give an error instead of silently failing or crashing.
+  - If stage not detected, give an error instead of silently failing or crashing.
 
-    - Disable Ti2 control pad joystick while photobleaching to prevent erratic behavior.
+  - Ti2: Disable control pad joystick while photobleaching to prevent erratic behavior.
 
-    - Detect when stage reaches hardware limit, show a warning, and gracefully recovery.
+  - Ti2: Detect when stage reaches hardware limit, show a warning, and gracefully recovery.
 
 
 * Lasers:
 
-    - LaserQuantum: if user tries to set power for a laser not configured, give a warning rather than crash.
+  - Support for stroboscopic, time-lapse, and alternating laser excitation (ALEX) modes.
 
-    - Add support for rapid laser power tuning with a rotating polarizer (Thorlabs PRM1Z8).
+  - Support for Coherent Genesis lasers (HOPS driver).
 
-    - LaserQuantum: include cases for supported lasers including OBIS (RS232) and "Disabled".
-        This should be renamed to "Virtual Laser" in the future.
+  - Support for rapid laser power tuning with a rotating polarizer (Thorlabs PRM1Z8).
+
+  - Give a warning instead of crashing if a laser not configured.
+
 
 * BinaryTIFF:
 
-    - Use dcimgapi.dll to read .dcimg files. This will enable support for any DCAM version
-        and camera model. It is slightly faster in many cases than the previous version that
-        directly read the files. Single-channel is significantly faster.
+  - Use dcimgapi.dll to read .dcimg files. This will enable support for any DCAM version
+      and camera model. It is slightly faster in many cases than the previous version that
+      directly read the files. Single-channel is significantly faster.
 
-    - "Rescue Raw Data" no longer tries to read proprietary .dcimg fields for image size,
-        which changes between library versions. Instead, get parameters from "Max Lines.vi".
+  - "Rescue Raw Data" no longer tries to read proprietary .dcimg fields for image size,
+      which changes between library versions. Instead, get parameters from "Max Lines.vi".
 
-    - Create TiffWriter class to convert .dcimg to .tif files in the backrgound.
-        This allows user to Show Live or start next acquisition without delay.
-
+  - Create TiffWriter class to convert .dcimg to .tif files in the backrgound.
+      This allows user to Show Live or start next acquisition without delay.
 
 
 Known issues:
@@ -96,7 +98,8 @@ Known issues:
 Testing platforms verified to work:
 ----------
  - Windows 10 Enterprise (20H2; build 19042.1526) 64-bit
- - Hamamatsu HVC 4.4.23 and DCAM 22.2.6391
+ - Hamamatsu HVC 4.4.23
+ - Hamamatsu DCAM 22.2.6391
  - Hamamatsu Fusion (C14440-20UP) with USB 3.0 interface.
  - Hamamatsu Flash 4.0v2 (C11440-22CU) with CoaXPress cards.
  - Nation Instruments USB-6501 DAQ.
@@ -104,4 +107,5 @@ Testing platforms verified to work:
  - Nikon Ti2 stand with build-in stage and filter turret.
  - Newport ESP301 stage driver
  - LaserQuantum Ciel 473nm and Opus 532 lasers
+ - Coherent Genesis MTX-STM 640
  - Thorlabs PRM1Z8 rotation stage for laser attenuation polarizer.
