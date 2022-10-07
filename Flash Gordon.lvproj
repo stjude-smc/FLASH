@@ -400,7 +400,6 @@
 				<Property Name="App_INI_aliasGUID" Type="Str">{6BEBD298-F68D-4CFA-AA16-7A25096881B5}</Property>
 				<Property Name="App_INI_GUID" Type="Str">{EF65907B-DF4D-4AE7-BA2D-819191B392D7}</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
-				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{E5A166F8-B122-4B59-844C-826515618897}</Property>
 				<Property Name="Bld_buildSpecName" Type="Str">Flash Gordon</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
@@ -410,8 +409,10 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
-				<Property Name="Bld_version.build" Type="Int">101</Property>
+				<Property Name="Bld_version.build" Type="Int">1007</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Bld_version.minor" Type="Int">1</Property>
+				<Property Name="Bld_version.patch" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Flash Gordon.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../Stand-Alone/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -420,7 +421,7 @@
 				<Property Name="Destination[1].path" Type="Path">../Stand-Alone/dll</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{12AEC07A-667B-4BDD-951C-A5F2E098A284}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{58AE4709-8EBE-471C-9F52-8694E83B7B09}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
@@ -440,7 +441,7 @@
 				<Property Name="Source[5].type" Type="Str">Container</Property>
 				<Property Name="SourceCount" Type="Int">6</Property>
 				<Property Name="TgtF_companyName" Type="Str">St Jude Childrens Research Hospital</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Flash Gordon</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Instrument control and data acquisition for TIRF-smFRET imaging</Property>
 				<Property Name="TgtF_internalName" Type="Str">Flash Gordon</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2014-2022 Blanchard Lab</Property>
 				<Property Name="TgtF_productName" Type="Str">Flash Gordon</Property>
