@@ -24,7 +24,6 @@
 			<Item Name="Hardware Abstraction Layer" Type="Folder">
 				<Item Name="Camera.lvlib" Type="Library" URL="../Hardware/Camera/Camera.lvlib"/>
 				<Item Name="Device.lvlib" Type="Library" URL="../Hardware/Device/Device.lvlib"/>
-				<Item Name="Virtual Camera.lvlib" Type="Library" URL="../Hardware/Virtual Camera/Virtual Camera.lvlib"/>
 				<Item Name="Virtual Microscope.lvlib" Type="Library" URL="../Hardware/Virtual Microscope/Virtual Microscope.lvlib"/>
 			</Item>
 			<Item Name="Hardware Devices" Type="Folder">
@@ -65,6 +64,7 @@
 			<Item Name="Helper VIs" Type="Folder">
 				<Item Name="Check File Path.vi" Type="VI" URL="../Resources/Helper VIs/Check File Path.vi"/>
 				<Item Name="Color Table To Reference.vi" Type="VI" URL="../Resources/Helper VIs/Color Table To Reference.vi"/>
+				<Item Name="Create Stack Info.vi" Type="VI" URL="../Resources/Helper VIs/Create Stack Info.vi"/>
 				<Item Name="Cubehelix.vi" Type="VI" URL="../Resources/Helper VIs/Cubehelix.vi"/>
 				<Item Name="Custom Photobleach Length.vi" Type="VI" URL="../Resources/Helper VIs/Custom Photobleach Length.vi"/>
 				<Item Name="DCIMG File Names.vi" Type="VI" URL="../Resources/Helper VIs/DCIMG File Names.vi"/>
@@ -393,6 +393,7 @@
 			<Item Name="user32.dll" Type="Document" URL="user32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Virtual Camera.lvlib" Type="Library" URL="../Hardware/Virtual Camera/Virtual Camera.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Flash Gordon" Type="EXE">
