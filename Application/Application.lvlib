@@ -10,6 +10,7 @@
 		<Item Name="Finish Stream Msg.lvclass" Type="LVClass" URL="../../Application Messages/Finish Stream Msg/Finish Stream Msg.lvclass"/>
 		<Item Name="Launch Viewer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Launch Viewer Msg/Launch Viewer Msg.lvclass"/>
 		<Item Name="Live Button Off Msg.lvclass" Type="LVClass" URL="../../Application Messages/Live Button Off Msg/Live Button Off Msg.lvclass"/>
+		<Item Name="New Frame Notify Msg.lvclass" Type="LVClass" URL="../../Application Messages/New Frame Notify Msg/New Frame Notify Msg.lvclass"/>
 		<Item Name="Open Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Open Shutter Msg/Open Shutter Msg.lvclass"/>
 		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
 		<Item Name="Photobleach Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Msg/Photobleach Msg.lvclass"/>
