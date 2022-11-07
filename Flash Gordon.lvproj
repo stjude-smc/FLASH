@@ -24,7 +24,6 @@
 			<Item Name="Hardware Abstraction Layer" Type="Folder">
 				<Item Name="Camera.lvlib" Type="Library" URL="../Hardware/Camera/Camera.lvlib"/>
 				<Item Name="Device.lvlib" Type="Library" URL="../Hardware/Device/Device.lvlib"/>
-				<Item Name="Virtual Microscope.lvlib" Type="Library" URL="../Hardware/Virtual Microscope/Virtual Microscope.lvlib"/>
 			</Item>
 			<Item Name="Hardware Devices" Type="Folder">
 				<Item Name="Orca-Flash 4.0 V2.lvlib" Type="Library" URL="../Hardware/Orca-Flash 4.0 V2/Orca-Flash 4.0 V2.lvlib"/>
@@ -94,7 +93,6 @@
 				<Item Name="test laser.vi" Type="VI" URL="../Resources/Testing/test laser.vi"/>
 				<Item Name="Test Sync Device.vi" Type="VI" URL="../Application/Test Sync Device.vi"/>
 				<Item Name="Test Sync.vi" Type="VI" URL="../Resources/Testing/Test Sync.vi"/>
-				<Item Name="V-Cam Test.vi" Type="VI" URL="../Resources/Testing/V-Cam Test.vi"/>
 				<Item Name="Viewer wrapper.vi" Type="VI" URL="../Resources/Testing/Viewer wrapper.vi"/>
 			</Item>
 			<Item Name="Type Defs" Type="Folder">
@@ -393,7 +391,6 @@
 			<Item Name="user32.dll" Type="Document" URL="user32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Virtual Camera.lvlib" Type="Library" URL="../Hardware/Virtual Camera/Virtual Camera.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Flash Gordon" Type="EXE">
