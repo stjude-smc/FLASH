@@ -18,6 +18,7 @@
 		</Item>
 		<Item Name="BinaryTIFF" Type="Folder">
 			<Item Name="BinaryTIFF.lvlib" Type="Library" URL="../BinaryTIFF/BinaryTIFF.lvlib"/>
+			<Item Name="Tiff Writer.lvlib" Type="Library" URL="../Hardware/Tiff Writer/Tiff Writer.lvlib"/>
 		</Item>
 		<Item Name="Hardware" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
@@ -26,12 +27,11 @@
 				<Item Name="Device.lvlib" Type="Library" URL="../Hardware/Device/Device.lvlib"/>
 			</Item>
 			<Item Name="Hardware Devices" Type="Folder">
-				<Item Name="Orca-Flash 4.0 V2.lvlib" Type="Library" URL="../Hardware/Orca-Flash 4.0 V2/Orca-Flash 4.0 V2.lvlib"/>
+				<Item Name="Hamamatsu Camera.lvlib" Type="Library" URL="../Hardware/Hamamatsu Camera/Hamamatsu Camera.lvlib"/>
 				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
 				<Item Name="Synchronization Device.lvlib" Type="Library" URL="../Hardware/Synchronization Device/Synchronization Device.lvlib"/>
-				<Item Name="Laser Quantum.lvlib" Type="Library" URL="../Hardware/Laser Quantum/Laser Quantum.lvlib"/>
-				<Item Name="Ti2.lvlib" Type="Library" URL="../Hardware/Ti2/Ti2.lvlib"/>
-				<Item Name="Tiff Writer.lvlib" Type="Library" URL="../Hardware/Tiff Writer/Tiff Writer.lvlib"/>
+				<Item Name="Laser.lvlib" Type="Library" URL="../Hardware/Laser/Laser.lvlib"/>
+				<Item Name="Microscope.lvlib" Type="Library" URL="../Hardware/Microscope/Microscope.lvlib"/>
 			</Item>
 		</Item>
 		<Item Name="Resources" Type="Folder">
@@ -72,13 +72,6 @@
 				<Item Name="Resize Graph.vi" Type="VI" URL="../Resources/Helper VIs/Resize Graph.vi"/>
 				<Item Name="Set Title Bar Icon.vi" Type="VI" URL="../Resources/Helper VIs/Set Title Bar Icon.vi"/>
 			</Item>
-			<Item Name="HOPS" Type="Folder">
-				<Item Name="CheckForDevices.vi" Type="VI" URL="../Resources/HOPS/CheckForDevices.vi"/>
-				<Item Name="close.vi" Type="VI" URL="../Resources/HOPS/close.vi"/>
-				<Item Name="Error Handler.vi" Type="VI" URL="../Resources/HOPS/Error Handler.vi"/>
-				<Item Name="GetDLLVersion.vi" Type="VI" URL="../Resources/HOPS/GetDLLVersion.vi"/>
-				<Item Name="SendCommand.vi" Type="VI" URL="../Resources/HOPS/SendCommand.vi"/>
-			</Item>
 			<Item Name="Images" Type="Folder">
 				<Item Name="Icon.gif" Type="Document" URL="../Resources/Images/Icon.gif"/>
 				<Item Name="Icon.ico" Type="Document" URL="../Resources/Images/Icon.ico"/>
@@ -90,7 +83,6 @@
 				<Item Name="color map in histogram.vi" Type="VI" URL="../Resources/Testing/color map in histogram.vi"/>
 				<Item Name="events test.vi" Type="VI" URL="../Resources/Testing/events test.vi"/>
 				<Item Name="Test color map.vi" Type="VI" URL="../Resources/Testing/Test color map.vi"/>
-				<Item Name="test laser.vi" Type="VI" URL="../Resources/Testing/test laser.vi"/>
 				<Item Name="Test Sync Device.vi" Type="VI" URL="../Application/Test Sync Device.vi"/>
 				<Item Name="Test Sync.vi" Type="VI" URL="../Resources/Testing/Test Sync.vi"/>
 				<Item Name="Viewer wrapper.vi" Type="VI" URL="../Resources/Testing/Viewer wrapper.vi"/>
@@ -111,7 +103,7 @@
 				<Item Name="Virtual Camera Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Virtual Camera Configuration.ctl"/>
 			</Item>
 			<Item Name="Actor Framework.lvlib" Type="Library" URL="/&lt;vilib&gt;/ActorFramework/Actor Framework.lvlib"/>
-			<Item Name="ti2lv.lvlib" Type="Library" URL="../Hardware/Ti2/ti2lv/ti2lv.lvlib"/>
+			<Item Name="ti2lv.lvlib" Type="Library" URL="../Hardware/Microscope/ti2lv/ti2lv.lvlib"/>
 		</Item>
 		<Item Name="User Interface" Type="Folder">
 			<Item Name="Change Log.lvlib" Type="Library" URL="../User Interface/Change Log/Change Log.lvlib"/>
