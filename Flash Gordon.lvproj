@@ -61,6 +61,7 @@
 				<Item Name="GLOBAL Time-critical.vi" Type="VI" URL="../Resources/GLOBAL/GLOBAL Time-critical.vi"/>
 			</Item>
 			<Item Name="Helper VIs" Type="Folder">
+				<Item Name="Brenner Gradient.vi" Type="VI" URL="../Resources/Helper VIs/Brenner Gradient.vi"/>
 				<Item Name="Check File Path.vi" Type="VI" URL="../Resources/Helper VIs/Check File Path.vi"/>
 				<Item Name="Color Table To Reference.vi" Type="VI" URL="../Resources/Helper VIs/Color Table To Reference.vi"/>
 				<Item Name="Create Stack Info.vi" Type="VI" URL="../Resources/Helper VIs/Create Stack Info.vi"/>
@@ -318,6 +319,7 @@
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
+				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
