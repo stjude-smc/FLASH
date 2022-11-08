@@ -16,6 +16,7 @@
 		<Item Name="Move Custom Step Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Custom Step Msg/Move Custom Step Msg.lvclass"/>
 		<Item Name="Move Forward Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Forward Msg/Move Forward Msg.lvclass"/>
 		<Item Name="Move Home Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Home Msg/Move Home Msg.lvclass"/>
+		<Item Name="Move Z Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Z Msg/Move Z Msg.lvclass"/>
 		<Item Name="Next Lane Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Next Lane Msg/Next Lane Msg.lvclass"/>
 		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
 		<Item Name="Photobleach Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Photobleach Msg/Photobleach Msg.lvclass"/>
