@@ -61,7 +61,6 @@
 				<Item Name="GLOBAL Time-critical.vi" Type="VI" URL="../Resources/GLOBAL/GLOBAL Time-critical.vi"/>
 			</Item>
 			<Item Name="Helper VIs" Type="Folder">
-				<Item Name="Brenner Gradient.vi" Type="VI" URL="../Resources/Helper VIs/Brenner Gradient.vi"/>
 				<Item Name="Check File Path.vi" Type="VI" URL="../Resources/Helper VIs/Check File Path.vi"/>
 				<Item Name="Color Table To Reference.vi" Type="VI" URL="../Resources/Helper VIs/Color Table To Reference.vi"/>
 				<Item Name="Create Stack Info.vi" Type="VI" URL="../Resources/Helper VIs/Create Stack Info.vi"/>
@@ -125,6 +124,7 @@
 				<Item Name="tm_deinitialize_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_deinitialize_40.vi"/>
 				<Item Name="tm_errorreport.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_errorreport.vi"/>
 				<Item Name="tm_getcamerainfo_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getcamerainfo_40.vi"/>
+				<Item Name="tm_getcamerastatus_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getcamerastatus_40.vi"/>
 				<Item Name="tm_getcaptureinfo_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getcaptureinfo_40.vi"/>
 				<Item Name="tm_getframe16_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getframe16_40.vi"/>
 				<Item Name="tm_getparameter_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getparameter_40.vi"/>

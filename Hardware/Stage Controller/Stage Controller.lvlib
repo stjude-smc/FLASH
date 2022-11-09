@@ -12,12 +12,14 @@
 	</Item>
 	<Item Name="Messages for this actor" Type="Folder">
 		<Item Name="Abort Motion Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Abort Motion Msg/Abort Motion Msg.lvclass"/>
+		<Item Name="Autofocus Step Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Autofocus Step Msg/Autofocus Step Msg.lvclass"/>
 		<Item Name="Move Home Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Home Msg/Move Home Msg.lvclass"/>
 		<Item Name="Move Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Msg/Move Msg.lvclass"/>
 		<Item Name="Move Z Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Z Msg/Move Z Msg.lvclass"/>
 		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
 		<Item Name="Photobleach Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Photobleach Msg/Photobleach Msg.lvclass"/>
 		<Item Name="Set Home Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Set Home Msg/Set Home Msg.lvclass"/>
+		<Item Name="Start Autofocus Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Start Autofocus Msg/Start Autofocus Msg.lvclass"/>
 	</Item>
 	<Item Name="Stage Controller.lvclass" Type="LVClass" URL="../Stage Controller.lvclass"/>
 </Library>
