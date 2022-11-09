@@ -12,15 +12,11 @@
 	</Item>
 	<Item Name="Messages for this actor" Type="Folder">
 		<Item Name="Abort Motion Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Abort Motion Msg/Abort Motion Msg.lvclass"/>
-		<Item Name="Move Back Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Back Msg/Move Back Msg.lvclass"/>
-		<Item Name="Move Custom Step Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Custom Step Msg/Move Custom Step Msg.lvclass"/>
-		<Item Name="Move Forward Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Forward Msg/Move Forward Msg.lvclass"/>
 		<Item Name="Move Home Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Home Msg/Move Home Msg.lvclass"/>
+		<Item Name="Move Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Msg/Move Msg.lvclass"/>
 		<Item Name="Move Z Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Z Msg/Move Z Msg.lvclass"/>
-		<Item Name="Next Lane Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Next Lane Msg/Next Lane Msg.lvclass"/>
 		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
 		<Item Name="Photobleach Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Photobleach Msg/Photobleach Msg.lvclass"/>
-		<Item Name="Previous Lane Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Previous Lane Msg/Previous Lane Msg.lvclass"/>
 		<Item Name="Set Home Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Set Home Msg/Set Home Msg.lvclass"/>
 	</Item>
 	<Item Name="Stage Controller.lvclass" Type="LVClass" URL="../Stage Controller.lvclass"/>
