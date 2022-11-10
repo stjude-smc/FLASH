@@ -5,8 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
-		<Item Name="Live Button Off Msg.lvclass" Type="LVClass" URL="../../Main Window Messages/Live Button Off Msg/Live Button Off Msg.lvclass"/>
-		<Item Name="Record Button Off Msg.lvclass" Type="LVClass" URL="../../Main Window Messages/Record Button Off Msg/Record Button Off Msg.lvclass"/>
+		<Item Name="Application Mode Change Msg.lvclass" Type="LVClass" URL="../../Main Window Messages/Application Mode Change Msg/Application Mode Change Msg.lvclass"/>
 	</Item>
 	<Item Name="Main Window.lvclass" Type="LVClass" URL="../Main Window.lvclass"/>
 </Library>
