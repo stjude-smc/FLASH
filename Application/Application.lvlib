@@ -5,6 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
+		<Item Name="Cancel Operation Msg.lvclass" Type="LVClass" URL="../../Application Messages/Record Button Off Msg/Cancel Operation Msg.lvclass"/>
 		<Item Name="Close Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Shutter Msg/Close Shutter Msg.lvclass"/>
 		<Item Name="Close Viewer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Viewer Msg/Close Viewer Msg.lvclass"/>
 		<Item Name="Launch Viewer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Launch Viewer Msg/Launch Viewer Msg.lvclass"/>
@@ -12,7 +13,6 @@
 		<Item Name="Open Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Open Shutter Msg/Open Shutter Msg.lvclass"/>
 		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
 		<Item Name="Photobleach Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Msg/Photobleach Msg.lvclass"/>
-		<Item Name="Record Button Off Msg.lvclass" Type="LVClass" URL="../../Application Messages/Record Button Off Msg/Record Button Off Msg.lvclass"/>
 		<Item Name="Set Detection Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Detection Msg/Set Detection Msg.lvclass"/>
 		<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
 		<Item Name="Stage Abort Motion Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Abort Motion Msg/Stage Abort Motion Msg.lvclass"/>
