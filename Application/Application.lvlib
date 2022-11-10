@@ -31,4 +31,5 @@
 		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
 	</Item>
 	<Item Name="Application.lvclass" Type="LVClass" URL="../Application.lvclass"/>
+	<Item Name="Mode.ctl" Type="VI" URL="../Mode.ctl"/>
 </Library>
