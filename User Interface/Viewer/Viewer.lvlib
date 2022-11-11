@@ -5,6 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
+		<Item Name="New Frame Event Msg.lvclass" Type="LVClass" URL="../../Viewer Messages/New Frame Event Msg/New Frame Event Msg.lvclass"/>
 		<Item Name="Set Visibility Msg.lvclass" Type="LVClass" URL="../../Viewer Messages/Set Visibility Msg/Set Visibility Msg.lvclass"/>
 	</Item>
 	<Item Name="Viewer.lvclass" Type="LVClass" URL="../Viewer.lvclass"/>
