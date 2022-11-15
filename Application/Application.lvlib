@@ -22,6 +22,7 @@
 		<Item Name="Stage Next Lane Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Next Lane Msg/Stage Next Lane Msg.lvclass"/>
 		<Item Name="Stage Previous Lane Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Previous Lane Msg/Stage Previous Lane Msg.lvclass"/>
 		<Item Name="Stage Set Home Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Set Home Msg/Stage Set Home Msg.lvclass"/>
+		<Item Name="Stage Status Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Status Msg/Stage Status Msg.lvclass"/>
 		<Item Name="Start Autofocus Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Autofocus Msg/Start Autofocus Msg.lvclass"/>
 		<Item Name="Start Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Live Mode Msg/Start Live Mode Msg.lvclass"/>
 		<Item Name="Start Stream Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Stream Msg/Start Stream Msg.lvclass"/>
