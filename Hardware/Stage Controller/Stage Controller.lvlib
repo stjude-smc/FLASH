@@ -21,6 +21,5 @@
 		<Item Name="Start Autofocus Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Start Autofocus Msg/Start Autofocus Msg.lvclass"/>
 		<Item Name="Status Update Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Status Update Msg/Status Update Msg.lvclass"/>
 	</Item>
-	<Item Name="plate image.vi" Type="VI" URL="../../../../plate image.vi"/>
 	<Item Name="Stage Controller.lvclass" Type="LVClass" URL="../Stage Controller.lvclass"/>
 </Library>
