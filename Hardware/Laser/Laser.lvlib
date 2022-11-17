@@ -15,6 +15,7 @@
 		<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../../Laser Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
 	</Item>
 	<Item Name="Laser.lvclass" Type="LVClass" URL="../Laser.lvclass"/>
+	<Item Name="obis set power.vi" Type="VI" URL="../obis set power.vi"/>
 	<Item Name="PRM1Z8_Init.vi" Type="VI" URL="../PRM1Z8_Init.vi"/>
 	<Item Name="PRM1Z8_setPower.vi" Type="VI" URL="../PRM1Z8_setPower.vi"/>
 </Library>
