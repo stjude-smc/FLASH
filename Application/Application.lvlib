@@ -8,6 +8,7 @@
 		<Item Name="Cancel Operation Msg.lvclass" Type="LVClass" URL="../../Application Messages/Record Button Off Msg/Cancel Operation Msg.lvclass"/>
 		<Item Name="Close Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Shutter Msg/Close Shutter Msg.lvclass"/>
 		<Item Name="Close Viewer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Viewer Msg/Close Viewer Msg.lvclass"/>
+		<Item Name="Finish Bleach Msg.lvclass" Type="LVClass" URL="../../Application Messages/Finish Bleach Msg/Finish Bleach Msg.lvclass"/>
 		<Item Name="Launch Viewer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Launch Viewer Msg/Launch Viewer Msg.lvclass"/>
 		<Item Name="New Frame Notify Msg.lvclass" Type="LVClass" URL="../../Application Messages/New Frame Notify Msg/New Frame Notify Msg.lvclass"/>
 		<Item Name="Open Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Open Shutter Msg/Open Shutter Msg.lvclass"/>
