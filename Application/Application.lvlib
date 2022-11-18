@@ -12,6 +12,7 @@
 		<Item Name="New Frame Notify Msg.lvclass" Type="LVClass" URL="../../Application Messages/New Frame Notify Msg/New Frame Notify Msg.lvclass"/>
 		<Item Name="Open Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Open Shutter Msg/Open Shutter Msg.lvclass"/>
 		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
+		<Item Name="Reset Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Reset Laser Power Msg/Reset Laser Power Msg.lvclass"/>
 		<Item Name="Set Detection Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Detection Msg/Set Detection Msg.lvclass"/>
 		<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
 		<Item Name="Stage Abort Motion Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Abort Motion Msg/Stage Abort Motion Msg.lvclass"/>
@@ -29,5 +30,6 @@
 		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
 	</Item>
 	<Item Name="Application.lvclass" Type="LVClass" URL="../Application.lvclass"/>
+	<Item Name="laser power FGV.vi" Type="VI" URL="../laser power FGV.vi"/>
 	<Item Name="Mode.ctl" Type="VI" URL="../Mode.ctl"/>
 </Library>

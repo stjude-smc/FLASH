@@ -12,6 +12,7 @@
 		<Item Name="SendCommand.vi" Type="VI" URL="../HOPS/SendCommand.vi"/>
 	</Item>
 	<Item Name="Messages for this actor" Type="Folder">
+		<Item Name="Reset Power Msg.lvclass" Type="LVClass" URL="../../Laser Messages/Reset Power Msg/Reset Power Msg.lvclass"/>
 		<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../../Laser Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
 	</Item>
 	<Item Name="Laser.lvclass" Type="LVClass" URL="../Laser.lvclass"/>
