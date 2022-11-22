@@ -6,6 +6,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
 		<Item Name="Application Mode Change Msg.lvclass" Type="LVClass" URL="../../Main Window Messages/Application Mode Change Msg/Application Mode Change Msg.lvclass"/>
+		<Item Name="Shutter Status Update Msg.lvclass" Type="LVClass" URL="../../Main Window Messages/Shutter Status Update Msg/Shutter Status Update Msg.lvclass"/>
 		<Item Name="Stage Status Update Msg.lvclass" Type="LVClass" URL="../../Main Window Messages/Stage Status Update Msg/Stage Status Update Msg.lvclass"/>
 	</Item>
 	<Item Name="Main Window.lvclass" Type="LVClass" URL="../Main Window.lvclass"/>
