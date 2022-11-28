@@ -26,10 +26,12 @@
 		<Item Name="Stage Status Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Status Msg/Stage Status Msg.lvclass"/>
 		<Item Name="Start Autofocus Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Autofocus Msg/Start Autofocus Msg.lvclass"/>
 		<Item Name="Start Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Live Mode Msg/Start Live Mode Msg.lvclass"/>
+		<Item Name="Start Recording Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Recording Msg/Start Recording Msg.lvclass"/>
 		<Item Name="Start Stream Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Stream Msg/Start Stream Msg.lvclass"/>
 		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
 	</Item>
 	<Item Name="Application.lvclass" Type="LVClass" URL="../Application.lvclass"/>
 	<Item Name="laser power FGV.vi" Type="VI" URL="../laser power FGV.vi"/>
 	<Item Name="Mode.ctl" Type="VI" URL="../Mode.ctl"/>
+	<Item Name="Wait for mode change.vi" Type="VI" URL="../Wait for mode change.vi"/>
 </Library>
