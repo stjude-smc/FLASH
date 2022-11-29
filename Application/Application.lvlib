@@ -15,6 +15,7 @@
 		<Item Name="Reset Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Reset Laser Power Msg/Reset Laser Power Msg.lvclass"/>
 		<Item Name="Set Detection Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Detection Msg/Set Detection Msg.lvclass"/>
 		<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
+		<Item Name="Shut Down Msg.lvclass" Type="LVClass" URL="../../Application Messages/Shut Down Msg/Shut Down Msg.lvclass"/>
 		<Item Name="Stage Abort Motion Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Abort Motion Msg/Stage Abort Motion Msg.lvclass"/>
 		<Item Name="Stage Back Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Back Msg/Stage Back Msg.lvclass"/>
 		<Item Name="Stage Forward Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Forward Msg/Stage Forward Msg.lvclass"/>
