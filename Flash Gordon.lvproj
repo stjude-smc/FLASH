@@ -97,6 +97,7 @@
 				<Item Name="Laser Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Laser Configuration.ctl"/>
 				<Item Name="Microscope Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Microscope Configuration.ctl"/>
 				<Item Name="Microscope Type.ctl" Type="VI" URL="../Resources/Type Defs/Microscope Type.ctl"/>
+				<Item Name="Mode.ctl" Type="VI" URL="../Application/Mode.ctl"/>
 				<Item Name="Physical Camera Assignment.ctl" Type="VI" URL="../Resources/Type Defs/Physical Camera Assignment.ctl"/>
 				<Item Name="Pump Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Pump Configuration.ctl"/>
 				<Item Name="Shutter Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Shutter Configuration.ctl"/>
