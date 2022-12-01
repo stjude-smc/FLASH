@@ -72,6 +72,7 @@
 				<Item Name="plate image.vi" Type="VI" URL="../Resources/Helper VIs/plate image.vi"/>
 				<Item Name="Resize Graph.vi" Type="VI" URL="../Resources/Helper VIs/Resize Graph.vi"/>
 				<Item Name="Set Title Bar Icon.vi" Type="VI" URL="../Resources/Helper VIs/Set Title Bar Icon.vi"/>
+				<Item Name="stage to pixel coordinates.vi" Type="VI" URL="../Resources/Helper VIs/stage to pixel coordinates.vi"/>
 			</Item>
 			<Item Name="Images" Type="Folder" URL="../Resources/Images">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -294,6 +295,7 @@
 				<Item Name="Draw Arc.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Arc.vi"/>
 				<Item Name="Draw Circle by Radius.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Draw Circle by Radius.vi"/>
 				<Item Name="Draw Flattened Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Flattened Pixmap.vi"/>
+				<Item Name="Draw Rectangle.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Rectangle.vi"/>
 				<Item Name="DTbl Digital Size.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Digital Size.vi"/>
 				<Item Name="DTbl Uncompress Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Uncompress Digital.vi"/>
 				<Item Name="DWDT Uncompress Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DWDTOps.llb/DWDT Uncompress Digital.vi"/>
