@@ -73,11 +73,8 @@
 				<Item Name="Resize Graph.vi" Type="VI" URL="../Resources/Helper VIs/Resize Graph.vi"/>
 				<Item Name="Set Title Bar Icon.vi" Type="VI" URL="../Resources/Helper VIs/Set Title Bar Icon.vi"/>
 			</Item>
-			<Item Name="Images" Type="Folder">
-				<Item Name="Icon.gif" Type="Document" URL="../Resources/Images/Icon.gif"/>
-				<Item Name="Icon.ico" Type="Document" URL="../Resources/Images/Icon.ico"/>
-				<Item Name="Icon.jpg" Type="Document" URL="../Resources/Images/Icon.jpg"/>
-				<Item Name="Logo.tif" Type="Document" URL="../Resources/Images/Logo.tif"/>
+			<Item Name="Images" Type="Folder" URL="../Resources/Images">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Testing" Type="Folder">
 				<Item Name="Active Drive Test Sync.vi" Type="VI" URL="../Resources/Testing/Active Drive Test Sync.vi"/>
