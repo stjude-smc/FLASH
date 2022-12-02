@@ -1,20 +1,56 @@
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
-<Version>15.0.1f2</Version>
+<Version>18.0.1f4</Version>
 <Cluster>
 <Name>Default Settings</Name>
-<NumElts>3</NumElts>
+<NumElts>4</NumElts>
 <I32>
 <Name>Refresh Timeout (ms)</Name>
-<Val>100</Val>
+<Val>200</Val>
 </I32>
 <String>
 <Name>Version String</Name>
-<Val>v1.0</Val>
+<Val>1.2</Val>
 </String>
 <String>
 <Name>Hardware Configuration File</Name>
+<Val></Val>
+</String>
+<Cluster>
+<Name>Config Hostname Map</Name>
+<NumElts>2</NumElts>
+<Array>
+<Name>Hostname</Name>
+<Dimsize>3</Dimsize>
+<String>
+<Name> </Name>
+<Val>D200842</Val>
+</String>
+<String>
+<Name> </Name>
+<Val>D191125</Val>
+</String>
+<String>
+<Name> </Name>
+<Val>D191123</Val>
+</String>
+</Array>
+<Array>
+<Name>Config File</Name>
+<Dimsize>3</Dimsize>
+<String>
+<Name> </Name>
+<Val>pTIRF 3</Val>
+</String>
+<String>
+<Name> </Name>
 <Val>pTIRF 2</Val>
 </String>
+<String>
+<Name> </Name>
+<Val>pTIRF 1</Val>
+</String>
+</Array>
+</Cluster>
 </Cluster>
 </LVData>

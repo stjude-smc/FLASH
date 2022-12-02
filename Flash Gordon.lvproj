@@ -63,6 +63,7 @@
 			<Item Name="Helper VIs" Type="Folder">
 				<Item Name="Check File Path.vi" Type="VI" URL="../Resources/Helper VIs/Check File Path.vi"/>
 				<Item Name="Color Table To Reference.vi" Type="VI" URL="../Resources/Helper VIs/Color Table To Reference.vi"/>
+				<Item Name="computer name.vi" Type="VI" URL="../Resources/Helper VIs/computer name.vi"/>
 				<Item Name="Create Stack Info.vi" Type="VI" URL="../Resources/Helper VIs/Create Stack Info.vi"/>
 				<Item Name="Cubehelix.vi" Type="VI" URL="../Resources/Helper VIs/Cubehelix.vi"/>
 				<Item Name="Custom Photobleach Length.vi" Type="VI" URL="../Resources/Helper VIs/Custom Photobleach Length.vi"/>
