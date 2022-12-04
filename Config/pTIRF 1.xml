@@ -90,7 +90,7 @@
 </Array>
 <Cluster>
 <Name>Stage Configuration</Name>
-<NumElts>5</NumElts>
+<NumElts>9</NumElts>
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
@@ -117,6 +117,54 @@
 <Choice>ASI</Choice>
 <Val>1</Val>
 </EW>
+<I32>
+<Name>Autofocus Steps</Name>
+<Val>9</Val>
+</I32>
+<DBL>
+<Name>Autofocus Range (um)</Name>
+<Val>30.00000000000000</Val>
+</DBL>
+<Cluster>
+<Name>Stage Limits</Name>
+<NumElts>4</NumElts>
+<DBL>
+<Name>Y Min</Name>
+<Val>-Inf</Val>
+</DBL>
+<DBL>
+<Name>Y Max</Name>
+<Val>Inf</Val>
+</DBL>
+<DBL>
+<Name>X Min</Name>
+<Val>-Inf</Val>
+</DBL>
+<DBL>
+<Name>X Max</Name>
+<Val>Inf</Val>
+</DBL>
+</Cluster>
+<Cluster>
+<Name>Slide (mm)</Name>
+<NumElts>4</NumElts>
+<DBL>
+<Name>top</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>right</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>width</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>height</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+</Cluster>
 </Cluster>
 <Cluster>
 <Name>Microscope Configuration</Name>
@@ -250,7 +298,7 @@
 </Cluster>
 <Array>
 <Name>Laser Configuration</Name>
-<Dimsize>3</Dimsize>
+<Dimsize>4</Dimsize>
 <Cluster>
 <Name>Laser Configuration</Name>
 <NumElts>5</NumElts>
@@ -341,6 +389,36 @@
 <Val>640</Val>
 </U16>
 </Cluster>
+<Cluster>
+<Name>Laser Configuration</Name>
+<NumElts>5</NumElts>
+<Refnum>
+<Name>Serial Port</Name>
+<RefKind>VISA</RefKind>
+<Val>COM15</Val>
+</Refnum>
+<EW>
+<Name>Laser Type</Name>
+<Choice>Disable</Choice>
+<Choice>Laser Quantum</Choice>
+<Choice>Coherent OBIS</Choice>
+<Choice>PRM1-Z8</Choice>
+<Choice>Coherent HOPS</Choice>
+<Val>2</Val>
+</EW>
+<DBL>
+<Name>Polarizer Amplitude</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Polarizer Theta Zero</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<U16>
+<Name>Wavelength</Name>
+<Val>721</Val>
+</U16>
+</Cluster>
 </Array>
 <Cluster>
 <Name>Fluidics Configuration</Name>
@@ -367,7 +445,7 @@
 </EW>
 <String>
 <Name>Serial Number</Name>
-<Val>001790</Val>
+<Val>740916</Val>
 </String>
 <Boolean>
 <Name>Flip Vertically</Name>
@@ -400,7 +478,7 @@
 </EW>
 <String>
 <Name>Serial Number</Name>
-<Val>740916</Val>
+<Val>001790</Val>
 </String>
 <Boolean>
 <Name>Flip Vertically</Name>
@@ -412,7 +490,7 @@
 </Boolean>
 <DBL>
 <Name>photonsPerCount</Name>
-<Val>0.50000000000000</Val>
+<Val>0.49000000000000</Val>
 </DBL>
 <I16>
 <Name>wavelength</Name>
