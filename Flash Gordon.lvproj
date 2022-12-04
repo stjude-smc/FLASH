@@ -116,7 +116,6 @@
 			<Item Name="Viewer.lvlib" Type="Library" URL="../User Interface/Viewer/Viewer.lvlib"/>
 		</Item>
 		<Item Name="Create Hardware Configuration UI.vi" Type="VI" URL="../Application/Create Hardware Configuration UI.vi"/>
-		<Item Name="Create Hardware Configuration.vi" Type="VI" URL="../Application/Create Hardware Configuration.vi"/>
 		<Item Name="Create Initialization File.vi" Type="VI" URL="../Application/Create Initialization File.vi"/>
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
