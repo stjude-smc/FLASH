@@ -123,7 +123,7 @@
 </I32>
 <DBL>
 <Name>Autofocus Range (um)</Name>
-<Val>30.00000000000000</Val>
+<Val>3.00000000000000</Val>
 </DBL>
 <Cluster>
 <Name>Stage Limits</Name>
