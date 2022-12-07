@@ -35,25 +35,11 @@
 			</Item>
 		</Item>
 		<Item Name="Resources" Type="Folder">
-			<Item Name="C Libraries" Type="Folder">
-				<Item Name="dcimg2tiff.dll" Type="Document" URL="../dll/dcimg2tiff.dll"/>
-				<Item Name="Thorlabs.MotionControl.Controls.dll" Type="Document" URL="../dll/Thorlabs.MotionControl.Controls.dll"/>
-				<Item Name="Thorlabs.MotionControl.DeviceManager.dll" Type="Document" URL="../dll/Thorlabs.MotionControl.DeviceManager.dll"/>
-				<Item Name="Thorlabs.MotionControl.DeviceManagerCLI.dll" Type="Document" URL="../dll/Thorlabs.MotionControl.DeviceManagerCLI.dll"/>
-				<Item Name="Thorlabs.MotionControl.GenericMotorCLI.dll" Type="Document" URL="../dll/Thorlabs.MotionControl.GenericMotorCLI.dll"/>
-				<Item Name="Thorlabs.MotionControl.KCube.DCServo.dll" Type="Document" URL="../dll/Thorlabs.MotionControl.KCube.DCServo.dll"/>
-				<Item Name="ThorLabs.MotionControl.KCube.DCServoCLI.dll" Type="Document" URL="../dll/ThorLabs.MotionControl.KCube.DCServoCLI.dll"/>
-				<Item Name="Thorlabs.MotionControl.PrivateInternal.dll" Type="Document" URL="../dll/Thorlabs.MotionControl.PrivateInternal.dll"/>
-				<Item Name="Thorlabs.MotionControl.Tools.Common.dll" Type="Document" URL="../dll/Thorlabs.MotionControl.Tools.Common.dll"/>
-				<Item Name="Thorlabs.MotionControl.Tools.Logging.dll" Type="Document" URL="../dll/Thorlabs.MotionControl.Tools.Logging.dll"/>
-				<Item Name="Thorlabs.MotionControl.Tools.WPF.dll" Type="Document" URL="../dll/Thorlabs.MotionControl.Tools.WPF.dll"/>
-				<Item Name="Thorlabs.MotionControl.Tools.WPF.UI.dll" Type="Document" URL="../dll/Thorlabs.MotionControl.Tools.WPF.UI.dll"/>
-				<Item Name="Ti2_Mic_Driver.dll" Type="Document" URL="../dll/Ti2_Mic_Driver.dll"/>
-				<Item Name="ti2wrap.dll" Type="Document" URL="../dll/ti2wrap.dll"/>
-				<Item Name="tmcamcon.dll" Type="Document" URL="tmcamcon.dll">
-					<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-				</Item>
-				<Item Name="Xceed.Wpf.Toolkit.dll" Type="Document" URL="../dll/Xceed.Wpf.Toolkit.dll"/>
+			<Item Name="Config" Type="Folder" URL="../Config">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
+			<Item Name="dll" Type="Folder" URL="../dll">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
 			<Item Name="GLOBAL" Type="Folder">
 				<Item Name="GLOBAL Debug.vi" Type="VI" URL="../Resources/GLOBAL/GLOBAL Debug.vi"/>
@@ -104,6 +90,10 @@
 				<Item Name="Virtual Camera Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Virtual Camera Configuration.ctl"/>
 			</Item>
 			<Item Name="Actor Framework.lvlib" Type="Library" URL="/&lt;vilib&gt;/ActorFramework/Actor Framework.lvlib"/>
+			<Item Name="Flash Gordon documentation.pdf" Type="Document" URL="../Flash Gordon documentation.pdf"/>
+			<Item Name="Init.xml" Type="Document" URL="../Init.xml"/>
+			<Item Name="release.txt" Type="Document" URL="../release.txt"/>
+			<Item Name="slide diagram.png" Type="Document" URL="../slide diagram.png"/>
 			<Item Name="ti2lv.lvlib" Type="Library" URL="../Hardware/Microscope/ti2lv/ti2lv.lvlib"/>
 		</Item>
 		<Item Name="User Interface" Type="Folder">
@@ -400,6 +390,9 @@
 			<Item Name="systemLogging.dll" Type="Document" URL="systemLogging.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="tmcamcon.dll" Type="Document" URL="tmcamcon.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 			<Item Name="user32.dll" Type="Document" URL="user32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -415,41 +408,63 @@
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../Stand-Alone</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../Testing</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
-				<Property Name="Bld_version.build" Type="Int">1007</Property>
+				<Property Name="Bld_version.build" Type="Int">1207</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Bld_version.minor" Type="Int">1</Property>
-				<Property Name="Bld_version.patch" Type="Int">1</Property>
+				<Property Name="Bld_version.minor" Type="Int">2</Property>
 				<Property Name="Destination[0].destName" Type="Str">Flash Gordon.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../Stand-Alone/NI_AB_PROJECTNAME.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../Testing/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">../Stand-Alone/dll</Property>
-				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{58AE4709-8EBE-471C-9F52-8694E83B7B09}</Property>
+				<Property Name="Destination[1].path" Type="Path">../Testing</Property>
+				<Property Name="Destination[2].destName" Type="Str">Config</Property>
+				<Property Name="Destination[2].path" Type="Path">../Testing/Config</Property>
+				<Property Name="Destination[3].destName" Type="Str">dll</Property>
+				<Property Name="Destination[3].path" Type="Path">../Testing/dll</Property>
+				<Property Name="DestinationCount" Type="Int">4</Property>
+				<Property Name="Source[0].itemID" Type="Str">{08DAC17C-157E-4C56-A7AE-DE898EE71CC0}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[10].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[10].itemID" Type="Ref">/My Computer/Resources/slide diagram.png</Property>
+				<Property Name="Source[10].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Resources/C Libraries/dcimg2tiff.dll</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Resources/dll/dcimg2tiff.dll</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Resources/C Libraries/Ti2_Mic_Driver.dll</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Resources/dll/Ti2_Mic_Driver.dll</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Resources/C Libraries/ti2wrap.dll</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Resources/dll/ti2wrap.dll</Property>
+				<Property Name="Source[5].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[5].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[5].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Resources/C Libraries</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">3</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Resources/dll</Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[5].type" Type="Str">Container</Property>
-				<Property Name="SourceCount" Type="Int">6</Property>
+				<Property Name="Source[6].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[6].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[6].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">2</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Resources/Config</Property>
+				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[6].type" Type="Str">Container</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Resources/Flash Gordon documentation.pdf</Property>
+				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/My Computer/Resources/Init.xml</Property>
+				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Resources/release.txt</Property>
+				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="SourceCount" Type="Int">11</Property>
 				<Property Name="TgtF_companyName" Type="Str">St Jude Childrens Research Hospital</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Instrument control and data acquisition for TIRF-smFRET imaging</Property>
 				<Property Name="TgtF_internalName" Type="Str">Flash Gordon</Property>
