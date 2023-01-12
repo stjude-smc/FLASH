@@ -119,11 +119,11 @@
 </EW>
 <I32>
 <Name>Autofocus Steps</Name>
-<Val>9</Val>
+<Val>10</Val>
 </I32>
 <DBL>
 <Name>Autofocus Range (um)</Name>
-<Val>3.00000000000000</Val>
+<Val>4.00000000000000</Val>
 </DBL>
 <Cluster>
 <Name>Stage Limits</Name>
