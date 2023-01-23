@@ -429,7 +429,7 @@
 				<Property Name="Destination[3].destName" Type="Str">dll</Property>
 				<Property Name="Destination[3].path" Type="Path">../Testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
-				<Property Name="Source[0].itemID" Type="Str">{6F6EF819-C017-41A7-A6C1-4B56238603A1}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{7965478F-112B-4216-B896-0E09C5A32303}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
