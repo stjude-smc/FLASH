@@ -11,6 +11,7 @@
 		<Item Name="Get Most Recent Frame (if active) Msg.lvclass" Type="LVClass" URL="../../Hamamatsu Camera Messages/Get Most Recent Frame (if active) Msg/Get Most Recent Frame (if active) Msg.lvclass"/>
 		<Item Name="Start Stream Msg.lvclass" Type="LVClass" URL="../../Hamamatsu Camera Messages/Flash Start Stream Msg/Start Stream Msg.lvclass"/>
 		<Item Name="Finish Stream Msg.lvclass" Type="LVClass" URL="../../Hamamatsu Camera Messages/Flash Finish Stream Msg/Finish Stream Msg.lvclass"/>
+		<Item Name="Set Enabled Cameras Msg.lvclass" Type="LVClass" URL="../../Hamamatsu Camera Messages/Set Enabled Cameras Msg/Set Enabled Cameras Msg.lvclass"/>
 	</Item>
 	<Item Name="Hamamatsu Camera.lvclass" Type="LVClass" URL="../Hamamatsu Camera.lvclass"/>
 </Library>
