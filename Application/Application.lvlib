@@ -21,6 +21,7 @@
 		<Item Name="Shut Down Msg.lvclass" Type="LVClass" URL="../../Application Messages/Shut Down Msg/Shut Down Msg.lvclass"/>
 		<Item Name="Stage Abort Motion Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Abort Motion Msg/Stage Abort Motion Msg.lvclass"/>
 		<Item Name="Stage Back Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Back Msg/Stage Back Msg.lvclass"/>
+		<Item Name="Stage Enforce Limits Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Enforce Limits Msg/Stage Enforce Limits Msg.lvclass"/>
 		<Item Name="Stage Forward Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Forward Msg/Stage Forward Msg.lvclass"/>
 		<Item Name="Stage Move Custom Step Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Move Custom Step Msg/Stage Move Custom Step Msg.lvclass"/>
 		<Item Name="Stage Move Home Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Move Home Msg/Stage Move Home Msg.lvclass"/>
