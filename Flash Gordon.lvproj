@@ -32,6 +32,7 @@
 				<Item Name="Synchronization Device.lvlib" Type="Library" URL="../Hardware/Synchronization Device/Synchronization Device.lvlib"/>
 				<Item Name="Laser.lvlib" Type="Library" URL="../Hardware/Laser/Laser.lvlib"/>
 				<Item Name="Microscope.lvlib" Type="Library" URL="../Hardware/Microscope/Microscope.lvlib"/>
+				<Item Name="Power Meter.lvlib" Type="Library" URL="../Hardware/Power Meter/Power Meter.lvlib"/>
 			</Item>
 		</Item>
 		<Item Name="Resources" Type="Folder">
@@ -110,6 +111,14 @@
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
 		<Item Name="Load Config List.vi" Type="VI" URL="../Resources/Helper VIs/Load Config List.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
+			<Item Name="instr.lib" Type="Folder">
+				<Item Name="TLPM Close.vi" Type="VI" URL="/&lt;instrlib&gt;/TLPM/TLPM.llb/TLPM Close.vi"/>
+				<Item Name="TLPM Find Resources.vi" Type="VI" URL="/&lt;instrlib&gt;/TLPM/TLPM.llb/TLPM Find Resources.vi"/>
+				<Item Name="TLPM Get Resource Name.vi" Type="VI" URL="/&lt;instrlib&gt;/TLPM/TLPM.llb/TLPM Get Resource Name.vi"/>
+				<Item Name="TLPM Initialize.vi" Type="VI" URL="/&lt;instrlib&gt;/TLPM/TLPM.llb/TLPM Initialize.vi"/>
+				<Item Name="TLPM Measure Power.vi" Type="VI" URL="/&lt;instrlib&gt;/TLPM/TLPM.llb/TLPM Measure Power.vi"/>
+				<Item Name="TLPM VXIpnp Error Converter.vi" Type="VI" URL="/&lt;instrlib&gt;/TLPM/TLPM.llb/TLPM VXIpnp Error Converter.vi"/>
+			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="tm_closecamera_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_closecamera_40.vi"/>
 				<Item Name="tm_deinitialize_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_deinitialize_40.vi"/>
@@ -390,6 +399,9 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="systemLogging.dll" Type="Document" URL="systemLogging.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="TLPM_64.dll" Type="Document" URL="TLPM_64.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="tmcamcon.dll" Type="Document" URL="tmcamcon.dll">

@@ -13,6 +13,7 @@
 		<Item Name="New Frame Notify Msg.lvclass" Type="LVClass" URL="../../Application Messages/New Frame Notify Msg/New Frame Notify Msg.lvclass"/>
 		<Item Name="Open Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Open Shutter Msg/Open Shutter Msg.lvclass"/>
 		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Application Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
+		<Item Name="Read Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Read Laser Power Msg/Read Laser Power Msg.lvclass"/>
 		<Item Name="Reset Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Reset Laser Power Msg/Reset Laser Power Msg.lvclass"/>
 		<Item Name="Set All Laser Powers Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set All Laser Powers Msg/Set All Laser Powers Msg.lvclass"/>
 		<Item Name="Set Detection Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Detection Msg/Set Detection Msg.lvclass"/>
