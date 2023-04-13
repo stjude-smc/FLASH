@@ -3,7 +3,7 @@
 <Version>18.0.1f4</Version>
 <Cluster>
 <Name>Hardware Configuration</Name>
-<NumElts>7</NumElts>
+<NumElts>8</NumElts>
 <Array>
 <Name>Shutters</Name>
 <Dimsize>4</Dimsize>
@@ -94,7 +94,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM14</Val>
+<Val></Val>
 </Refnum>
 <DBL>
 <Name>Forward Step (mm)</Name>
@@ -115,7 +115,7 @@
 <Choice>Ti2</Choice>
 <Choice>Ludl</Choice>
 <Choice>ASI</Choice>
-<Val>1</Val>
+<Val>2</Val>
 </EW>
 <I32>
 <Name>Autofocus Steps</Name>
@@ -130,19 +130,19 @@
 <NumElts>4</NumElts>
 <DBL>
 <Name>Y Min</Name>
-<Val>-Inf</Val>
+<Val>-4.50000000000000</Val>
 </DBL>
 <DBL>
 <Name>Y Max</Name>
-<Val>Inf</Val>
+<Val>3.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>X Min</Name>
-<Val>-Inf</Val>
+<Val>-19.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>X Max</Name>
-<Val>Inf</Val>
+<Val>33.60000000000000</Val>
 </DBL>
 </Cluster>
 <Cluster>
@@ -150,19 +150,19 @@
 <NumElts>4</NumElts>
 <DBL>
 <Name>top</Name>
-<Val>0.00000000000000</Val>
+<Val>-13.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>right</Name>
-<Val>0.00000000000000</Val>
+<Val>-22.30000000000000</Val>
 </DBL>
 <DBL>
 <Name>width</Name>
-<Val>0.00000000000000</Val>
+<Val>60.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>height</Name>
-<Val>0.00000000000000</Val>
+<Val>25.40000000000000</Val>
 </DBL>
 </Cluster>
 </Cluster>
@@ -172,7 +172,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM2</Val>
+<Val></Val>
 </Refnum>
 <EW>
 <Name>Microscope Type</Name>
@@ -395,7 +395,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM15</Val>
+<Val></Val>
 </Refnum>
 <EW>
 <Name>Laser Type</Name>
@@ -404,7 +404,7 @@
 <Choice>Coherent OBIS</Choice>
 <Choice>PRM1-Z8</Choice>
 <Choice>Coherent HOPS</Choice>
-<Val>2</Val>
+<Val>0</Val>
 </EW>
 <DBL>
 <Name>Polarizer Amplitude</Name>
@@ -564,5 +564,17 @@
 </I16>
 </Cluster>
 </Array>
+<Cluster>
+<Name>Power Meter Configuration</Name>
+<NumElts>1</NumElts>
+<EW>
+<Name>Power Meter Type</Name>
+<Choice>Disabled</Choice>
+<Choice>Thorlabs</Choice>
+<Choice>Newport</Choice>
+<Choice>Coherent</Choice>
+<Val>0</Val>
+</EW>
+</Cluster>
 </Cluster>
 </LVData>

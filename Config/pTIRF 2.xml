@@ -3,7 +3,7 @@
 <Version>18.0.1f4</Version>
 <Cluster>
 <Name>Hardware Configuration</Name>
-<NumElts>7</NumElts>
+<NumElts>8</NumElts>
 <Array>
 <Name>Shutters</Name>
 <Dimsize>4</Dimsize>
@@ -564,5 +564,17 @@
 </I16>
 </Cluster>
 </Array>
+<Cluster>
+<Name>Power Meter Configuration</Name>
+<NumElts>1</NumElts>
+<EW>
+<Name>Power Meter Type</Name>
+<Choice>Disabled</Choice>
+<Choice>Thorlabs</Choice>
+<Choice>Newport</Choice>
+<Choice>Coherent</Choice>
+<Val>0</Val>
+</EW>
+</Cluster>
 </Cluster>
 </LVData>
