@@ -573,7 +573,7 @@
 <Choice>Thorlabs</Choice>
 <Choice>Newport</Choice>
 <Choice>Coherent</Choice>
-<Val>0</Val>
+<Val>1</Val>
 </EW>
 </Cluster>
 </Cluster>
