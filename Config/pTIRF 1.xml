@@ -344,15 +344,15 @@
 <Choice>Coherent OBIS</Choice>
 <Choice>PRM1-Z8</Choice>
 <Choice>Coherent HOPS</Choice>
-<Val>1</Val>
+<Val>3</Val>
 </EW>
 <DBL>
 <Name>Polarizer Amplitude</Name>
-<Val>0.00000000000000</Val>
+<Val>1900.00000000000000</Val>
 </DBL>
 <DBL>
 <Name>Polarizer Theta Zero</Name>
-<Val>0.00000000000000</Val>
+<Val>-19.41000000000000</Val>
 </DBL>
 <U16>
 <Name>Wavelength</Name>
@@ -566,7 +566,7 @@
 </Array>
 <Cluster>
 <Name>Power Meter Configuration</Name>
-<NumElts>1</NumElts>
+<NumElts>2</NumElts>
 <EW>
 <Name>Power Meter Type</Name>
 <Choice>Disabled</Choice>
@@ -575,6 +575,10 @@
 <Choice>Coherent</Choice>
 <Val>1</Val>
 </EW>
+<DBL>
+<Name>attenuation</Name>
+<Val>53.2</Val>
+</DBL>
 </Cluster>
 </Cluster>
 </LVData>

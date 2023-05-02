@@ -1,3 +1,4 @@
+
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
 <Version>18.0.1f4</Version>
@@ -566,7 +567,7 @@
 </Array>
 <Cluster>
 <Name>Power Meter Configuration</Name>
-<NumElts>1</NumElts>
+<NumElts>2</NumElts>
 <EW>
 <Name>Power Meter Type</Name>
 <Choice>Disabled</Choice>
@@ -575,6 +576,10 @@
 <Choice>Coherent</Choice>
 <Val>0</Val>
 </EW>
+<DBL>
+<Name>attenuation</Name>
+<Val>1</Val>
+</DBL>
 </Cluster>
 </Cluster>
 </LVData>
