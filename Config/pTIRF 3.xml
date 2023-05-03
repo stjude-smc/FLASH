@@ -582,7 +582,7 @@
 <Refnum>
 <Name>instrument handle</Name>
 <RefKind>VISA</RefKind>
-<Val></Val>
+<Val>COM4</Val>
 </Refnum>
 </Cluster>
 </Cluster>

@@ -583,7 +583,7 @@
 <Refnum>
 <Name>instrument handle</Name>
 <RefKind>VISA</RefKind>
-<Val></Val>
+<Val>COM5</Val>
 </Refnum>
 </Cluster>
 </Cluster>
