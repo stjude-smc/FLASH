@@ -566,7 +566,7 @@
 </Array>
 <Cluster>
 <Name>Power Meter Configuration</Name>
-<NumElts>2</NumElts>
+<NumElts>3</NumElts>
 <EW>
 <Name>Power Meter Type</Name>
 <Choice>Disabled</Choice>
@@ -579,6 +579,11 @@
 <Name>attenuation</Name>
 <Val>1</Val>
 </DBL>
+<Refnum>
+<Name>instrument handle</Name>
+<RefKind>VISA</RefKind>
+<Val></Val>
+</Refnum>
 </Cluster>
 </Cluster>
 </LVData>

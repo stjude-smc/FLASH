@@ -577,12 +577,12 @@
 </EW>
 <DBL>
 <Name>attenuation</Name>
-<Val>53.2</Val>
+<Val>53.20000000000000</Val>
 </DBL>
 <Refnum>
-<Name>Serial Port</Name>
+<Name>instrument handle</Name>
 <RefKind>VISA</RefKind>
-<Val>COM10</Val>
+<Val></Val>
 </Refnum>
 </Cluster>
 </Cluster>
