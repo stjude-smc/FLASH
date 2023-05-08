@@ -61,6 +61,7 @@
 				<Item Name="Resize Graph.vi" Type="VI" URL="../Resources/Helper VIs/Resize Graph.vi"/>
 				<Item Name="Set Title Bar Icon.vi" Type="VI" URL="../Resources/Helper VIs/Set Title Bar Icon.vi"/>
 				<Item Name="stage to pixel coordinates.vi" Type="VI" URL="../Resources/Helper VIs/stage to pixel coordinates.vi"/>
+				<Item Name="Subtract Baseline.vi" Type="VI" URL="../Resources/Helper VIs/Subtract Baseline.vi"/>
 			</Item>
 			<Item Name="Images" Type="Folder" URL="../Resources/Images">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
