@@ -130,19 +130,19 @@
 <NumElts>4</NumElts>
 <DBL>
 <Name>Y Min</Name>
-<Val>-4.50000000000000</Val>
+<Val>-4.57000000000000</Val>
 </DBL>
 <DBL>
 <Name>Y Max</Name>
-<Val>3.00000000000000</Val>
+<Val>4.14700000000000</Val>
 </DBL>
 <DBL>
 <Name>X Min</Name>
-<Val>-19.00000000000000</Val>
+<Val>-19.56700000000000</Val>
 </DBL>
 <DBL>
 <Name>X Max</Name>
-<Val>33.50000000000000</Val>
+<Val>34.14200000000000</Val>
 </DBL>
 </Cluster>
 <Cluster>
@@ -150,11 +150,11 @@
 <NumElts>4</NumElts>
 <DBL>
 <Name>top</Name>
-<Val>-13.00000000000000</Val>
+<Val>-12.26300000000000</Val>
 </DBL>
 <DBL>
 <Name>right</Name>
-<Val>-22.30000000000000</Val>
+<Val>-22.21400000000000</Val>
 </DBL>
 <DBL>
 <Name>width</Name>
@@ -577,7 +577,7 @@
 </EW>
 <DBL>
 <Name>attenuation</Name>
-<Val>1</Val>
+<Val>9.75300000000000</Val>
 </DBL>
 <Refnum>
 <Name>instrument handle</Name>

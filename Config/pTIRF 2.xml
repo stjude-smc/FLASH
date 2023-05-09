@@ -1,4 +1,3 @@
-
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
 <Version>18.0.1f4</Version>
@@ -131,19 +130,19 @@
 <NumElts>4</NumElts>
 <DBL>
 <Name>Y Min</Name>
-<Val>-4.50000000000000</Val>
+<Val>-4.27200000000000</Val>
 </DBL>
 <DBL>
 <Name>Y Max</Name>
-<Val>3.00000000000000</Val>
+<Val>5.67000000000000</Val>
 </DBL>
 <DBL>
 <Name>X Min</Name>
-<Val>-19.00000000000000</Val>
+<Val>-19.34500000000000</Val>
 </DBL>
 <DBL>
 <Name>X Max</Name>
-<Val>33.50000000000000</Val>
+<Val>34.04100000000000</Val>
 </DBL>
 </Cluster>
 <Cluster>
@@ -151,11 +150,11 @@
 <NumElts>4</NumElts>
 <DBL>
 <Name>top</Name>
-<Val>-13.00000000000000</Val>
+<Val>-11.31700000000000</Val>
 </DBL>
 <DBL>
 <Name>right</Name>
-<Val>-22.30000000000000</Val>
+<Val>-22.27700000000000</Val>
 </DBL>
 <DBL>
 <Name>width</Name>
@@ -578,7 +577,7 @@
 </EW>
 <DBL>
 <Name>attenuation</Name>
-<Val>1</Val>
+<Val>10.83000000000000</Val>
 </DBL>
 <Refnum>
 <Name>instrument handle</Name>
