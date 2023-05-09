@@ -573,7 +573,7 @@
 <Choice>Thorlabs</Choice>
 <Choice>Newport</Choice>
 <Choice>Coherent</Choice>
-<Val>0</Val>
+<Val>2</Val>
 </EW>
 <DBL>
 <Name>attenuation</Name>
