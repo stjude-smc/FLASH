@@ -417,10 +417,9 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
-				<Property Name="Bld_version.build" Type="Int">309</Property>
+				<Property Name="Bld_version.build" Type="Int">512</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">3</Property>
-				<Property Name="Bld_version.patch" Type="Int">2</Property>
 				<Property Name="Destination[0].destName" Type="Str">Flash Gordon.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../Testing/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -432,7 +431,8 @@
 				<Property Name="Destination[3].destName" Type="Str">dll</Property>
 				<Property Name="Destination[3].path" Type="Path">../Testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
-				<Property Name="Source[0].itemID" Type="Str">{D72999A4-38E1-4589-A024-39B15800F455}</Property>
+				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
+				<Property Name="Source[0].itemID" Type="Str">{2032EDE6-ED5C-4A24-83B8-3C2D724D2128}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
