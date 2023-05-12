@@ -89,6 +89,7 @@
 				<Item Name="Pump Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Pump Configuration.ctl"/>
 				<Item Name="Shutter Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Shutter Configuration.ctl"/>
 				<Item Name="Stage Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Stage Configuration.ctl"/>
+				<Item Name="sync device settings.ctl" Type="VI" URL="../Resources/Type Defs/sync device settings.ctl"/>
 				<Item Name="Virtual Camera Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Virtual Camera Configuration.ctl"/>
 			</Item>
 			<Item Name="Actor Framework.lvlib" Type="Library" URL="/&lt;vilib&gt;/ActorFramework/Actor Framework.lvlib"/>
