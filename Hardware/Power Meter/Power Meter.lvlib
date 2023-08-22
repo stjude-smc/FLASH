@@ -24,4 +24,5 @@
 	<Item Name="Power Meter.lvclass" Type="LVClass" URL="../Power Meter/Power Meter.lvclass"/>
 	<Item Name="calibrate polarizer.vi" Type="VI" URL="../calibrate polarizer.vi"/>
 	<Item Name="test power meter.vi" Type="VI" URL="../test power meter.vi"/>
+	<Item Name="calibrate polarizer newport.vi" Type="VI" URL="../calibrate polarizer newport.vi"/>
 </Library>
