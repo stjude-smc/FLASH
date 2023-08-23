@@ -348,11 +348,11 @@
 </EW>
 <DBL>
 <Name>Polarizer Amplitude</Name>
-<Val>1900.00000000000000</Val>
+<Val>1772.03999999999996</Val>
 </DBL>
 <DBL>
 <Name>Polarizer Theta Zero</Name>
-<Val>-19.41000000000000</Val>
+<Val>-19.19618000000000</Val>
 </DBL>
 <U16>
 <Name>Wavelength</Name>
@@ -577,7 +577,7 @@
 </EW>
 <DBL>
 <Name>attenuation</Name>
-<Val>53.20000000000000</Val>
+<Val>18.09000000000000</Val>
 </DBL>
 <Refnum>
 <Name>instrument handle</Name>
