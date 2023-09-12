@@ -5,6 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
+		<Item Name="Calibrate Polarizer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Calibrate Polarizer Msg/Calibrate Polarizer Msg.lvclass"/>
 		<Item Name="Cancel Operation Msg.lvclass" Type="LVClass" URL="../../Application Messages/Record Button Off Msg/Cancel Operation Msg.lvclass"/>
 		<Item Name="Close Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Shutter Msg/Close Shutter Msg.lvclass"/>
 		<Item Name="Close Viewer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Viewer Msg/Close Viewer Msg.lvclass"/>

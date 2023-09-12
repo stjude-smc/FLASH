@@ -305,7 +305,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM6</Val>
+<Val>COM3</Val>
 </Refnum>
 <EW>
 <Name>Laser Type</Name>
@@ -348,11 +348,11 @@
 </EW>
 <DBL>
 <Name>Polarizer Amplitude</Name>
-<Val>5791.13000000000010</Val>
+<Val>6018.22999999999956</Val>
 </DBL>
 <DBL>
 <Name>Polarizer Theta Zero</Name>
-<Val>-7.65131000000000</Val>
+<Val>-7.71071000000000</Val>
 </DBL>
 <U16>
 <Name>Wavelength</Name>
@@ -577,12 +577,12 @@
 </EW>
 <DBL>
 <Name>attenuation</Name>
-<Val>9.75300000000000</Val>
+<Val>22.19000000000000</Val>
 </DBL>
 <Refnum>
 <Name>instrument handle</Name>
 <RefKind>VISA</RefKind>
-<Val>COM4</Val>
+<Val>COM5</Val>
 </Refnum>
 </Cluster>
 </Cluster>
