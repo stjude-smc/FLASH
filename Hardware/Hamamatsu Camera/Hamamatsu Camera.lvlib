@@ -6,11 +6,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Messages for this actor" Type="Folder">
-		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Hamamatsu Camera Messages/Flash Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
 		<Item Name="Get Most Recent Frame (if active) Msg.lvclass" Type="LVClass" URL="../../Hamamatsu Camera Messages/Get Most Recent Frame (if active) Msg/Get Most Recent Frame (if active) Msg.lvclass"/>
-		<Item Name="Start Stream Msg.lvclass" Type="LVClass" URL="../../Hamamatsu Camera Messages/Flash Start Stream Msg/Start Stream Msg.lvclass"/>
-		<Item Name="Finish Stream Msg.lvclass" Type="LVClass" URL="../../Hamamatsu Camera Messages/Flash Finish Stream Msg/Finish Stream Msg.lvclass"/>
-		<Item Name="Set Enabled Cameras Msg.lvclass" Type="LVClass" URL="../../Hamamatsu Camera Messages/Set Enabled Cameras Msg/Set Enabled Cameras Msg.lvclass"/>
 	</Item>
 	<Item Name="Hamamatsu Camera.lvclass" Type="LVClass" URL="../Hamamatsu Camera.lvclass"/>
 </Library>

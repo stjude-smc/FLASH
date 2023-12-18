@@ -5,7 +5,11 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
+		<Item Name="Finish Stream Msg.lvclass" Type="LVClass" URL="../../Camera Messages/Finish Stream Msg/Finish Stream Msg.lvclass"/>
+		<Item Name="Set Enabled Cameras Msg.lvclass" Type="LVClass" URL="../../Camera Messages/Set Enabled Cameras Msg/Set Enabled Cameras Msg.lvclass"/>
 		<Item Name="Start Live Mode Msg.lvclass" Type="LVClass" URL="../../Camera Messages/Start Live Mode Msg/Start Live Mode Msg.lvclass"/>
+		<Item Name="Start Stream Msg.lvclass" Type="LVClass" URL="../../Camera Messages/Start Stream Msg/Start Stream Msg.lvclass"/>
+		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Camera Messages/Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
 	</Item>
 	<Item Name="Camera.lvclass" Type="LVClass" URL="../Camera.lvclass"/>
 	<Item Name="Flip Frame.vi" Type="VI" URL="../Flip Frame.vi"/>
