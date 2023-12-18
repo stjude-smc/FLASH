@@ -5,8 +5,6 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
-	<Item Name="Messages for this actor" Type="Folder">
-		<Item Name="Get Most Recent Frame (if active) Msg.lvclass" Type="LVClass" URL="../../Hamamatsu Camera Messages/Get Most Recent Frame (if active) Msg/Get Most Recent Frame (if active) Msg.lvclass"/>
-	</Item>
+	<Item Name="Messages for this actor" Type="Folder"/>
 	<Item Name="Hamamatsu Camera.lvclass" Type="LVClass" URL="../Hamamatsu Camera.lvclass"/>
 </Library>
