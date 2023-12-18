@@ -4,6 +4,9 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">402685952</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Messages for this actor" Type="Folder">
+		<Item Name="Start Live Mode Msg.lvclass" Type="LVClass" URL="../../Camera Messages/Start Live Mode Msg/Start Live Mode Msg.lvclass"/>
+	</Item>
 	<Item Name="Camera.lvclass" Type="LVClass" URL="../Camera.lvclass"/>
 	<Item Name="Flip Frame.vi" Type="VI" URL="../Flip Frame.vi"/>
 </Library>
