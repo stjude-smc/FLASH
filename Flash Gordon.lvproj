@@ -33,6 +33,7 @@
 				<Item Name="Laser.lvlib" Type="Library" URL="../Hardware/Laser/Laser.lvlib"/>
 				<Item Name="Microscope.lvlib" Type="Library" URL="../Hardware/Microscope/Microscope.lvlib"/>
 				<Item Name="Power Meter.lvlib" Type="Library" URL="../Hardware/Power Meter/Power Meter.lvlib"/>
+				<Item Name="Andor Camera.lvlib" Type="Library" URL="../Hardware/Andor Camera/Andor Camera.lvlib"/>
 			</Item>
 		</Item>
 		<Item Name="Resources" Type="Folder">
