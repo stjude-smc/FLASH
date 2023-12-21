@@ -289,6 +289,8 @@
 <EW>
 <Name>Camera Type</Name>
 <Choice>Hamamatsu</Choice>
+<Choice>Andor</Choice>
+<Choice>Photometrics</Choice>
 <Val>0</Val>
 </EW>
 <DAQChannel>
@@ -433,16 +435,11 @@
 <Dimsize>4</Dimsize>
 <Cluster>
 <Name>Channel Assignment</Name>
-<NumElts>7</NumElts>
+<NumElts>6</NumElts>
 <String>
 <Name>Channel Name</Name>
 <Val>Cy2</Val>
 </String>
-<EW>
-<Name>Camera Type</Name>
-<Choice>Hamamatsu</Choice>
-<Val>0</Val>
-</EW>
 <String>
 <Name>Serial Number</Name>
 <Val>000117</Val>
@@ -466,16 +463,11 @@
 </Cluster>
 <Cluster>
 <Name>Channel Assignment</Name>
-<NumElts>7</NumElts>
+<NumElts>6</NumElts>
 <String>
 <Name>Channel Name</Name>
 <Val>Cy3</Val>
 </String>
-<EW>
-<Name>Camera Type</Name>
-<Choice>Hamamatsu</Choice>
-<Val>0</Val>
-</EW>
 <String>
 <Name>Serial Number</Name>
 <Val>000112</Val>
@@ -499,16 +491,11 @@
 </Cluster>
 <Cluster>
 <Name>Channel Assignment</Name>
-<NumElts>7</NumElts>
+<NumElts>6</NumElts>
 <String>
 <Name>Channel Name</Name>
 <Val>Cy5</Val>
 </String>
-<EW>
-<Name>Camera Type</Name>
-<Choice>Hamamatsu</Choice>
-<Val>0</Val>
-</EW>
 <String>
 <Name>Serial Number</Name>
 <Val>000113</Val>
@@ -532,16 +519,11 @@
 </Cluster>
 <Cluster>
 <Name>Channel Assignment</Name>
-<NumElts>7</NumElts>
+<NumElts>6</NumElts>
 <String>
 <Name>Channel Name</Name>
 <Val>Cy7</Val>
 </String>
-<EW>
-<Name>Camera Type</Name>
-<Choice>Hamamatsu</Choice>
-<Val>0</Val>
-</EW>
 <String>
 <Name>Serial Number</Name>
 <Val>000115</Val>

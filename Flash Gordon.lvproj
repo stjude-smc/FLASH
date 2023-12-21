@@ -151,7 +151,6 @@
 				<Item Name="tm_closecamera_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_closecamera_40.vi"/>
 				<Item Name="tm_deinitialize_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_deinitialize_40.vi"/>
 				<Item Name="tm_errorreport.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_errorreport.vi"/>
-				<Item Name="tm_getcamerainfo_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getcamerainfo_40.vi"/>
 				<Item Name="tm_getcamerastatus_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getcamerastatus_40.vi"/>
 				<Item Name="tm_getcaptureinfo_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getcaptureinfo_40.vi"/>
 				<Item Name="tm_getframe16_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getframe16_40.vi"/>
