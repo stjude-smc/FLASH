@@ -7,4 +7,5 @@
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Messages for this actor" Type="Folder"/>
 	<Item Name="Hamamatsu Camera.lvclass" Type="LVClass" URL="../Hamamatsu Camera.lvclass"/>
+	<Item Name="Max Lines.vi" Type="VI" URL="../../../Resources/Helper VIs/Max Lines.vi"/>
 </Library>
