@@ -5,4 +5,5 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Andor Camera.lvclass" Type="LVClass" URL="../Andor Camera.lvclass"/>
+	<Item Name="Andor Test.vi" Type="VI" URL="../Andor Test.vi"/>
 </Library>
