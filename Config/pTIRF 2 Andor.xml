@@ -425,10 +425,10 @@
 <Cluster>
 <Name>Fluidics Configuration</Name>
 <NumElts>1</NumElts>
-<Boolean>
-<Name>Fluidics present</Name>
-<Val>0</Val>
-</Boolean>
+<DAQChannel>
+<Name>fluidics trigger line</Name>
+<Val>Dev1/port2/line6</Val>
+</DAQChannel>
 </Cluster>
 <Array>
 <Name>Installed Cameras</Name>
