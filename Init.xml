@@ -21,7 +21,7 @@
 <NumElts>2</NumElts>
 <Array>
 <Name>Hostname</Name>
-<Dimsize>3</Dimsize>
+<Dimsize>4</Dimsize>
 <String>
 <Name> </Name>
 <Val>D200842</Val>
@@ -34,10 +34,14 @@
 <Name> </Name>
 <Val>D191123</Val>
 </String>
+<String>
+<Name> </Name>
+<Val>D200412</Val>
+</String>
 </Array>
 <Array>
 <Name>Config File</Name>
-<Dimsize>3</Dimsize>
+<Dimsize>4</Dimsize>
 <String>
 <Name> </Name>
 <Val>pTIRF 3</Val>
@@ -49,6 +53,10 @@
 <String>
 <Name> </Name>
 <Val>pTIRF 1</Val>
+</String>
+<String>
+<Name> </Name>
+<Val>Workstation</Val>
 </String>
 </Array>
 </Cluster>
