@@ -113,6 +113,9 @@
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
 		<Item Name="Load Config List.vi" Type="VI" URL="../Resources/Helper VIs/Load Config List.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
+			<Item Name="instr.lib" Type="Folder">
+				<Item Name="ASI TG-1000.lvlib" Type="Library" URL="/&lt;instrlib&gt;/ASI TG-1000/ASI TG-1000.lvlib"/>
+			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="AbortAcquisition.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/AbortAcquisition.vi"/>
 				<Item Name="AcquisitionMode_mode typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/AcquisitionMode_mode typedef.ctl"/>
@@ -120,43 +123,49 @@
 				<Item Name="Add ECO For LabVIEW.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Add ECO For LabVIEW.vi"/>
 				<Item Name="CoolerOFF.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/CoolerOFF.vi"/>
 				<Item Name="CoolerON.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/CoolerON.vi"/>
+				<Item Name="EMGainMode_mode typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/EMGainMode_mode typedef.ctl"/>
 				<Item Name="Error Code Enum typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/Error Code Enum typedef.ctl"/>
 				<Item Name="Error Code Handler.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Error Code Handler.vi"/>
 				<Item Name="Error Code Offset global.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Error Code Offset global.vi"/>
 				<Item Name="FanMode_mode typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/FanMode_mode typedef.ctl"/>
-				<Item Name="Filter_SetMode.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/Filter_SetMode.vi"/>
 				<Item Name="Get Error Source.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Get Error Source.vi"/>
-				<Item Name="GetAcquiredData.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetAcquiredData.vi"/>
 				<Item Name="GetAcquisitionTimings.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetAcquisitionTimings.vi"/>
 				<Item Name="GetAvailableCameras.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetAvailableCameras.vi"/>
 				<Item Name="GetCameraHandle.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetCameraHandle.vi"/>
 				<Item Name="GetCameraSerialNumber.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetCameraSerialNumber.vi"/>
 				<Item Name="GetControllerCardModel.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetControllerCardModel.vi"/>
 				<Item Name="GetDetector.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetDetector.vi"/>
-				<Item Name="GetFastestRecommendedVSSpeed.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetFastestRecommendedVSSpeed.vi"/>
 				<Item Name="GetHeadModel.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetHeadModel.vi"/>
 				<Item Name="GetHSSpeed.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetHSSpeed.vi"/>
+				<Item Name="GetMostRecentImage16.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetMostRecentImage16.vi"/>
 				<Item Name="GetStatus.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetStatus.vi"/>
 				<Item Name="GetTemperature.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetTemperature.vi"/>
 				<Item Name="GetTotalNumberImagesAcquired.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetTotalNumberImagesAcquired.vi"/>
+				<Item Name="GetVSSpeed.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetVSSpeed.vi"/>
 				<Item Name="HSSpeed_type typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/HSSpeed_type typedef.ctl"/>
 				<Item Name="Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/Initialize.vi"/>
 				<Item Name="Join Strings.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Join Strings.vi"/>
 				<Item Name="ReadMode_mode typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/ReadMode_mode typedef.ctl"/>
 				<Item Name="SetAcquisitionMode.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetAcquisitionMode.vi"/>
 				<Item Name="SetADChannel.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetADChannel.vi"/>
+				<Item Name="SetCurrentCamera.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetCurrentCamera.vi"/>
+				<Item Name="SetEMCCDGain.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetEMCCDGain.vi"/>
+				<Item Name="SetEMGainMode.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetEMGainMode.vi"/>
 				<Item Name="SetExposureTime.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetExposureTime.vi"/>
 				<Item Name="SetFanMode.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetFanMode.vi"/>
-				<Item Name="SetGain.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetGain.vi"/>
+				<Item Name="SetFrameTransferMode.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetFrameTransferMode.vi"/>
 				<Item Name="SetHSSpeed.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetHSSpeed.vi"/>
 				<Item Name="SetImage.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetImage.vi"/>
 				<Item Name="SetNumberKinetics.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetNumberKinetics.vi"/>
 				<Item Name="SetReadMode.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetReadMode.vi"/>
+				<Item Name="SetShutter.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetShutter.vi"/>
 				<Item Name="SetSpool.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetSpool.vi"/>
 				<Item Name="SetTemperature.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetTemperature.vi"/>
 				<Item Name="SetTriggerMode.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetTriggerMode.vi"/>
 				<Item Name="SetVSSpeed.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetVSSpeed.vi"/>
 				<Item Name="ShutDown.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/ShutDown.vi"/>
+				<Item Name="Shutter_mode typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/Shutter_mode typedef.ctl"/>
+				<Item Name="Shutter_type typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/Shutter_type typedef.ctl"/>
 				<Item Name="Spool_method typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/Spool_method typedef.ctl"/>
 				<Item Name="StartAcquisition.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/StartAcquisition.vi"/>
 				<Item Name="Subtract ECO For DLL.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Subtract ECO For DLL.vi"/>
@@ -438,7 +447,6 @@
 			</Item>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
-			<Item Name="matscript.dll" Type="Document"/>
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -448,9 +456,7 @@
 			<Item Name="systemLogging.dll" Type="Document" URL="systemLogging.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="tmcamcon.dll" Type="Document" URL="tmcamcon.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
+			<Item Name="tmcamcon.dll" Type="Document" URL="../../../Windows/System32/tmcamcon.dll"/>
 			<Item Name="user32.dll" Type="Document" URL="user32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
