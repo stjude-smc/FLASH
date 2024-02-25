@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
-<Version>18.0.1f4</Version>
+<Version>22.3.1f8</Version>
 <Cluster>
 <Name>Hardware Configuration</Name>
 <NumElts>8</NumElts>
@@ -291,7 +291,7 @@
 <Choice>Hamamatsu</Choice>
 <Choice>Andor</Choice>
 <Choice>Photometrics</Choice>
-<Val>0</Val>
+<Val>2</Val>
 </EW>
 <DAQChannel>
 <Name>Sync Line</Name>
@@ -432,7 +432,7 @@
 </Cluster>
 <Array>
 <Name>Installed Cameras</Name>
-<Dimsize>5</Dimsize>
+<Dimsize>6</Dimsize>
 <Cluster>
 <Name>Channel Assignment</Name>
 <NumElts>6</NumElts>
@@ -555,6 +555,34 @@
 <String>
 <Name>Serial Number</Name>
 <Val>13800</Val>
+</String>
+<Boolean>
+<Name>Flip Vertically</Name>
+<Val>0</Val>
+</Boolean>
+<Boolean>
+<Name>Flip Horizontally</Name>
+<Val>0</Val>
+</Boolean>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>1.00000000000000</Val>
+</DBL>
+<I16>
+<Name>wavelength</Name>
+<Val>532</Val>
+</I16>
+</Cluster>
+<Cluster>
+<Name>Channel Assignment</Name>
+<NumElts>6</NumElts>
+<String>
+<Name>Channel Name</Name>
+<Val>Cy3</Val>
+</String>
+<String>
+<Name>Serial Number</Name>
+<Val>A23A723016</Val>
 </String>
 <Boolean>
 <Name>Flip Vertically</Name>
