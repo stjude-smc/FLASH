@@ -58,6 +58,7 @@
 				<Item Name="Custom Photobleach Length.vi" Type="VI" URL="../Resources/Helper VIs/Custom Photobleach Length.vi"/>
 				<Item Name="DCIMG File Names.vi" Type="VI" URL="../Resources/Helper VIs/DCIMG File Names.vi"/>
 				<Item Name="Increment File Name.vi" Type="VI" URL="../Resources/Helper VIs/Increment File Name.vi"/>
+				<Item Name="Log Message.vi" Type="VI" URL="../Resources/Helper VIs/Log Message.vi"/>
 				<Item Name="plate image.vi" Type="VI" URL="../Resources/Helper VIs/plate image.vi"/>
 				<Item Name="Resize Graph.vi" Type="VI" URL="../Resources/Helper VIs/Resize Graph.vi"/>
 				<Item Name="Set Title Bar Icon.vi" Type="VI" URL="../Resources/Helper VIs/Set Title Bar Icon.vi"/>
