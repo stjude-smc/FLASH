@@ -1,0 +1,643 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>22.3.1f8</Version>
+<Cluster>
+<Name>Hardware Configuration</Name>
+<NumElts>8</NumElts>
+<Array>
+<Name>Shutters</Name>
+<Dimsize>4</Dimsize>
+<Cluster>
+<Name>Shutter Configuration</Name>
+<NumElts>4</NumElts>
+<DAQChannel>
+<Name>IO Line</Name>
+<Val>Dev1/port1/line0</Val>
+</DAQChannel>
+<String>
+<Name>Name</Name>
+<Val>Cy2</Val>
+</String>
+<U16>
+<Name>Wavelength</Name>
+<Val>473</Val>
+</U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
+</Cluster>
+<Cluster>
+<Name>Shutter Configuration</Name>
+<NumElts>4</NumElts>
+<DAQChannel>
+<Name>IO Line</Name>
+<Val>Dev1/port1/line1</Val>
+</DAQChannel>
+<String>
+<Name>Name</Name>
+<Val>Cy3</Val>
+</String>
+<U16>
+<Name>Wavelength</Name>
+<Val>532</Val>
+</U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
+</Cluster>
+<Cluster>
+<Name>Shutter Configuration</Name>
+<NumElts>4</NumElts>
+<DAQChannel>
+<Name>IO Line</Name>
+<Val>Dev1/port1/line2</Val>
+</DAQChannel>
+<String>
+<Name>Name</Name>
+<Val>Cy5</Val>
+</String>
+<U16>
+<Name>Wavelength</Name>
+<Val>640</Val>
+</U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
+</Cluster>
+<Cluster>
+<Name>Shutter Configuration</Name>
+<NumElts>4</NumElts>
+<DAQChannel>
+<Name>IO Line</Name>
+<Val>Dev1/port1/line3</Val>
+</DAQChannel>
+<String>
+<Name>Name</Name>
+<Val>Cy7</Val>
+</String>
+<U16>
+<Name>Wavelength</Name>
+<Val>721</Val>
+</U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
+</Cluster>
+</Array>
+<Cluster>
+<Name>Stage Configuration</Name>
+<NumElts>9</NumElts>
+<Refnum>
+<Name>Serial Port</Name>
+<RefKind>VISA</RefKind>
+<Val>COM4</Val>
+</Refnum>
+<DBL>
+<Name>Forward Step (mm)</Name>
+<Val>0.40000000000000</Val>
+</DBL>
+<DBL>
+<Name>Lane Length (mm)</Name>
+<Val>6.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Lane Separation (mm)</Name>
+<Val>0.80000000000000</Val>
+</DBL>
+<EW>
+<Name>Stage Type</Name>
+<Choice>Disabled</Choice>
+<Choice>ESP301</Choice>
+<Choice>Ti2</Choice>
+<Choice>Ludl</Choice>
+<Choice>ASI</Choice>
+<Val>2</Val>
+</EW>
+<I32>
+<Name>Autofocus Steps</Name>
+<Val>10</Val>
+</I32>
+<DBL>
+<Name>Autofocus Range (um)</Name>
+<Val>4.00000000000000</Val>
+</DBL>
+<Cluster>
+<Name>Stage Limits</Name>
+<NumElts>4</NumElts>
+<DBL>
+<Name>Y Min</Name>
+<Val>-4.27200000000000</Val>
+</DBL>
+<DBL>
+<Name>Y Max</Name>
+<Val>5.67000000000000</Val>
+</DBL>
+<DBL>
+<Name>X Min</Name>
+<Val>-19.34500000000000</Val>
+</DBL>
+<DBL>
+<Name>X Max</Name>
+<Val>34.04100000000000</Val>
+</DBL>
+</Cluster>
+<Cluster>
+<Name>Slide (mm)</Name>
+<NumElts>4</NumElts>
+<DBL>
+<Name>top</Name>
+<Val>-11.31700000000000</Val>
+</DBL>
+<DBL>
+<Name>right</Name>
+<Val>-22.27700000000000</Val>
+</DBL>
+<DBL>
+<Name>width</Name>
+<Val>60.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>height</Name>
+<Val>25.40000000000000</Val>
+</DBL>
+</Cluster>
+</Cluster>
+<Cluster>
+<Name>Microscope Configuration</Name>
+<NumElts>3</NumElts>
+<Refnum>
+<Name>Serial Port</Name>
+<RefKind>VISA</RefKind>
+<Val>COM2</Val>
+</Refnum>
+<EW>
+<Name>Microscope Type</Name>
+<Choice>Disable</Choice>
+<Choice>TE2000</Choice>
+<Choice>Eclipse Ti</Choice>
+<Choice>Ti2</Choice>
+<Val>3</Val>
+</EW>
+<Array>
+<Name>Detection Settings</Name>
+<Dimsize>7</Dimsize>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy2 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>1</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy3 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>2</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy5 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>3</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy7 (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>4</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>No Filter (Right)</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>5</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>2</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Lasers to Eyes</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>6</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>1</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Detection Settings</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Name</Name>
+<Val>Cy5 Left</Val>
+</String>
+<U16>
+<Name>Filter Position</Name>
+<Val>3</Val>
+</U16>
+<U16>
+<Name>Optical Path</Name>
+<Val>4</Val>
+</U16>
+</Cluster>
+</Array>
+</Cluster>
+<Cluster>
+<Name>Virtual Camera Configuration</Name>
+<NumElts>2</NumElts>
+<EW>
+<Name>Camera Type</Name>
+<Choice>Hamamatsu</Choice>
+<Choice>Andor</Choice>
+<Choice>Photometrics</Choice>
+<Val>2</Val>
+</EW>
+<DAQChannel>
+<Name>Sync Line</Name>
+<Val>Dev1/port2/line7</Val>
+</DAQChannel>
+</Cluster>
+<Array>
+<Name>Laser Configuration</Name>
+<Dimsize>4</Dimsize>
+<Cluster>
+<Name>Laser Configuration</Name>
+<NumElts>5</NumElts>
+<Refnum>
+<Name>Serial Port</Name>
+<RefKind>VISA</RefKind>
+<Val>COM3</Val>
+</Refnum>
+<EW>
+<Name>Laser Type</Name>
+<Choice>Disable</Choice>
+<Choice>Laser Quantum</Choice>
+<Choice>Coherent OBIS</Choice>
+<Choice>PRM1-Z8</Choice>
+<Choice>Coherent HOPS</Choice>
+<Val>1</Val>
+</EW>
+<DBL>
+<Name>Polarizer Amplitude</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Polarizer Theta Zero</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<U16>
+<Name>Wavelength</Name>
+<Val>473</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Laser Configuration</Name>
+<NumElts>5</NumElts>
+<Refnum>
+<Name>Serial Port</Name>
+<RefKind>VISA</RefKind>
+<Val></Val>
+</Refnum>
+<EW>
+<Name>Laser Type</Name>
+<Choice>Disable</Choice>
+<Choice>Laser Quantum</Choice>
+<Choice>Coherent OBIS</Choice>
+<Choice>PRM1-Z8</Choice>
+<Choice>Coherent HOPS</Choice>
+<Val>3</Val>
+</EW>
+<DBL>
+<Name>Polarizer Amplitude</Name>
+<Val>5445.53999999999996</Val>
+</DBL>
+<DBL>
+<Name>Polarizer Theta Zero</Name>
+<Val>-3.44040000000000</Val>
+</DBL>
+<U16>
+<Name>Wavelength</Name>
+<Val>532</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Laser Configuration</Name>
+<NumElts>5</NumElts>
+<Refnum>
+<Name>Serial Port</Name>
+<RefKind>VISA</RefKind>
+<Val></Val>
+</Refnum>
+<EW>
+<Name>Laser Type</Name>
+<Choice>Disable</Choice>
+<Choice>Laser Quantum</Choice>
+<Choice>Coherent OBIS</Choice>
+<Choice>PRM1-Z8</Choice>
+<Choice>Coherent HOPS</Choice>
+<Val>4</Val>
+</EW>
+<DBL>
+<Name>Polarizer Amplitude</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Polarizer Theta Zero</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<U16>
+<Name>Wavelength</Name>
+<Val>640</Val>
+</U16>
+</Cluster>
+<Cluster>
+<Name>Laser Configuration</Name>
+<NumElts>5</NumElts>
+<Refnum>
+<Name>Serial Port</Name>
+<RefKind>VISA</RefKind>
+<Val></Val>
+</Refnum>
+<EW>
+<Name>Laser Type</Name>
+<Choice>Disable</Choice>
+<Choice>Laser Quantum</Choice>
+<Choice>Coherent OBIS</Choice>
+<Choice>PRM1-Z8</Choice>
+<Choice>Coherent HOPS</Choice>
+<Val>0</Val>
+</EW>
+<DBL>
+<Name>Polarizer Amplitude</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Polarizer Theta Zero</Name>
+<Val>0.00000000000000</Val>
+</DBL>
+<U16>
+<Name>Wavelength</Name>
+<Val>721</Val>
+</U16>
+</Cluster>
+</Array>
+<Cluster>
+<Name>Fluidics Configuration</Name>
+<NumElts>1</NumElts>
+<DAQChannel>
+<Name>fluidics trigger line</Name>
+<Val>Dev1/port2/line6</Val>
+</DAQChannel>
+</Cluster>
+<Array>
+<Name>Installed Cameras</Name>
+<Dimsize>6</Dimsize>
+<Cluster>
+<Name>Channel Assignment</Name>
+<NumElts>6</NumElts>
+<String>
+<Name>Channel Name</Name>
+<Val>Cy2</Val>
+</String>
+<String>
+<Name>Serial Number</Name>
+<Val>000123</Val>
+</String>
+<Boolean>
+<Name>Flip Vertically</Name>
+<Val>1</Val>
+</Boolean>
+<Boolean>
+<Name>Flip Horizontally</Name>
+<Val>0</Val>
+</Boolean>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.21000000000000</Val>
+</DBL>
+<I16>
+<Name>wavelength</Name>
+<Val>473</Val>
+</I16>
+</Cluster>
+<Cluster>
+<Name>Channel Assignment</Name>
+<NumElts>6</NumElts>
+<String>
+<Name>Channel Name</Name>
+<Val>Cy3</Val>
+</String>
+<String>
+<Name>Serial Number</Name>
+<Val>000122</Val>
+</String>
+<Boolean>
+<Name>Flip Vertically</Name>
+<Val>0</Val>
+</Boolean>
+<Boolean>
+<Name>Flip Horizontally</Name>
+<Val>0</Val>
+</Boolean>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.21000000000000</Val>
+</DBL>
+<I16>
+<Name>wavelength</Name>
+<Val>532</Val>
+</I16>
+</Cluster>
+<Cluster>
+<Name>Channel Assignment</Name>
+<NumElts>6</NumElts>
+<String>
+<Name>Channel Name</Name>
+<Val>Cy5</Val>
+</String>
+<String>
+<Name>Serial Number</Name>
+<Val>000121</Val>
+</String>
+<Boolean>
+<Name>Flip Vertically</Name>
+<Val>0</Val>
+</Boolean>
+<Boolean>
+<Name>Flip Horizontally</Name>
+<Val>0</Val>
+</Boolean>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.21000000000000</Val>
+</DBL>
+<I16>
+<Name>wavelength</Name>
+<Val>640</Val>
+</I16>
+</Cluster>
+<Cluster>
+<Name>Channel Assignment</Name>
+<NumElts>6</NumElts>
+<String>
+<Name>Channel Name</Name>
+<Val>Cy7</Val>
+</String>
+<String>
+<Name>Serial Number</Name>
+<Val>000118</Val>
+</String>
+<Boolean>
+<Name>Flip Vertically</Name>
+<Val>1</Val>
+</Boolean>
+<Boolean>
+<Name>Flip Horizontally</Name>
+<Val>0</Val>
+</Boolean>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.21000000000000</Val>
+</DBL>
+<I16>
+<Name>wavelength</Name>
+<Val>721</Val>
+</I16>
+</Cluster>
+<Cluster>
+<Name>Channel Assignment</Name>
+<NumElts>6</NumElts>
+<String>
+<Name>Channel Name</Name>
+<Val>Cy3</Val>
+</String>
+<String>
+<Name>Serial Number</Name>
+<Val>A23A723016</Val>
+</String>
+<Boolean>
+<Name>Flip Vertically</Name>
+<Val>0</Val>
+</Boolean>
+<Boolean>
+<Name>Flip Horizontally</Name>
+<Val>0</Val>
+</Boolean>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>1.00000000000000</Val>
+</DBL>
+<I16>
+<Name>wavelength</Name>
+<Val>532</Val>
+</I16>
+</Cluster>
+<Cluster>
+<Name>Channel Assignment</Name>
+<NumElts>6</NumElts>
+<String>
+<Name>Channel Name</Name>
+<Val>Cy5</Val>
+</String>
+<String>
+<Name>Serial Number</Name>
+<Val>A21C723018</Val>
+</String>
+<Boolean>
+<Name>Flip Vertically</Name>
+<Val>0</Val>
+</Boolean>
+<Boolean>
+<Name>Flip Horizontally</Name>
+<Val>0</Val>
+</Boolean>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>1.00000000000000</Val>
+</DBL>
+<I16>
+<Name>wavelength</Name>
+<Val>640</Val>
+</I16>
+</Cluster>
+</Array>
+<Cluster>
+<Name>Power Meter Configuration</Name>
+<NumElts>3</NumElts>
+<EW>
+<Name>Power Meter Type</Name>
+<Choice>Disabled</Choice>
+<Choice>Thorlabs</Choice>
+<Choice>Newport</Choice>
+<Choice>Coherent</Choice>
+<Val>2</Val>
+</EW>
+<DBL>
+<Name>attenuation</Name>
+<Val>17.88000000000000</Val>
+</DBL>
+<Refnum>
+<Name>instrument handle</Name>
+<RefKind>VISA</RefKind>
+<Val>COM5</Val>
+</Refnum>
+</Cluster>
+</Cluster>
+</LVData>
