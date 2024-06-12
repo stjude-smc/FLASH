@@ -90,6 +90,7 @@
 				<Item Name="Physical Camera Assignment.ctl" Type="VI" URL="../Resources/Type Defs/Physical Camera Assignment.ctl"/>
 				<Item Name="Pump Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Pump Configuration.ctl"/>
 				<Item Name="Shutter Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Shutter Configuration.ctl"/>
+				<Item Name="Stack Info.ctl" Type="VI" URL="../Resources/Type Defs/Stack Info.ctl"/>
 				<Item Name="Stage Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Stage Configuration.ctl"/>
 				<Item Name="sync device settings.ctl" Type="VI" URL="../Resources/Type Defs/sync device settings.ctl"/>
 				<Item Name="Virtual Camera Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Virtual Camera Configuration.ctl"/>
@@ -204,6 +205,7 @@
 				<Item Name="Batch Msg.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/ActorFramework/Batch Msg/Batch Msg.lvclass"/>
 				<Item Name="Bit-array To Byte-array.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Bit-array To Byte-array.vi"/>
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
+				<Item Name="Casting Utility For Actors.vim" Type="VI" URL="/&lt;vilib&gt;/ActorFramework/Actor/Casting Utility For Actors.vim"/>
 				<Item Name="Check Color Table Size.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check Color Table Size.vi"/>
 				<Item Name="Check Data Size.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check Data Size.vi"/>
 				<Item Name="Check File Permissions.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check File Permissions.vi"/>

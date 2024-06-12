@@ -37,4 +37,22 @@ extern "C" DCIMG2TIFFDLL_API uint32_t dcimg2tiff(
 											// 			dcimg1	dcimg2		dcimg1	dcimg2
 											//		   	dcimg3 (dcimg4)	   (dcimg4) dcimg3
 
+extern "C" DCIMG2TIFFDLL_API uint32_t raw2tiff(
+	char* tiffPath, 						// TIFF file (prepared by BinaryTIFF.lvproj)
+	uint32_t _frameWidth,					// frame width (single channel)
+	uint32_t _frameHeight, 					// frame height (single channel)
+	uint32_t nFrames, 						// number of frames
+	uint32_t skipFrames,					// number of frames to skip from beginning of movie
+	uint32_t nChannels,						// number of channels (2 to 4)
+	uint32_t* vFlip,						// length = nChannels. 0 - don't flip; 1 - flip upside down
+	uint32_t* hFlip,						// length = nChannels. 0 - don't flip; 1 - flip left/right
+	uint32_t ch3right,						// 3rd channel is placed on right if != 0, on left if == 0
+	// (applies only if nChannels > 2)
+	int64_t tiffOffset,						// offset to TIFF data block
+	char* dcimgPath1, char* dcimgPath2, 	// raw image files (Hamamatsu DCIMG format, unsigned 16bit int)
+	char* dcimgPath3, char* dcimgPath4);	// (dcimgPath3/4 optional)
+// Layout:	(ch3right == 0)		(ch3right == 0)
+// 			dcimg1	dcimg2		dcimg1	dcimg2
+//		   	dcimg3 (dcimg4)	   (dcimg4) dcimg3
+
 extern "C" DCIMG2TIFFDLL_API void writeDummyFile(char* filePath, int fileLength);

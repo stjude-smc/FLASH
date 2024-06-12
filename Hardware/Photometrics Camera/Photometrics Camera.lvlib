@@ -20,4 +20,5 @@
 	<Item Name="Photometrics Camera.lvclass" Type="LVClass" URL="../Photometrics Camera.lvclass"/>
 	<Item Name="TestPVCam.vi" Type="VI" URL="../TestPVCam.vi"/>
 	<Item Name="TestPVCam_basic.vi" Type="VI" URL="../TestPVCam_basic.vi"/>
+	<Item Name="TestPVCam_DiskStreaming.vi" Type="VI" URL="../TestPVCam_DiskStreaming.vi"/>
 </Library>

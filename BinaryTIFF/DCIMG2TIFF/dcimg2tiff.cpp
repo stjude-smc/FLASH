@@ -3,6 +3,10 @@
 
 #include "stdafx.h"
 #include <time.h>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <fstream>
 
 
 #define LOGFILE "C:\\temp\\dcimg2tiff.log"
@@ -71,6 +75,143 @@ void debugPrintf(const char *fmt, ...)
 	return;
 }
 
+
+
+// Similar to dcimg2tiff but reads raw frame data from PVCam driver (photometrics).
+// These files contain 
+//
+extern "C" uint32_t raw2tiff(
+	char* tiffPath, 						// TIFF file (prepared by BinaryTIFF.lvproj)
+	uint32_t frameWidth,					// frame width in pixels (single channel)
+	uint32_t frameHeight, 					// frame height in pixels (single channel)
+	uint32_t nFrames, 						// number of frames (excluding skipFrames)
+	uint32_t skipFrames,					// number of frames to skip from beginning of movie
+	uint32_t nChannels,						// number of channels (1 to 4)
+	uint32_t* vFlip,						// length = nChannels. 0 - don't flip; 1 - flip upside down
+	uint32_t* hFlip,						// length = nChannels. 0 - don't flip; 1 - flip left/right
+	uint32_t ch3right,						// 3rd channel is placed on right if != 0, on left if == 0
+	// (applies only if nChannels > 2)
+	int64_t tiffOffset,						// offset to TIFF data block
+	char* dcimgPath1, char* dcimgPath2, 	// raw image files (Hamamatsu DCIMG format, unsigned 16bit int)
+	char* dcimgPath3, char* dcimgPath4)		// Layout:	(ch3right == 0)		(ch3right == 1)
+											// 			dcimg1	dcimg2		dcimg1	dcimg2
+											//		   	dcimg3 (dcimg4)	   (dcimg4) dcimg3
+	//FIXME: Add here the pixel size (8 or 16 bits) as a an input parameter
+{
+	// initializations
+	remove(LOGFILE);
+	clock_t startTime = clock();
+	resetCurrentFrame();
+	canceled = 0;
+	int jFlip, kFlip;
+
+	debugPrintf("START: tiffPath=%s, dcimgPath1=%s, frameWidth=%d, frameHeight=%d, nFrames=%d, skipFrames=%d, nChannels=%d, ch3right=%d, tiffOffset=%d.", \
+		tiffPath, dcimgPath1, frameWidth, frameHeight, nFrames, skipFrames, nChannels, ch3right, tiffOffset);
+
+
+	// Load raw data input files
+	std::vector<std::ifstream> hdcimg;
+	hdcimg.emplace_back(dcimgPath1, std::ios::binary);
+	if (nChannels>1)  hdcimg.emplace_back(dcimgPath2, std::ios::binary);
+	if (nChannels>2)  hdcimg.emplace_back(dcimgPath3, std::ios::binary);
+	if (nChannels>3)  hdcimg.emplace_back(dcimgPath4, std::ios::binary);
+
+	for (const auto& file : hdcimg) {
+		if (!file) {
+			cancelConversion();
+			debugPrintf("Failed to load input file %s", dcimgPath1);
+		}
+	}
+
+	// Open pre-formed TIFF file without destroying contents for writing frame data
+	std::fstream tiffFile(tiffPath, std::ios::binary | std::ios::in | std::ios::out );
+	tiffFile.seekp(tiffOffset, std::ios::beg);
+	if (!tiffFile) {
+		cancelConversion();
+		debugPrintf("Failed to open output file: %s", tiffPath);
+	}
+
+	// Allocate I/O buffers: input is camera frame, output may have multiple camera frames tiled together.
+	// NOTE: writeBuffer initialization to zero is important for unused channels (3-color).
+	const int pxSize = sizeof(uint16_t);
+	const int movieWidth = (nChannels > 1) ? 2 : 1;
+	const int movieHeight = (nChannels > 2) ? 2 : 1;
+
+	std::vector<uint16_t> readBuffer(frameWidth * frameHeight, 0);
+	std::vector<uint16_t> writeBuffer(frameWidth * frameHeight * movieWidth * movieHeight, 0);
+
+
+	for (int i=skipFrames; i < nFrames+skipFrames; ++i)  // loop over frames
+	{
+		if (canceled) {
+			debugPrintf("Conversion cancelled, ending main loop.");
+			break; // abort if cancelConversion() called externally
+		}
+
+
+		// Special case: write directly to disk if single channel and no flipping (very fast)
+		if (nChannels == 1 && !hFlip[0] && !vFlip[0]) {
+			debugPrintf("Fast write frame #%d: %d pixels.", i, readBuffer.size());
+
+			hdcimg[0].read( (char*)readBuffer.data(), readBuffer.size()*pxSize );
+			hdcimg[0].seekg(4096, std::ios::cur);  //fixed gap between images added by photometrics SDK.
+			tiffFile.write( (char*)readBuffer.data(), readBuffer.size()*pxSize );
+			currentFrame = i - 1;
+			continue;
+		}
+
+
+		// Copy frame data from dcimg file to TIFF frame.
+		for (int ch = 0; ch < nChannels; ++ch)
+		{
+			debugPrintf("Read frame #%d, ch %d: %d pixels.", i, ch, readBuffer.size());
+			hdcimg[ch].read( (char*)readBuffer.data(), readBuffer.size()*pxSize );
+			hdcimg[ch].seekg(4096, std::ios::cur);  //fixed gap between images added by photometrics SDK.
+
+			int movieCol = ch % 2;
+			int rowOffset = (ch >= 2) * movieWidth * frameWidth * frameHeight;
+
+			// place 3rd channel on the right side of the bottom row.
+			if (ch >= 2 && ch3right)  movieCol=1;
+
+			// No horizontal flipping: copy row by row
+			if (!hFlip[ch] && !vFlip[ch]) {
+				for (int j = 0; j < frameHeight; j++) {		// loop over rows
+					memcpy(&writeBuffer[(movieWidth * j + movieCol) * frameWidth + rowOffset], &readBuffer[j * frameWidth], pxSize * frameWidth);
+				}
+			}
+			else if (!hFlip[ch] && vFlip[ch]) {
+				for (int j = 0; j < frameHeight; j++) {		// loop over rows
+					jFlip = frameHeight - (j + 1); 	// replaces j index if vertical flip is active
+					memcpy(&writeBuffer[(movieWidth * j + movieCol) * frameWidth + rowOffset], &readBuffer[jFlip * frameWidth], pxSize * frameWidth);
+				}
+			}
+
+			// General case: horizontal flipping requires byte-by-byte copying.
+			else if (hFlip[ch]) {
+				for (int j = 0; j < frameHeight; j++) {		// loop over rows
+					jFlip = (vFlip[ch] ? frameHeight - (j + 1) : j); 	// replaces j index if vertical flip is active
+					for (int k = 0; k < frameWidth; k++) {	// loop over columns
+						kFlip = frameWidth - (k + 1);	// replaces k index if horizontal flip is active
+						writeBuffer[(movieWidth * j + movieCol) * frameWidth + rowOffset + k] = readBuffer[jFlip * frameWidth + kFlip];
+					}
+				}
+			}
+		} //for each dcimg file
+
+		// write frame to output file
+		debugPrintf("Writing frame #%d: %d px.", i, writeBuffer.size());
+		tiffFile.write( (char*)writeBuffer.data(), writeBuffer.size()*pxSize );
+
+		currentFrame = i - 1;			// This can be queried with getCurrentFrame()
+	}
+
+	currentFrame++; // final increment to tell caller that conversion is done
+	debugPrintf("FINISHED after %.1f seconds. Cancelled=%d", ((double)(clock()-startTime))/CLOCKS_PER_SEC, canceled);
+
+	if (canceled) return -1;
+	else return 0;
+}
 
 
 
