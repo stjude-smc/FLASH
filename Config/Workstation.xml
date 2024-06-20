@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
-<Version>22.3.1f8</Version>
+<Version>23.3.3f3</Version>
 <Cluster>
 <Name>Hardware Configuration</Name>
 <NumElts>8</NumElts>
