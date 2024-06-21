@@ -16,6 +16,7 @@
 		<Item Name="PmSetExternalTriggerOut.vi" Type="VI" URL="../helper/PmSetExternalTriggerOut.vi"/>
 		<Item Name="PmSetReadoutMode.vi" Type="VI" URL="../helper/PmSetReadoutMode.vi"/>
 		<Item Name="PmSetRegion.vi" Type="VI" URL="../helper/PmSetRegion.vi"/>
+		<Item Name="Prep Acquisition.vi" Type="VI" URL="../helper/Prep Acquisition.vi"/>
 	</Item>
 	<Item Name="Photometrics Camera.lvclass" Type="LVClass" URL="../Photometrics Camera.lvclass"/>
 	<Item Name="TestPVCam.vi" Type="VI" URL="../TestPVCam.vi"/>

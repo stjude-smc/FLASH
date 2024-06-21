@@ -432,7 +432,7 @@
 </Cluster>
 <Array>
 <Name>Installed Cameras</Name>
-<Dimsize>6</Dimsize>
+<Dimsize>7</Dimsize>
 <Cluster>
 <Name>Channel Assignment</Name>
 <NumElts>6</NumElts>
@@ -599,6 +599,34 @@
 <I16>
 <Name>wavelength</Name>
 <Val>532</Val>
+</I16>
+</Cluster>
+<Cluster>
+<Name>Channel Assignment</Name>
+<NumElts>6</NumElts>
+<String>
+<Name>Channel Name</Name>
+<Val>Cy5</Val>
+</String>
+<String>
+<Name>Serial Number</Name>
+<Val>A24C723032</Val>
+</String>
+<Boolean>
+<Name>Flip Vertically</Name>
+<Val>0</Val>
+</Boolean>
+<Boolean>
+<Name>Flip Horizontally</Name>
+<Val>0</Val>
+</Boolean>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.50000000000000</Val>
+</DBL>
+<I16>
+<Name>wavelength</Name>
+<Val>640</Val>
 </I16>
 </Cluster>
 </Array>

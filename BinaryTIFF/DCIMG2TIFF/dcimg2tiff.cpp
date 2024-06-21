@@ -11,6 +11,17 @@
 
 #define LOGFILE "C:\\temp\\dcimg2tiff.log"
 
+// RAW format parameters used for disk streaming from Photometrics cameras
+#define PVCAM_FRAME_GAP_BYTES 4096
+#define PVCAM_OFFSET_TO_FIRST_FRAME 80
+
+// Standard error codes (also defined in LabVIEW)
+#define FG_ERROR_CANCELLED 5920
+#define FG_ERROR_INVALID_INPUT 5921
+#define FG_ERROR_INVALID_OUTPUT 5922
+#define FG_ERROR_OTHER 5929
+
+
 
 // definitions for hamamatsu functions
 BOOL get_image_information(HDCIMG hdcimg, int32& width, int32& height, int32& rowbytes, int32& pixeltype);
@@ -104,9 +115,18 @@ extern "C" uint32_t raw2tiff(
 	resetCurrentFrame();
 	canceled = 0;
 	int jFlip, kFlip;
+	const int pxSize = sizeof(uint16_t);
+	const int movieWidth = (nChannels > 1) ? 2 : 1;
+	const int movieHeight = (nChannels > 2) ? 2 : 1;
 
-	debugPrintf("START: tiffPath=%s, dcimgPath1=%s, frameWidth=%d, frameHeight=%d, nFrames=%d, skipFrames=%d, nChannels=%d, ch3right=%d, tiffOffset=%d.", \
-		tiffPath, dcimgPath1, frameWidth, frameHeight, nFrames, skipFrames, nChannels, ch3right, tiffOffset);
+	// Save call parameters to log file for debugging
+	std::string dcimgPath(dcimgPath1);
+	if (nChannels > 1)  dcimgPath = dcimgPath + ", " + dcimgPath2;
+	if (nChannels > 2)  dcimgPath = dcimgPath + ", " + dcimgPath3;
+	if (nChannels > 3)  dcimgPath = dcimgPath + ", " + dcimgPath4;
+
+	debugPrintf("START: tiffPath=%s, dcimgPaths=%s, frameWidth=%d, frameHeight=%d, nFrames=%d, skipFrames=%d, nChannels=%d, ch3right=%d, tiffOffset=%d.", \
+		tiffPath, dcimgPath.c_str(), frameWidth, frameHeight, nFrames, skipFrames, nChannels, ch3right, tiffOffset);
 
 
 	// Load raw data input files
@@ -116,10 +136,13 @@ extern "C" uint32_t raw2tiff(
 	if (nChannels>2)  hdcimg.emplace_back(dcimgPath3, std::ios::binary);
 	if (nChannels>3)  hdcimg.emplace_back(dcimgPath4, std::ios::binary);
 
-	for (const auto& file : hdcimg) {
+	for (auto& file : hdcimg) {
+		file.seekg(PVCAM_OFFSET_TO_FIRST_FRAME, std::ios::beg);
+
 		if (!file) {
 			cancelConversion();
-			debugPrintf("Failed to load input file %s", dcimgPath1);
+			debugPrintf("Failed to open input file; empty or does not exist?");
+			return FG_ERROR_INVALID_INPUT;
 		}
 	}
 
@@ -129,14 +152,11 @@ extern "C" uint32_t raw2tiff(
 	if (!tiffFile) {
 		cancelConversion();
 		debugPrintf("Failed to open output file: %s", tiffPath);
+		return FG_ERROR_INVALID_OUTPUT;
 	}
 
 	// Allocate I/O buffers: input is camera frame, output may have multiple camera frames tiled together.
 	// NOTE: writeBuffer initialization to zero is important for unused channels (3-color).
-	const int pxSize = sizeof(uint16_t);
-	const int movieWidth = (nChannels > 1) ? 2 : 1;
-	const int movieHeight = (nChannels > 2) ? 2 : 1;
-
 	std::vector<uint16_t> readBuffer(frameWidth * frameHeight, 0);
 	std::vector<uint16_t> writeBuffer(frameWidth * frameHeight * movieWidth * movieHeight, 0);
 
@@ -154,7 +174,7 @@ extern "C" uint32_t raw2tiff(
 			debugPrintf("Fast write frame #%d: %d pixels.", i, readBuffer.size());
 
 			hdcimg[0].read( (char*)readBuffer.data(), readBuffer.size()*pxSize );
-			hdcimg[0].seekg(4096, std::ios::cur);  //fixed gap between images added by photometrics SDK.
+			hdcimg[0].seekg(PVCAM_FRAME_GAP_BYTES, std::ios::cur);  //fixed gap between images
 			tiffFile.write( (char*)readBuffer.data(), readBuffer.size()*pxSize );
 			currentFrame = i - 1;
 			continue;
@@ -166,7 +186,13 @@ extern "C" uint32_t raw2tiff(
 		{
 			debugPrintf("Read frame #%d, ch %d: %d pixels.", i, ch, readBuffer.size());
 			hdcimg[ch].read( (char*)readBuffer.data(), readBuffer.size()*pxSize );
-			hdcimg[ch].seekg(4096, std::ios::cur);  //fixed gap between images added by photometrics SDK.
+			if (!hdcimg[ch]) {
+				cancelConversion();
+				debugPrintf("Input file %d early EOF at frame %d", ch, i);
+				return FG_ERROR_INVALID_INPUT;
+			}
+
+			hdcimg[ch].seekg(PVCAM_FRAME_GAP_BYTES, std::ios::cur);  //fixed gap between images
 
 			int movieCol = ch % 2;
 			int rowOffset = (ch >= 2) * movieWidth * frameWidth * frameHeight;
