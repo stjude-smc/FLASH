@@ -49,7 +49,8 @@ extern "C" DCIMG2TIFFDLL_API uint32_t raw2tiff(
 	uint32_t ch3right,						// 3rd channel is placed on right if != 0, on left if == 0
 	// (applies only if nChannels > 2)
 	int64_t tiffOffset,						// offset to TIFF data block
-	char* dcimgPath1, char* dcimgPath2, 	// raw image files (Hamamatsu DCIMG format, unsigned 16bit int)
+	uint32_t bytesPerSample,				// number of bits per pixel (8 or 16).
+	char* dcimgPath1, char* dcimgPath2, 	// raw image stack file paths
 	char* dcimgPath3, char* dcimgPath4);	// (dcimgPath3/4 optional)
 // Layout:	(ch3right == 0)		(ch3right == 0)
 // 			dcimg1	dcimg2		dcimg1	dcimg2

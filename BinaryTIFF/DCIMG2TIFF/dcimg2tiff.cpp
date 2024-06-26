@@ -103,19 +103,18 @@ extern "C" uint32_t raw2tiff(
 	uint32_t ch3right,						// 3rd channel is placed on right if != 0, on left if == 0
 	// (applies only if nChannels > 2)
 	int64_t tiffOffset,						// offset to TIFF data block
-	char* dcimgPath1, char* dcimgPath2, 	// raw image files (Hamamatsu DCIMG format, unsigned 16bit int)
+	uint32_t bytesPerSample,				// number of bits per pixel (8 or 16).
+	char* dcimgPath1, char* dcimgPath2, 	// raw image stack file paths
 	char* dcimgPath3, char* dcimgPath4)		// Layout:	(ch3right == 0)		(ch3right == 1)
 											// 			dcimg1	dcimg2		dcimg1	dcimg2
 											//		   	dcimg3 (dcimg4)	   (dcimg4) dcimg3
-	//FIXME: Add here the pixel size (8 or 16 bits) as a an input parameter
 {
 	// initializations
 	remove(LOGFILE);
 	clock_t startTime = clock();
 	resetCurrentFrame();
 	canceled = 0;
-	int jFlip, kFlip;
-	const int pxSize = sizeof(uint16_t);
+	const int pxSize = bytesPerSample;
 	const int movieWidth = (nChannels > 1) ? 2 : 1;
 	const int movieHeight = (nChannels > 2) ? 2 : 1;
 
@@ -130,13 +129,13 @@ extern "C" uint32_t raw2tiff(
 
 
 	// Load raw data input files
-	std::vector<std::ifstream> hdcimg;
-	hdcimg.emplace_back(dcimgPath1, std::ios::binary);
-	if (nChannels>1)  hdcimg.emplace_back(dcimgPath2, std::ios::binary);
-	if (nChannels>2)  hdcimg.emplace_back(dcimgPath3, std::ios::binary);
-	if (nChannels>3)  hdcimg.emplace_back(dcimgPath4, std::ios::binary);
+	std::vector<std::ifstream> rawfile;
+	rawfile.emplace_back(dcimgPath1, std::ios::binary);
+	if (nChannels>1)  rawfile.emplace_back(dcimgPath2, std::ios::binary);
+	if (nChannels>2)  rawfile.emplace_back(dcimgPath3, std::ios::binary);
+	if (nChannels>3)  rawfile.emplace_back(dcimgPath4, std::ios::binary);
 
-	for (auto& file : hdcimg) {
+	for (auto& file : rawfile) {
 		file.seekg(PVCAM_OFFSET_TO_FIRST_FRAME, std::ios::beg);
 
 		if (!file) {
@@ -155,11 +154,9 @@ extern "C" uint32_t raw2tiff(
 		return FG_ERROR_INVALID_OUTPUT;
 	}
 
-	// Allocate I/O buffers: input is camera frame, output may have multiple camera frames tiled together.
 	// NOTE: writeBuffer initialization to zero is important for unused channels (3-color).
-	std::vector<uint16_t> readBuffer(frameWidth * frameHeight, 0);
-	std::vector<uint16_t> writeBuffer(frameWidth * frameHeight * movieWidth * movieHeight, 0);
-
+	std::vector<char> readBuffer(frameWidth * frameHeight * pxSize, 0);
+	std::vector<char> writeBuffer(frameWidth * frameHeight * movieWidth * movieHeight * pxSize, 0);
 
 	for (int i=skipFrames; i < nFrames+skipFrames; ++i)  // loop over frames
 	{
@@ -171,11 +168,11 @@ extern "C" uint32_t raw2tiff(
 
 		// Special case: write directly to disk if single channel and no flipping (very fast)
 		if (nChannels == 1 && !hFlip[0] && !vFlip[0]) {
-			debugPrintf("Fast write frame #%d: %d pixels.", i, readBuffer.size());
+			debugPrintf("Fast write frame #%d: %d pixels.", i, readBuffer.size()/pxSize);
 
-			hdcimg[0].read( (char*)readBuffer.data(), readBuffer.size()*pxSize );
-			hdcimg[0].seekg(PVCAM_FRAME_GAP_BYTES, std::ios::cur);  //fixed gap between images
-			tiffFile.write( (char*)readBuffer.data(), readBuffer.size()*pxSize );
+			rawfile[0].read( readBuffer.data(), readBuffer.size() );
+			rawfile[0].seekg(PVCAM_FRAME_GAP_BYTES, std::ios::cur);  //fixed gap between images
+			tiffFile.write( readBuffer.data(), readBuffer.size() );
 			currentFrame = i - 1;
 			continue;
 		}
@@ -184,15 +181,15 @@ extern "C" uint32_t raw2tiff(
 		// Copy frame data from dcimg file to TIFF frame.
 		for (int ch = 0; ch < nChannels; ++ch)
 		{
-			debugPrintf("Read frame #%d, ch %d: %d pixels.", i, ch, readBuffer.size());
-			hdcimg[ch].read( (char*)readBuffer.data(), readBuffer.size()*pxSize );
-			if (!hdcimg[ch]) {
+			debugPrintf("Read frame #%d, ch %d: %d pixels.", i, ch, readBuffer.size()/pxSize);
+			rawfile[ch].read( readBuffer.data(), readBuffer.size() );
+			if (!rawfile[ch]) {
 				cancelConversion();
 				debugPrintf("Input file %d early EOF at frame %d", ch, i);
 				return FG_ERROR_INVALID_INPUT;
 			}
 
-			hdcimg[ch].seekg(PVCAM_FRAME_GAP_BYTES, std::ios::cur);  //fixed gap between images
+			rawfile[ch].seekg(PVCAM_FRAME_GAP_BYTES, std::ios::cur);  //fixed gap between images
 
 			int movieCol = ch % 2;
 			int rowOffset = (ch >= 2) * movieWidth * frameWidth * frameHeight;
@@ -203,31 +200,31 @@ extern "C" uint32_t raw2tiff(
 			// No horizontal flipping: copy row by row
 			if (!hFlip[ch] && !vFlip[ch]) {
 				for (int j = 0; j < frameHeight; j++) {		// loop over rows
-					memcpy(&writeBuffer[(movieWidth * j + movieCol) * frameWidth + rowOffset], &readBuffer[j * frameWidth], pxSize * frameWidth);
+					memcpy(&writeBuffer[pxSize*((movieWidth * j + movieCol) * frameWidth + rowOffset)], &readBuffer[pxSize * j * frameWidth], pxSize * frameWidth);
 				}
 			}
 			else if (!hFlip[ch] && vFlip[ch]) {
 				for (int j = 0; j < frameHeight; j++) {		// loop over rows
-					jFlip = frameHeight - (j + 1); 	// replaces j index if vertical flip is active
-					memcpy(&writeBuffer[(movieWidth * j + movieCol) * frameWidth + rowOffset], &readBuffer[jFlip * frameWidth], pxSize * frameWidth);
+					int jFlip = frameHeight - (j + 1); 	// replaces j index if vertical flip is active
+					memcpy(&writeBuffer[pxSize*((movieWidth * j + movieCol) * frameWidth + rowOffset)], &readBuffer[pxSize * jFlip * frameWidth], pxSize * frameWidth);
 				}
 			}
 
-			// General case: horizontal flipping requires byte-by-byte copying.
+			// General case: horizontal flipping requires element-by-element copying.
 			else if (hFlip[ch]) {
 				for (int j = 0; j < frameHeight; j++) {		// loop over rows
-					jFlip = (vFlip[ch] ? frameHeight - (j + 1) : j); 	// replaces j index if vertical flip is active
+					int jFlip = (vFlip[ch] ? frameHeight - (j + 1) : j); 	// replaces j index if vertical flip is active
 					for (int k = 0; k < frameWidth; k++) {	// loop over columns
-						kFlip = frameWidth - (k + 1);	// replaces k index if horizontal flip is active
-						writeBuffer[(movieWidth * j + movieCol) * frameWidth + rowOffset + k] = readBuffer[jFlip * frameWidth + kFlip];
+						int kFlip = frameWidth - (k + 1);	// replaces k index if horizontal flip is active
+						memcpy(&writeBuffer[pxSize*((movieWidth * j + movieCol) * frameWidth + rowOffset + k)], &readBuffer[pxSize*(jFlip * frameWidth + kFlip)], pxSize);
 					}
 				}
 			}
 		} //for each dcimg file
 
 		// write frame to output file
-		debugPrintf("Writing frame #%d: %d px.", i, writeBuffer.size());
-		tiffFile.write( (char*)writeBuffer.data(), writeBuffer.size()*pxSize );
+		debugPrintf("Writing frame #%d: %d px.", i, writeBuffer.size()/pxSize);
+		tiffFile.write( (char*)writeBuffer.data(), writeBuffer.size() );
 
 		currentFrame = i - 1;			// This can be queried with getCurrentFrame()
 	}
