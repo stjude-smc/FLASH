@@ -23,5 +23,4 @@
 	<Item Name="TestPVCam_basic.vi" Type="VI" URL="../TestPVCam_basic.vi"/>
 	<Item Name="TestPVCam_DiskStreaming.vi" Type="VI" URL="../TestPVCam_DiskStreaming.vi"/>
 	<Item Name="TestPVCam_DiskStreaming2.vi" Type="VI" URL="../TestPVCam_DiskStreaming2.vi"/>
-	<Item Name="TestPVCam_DiskStreamingDirect.vi" Type="VI" URL="../TestPVCam_DiskStreamingDirect.vi"/>
 </Library>
