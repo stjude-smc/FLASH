@@ -505,7 +505,6 @@
 			<Item Name="PVCam Type Converter.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Conversion/PVCam Type Converter.vi"/>
 			<Item Name="PVCam Types.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/PVCam Types.ctl"/>
 			<Item Name="PVCAM.lvclass" Type="LVClass" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/PVCAM/PVCAM.lvclass"/>
-			<Item Name="PVCamNET.dll" Type="Document" URL="../dll/PVCamNET.dll"/>
 			<Item Name="PVCamNET.dll" Type="Document" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Dependencies/PVCamNET.dll"/>
 			<Item Name="Region Index.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Region Index.ctl"/>
 			<Item Name="Region.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Region.ctl"/>

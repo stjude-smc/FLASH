@@ -8,19 +8,15 @@
 
 </Property>
 	<Item Name="helper" Type="Folder">
-		<Item Name="PmGetCameras.vi" Type="VI" URL="../helper/PmGetCameras.vi"/>
-		<Item Name="PmGetSpeeds.vi" Type="VI" URL="../helper/PmGetSpeeds.vi"/>
-		<Item Name="PmObsCol.vi" Type="VI" URL="../helper/PmObsCol.vi"/>
-		<Item Name="PmSensorSize.vi" Type="VI" URL="../helper/PmSensorSize.vi"/>
-		<Item Name="PmSetExternalTrigger.vi" Type="VI" URL="../helper/PmSetExternalTrigger.vi"/>
-		<Item Name="PmSetExternalTriggerOut.vi" Type="VI" URL="../helper/PmSetExternalTriggerOut.vi"/>
 		<Item Name="PmSetReadoutMode.vi" Type="VI" URL="../helper/PmSetReadoutMode.vi"/>
 		<Item Name="PmSetRegion.vi" Type="VI" URL="../helper/PmSetRegion.vi"/>
 		<Item Name="Prep Acquisition.vi" Type="VI" URL="../helper/Prep Acquisition.vi"/>
 	</Item>
+	<Item Name="testing" Type="Folder">
+		<Item Name="TestPVCam.vi" Type="VI" URL="../TestPVCam.vi"/>
+		<Item Name="TestPVCam_basic.vi" Type="VI" URL="../TestPVCam_basic.vi"/>
+		<Item Name="TestPVCam_DiskStreaming.vi" Type="VI" URL="../TestPVCam_DiskStreaming.vi"/>
+		<Item Name="TestPVCam_DiskStreaming2.vi" Type="VI" URL="../TestPVCam_DiskStreaming2.vi"/>
+	</Item>
 	<Item Name="Photometrics Camera.lvclass" Type="LVClass" URL="../Photometrics Camera.lvclass"/>
-	<Item Name="TestPVCam.vi" Type="VI" URL="../TestPVCam.vi"/>
-	<Item Name="TestPVCam_basic.vi" Type="VI" URL="../TestPVCam_basic.vi"/>
-	<Item Name="TestPVCam_DiskStreaming.vi" Type="VI" URL="../TestPVCam_DiskStreaming.vi"/>
-	<Item Name="TestPVCam_DiskStreaming2.vi" Type="VI" URL="../TestPVCam_DiskStreaming2.vi"/>
 </Library>
