@@ -56,7 +56,6 @@
 				<Item Name="computer name.vi" Type="VI" URL="../Resources/Helper VIs/computer name.vi"/>
 				<Item Name="Cubehelix.vi" Type="VI" URL="../Resources/Helper VIs/Cubehelix.vi"/>
 				<Item Name="Custom Photobleach Length.vi" Type="VI" URL="../Resources/Helper VIs/Custom Photobleach Length.vi"/>
-				<Item Name="DCIMG File Names.vi" Type="VI" URL="../Resources/Helper VIs/DCIMG File Names.vi"/>
 				<Item Name="Increment File Name.vi" Type="VI" URL="../Resources/Helper VIs/Increment File Name.vi"/>
 				<Item Name="Log Message.vi" Type="VI" URL="../Resources/Helper VIs/Log Message.vi"/>
 				<Item Name="plate image.vi" Type="VI" URL="../Resources/Helper VIs/plate image.vi"/>
