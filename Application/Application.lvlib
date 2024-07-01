@@ -40,5 +40,6 @@
 	</Item>
 	<Item Name="Application.lvclass" Type="LVClass" URL="../Application.lvclass"/>
 	<Item Name="laser power FGV.vi" Type="VI" URL="../laser power FGV.vi"/>
+	<Item Name="Wait For Device.vi" Type="VI" URL="../Wait For Device.vi"/>
 	<Item Name="Wait for mode change.vi" Type="VI" URL="../Wait for mode change.vi"/>
 </Library>
