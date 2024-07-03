@@ -291,7 +291,7 @@
 <Choice>Hamamatsu</Choice>
 <Choice>Andor</Choice>
 <Choice>Photometrics</Choice>
-<Val>2</Val>
+<Val>0</Val>
 </EW>
 <DAQChannel>
 <Name>Sync Line</Name>
@@ -432,7 +432,7 @@
 </Cluster>
 <Array>
 <Name>Installed Cameras</Name>
-<Dimsize>4</Dimsize>
+<Dimsize>5</Dimsize>
 <Cluster>
 <Name>Channel Assignment</Name>
 <NumElts>6</NumElts>
@@ -606,6 +606,38 @@
 <DBL>
 <Name>photonsPerCount</Name>
 <Val>1.40000000000000E-2</Val>
+</DBL>
+</Array>
+</Cluster>
+<Cluster>
+<Name>Channel Assignment</Name>
+<NumElts>6</NumElts>
+<String>
+<Name>Channel Name</Name>
+<Val>Cy2</Val>
+</String>
+<String>
+<Name>Serial Number</Name>
+<Val>000123</Val>
+</String>
+<Boolean>
+<Name>Flip Vertically</Name>
+<Val>0</Val>
+</Boolean>
+<Boolean>
+<Name>Flip Horizontally</Name>
+<Val>0</Val>
+</Boolean>
+<I16>
+<Name>wavelength</Name>
+<Val>473</Val>
+</I16>
+<Array>
+<Name>photonsPerCount</Name>
+<Dimsize>1</Dimsize>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>1.00000000000000</Val>
 </DBL>
 </Array>
 </Cluster>
