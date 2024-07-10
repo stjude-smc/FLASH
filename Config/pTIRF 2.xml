@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
-<Version>18.0.1f4</Version>
+<Version>23.3.4f4</Version>
 <Cluster>
 <Name>Hardware Configuration</Name>
 <NumElts>8</NumElts>
@@ -452,14 +452,26 @@
 <Name>Flip Horizontally</Name>
 <Val>0</Val>
 </Boolean>
-<DBL>
-<Name>photonsPerCount</Name>
-<Val>0.21000000000000</Val>
-</DBL>
 <I16>
 <Name>wavelength</Name>
 <Val>473</Val>
 </I16>
+<Array>
+<Name>photonsPerCount</Name>
+<Dimsize>3</Dimsize>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.20000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.21000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.22000000000000</Val>
+</DBL>
+</Array>
 </Cluster>
 <Cluster>
 <Name>Channel Assignment</Name>
@@ -480,14 +492,26 @@
 <Name>Flip Horizontally</Name>
 <Val>0</Val>
 </Boolean>
-<DBL>
-<Name>photonsPerCount</Name>
-<Val>0.21000000000000</Val>
-</DBL>
 <I16>
 <Name>wavelength</Name>
 <Val>532</Val>
 </I16>
+<Array>
+<Name>photonsPerCount</Name>
+<Dimsize>3</Dimsize>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.20000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.21000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.23000000000000</Val>
+</DBL>
+</Array>
 </Cluster>
 <Cluster>
 <Name>Channel Assignment</Name>
@@ -508,14 +532,26 @@
 <Name>Flip Horizontally</Name>
 <Val>0</Val>
 </Boolean>
-<DBL>
-<Name>photonsPerCount</Name>
-<Val>0.21000000000000</Val>
-</DBL>
 <I16>
 <Name>wavelength</Name>
 <Val>640</Val>
 </I16>
+<Array>
+<Name>photonsPerCount</Name>
+<Dimsize>3</Dimsize>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.20000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.21000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.23000000000000</Val>
+</DBL>
+</Array>
 </Cluster>
 <Cluster>
 <Name>Channel Assignment</Name>
@@ -536,14 +572,26 @@
 <Name>Flip Horizontally</Name>
 <Val>0</Val>
 </Boolean>
-<DBL>
-<Name>photonsPerCount</Name>
-<Val>0.21000000000000</Val>
-</DBL>
 <I16>
 <Name>wavelength</Name>
 <Val>721</Val>
 </I16>
+<Array>
+<Name>photonsPerCount</Name>
+<Dimsize>3</Dimsize>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.20000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.21000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.22000000000000</Val>
+</DBL>
+</Array>
 </Cluster>
 </Array>
 <Cluster>

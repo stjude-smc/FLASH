@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
-<Version>18.0.1f4</Version>
+<Version>23.3.4f4</Version>
 <Cluster>
 <Name>Hardware Configuration</Name>
 <NumElts>8</NumElts>
@@ -94,7 +94,7 @@
 <Refnum>
 <Name>Serial Port</Name>
 <RefKind>VISA</RefKind>
-<Val></Val>
+<Val>COM4</Val>
 </Refnum>
 <DBL>
 <Name>Forward Step (mm)</Name>
@@ -134,15 +134,15 @@
 </DBL>
 <DBL>
 <Name>Y Max</Name>
-<Val>3.00000000000000</Val>
+<Val>4.50000000000000</Val>
 </DBL>
 <DBL>
 <Name>X Min</Name>
-<Val>-19.00000000000000</Val>
+<Val>-3.50000000000000</Val>
 </DBL>
 <DBL>
 <Name>X Max</Name>
-<Val>33.60000000000000</Val>
+<Val>53.77000000000000</Val>
 </DBL>
 </Cluster>
 <Cluster>
@@ -150,11 +150,11 @@
 <NumElts>4</NumElts>
 <DBL>
 <Name>top</Name>
-<Val>-13.00000000000000</Val>
+<Val>-11.99370000000000</Val>
 </DBL>
 <DBL>
 <Name>right</Name>
-<Val>-22.30000000000000</Val>
+<Val>-4.95320000000000</Val>
 </DBL>
 <DBL>
 <Name>width</Name>
@@ -354,7 +354,7 @@
 </DBL>
 <DBL>
 <Name>Polarizer Theta Zero</Name>
-<Val>-19.19618000000000</Val>
+<Val>-19.19620000000000</Val>
 </DBL>
 <U16>
 <Name>Wavelength</Name>
@@ -452,14 +452,26 @@
 <Name>Flip Horizontally</Name>
 <Val>0</Val>
 </Boolean>
-<DBL>
-<Name>photonsPerCount</Name>
-<Val>0.49000000000000</Val>
-</DBL>
 <I16>
 <Name>wavelength</Name>
 <Val>473</Val>
 </I16>
+<Array>
+<Name>photonsPerCount</Name>
+<Dimsize>3</Dimsize>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.50000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.50000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.50000000000000</Val>
+</DBL>
+</Array>
 </Cluster>
 <Cluster>
 <Name>Channel Assignment</Name>
@@ -468,7 +480,6 @@
 <Name>Channel Name</Name>
 <Val>Cy3</Val>
 </String>
-
 <String>
 <Name>Serial Number</Name>
 <Val>001790</Val>
@@ -481,14 +492,26 @@
 <Name>Flip Horizontally</Name>
 <Val>0</Val>
 </Boolean>
-<DBL>
-<Name>photonsPerCount</Name>
-<Val>0.49000000000000</Val>
-</DBL>
 <I16>
 <Name>wavelength</Name>
 <Val>532</Val>
 </I16>
+<Array>
+<Name>photonsPerCount</Name>
+<Dimsize>3</Dimsize>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.49000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.49000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.49000000000000</Val>
+</DBL>
+</Array>
 </Cluster>
 <Cluster>
 <Name>Channel Assignment</Name>
@@ -509,14 +532,26 @@
 <Name>Flip Horizontally</Name>
 <Val>0</Val>
 </Boolean>
-<DBL>
-<Name>photonsPerCount</Name>
-<Val>0.49000000000000</Val>
-</DBL>
 <I16>
 <Name>wavelength</Name>
 <Val>640</Val>
 </I16>
+<Array>
+<Name>photonsPerCount</Name>
+<Dimsize>3</Dimsize>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.49000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.49000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.49000000000000</Val>
+</DBL>
+</Array>
 </Cluster>
 <Cluster>
 <Name>Channel Assignment</Name>
@@ -537,14 +572,26 @@
 <Name>Flip Horizontally</Name>
 <Val>0</Val>
 </Boolean>
-<DBL>
-<Name>photonsPerCount</Name>
-<Val>0.49000000000000</Val>
-</DBL>
 <I16>
 <Name>wavelength</Name>
 <Val>721</Val>
 </I16>
+<Array>
+<Name>photonsPerCount</Name>
+<Dimsize>3</Dimsize>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.49000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.49000000000000</Val>
+</DBL>
+<DBL>
+<Name>photonsPerCount</Name>
+<Val>0.49000000000000</Val>
+</DBL>
+</Array>
 </Cluster>
 </Array>
 <Cluster>
