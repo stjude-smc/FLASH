@@ -1,111 +1,20 @@
 Flash Gordon
-Version 1.0
 Copyright (c) Cornell University and St Jude Children's Research Hospital, 2014-2022
 Created by Manuel Juette and Daniel Terry.
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+================================================================================
 
 
-Change log: version 1.0
+Change log: 
 ----------
 
-This version is a fork of Manuel Juette's version 0.6.1b (last stable version).
+1.5.0 (2024-7-11) -- testing branch
+- Experimental support for Photometrics Kinetix cameras. Other Photometrics cameras may work but are untested. See documentation for limitations and known bugs.
+- Experimental support for Andor EMCCD cameras (SDK 2).
+- ADU to photoelectron conversion factor is now an array, with one value per camera readout mode; can't assume they are all the same.
+- Main Window: added controls for camera readout mode and binning in Advanced tab.
+- Live Viewer: status bar shows count of saturated pixles (important for low bitrate modes).
+- Fluidics trigger line can be adjusted in configuration file.
+- Update project to LabVIEW 2023 (SP3) from 2018 (SP1).
+- Improved error handling.
+- Avoid possible deadlock conditions when waiting for cameras to be ready for acquisition.
 
-* User Interface:
-
-  - Much faster rendering of the live window reduces lag/stutter.
-
-  - More graceful error handling, for example with invalid configuration files.
-
-  - Simplified block diagrams of Live Viewer and Main Window.
-
-  - Live Viewer: add timeout to prevent freezing if data camera never received.
-
-  - Disable acquisition controls during streaming to prevent file saving errors.
-
-  - Prevent Flash Gordon splash screen from hiding "Choose Configuration" diaglog.
-
-  - Main Window status bar for background .tif movie saving (conversion from .dcimg).
-
-  - Main Window: show correct number of veritcal lines for specified time resolution.
-
- - Countdown Timer: improved synchronization with actual movie start.
-
-
-* Cameras:
-
-  - Support for Fusion cameras by upgrading to HVC version 4.4.
-
-  - Fix crash: number of lines must be divisible by 8.
-
-  - Fix crash when closing Flash Gordon (trying to close camera handle after deleted).
-
-  - Fix various triggering issues, especially for sub-ms recordings.
-
-  - Automatically choose optimal readout mode for a given camera and time resolution.
-
-  - Fix delay between end of stream acquisition and .tif file conversion caused by
-      pile-up of "Get Most Recent Frame" messages with short refresh time.
-
-
-* Stage:
-
-  - Support for Ludl, ASI, and Ti2 stages, as well as "Disabled" mode.
-
-  - Disable "Move Home" button before "Set Home" to prevent undefined behavior.
-
-  - If stage not detected, give an error instead of silently failing or crashing.
-
-  - Ti2: Disable control pad joystick while photobleaching to prevent erratic behavior.
-
-  - Ti2: Detect when stage reaches hardware limit, show a warning, and gracefully recovery.
-
-
-* Lasers:
-
-  - Support for stroboscopic, time-lapse, and alternating laser excitation (ALEX) modes.
-
-  - Support for Coherent Genesis lasers (HOPS driver).
-
-  - Support for rapid laser power tuning with a rotating polarizer (Thorlabs PRM1Z8).
-
-  - Give a warning instead of crashing if a laser not configured.
-
-
-* BinaryTIFF:
-
-  - Use dcimgapi.dll to read .dcimg files. This will enable support for any DCAM version
-      and camera model. It is slightly faster in many cases than the previous version that
-      directly read the files. Single-channel is significantly faster.
-
-  - "Rescue Raw Data" no longer tries to read proprietary .dcimg fields for image size,
-      which changes between library versions. Instead, get parameters from "Max Lines.vi".
-
-  - Create TiffWriter class to convert .dcimg to .tif files in the backrgound.
-      This allows user to Show Live or start next acquisition without delay.
-
-
-Known issues:
-----------
-
- - Invalid Init.xml file will cause the Flash Gordon to crash without the
-    configuration selection dialog ever appearing.
-
- - If any device, such as a camera, is disconnected while running,
-    Flash Gordon may freeze or crash.
-
-
-
-Testing platforms verified to work:
-----------
- - Windows 10 Enterprise (20H2; build 19042.1526) 64-bit
- - Hamamatsu HVC 4.4.23
- - Hamamatsu DCAM 22.2.6391
- - Hamamatsu Fusion (C14440-20UP) with USB 3.0 interface.
- - Hamamatsu Flash 4.0v2 (C11440-22CU) with CoaXPress cards.
- - Nation Instruments USB-6501 DAQ.
- - Tektronix TDS 2014C oscilloscope.
- - Nikon Ti2 stand with build-in stage and filter turret.
- - Newport ESP301 stage driver
- - LaserQuantum Ciel 473nm and Opus 532 lasers
- - Coherent Genesis MTX-STM 640
- - Thorlabs PRM1Z8 rotation stage for laser attenuation polarizer.
