@@ -18,7 +18,6 @@
 		</Item>
 		<Item Name="BinaryTIFF" Type="Folder">
 			<Item Name="BinaryTIFF.lvlib" Type="Library" URL="../BinaryTIFF/BinaryTIFF.lvlib"/>
-			<Item Name="Create Stack Info.vi" Type="VI" URL="../Resources/Helper VIs/Create Stack Info.vi"/>
 			<Item Name="Tiff Writer.lvlib" Type="Library" URL="../Hardware/Tiff Writer/Tiff Writer.lvlib"/>
 		</Item>
 		<Item Name="Hardware" Type="Folder">
@@ -45,54 +44,20 @@
 			<Item Name="dll" Type="Folder" URL="../dll">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
-			<Item Name="GLOBAL" Type="Folder">
-				<Item Name="GLOBAL Debug.vi" Type="VI" URL="../Resources/GLOBAL/GLOBAL Debug.vi"/>
-				<Item Name="GLOBAL Experiment Metadata.vi" Type="VI" URL="../Resources/GLOBAL/GLOBAL Experiment Metadata.vi"/>
-				<Item Name="GLOBAL Time-critical.vi" Type="VI" URL="../Resources/GLOBAL/GLOBAL Time-critical.vi"/>
+			<Item Name="GLOBAL" Type="Folder" URL="../Resources/GLOBAL">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Helper VIs" Type="Folder">
-				<Item Name="Check File Path.vi" Type="VI" URL="../Resources/Helper VIs/Check File Path.vi"/>
-				<Item Name="Color Table To Reference.vi" Type="VI" URL="../Resources/Helper VIs/Color Table To Reference.vi"/>
-				<Item Name="computer name.vi" Type="VI" URL="../Resources/Helper VIs/computer name.vi"/>
-				<Item Name="Cubehelix.vi" Type="VI" URL="../Resources/Helper VIs/Cubehelix.vi"/>
-				<Item Name="Custom Photobleach Length.vi" Type="VI" URL="../Resources/Helper VIs/Custom Photobleach Length.vi"/>
-				<Item Name="Increment File Name.vi" Type="VI" URL="../Resources/Helper VIs/Increment File Name.vi"/>
-				<Item Name="Log Message.vi" Type="VI" URL="../Resources/Helper VIs/Log Message.vi"/>
-				<Item Name="plate image.vi" Type="VI" URL="../Resources/Helper VIs/plate image.vi"/>
-				<Item Name="Resize Graph.vi" Type="VI" URL="../Resources/Helper VIs/Resize Graph.vi"/>
-				<Item Name="Set Title Bar Icon.vi" Type="VI" URL="../Resources/Helper VIs/Set Title Bar Icon.vi"/>
-				<Item Name="stage to pixel coordinates.vi" Type="VI" URL="../Resources/Helper VIs/stage to pixel coordinates.vi"/>
-				<Item Name="Subtract Baseline.vi" Type="VI" URL="../Resources/Helper VIs/Subtract Baseline.vi"/>
+			<Item Name="Helper VIs" Type="Folder" URL="../Resources/Helper VIs">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Images" Type="Folder" URL="../Resources/Images">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Testing" Type="Folder">
-				<Item Name="Active Drive Test Sync.vi" Type="VI" URL="../Resources/Testing/Active Drive Test Sync.vi"/>
-				<Item Name="color map in histogram.vi" Type="VI" URL="../Resources/Testing/color map in histogram.vi"/>
-				<Item Name="events test.vi" Type="VI" URL="../Resources/Testing/events test.vi"/>
-				<Item Name="Test color map.vi" Type="VI" URL="../Resources/Testing/Test color map.vi"/>
-				<Item Name="Test Sync Device.vi" Type="VI" URL="../Application/Test Sync Device.vi"/>
-				<Item Name="Test Sync.vi" Type="VI" URL="../Resources/Testing/Test Sync.vi"/>
-				<Item Name="Viewer wrapper.vi" Type="VI" URL="../Resources/Testing/Viewer wrapper.vi"/>
+			<Item Name="Testing" Type="Folder" URL="../Resources/Testing">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Type Defs" Type="Folder">
-				<Item Name="Camera Settings.ctl" Type="VI" URL="../Resources/Type Defs/Camera Settings.ctl"/>
-				<Item Name="Camera Type.ctl" Type="VI" URL="../Resources/Type Defs/Camera Type.ctl"/>
-				<Item Name="Color Map.ctl" Type="VI" URL="../Resources/Type Defs/Color Map.ctl"/>
-				<Item Name="Default Settings.ctl" Type="VI" URL="../Resources/Type Defs/Default Settings.ctl"/>
-				<Item Name="Hardware Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Hardware Configuration.ctl"/>
-				<Item Name="Laser Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Laser Configuration.ctl"/>
-				<Item Name="Microscope Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Microscope Configuration.ctl"/>
-				<Item Name="Microscope Type.ctl" Type="VI" URL="../Resources/Type Defs/Microscope Type.ctl"/>
-				<Item Name="Mode.ctl" Type="VI" URL="../Application/Mode.ctl"/>
-				<Item Name="Physical Camera Assignment.ctl" Type="VI" URL="../Resources/Type Defs/Physical Camera Assignment.ctl"/>
-				<Item Name="Pump Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Pump Configuration.ctl"/>
-				<Item Name="Shutter Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Shutter Configuration.ctl"/>
-				<Item Name="Stack Info.ctl" Type="VI" URL="../Resources/Type Defs/Stack Info.ctl"/>
-				<Item Name="Stage Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Stage Configuration.ctl"/>
-				<Item Name="sync device settings.ctl" Type="VI" URL="../Resources/Type Defs/sync device settings.ctl"/>
-				<Item Name="Virtual Camera Configuration.ctl" Type="VI" URL="../Resources/Type Defs/Virtual Camera Configuration.ctl"/>
+			<Item Name="Type Defs" Type="Folder" URL="../Resources/Type Defs">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Actor Framework.lvlib" Type="Library" URL="/&lt;vilib&gt;/ActorFramework/Actor Framework.lvlib"/>
 			<Item Name="Flash Gordon documentation.pdf" Type="Document" URL="../Flash Gordon documentation.pdf"/>
@@ -102,18 +67,16 @@
 			<Item Name="ti2lv.lvlib" Type="Library" URL="../Hardware/Microscope/ti2lv/ti2lv.lvlib"/>
 		</Item>
 		<Item Name="User Interface" Type="Folder">
-			<Item Name="Change Log.lvlib" Type="Library" URL="../User Interface/Change Log/Change Log.lvlib"/>
 			<Item Name="Countdown.vi" Type="VI" URL="../User Interface/Countdown.vi"/>
-			<Item Name="Feedback Dialog.lvlib" Type="Library" URL="../User Interface/Feedback Dialog/Feedback Dialog.lvlib"/>
 			<Item Name="Main Window.lvlib" Type="Library" URL="../User Interface/Main Window/Main Window.lvlib"/>
 			<Item Name="Splash Screen.lvlib" Type="Library" URL="../User Interface/Splash Screen/Splash Screen.lvlib"/>
+			<Item Name="Text Viewer.vi" Type="VI" URL="../User Interface/Text Viewer.vi"/>
 			<Item Name="UI Window.lvlib" Type="Library" URL="../User Interface/UI Window/UI Window.lvlib"/>
 			<Item Name="Viewer.lvlib" Type="Library" URL="../User Interface/Viewer/Viewer.lvlib"/>
 		</Item>
 		<Item Name="Create Hardware Configuration UI.vi" Type="VI" URL="../Application/Create Hardware Configuration UI.vi"/>
 		<Item Name="Create Initialization File.vi" Type="VI" URL="../Application/Create Initialization File.vi"/>
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
-		<Item Name="Load Config List.vi" Type="VI" URL="../Resources/Helper VIs/Load Config List.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="instr.lib" Type="Folder">
 				<Item Name="ASI TG-1000.lvlib" Type="Library" URL="/&lt;instrlib&gt;/ASI TG-1000/ASI TG-1000.lvlib"/>
@@ -194,6 +157,7 @@
 				<Item Name="tm_stopcapture_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_stopcapture_40.vi"/>
 				<Item Name="tm_stoprecorder_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/dcimg/tm_stoprecorder_40.vi"/>
 				<Item Name="tm_unpreparecapture_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_unpreparecapture_40.vi"/>
+				<Item Name="tm_waitnextframe_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_waitnextframe_40.vi"/>
 				<Item Name="TriggerMode_mode typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/TriggerMode_mode typedef.ctl"/>
 				<Item Name="U32 To Error Code Enum.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/U32 To Error Code Enum.vi"/>
 			</Item>
@@ -298,7 +262,6 @@
 				<Item Name="DAQmx Create Virtual Channel.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Virtual Channel.vi"/>
 				<Item Name="DAQmx Fill In Error Info.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/miscellaneous.llb/DAQmx Fill In Error Info.vi"/>
 				<Item Name="DAQmx Flatten Channel String.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/miscellaneous.llb/DAQmx Flatten Channel String.vi"/>
-				<Item Name="DAQmx Reset Device.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/system.llb/DAQmx Reset Device.vi"/>
 				<Item Name="DAQmx Start Task.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Start Task.vi"/>
 				<Item Name="DAQmx Stop Task.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Stop Task.vi"/>
 				<Item Name="DAQmx Write (Analog 1D DBL 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write (Analog 1D DBL 1Chan NSamp).vi"/>
@@ -395,7 +358,6 @@
 				<Item Name="IMAQ Image Bit Depth" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Image Bit Depth"/>
 				<Item Name="IMAQ Image.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/IMAQ Image.ctl"/>
 				<Item Name="IMAQ SetImageSize" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ SetImageSize"/>
-				<Item Name="LabVIEWSMTPClient.lvlib" Type="Library" URL="/&lt;vilib&gt;/smtpClient/LabVIEWSMTPClient.lvlib"/>
 				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
@@ -408,7 +370,6 @@
 				<Item Name="NI_Matrix.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/Matrix/NI_Matrix.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="NI_SystemLogging.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/SystemLogging/NI_SystemLogging.lvlib"/>
-				<Item Name="Normalize End Of Line.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/Normalize End Of Line.vi"/>
 				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
 				<Item Name="Obtain Semaphore Reference.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Obtain Semaphore Reference.vi"/>
 				<Item Name="Open URL in Default Browser (path).vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser (path).vi"/>
@@ -517,12 +478,7 @@
 			<Item Name="systemLogging.dll" Type="Document" URL="systemLogging.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="tmcamcon.dll" Type="Document" URL="tmcamcon.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
-			<Item Name="user32.dll" Type="Document" URL="user32.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
+			<Item Name="tmcamcon.dll" Type="Document" URL="../../../Windows/System32/tmcamcon.dll"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Flash Gordon" Type="EXE">
@@ -540,10 +496,11 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
-				<Property Name="Bld_version.build" Type="Int">1213</Property>
+				<Property Name="Bld_userLogFile" Type="Path">../Testing/build_log.txt</Property>
+				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_version.build" Type="Int">711</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Bld_version.minor" Type="Int">4</Property>
-				<Property Name="Bld_version.patch" Type="Int">4</Property>
+				<Property Name="Bld_version.minor" Type="Int">5</Property>
 				<Property Name="Destination[0].destName" Type="Str">Flash Gordon.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../Testing/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -556,7 +513,7 @@
 				<Property Name="Destination[3].path" Type="Path">../Testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{9D671862-8886-4483-AF61-F988065F0177}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{A237ACDF-B650-4CDF-81D6-D70474B9A097}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
@@ -598,7 +555,7 @@
 				<Property Name="TgtF_companyName" Type="Str">St Jude Childrens Research Hospital</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Instrument control and data acquisition for TIRF-smFRET imaging</Property>
 				<Property Name="TgtF_internalName" Type="Str">Flash Gordon</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2014-2023 Blanchard Lab</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2014-2024 Blanchard Lab</Property>
 				<Property Name="TgtF_productName" Type="Str">Flash Gordon</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{06978C59-3946-4F24-A3A2-915601368EB6}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">Flash Gordon.exe</Property>

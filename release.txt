@@ -1,5 +1,5 @@
 Flash Gordon
-Copyright (c) Cornell University and St Jude Children's Research Hospital, 2014-2022
+Copyright (c) Cornell University and St Jude Children's Research Hospital, 2014-2024
 Created by Manuel Juette and Daniel Terry.
 ================================================================================
 
