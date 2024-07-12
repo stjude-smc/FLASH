@@ -14,6 +14,7 @@ Change log:
 - Main Window: added controls for camera readout mode and binning in Advanced tab.
 - Live Viewer: status bar shows count of saturated pixles (important for low bitrate modes).
 - Fluidics trigger line can be adjusted in configuration file.
+- Lasers: automatically home PRM1Z8 on startup if not already homed.
 - Update project to LabVIEW 2023 (SP3) from 2018 (SP1).
 - Improved error handling.
 - Avoid possible deadlock conditions when waiting for cameras to be ready for acquisition.
