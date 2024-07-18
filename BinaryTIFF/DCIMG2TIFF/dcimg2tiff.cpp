@@ -7,6 +7,8 @@
 #include <algorithm>
 #include <iostream>
 #include <fstream>
+#include <chrono>
+#include <cmath>
 
 
 #define LOGFILE "C:\\temp\\dcimg2tiff.log"
@@ -91,6 +93,7 @@ void debugPrintf(const char *fmt, ...)
 // Similar to dcimg2tiff but reads raw frame data from PVCam driver (photometrics).
 // These files contain 
 //
+//--------------------------------------------------------------------------------
 extern "C" uint32_t raw2tiff(
 	char* tiffPath, 						// TIFF file (prepared by BinaryTIFF.lvproj)
 	uint32_t frameWidth,					// frame width in pixels (single channel)
@@ -110,8 +113,8 @@ extern "C" uint32_t raw2tiff(
 											//		   	dcimg3 (dcimg4)	   (dcimg4) dcimg3
 {
 	// initializations
-	remove(LOGFILE);
-	clock_t startTime = clock();
+	std::ofstream log(LOGFILE);
+	auto startTime = std::chrono::high_resolution_clock::now();
 	resetCurrentFrame();
 	canceled = 0;
 	const int pxSize = bytesPerSample;
@@ -124,8 +127,9 @@ extern "C" uint32_t raw2tiff(
 	if (nChannels > 2)  dcimgPath = dcimgPath + ", " + dcimgPath3;
 	if (nChannels > 3)  dcimgPath = dcimgPath + ", " + dcimgPath4;
 
-	debugPrintf("START: tiffPath=%s, dcimgPaths=%s, frameWidth=%d, frameHeight=%d, nFrames=%d, skipFrames=%d, nChannels=%d, ch3right=%d, tiffOffset=%d.", \
-		tiffPath, dcimgPath.c_str(), frameWidth, frameHeight, nFrames, skipFrames, nChannels, ch3right, tiffOffset);
+	log << "START: tiffPath=" << tiffPath << ", dcimgPaths=" << dcimgPath << ", frameWidth=" << frameWidth
+		<< ", frameHeight=" << frameHeight << ", nFrames=" << nFrames << ", skipFrames=" << skipFrames 
+		<< ", nChannels=" << nChannels << ", ch3right=" << ch3right << ", tiffOffset=" << tiffOffset << std::endl;
 
 
 	// Load raw data input files
@@ -140,7 +144,7 @@ extern "C" uint32_t raw2tiff(
 
 		if (!file) {
 			cancelConversion();
-			debugPrintf("Failed to open input file; empty or does not exist?");
+			log << "ERROR: Failed to open input file; empty or does not exist?\n";
 			return FG_ERROR_INVALID_INPUT;
 		}
 	}
@@ -150,7 +154,7 @@ extern "C" uint32_t raw2tiff(
 	tiffFile.seekp(tiffOffset, std::ios::beg);
 	if (!tiffFile) {
 		cancelConversion();
-		debugPrintf("Failed to open output file: %s", tiffPath);
+		log << "ERROR: Failed to open output file: " << tiffPath << std::endl;
 		return FG_ERROR_INVALID_OUTPUT;
 	}
 
@@ -161,14 +165,14 @@ extern "C" uint32_t raw2tiff(
 	for (int i=skipFrames; i < nFrames+skipFrames; ++i)  // loop over frames
 	{
 		if (canceled) {
-			debugPrintf("Conversion cancelled, ending main loop.");
+			log << "Conversion cancelled, ending main loop.\n";
 			break; // abort if cancelConversion() called externally
 		}
 
 
 		// Special case: write directly to disk if single channel and no flipping (very fast)
 		if (nChannels == 1 && !hFlip[0] && !vFlip[0]) {
-			debugPrintf("Fast write frame #%d: %d pixels.", i, readBuffer.size()/pxSize);
+			log << "Fast write frame #" << i << " with " << readBuffer.size()/pxSize << " pixels.\n";
 
 			rawfile[0].read( readBuffer.data(), readBuffer.size() );
 			rawfile[0].seekg(PVCAM_FRAME_GAP_BYTES, std::ios::cur);  //fixed gap between images
@@ -181,11 +185,12 @@ extern "C" uint32_t raw2tiff(
 		// Copy frame data from dcimg file to TIFF frame.
 		for (int ch = 0; ch < nChannels; ++ch)
 		{
-			debugPrintf("Read frame #%d, ch %d: %d pixels.", i, ch, readBuffer.size()/pxSize);
+			//log << "Read frame #" << i << ", ch " << ch << ": " << readBuffer.size()/pxSize << " pixels.\n";
+
 			rawfile[ch].read( readBuffer.data(), readBuffer.size() );
 			if (!rawfile[ch]) {
 				cancelConversion();
-				debugPrintf("Input file %d early EOF at frame %d", ch, i);
+				log << "ERROR: Early EOF in input file #" << ch << " at frame " << i << std::endl;
 				return FG_ERROR_INVALID_INPUT;
 			}
 
@@ -223,14 +228,20 @@ extern "C" uint32_t raw2tiff(
 		} //for each dcimg file
 
 		// write frame to output file
-		debugPrintf("Writing frame #%d: %d px.", i, writeBuffer.size()/pxSize);
+		//log << "Write frame #" << i << ": " << writeBuffer.size()/pxSize << " pixels.\n";
 		tiffFile.write( (char*)writeBuffer.data(), writeBuffer.size() );
 
 		currentFrame = i - 1;			// This can be queried with getCurrentFrame()
 	}
 
 	currentFrame++; // final increment to tell caller that conversion is done
-	debugPrintf("FINISHED after %.1f seconds. Cancelled=%d", ((double)(clock()-startTime))/CLOCKS_PER_SEC, canceled);
+
+	std::chrono::duration<double> elapsed = std::chrono::high_resolution_clock::now() - startTime;
+	double mbs = (nChannels*(nFrames-skipFrames)*writeBuffer.size()) / (1024*1024*1024) / elapsed.count();
+	log << std::fixed;
+	log.precision(2);
+	log << "FINISHED after " << elapsed.count() << " seconds (" << mbs << " GB/s).\n";
+	log << "Cancelled = " << static_cast<int>(canceled) << std::endl;
 
 	if (canceled) return -1;
 	else return 0;
@@ -409,6 +420,7 @@ extern "C" uint32_t dcimg2tiff(
 	if (canceled) return -1;
 	else return 0;
 }
+
 
 
 // write dummy binary file for testing
