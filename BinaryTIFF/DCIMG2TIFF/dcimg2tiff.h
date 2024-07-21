@@ -55,5 +55,3 @@ extern "C" DCIMG2TIFFDLL_API uint32_t raw2tiff(
 // Layout:	(ch3right == 0)		(ch3right == 0)
 // 			dcimg1	dcimg2		dcimg1	dcimg2
 //		   	dcimg3 (dcimg4)	   (dcimg4) dcimg3
-
-extern "C" DCIMG2TIFFDLL_API void writeDummyFile(char* filePath, int fileLength);

@@ -1,12 +1,49 @@
 #include "stdafx.h"
+#include <chrono>
+#include <iostream>
+
+/*
+Use this entry point to test the code.
+We assume the files below have been created already by Flash Gordon.
+Need to configure it to not delete the intermediate files after conversion.
+*/
 
 
 
 int main()
 {
-	uint32_t flip[] = { 0,0,0,0 };
-	return dcimg2tiff( "E:\\test.tif.tmp", 1024, 1024, 1000, 1, 2, flip, flip, 0, 16400384, "E:\\test_Cy5.dcimg", "E:\\test_Cy7.dcimg", 0, 0 );
+	constexpr int repeats = 3;
+	constexpr int frameWidth = 1600;
+	constexpr int frameHeight = 1600;
+	constexpr int nFrames = 1000;
+	constexpr int nChannels = 2;
+	uint32_t bytesPerSample = 2;
+	uint32_t vflip[] = { 0,1,0,0 };
+	uint32_t hflip[] = { 1,0,0,0 };
 
+	int result;
+	double totalTime = 0;
+	static auto start = std::chrono::system_clock::now();
+
+	try
+	{
+		for (int rep = 0; rep < repeats; ++rep)
+		{
+			//return dcimg2tiff( "E:\\test.tif.tmp", 1024, 1024, 1000, 1, 2, hflip, vflip, 0, 16400384, "E:\\test_Cy5.dcimg", "E:\\test_Cy7.dcimg", 0, 0 );
+			result = raw2tiff("E:\\test\\test.tif", frameWidth, frameHeight, nFrames, 1, nChannels, vflip, hflip, 0, 16400384, bytesPerSample, "E:\\test\\test_Cy3.raw", "E:\\test\\test_Cy5.raw", 0, 0);
+		}
+	}
+	catch (...)
+	{
+		std::cout << "Error" << std::endl;
+		return -1;
+	}
+
+	std::chrono::duration<double> elapsed = std::chrono::system_clock::now() - start;
+	double gbs = static_cast<double>(frameWidth)*frameHeight*nChannels*bytesPerSample*nFrames*repeats / elapsed.count() / (1024.0*1024.0*1024.0);
+	std::cout << std::endl << "Mean elapsed time: " << elapsed.count() / repeats << "s (" << gbs << " GiB/s)" << std::endl;
+
+	return result;
 		/*
 		char* tiffPath, 						// TIFF file (prepared by BinaryTIFF.lvproj)
 		uint32_t frameWidth,					// frame width in pixels (single channel)

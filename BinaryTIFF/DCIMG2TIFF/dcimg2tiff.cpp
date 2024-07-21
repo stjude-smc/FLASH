@@ -1,14 +1,16 @@
 // dcimg2tiff.cpp : Defines the exported functions for the DLL application.
-//
+// 
+// FIXME: define width/height/etc. in bytes not pixels for simpler calculations.
 
 #include "stdafx.h"
-#include <time.h>
 #include <vector>
 #include <algorithm>
 #include <iostream>
 #include <fstream>
 #include <chrono>
 #include <cmath>
+#include <thread>
+#include <algorithm> //copy_n
 
 
 #define LOGFILE "C:\\temp\\dcimg2tiff.log"
@@ -89,6 +91,89 @@ void debugPrintf(const char *fmt, ...)
 }
 
 
+template <class T>
+int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uint32_t skipFrames,
+	uint32_t nFrames, uint32_t* vFlip, uint32_t* hFlip, uint32_t ch3right,
+	int64_t tiffOffset, std::vector<std::string> pathlist)
+{
+	const int nChannels = pathlist.size();
+	const int movieWidth = (nChannels > 1) ? 2 : 1;
+	const int movieHeight = (nChannels > 2) ? 2 : 1;
+	const int frameInputBytes = frameWidth*frameHeight*sizeof(T) + PVCAM_FRAME_GAP_BYTES;
+	const int frameOutputBytes = movieWidth * movieHeight * frameWidth * frameHeight * sizeof(T);
+
+	// Load raw data input files
+	std::vector<std::ifstream> rawfile;
+	for (auto path : pathlist)
+		rawfile.emplace_back(path, std::ios::binary);
+
+	for (auto& file : rawfile) {
+		const uint64_t offset = PVCAM_OFFSET_TO_FIRST_FRAME + skipFrames*frameInputBytes;
+
+		file.seekg(offset, std::ios::beg);
+		if (!file)
+			return FG_ERROR_INVALID_INPUT;
+	}
+
+	// Open pre-formed TIFF file without destroying contents for writing frame data
+	std::fstream tiffFile(tiffPath, std::ios::binary | std::ios::in | std::ios::out);
+	if (!tiffFile)
+		return FG_ERROR_INVALID_OUTPUT;
+
+	tiffFile.seekp(tiffOffset, std::ios::beg);
+
+
+	// NOTE: writeBuffer initialization to zero is important for unused channels (3-color).
+	std::vector<T> readBuffer(frameWidth * frameHeight, 0);
+	std::vector<T> writeBuffer(frameWidth * frameHeight * movieWidth * movieHeight, 0);
+	auto itrIn = readBuffer.begin();
+
+	for (int i = 0; i < nFrames; ++i)  // loop over frames
+	{
+		// Copy frame data from dcimg file to TIFF frame.
+		for (int ch = 0; ch < nChannels; ++ch)
+		{
+			//log << "Read frame #" << i << ", ch " << ch << ": " << readBuffer.size() << " pixels.\n";
+
+			rawfile[ch].read( reinterpret_cast<char*>(readBuffer.data()), readBuffer.size()*sizeof(T) );
+			if (!rawfile[ch])
+				return FG_ERROR_INVALID_INPUT;
+			rawfile[ch].seekg(PVCAM_FRAME_GAP_BYTES, std::ios::cur);  //fixed gap between images
+
+			int rowOffset = (ch >= 2) * movieWidth * frameWidth * frameHeight;
+
+			// place 3rd channel on the right side of the bottom row.
+			int movieCol = ch % 2;
+			if (ch >= 2 && ch3right) movieCol = 1;
+
+			// Copy frame data row by row, flipping if needed.
+			for (int j = 0; j < frameHeight; j++)
+			{
+				auto itrOut = writeBuffer.begin() + ((movieWidth * j + movieCol) * frameWidth + rowOffset);
+
+				if (vFlip[ch])
+					itrIn = readBuffer.begin() + (frameHeight-(j+1)) * frameWidth; //reverses row order
+				else
+					itrIn = readBuffer.begin() + j * frameWidth;
+
+				if (hFlip[ch])
+					std::reverse_copy(itrIn, itrIn+frameWidth, itrOut);
+				else
+					std::copy(itrIn, itrIn+frameWidth, itrOut);
+			}
+
+			++currentFrame;
+		} //for each input file
+
+		//log << "Write frame #" << i << ": " << writeBuffer.size() << " pixels.\n";
+		tiffFile.write( reinterpret_cast<char*>(writeBuffer.data()), writeBuffer.size()*sizeof(T) );
+
+	} //for each frame
+
+	return 0;
+}
+
+
 
 // Similar to dcimg2tiff but reads raw frame data from PVCam driver (photometrics).
 // These files contain 
@@ -113,13 +198,16 @@ extern "C" uint32_t raw2tiff(
 											//		   	dcimg3 (dcimg4)	   (dcimg4) dcimg3
 {
 	// initializations
+#ifdef _WINDLL
 	std::ofstream log(LOGFILE);
-	auto startTime = std::chrono::high_resolution_clock::now();
-	resetCurrentFrame();
-	canceled = 0;
-	const int pxSize = bytesPerSample;
+#else
+	std::ostream& log = std::cout;
+#endif
 	const int movieWidth = (nChannels > 1) ? 2 : 1;
 	const int movieHeight = (nChannels > 2) ? 2 : 1;
+	auto startTime = std::chrono::system_clock::now();
+	resetCurrentFrame();
+	int result;
 
 	// Save call parameters to log file for debugging
 	std::string dcimgPath(dcimgPath1);
@@ -133,118 +221,30 @@ extern "C" uint32_t raw2tiff(
 
 
 	// Load raw data input files
-	std::vector<std::ifstream> rawfile;
-	rawfile.emplace_back(dcimgPath1, std::ios::binary);
-	if (nChannels>1)  rawfile.emplace_back(dcimgPath2, std::ios::binary);
-	if (nChannels>2)  rawfile.emplace_back(dcimgPath3, std::ios::binary);
-	if (nChannels>3)  rawfile.emplace_back(dcimgPath4, std::ios::binary);
+	std::vector<std::string> pathlist;
+	pathlist.emplace_back(dcimgPath1);
+	if (nChannels>1)  pathlist.emplace_back(dcimgPath2);
+	if (nChannels>2)  pathlist.emplace_back(dcimgPath3);
+	if (nChannels>3)  pathlist.emplace_back(dcimgPath4);
 
-	for (auto& file : rawfile) {
-		file.seekg(PVCAM_OFFSET_TO_FIRST_FRAME, std::ios::beg);
+	if (bytesPerSample==2)
+		result = raw2tiff_impl<uint16_t>(tiffPath, frameWidth, frameHeight, skipFrames, 
+			nFrames, vFlip, hFlip, ch3right, tiffOffset, pathlist);
+	else
+		result = raw2tiff_impl<uint8_t>(tiffPath, frameWidth, frameHeight, skipFrames,
+			nFrames, vFlip, hFlip, ch3right, tiffOffset, pathlist);
 
-		if (!file) {
-			cancelConversion();
-			log << "ERROR: Failed to open input file; empty or does not exist?\n";
-			return FG_ERROR_INVALID_INPUT;
-		}
-	}
+	currentFrame++; // final increment tells caller that conversion is done
 
-	// Open pre-formed TIFF file without destroying contents for writing frame data
-	std::fstream tiffFile(tiffPath, std::ios::binary | std::ios::in | std::ios::out );
-	tiffFile.seekp(tiffOffset, std::ios::beg);
-	if (!tiffFile) {
-		cancelConversion();
-		log << "ERROR: Failed to open output file: " << tiffPath << std::endl;
-		return FG_ERROR_INVALID_OUTPUT;
-	}
-
-	// NOTE: writeBuffer initialization to zero is important for unused channels (3-color).
-	std::vector<char> readBuffer(frameWidth * frameHeight * pxSize, 0);
-	std::vector<char> writeBuffer(frameWidth * frameHeight * movieWidth * movieHeight * pxSize, 0);
-
-	for (int i=skipFrames; i < nFrames+skipFrames; ++i)  // loop over frames
-	{
-		if (canceled) {
-			log << "Conversion cancelled, ending main loop.\n";
-			break; // abort if cancelConversion() called externally
-		}
-
-
-		// Special case: write directly to disk if single channel and no flipping (very fast)
-		if (nChannels == 1 && !hFlip[0] && !vFlip[0]) {
-			log << "Fast write frame #" << i << " with " << readBuffer.size()/pxSize << " pixels.\n";
-
-			rawfile[0].read( readBuffer.data(), readBuffer.size() );
-			rawfile[0].seekg(PVCAM_FRAME_GAP_BYTES, std::ios::cur);  //fixed gap between images
-			tiffFile.write( readBuffer.data(), readBuffer.size() );
-			currentFrame = i - 1;
-			continue;
-		}
-
-
-		// Copy frame data from dcimg file to TIFF frame.
-		for (int ch = 0; ch < nChannels; ++ch)
-		{
-			//log << "Read frame #" << i << ", ch " << ch << ": " << readBuffer.size()/pxSize << " pixels.\n";
-
-			rawfile[ch].read( readBuffer.data(), readBuffer.size() );
-			if (!rawfile[ch]) {
-				cancelConversion();
-				log << "ERROR: Early EOF in input file #" << ch << " at frame " << i << std::endl;
-				return FG_ERROR_INVALID_INPUT;
-			}
-
-			rawfile[ch].seekg(PVCAM_FRAME_GAP_BYTES, std::ios::cur);  //fixed gap between images
-
-			int movieCol = ch % 2;
-			int rowOffset = (ch >= 2) * movieWidth * frameWidth * frameHeight;
-
-			// place 3rd channel on the right side of the bottom row.
-			if (ch >= 2 && ch3right)  movieCol=1;
-
-			// No horizontal flipping: copy row by row
-			if (!hFlip[ch] && !vFlip[ch]) {
-				for (int j = 0; j < frameHeight; j++) {		// loop over rows
-					memcpy(&writeBuffer[pxSize*((movieWidth * j + movieCol) * frameWidth + rowOffset)], &readBuffer[pxSize * j * frameWidth], pxSize * frameWidth);
-				}
-			}
-			else if (!hFlip[ch] && vFlip[ch]) {
-				for (int j = 0; j < frameHeight; j++) {		// loop over rows
-					int jFlip = frameHeight - (j + 1); 	// replaces j index if vertical flip is active
-					memcpy(&writeBuffer[pxSize*((movieWidth * j + movieCol) * frameWidth + rowOffset)], &readBuffer[pxSize * jFlip * frameWidth], pxSize * frameWidth);
-				}
-			}
-
-			// General case: horizontal flipping requires element-by-element copying.
-			else if (hFlip[ch]) {
-				for (int j = 0; j < frameHeight; j++) {		// loop over rows
-					int jFlip = (vFlip[ch] ? frameHeight - (j + 1) : j); 	// replaces j index if vertical flip is active
-					for (int k = 0; k < frameWidth; k++) {	// loop over columns
-						int kFlip = frameWidth - (k + 1);	// replaces k index if horizontal flip is active
-						memcpy(&writeBuffer[pxSize*((movieWidth * j + movieCol) * frameWidth + rowOffset + k)], &readBuffer[pxSize*(jFlip * frameWidth + kFlip)], pxSize);
-					}
-				}
-			}
-		} //for each dcimg file
-
-		// write frame to output file
-		//log << "Write frame #" << i << ": " << writeBuffer.size()/pxSize << " pixels.\n";
-		tiffFile.write( (char*)writeBuffer.data(), writeBuffer.size() );
-
-		currentFrame = i - 1;			// This can be queried with getCurrentFrame()
-	}
-
-	currentFrame++; // final increment to tell caller that conversion is done
-
-	std::chrono::duration<double> elapsed = std::chrono::high_resolution_clock::now() - startTime;
-	double mbs = (nChannels*(nFrames-skipFrames)*writeBuffer.size()) / (1024*1024*1024) / elapsed.count();
+	double outputBytes = static_cast<double>(nFrames) * movieWidth * movieHeight * frameWidth * frameHeight * bytesPerSample;
+	std::chrono::duration<double> elapsed = std::chrono::system_clock::now() - startTime;
+	double mbs = outputBytes / elapsed.count() / (1024.0 * 1024.0 * 1024.0);
 	log << std::fixed;
 	log.precision(2);
 	log << "FINISHED after " << elapsed.count() << " seconds (" << mbs << " GB/s).\n";
 	log << "Cancelled = " << static_cast<int>(canceled) << std::endl;
 
-	if (canceled) return -1;
-	else return 0;
+	return result;
 }
 
 
@@ -420,28 +420,6 @@ extern "C" uint32_t dcimg2tiff(
 	if (canceled) return -1;
 	else return 0;
 }
-
-
-
-// write dummy binary file for testing
-extern "C" void writeDummyFile(char* filePath, int fileLengthGB)
-{
-	uint8_t* writeBuffer;
-	int sizeGB = 1024 * 1024 * 1024;
-	int i;
-
-	writeBuffer = (uint8_t *) malloc(sizeGB);
-	for (i = 0; i<sizeGB; i++) {
-		writeBuffer[i] = 42;
-	}
-
-	FILE* dummyFile = fopen(filePath, "wb");
-	for (i = 0; i<fileLengthGB; i++) {
-		fwrite(writeBuffer, 1, sizeGB, dummyFile);
-	}
-	fclose(dummyFile);
-}
-
 
 
 
