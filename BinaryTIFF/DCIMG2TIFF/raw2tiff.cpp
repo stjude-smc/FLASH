@@ -11,20 +11,18 @@
 
 
 template <class T>
-int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uint32_t skipFrames,
-	uint32_t nFrames, uint32_t* vFlip, uint32_t* hFlip, uint32_t ch3right,
-	int64_t tiffOffset, std::vector<std::string> pathlist)
+int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uint32_t nFrames,
+	uint32_t skipFrames, uint32_t nChannels, uint32_t* vFlip, uint32_t* hFlip, uint32_t ch3right,
+	int64_t tiffOffset, std::vector<char*> pathlist)
 {
-	const int nChannels = pathlist.size();
 	const int movieWidth = (nChannels > 1) ? 2 : 1;
 	const int movieHeight = (nChannels > 2) ? 2 : 1;
-	const int frameInputBytes = frameWidth * frameHeight * sizeof(T) + PVCAM_FRAME_GAP_BYTES;
-	const int frameOutputBytes = movieWidth * movieHeight * frameWidth * frameHeight * sizeof(T);
+	const int frameInputBytes = sizeof(T) * frameWidth * frameHeight + PVCAM_FRAME_GAP_BYTES;
 
 	// Load raw data input files
 	std::vector<std::ifstream> rawfile;
-	for (auto path : pathlist)
-		rawfile.emplace_back(path, std::ios::binary);
+	for (int i=0; i<nChannels; ++i)
+		rawfile.emplace_back(pathlist[i], std::ios::binary);
 
 	for (auto& file : rawfile) {
 		const uint64_t offset = PVCAM_OFFSET_TO_FIRST_FRAME + skipFrames * frameInputBytes;
@@ -84,6 +82,8 @@ int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uin
 
 		//log << "Write frame #" << i << ": " << writeBuffer.size() << " pixels.\n";
 		tiffFile.write(reinterpret_cast<char*>(writeBuffer.data()), writeBuffer.size() * sizeof(T));
+		if (!tiffFile)
+			return FG_ERROR_INVALID_OUTPUT;
 		++currentFrame;
 
 	} //for each frame
@@ -127,30 +127,19 @@ extern "C" uint32_t raw2tiff(
 
 	currentFrame = 0;
 
-	// Save call parameters to log file for debugging
-	std::string dcimgPath(dcimgPath1);
-	if (nChannels > 1)  dcimgPath = dcimgPath + ", " + dcimgPath2;
-	if (nChannels > 2)  dcimgPath = dcimgPath + ", " + dcimgPath3;
-	if (nChannels > 3)  dcimgPath = dcimgPath + ", " + dcimgPath4;
+	std::vector<char*> pathlist{ dcimgPath1, dcimgPath2, dcimgPath3, dcimgPath4 };
 
-	log << "START: tiffPath=" << tiffPath << ", dcimgPaths=" << dcimgPath << ", frameWidth=" << frameWidth
+	log << "START: tiffPath=" << tiffPath << ", dcimgPath1=" << dcimgPath1 << " frameWidth=" << frameWidth
 		<< ", frameHeight=" << frameHeight << ", nFrames=" << nFrames << ", skipFrames=" << skipFrames
 		<< ", nChannels=" << nChannels << ", ch3right=" << ch3right << ", tiffOffset=" << tiffOffset << std::endl;
 
-
-	// Load raw data input files
-	std::vector<std::string> pathlist;
-	pathlist.emplace_back(dcimgPath1);
-	if (nChannels > 1)  pathlist.emplace_back(dcimgPath2);
-	if (nChannels > 2)  pathlist.emplace_back(dcimgPath3);
-	if (nChannels > 3)  pathlist.emplace_back(dcimgPath4);
-
+	// Load raw frame, combine, and save to tif file.
 	if (bytesPerSample == 2)
-		result = raw2tiff_impl<uint16_t>(tiffPath, frameWidth, frameHeight, skipFrames,
-			nFrames, vFlip, hFlip, ch3right, tiffOffset, pathlist);
+		result = raw2tiff_impl<uint16_t>(tiffPath, frameWidth, frameHeight, nFrames,
+			skipFrames, nChannels, vFlip, hFlip, ch3right, tiffOffset, pathlist);
 	else
-		result = raw2tiff_impl<uint8_t>(tiffPath, frameWidth, frameHeight, skipFrames,
-			nFrames, vFlip, hFlip, ch3right, tiffOffset, pathlist);
+		result = raw2tiff_impl<uint8_t>(tiffPath, frameWidth, frameHeight, nFrames, 
+			skipFrames, nChannels, vFlip, hFlip, ch3right, tiffOffset, pathlist);
 
 	currentFrame++; // final increment tells caller that conversion is done
 

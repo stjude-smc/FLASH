@@ -7,6 +7,7 @@
 
 // definitions for hamamatsu functions
 HDCIMG dcimgcon_init_open(const char* filename);
+bool dcimgIsValid(HDCIMG hdcimg, int32 width, int32 height, int32 nFrames);
 
 
 // Global variables
@@ -69,10 +70,15 @@ extern "C" uint32_t dcimg2tiff(
 		hdcimg[i] = dcimgcon_init_open(dcimgPaths[i]);
 		if (hdcimg[i] == nullptr)
 		{
-			// FIXME: does not close files already open, if any.
 			log << "Error opening dcimg input file: " << dcimgPaths[i] << std::endl;
 			return FG_ERROR_INVALID_INPUT;
 		}
+		if (!dcimgIsValid(hdcimg[i], frameWidth, frameHeight, nFrames+skipFrames))
+		{
+			log << "Mismatched dcimg metadata parameters: " << dcimgPaths[i] << std::endl;
+			return FG_ERROR_INVALID_INPUT;
+		}
+		// FIXME: does not close files already open, if any.
 	}
 	
 	// Open pre-formed TIFF file without destroying contents for writing frame data
@@ -123,9 +129,9 @@ extern "C" uint32_t dcimg2tiff(
 				auto itrOut = writeBuffer.begin() + ((movieWidth * j + movieCol) * frameWidth + rowOffset);
 
 				if (vFlip[ch])
-					itrIn = (uint16_t*)frame.buf + (frameHeight - (j + 1)) * frameWidth; //reverses row order
+					itrIn = static_cast<uint16_t*>(frame.buf) + (frameHeight - (j + 1)) * frameWidth; //reverses row order
 				else
-					itrIn = (uint16_t*)frame.buf + j * frameWidth;
+					itrIn = static_cast<uint16_t*>(frame.buf) + j * frameWidth;
 
 				if (hFlip[ch])
 					std::reverse_copy(itrIn, itrIn + frameWidth, itrOut);
@@ -135,6 +141,9 @@ extern "C" uint32_t dcimg2tiff(
 		} //for each dcimg file
 
 		tiffFile.write(reinterpret_cast<char*>(writeBuffer.data()), writeBuffer.size()*sizeof(uint16_t));
+		if (!tiffFile)
+			return FG_ERROR_INVALID_OUTPUT;
+
 		currentFrame++;
 	}
 
@@ -189,4 +198,33 @@ HDCIMG dcimgcon_init_open(const char* filename)
 		return nullptr;
 
 	return openparam.hdcimg;
+}
+
+
+
+// Return false if dcimg file doesn't match input parameters.
+// FIXME: would be nice to give a log message if failed.
+bool dcimgIsValid(HDCIMG hdcimg, int32 width, int32 height, int32 nFrames)
+{
+	DCIMG_ERR err;
+	int32 data;
+
+	err = dcimg_getparaml(hdcimg, DCIMG_IDPARAML_IMAGE_WIDTH, &data);
+	if (failed(err) || data != width)
+		return false;
+
+	err = dcimg_getparaml(hdcimg, DCIMG_IDPARAML_IMAGE_HEIGHT, &data);
+	if (failed(err) || data != height)
+		return false;
+
+	//Options:DCIMG_PIXELTYPE_NONE, DCIMG_PIXELTYPE_MONO8, DCIMG_PIXELTYPE_MONO16
+	err = dcimg_getparaml(hdcimg, DCIMG_IDPARAML_IMAGE_PIXELTYPE, &data);
+	if (failed(err) || data != DCIMG_PIXELTYPE_MONO16)
+		return false;
+
+	err = dcimg_getparaml(hdcimg, DCIMG_IDPARAML_NUMBEROF_FRAME, &data);
+	if (failed(err) || data < nFrames)
+		return false;
+
+	return true;
 }

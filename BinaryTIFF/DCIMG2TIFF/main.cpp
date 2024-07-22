@@ -21,15 +21,13 @@ int main()
 	uint32_t hflip[] = { 1,0,0,0 };
 
 	int result;
-	double totalTime = 0;
-	static auto start = std::chrono::system_clock::now();
 
 	try
 	{
 		for (int rep = 0; rep < repeats; ++rep)
 		{
-			//result = dcimg2tiff( "E:\\test.tif.tmp", 1024, 1024, 1000, 1, 2, hflip, vflip, 0, 16400384, "E:\\test_Cy5.dcimg", "E:\\test_Cy7.dcimg", 0, 0 );
-			result = raw2tiff("E:\\test\\test.tif", frameWidth, frameHeight, nFrames, 1, nChannels, vflip, hflip, 0, 16400384, bytesPerSample, "E:\\test\\test_Cy3.raw", "E:\\test\\test_Cy5.raw", 0, 0);
+			result = dcimg2tiff( "E:\\test\\Stack005.tif", 1152, 1152, 1000, 1, 1, hflip, vflip, 0, 16400384, "E:\\test\\Stack005_Cy2.dcimg", 0, 0, 0 );
+			//result = raw2tiff("E:\\test\\test.tif", frameWidth, frameHeight, nFrames, 1, nChannels, vflip, hflip, 0, 16400384, bytesPerSample, "E:\\test\\test_Cy3.raw", "E:\\test\\test_Cy5.raw", 0, 0);
 		}
 	}
 	catch (const std::exception& e)
@@ -42,10 +40,6 @@ int main()
 		std::cout << "Other error" << std::endl;
 		return -1;
 	}
-
-	std::chrono::duration<double> elapsed = std::chrono::system_clock::now() - start;
-	double gbs = static_cast<double>(frameWidth)*frameHeight*nChannels*bytesPerSample*nFrames*repeats / elapsed.count() / (1024.0*1024.0*1024.0);
-	std::cout << std::endl << "Mean elapsed time: " << elapsed.count() / repeats << "s (" << gbs << " GiB/s)" << std::endl;
 
 	return result;
 }
