@@ -13,11 +13,23 @@
 #pragma comment(lib,"dcimgapi.lib")
 
 
+// Path to log file
+#define LOGFILE "C:\\temp\\dcimg2tiff.log"
+
+// Standard error codes (also defined in LabVIEW)
+#define FG_ERROR_CANCELLED 5920
+#define FG_ERROR_INVALID_INPUT 5921
+#define FG_ERROR_INVALID_OUTPUT 5922
+#define FG_ERROR_OTHER 5929
+
+
+
+// Global variables
+extern uint64_t currentFrame;
+
 extern "C" DCIMG2TIFFDLL_API uint64_t getCurrentFrame();
 
 extern "C" DCIMG2TIFFDLL_API void resetCurrentFrame();
-
-extern "C" DCIMG2TIFFDLL_API void cancelConversion();
 
 extern "C" DCIMG2TIFFDLL_API uint32_t dcimg2tiff(
 	char* tiffPath, 						// TIFF file (prepared by BinaryTIFF.lvproj)
@@ -49,7 +61,7 @@ extern "C" DCIMG2TIFFDLL_API uint32_t raw2tiff(
 	uint32_t ch3right,						// 3rd channel is placed on right if != 0, on left if == 0
 	// (applies only if nChannels > 2)
 	int64_t tiffOffset,						// offset to TIFF data block
-	uint32_t bytesPerSample,				// number of bits per pixel (8 or 16).
+	uint32_t bytesPerSample,				// number of bytes per pixel (1 or 2).
 	char* dcimgPath1, char* dcimgPath2, 	// raw image stack file paths
 	char* dcimgPath3, char* dcimgPath4);	// (dcimgPath3/4 optional)
 // Layout:	(ch3right == 0)		(ch3right == 0)

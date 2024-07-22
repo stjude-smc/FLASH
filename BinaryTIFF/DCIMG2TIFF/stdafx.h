@@ -13,9 +13,16 @@
 #include <windows.h>
 
 
-
-// TODO: reference additional headers your program requires here
 #include <stdio.h>
 #include <stdlib.h>
 #include <inttypes.h>
-#include "dcimg2tiff.h"
+#include <cmath>
+
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <fstream>
+#include <chrono>
+
+
+
