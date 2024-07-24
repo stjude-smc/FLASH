@@ -5,9 +5,11 @@
 #include "stdafx.h"
 #include "dcimg2tiff.h"
 
+
 // definitions for hamamatsu functions
 HDCIMG dcimgcon_init_open(const char* filename);
-bool dcimgIsValid(HDCIMG hdcimg, int32 width, int32 height, int32 nFrames);
+bool dcimg_is_valid(HDCIMG hdcimg, int32 width, int32 height, int32 nFrames);
+bool check_dcimg_timestamps(HDCIMG hdcimg);
 
 
 // Global variables
@@ -59,6 +61,9 @@ extern "C" uint32_t dcimg2tiff(
 	auto startTime = std::chrono::system_clock::now();
 
 	currentFrame = 0;
+	int movieWidth = (nChannels > 1) ? 2 : 1;
+	int movieHeight = (nChannels > 2) ? 2 : 1;
+	std::vector<uint16_t> writeBuffer(movieWidth * movieHeight * frameWidth * frameHeight, 0);
 
 	// Open image data inputs (dcimg files)
 	DCIMG_ERR	err;
@@ -73,12 +78,14 @@ extern "C" uint32_t dcimg2tiff(
 			log << "Error opening dcimg input file: " << dcimgPaths[i] << std::endl;
 			return FG_ERROR_INVALID_INPUT;
 		}
-		if (!dcimgIsValid(hdcimg[i], frameWidth, frameHeight, nFrames+skipFrames))
+		if (!dcimg_is_valid(hdcimg[i], frameWidth, frameHeight, nFrames+skipFrames))
 		{
 			log << "Mismatched dcimg metadata parameters: " << dcimgPaths[i] << std::endl;
 			return FG_ERROR_INVALID_INPUT;
 		}
 		// FIXME: does not close files already open, if any.
+
+		check_dcimg_timestamps(hdcimg[0]);
 	}
 	
 	// Open pre-formed TIFF file without destroying contents for writing frame data
@@ -96,10 +103,6 @@ extern "C" uint32_t dcimg2tiff(
 	DCIMG_FRAME	frame;
 	memset(&frame, 0, sizeof(frame));
 	frame.size = sizeof(frame);
-
-	int movieWidth = (nChannels > 1) ? 2 : 1;
-	int movieHeight = (nChannels > 2) ? 2 : 1;
-	std::vector<uint16_t> writeBuffer(movieWidth * movieHeight * frameWidth * frameHeight, 0);
 
 	for (int i=skipFrames; i<nFrames+skipFrames; ++i)
 	{
@@ -204,7 +207,7 @@ HDCIMG dcimgcon_init_open(const char* filename)
 
 // Return false if dcimg file doesn't match input parameters.
 // FIXME: would be nice to give a log message if failed.
-bool dcimgIsValid(HDCIMG hdcimg, int32 width, int32 height, int32 nFrames)
+bool dcimg_is_valid(HDCIMG hdcimg, int32 width, int32 height, int32 nFrames)
 {
 	DCIMG_ERR err;
 	int32 data;
@@ -227,4 +230,80 @@ bool dcimgIsValid(HDCIMG hdcimg, int32 width, int32 height, int32 nFrames)
 		return false;
 
 	return true;
+}
+
+
+// Raed all time stamps and verify there are no dropped frames
+bool check_dcimg_timestamps(HDCIMG hdcimg)
+{
+	DCIMG_ERR	err;
+
+	// get number of frame
+	int32 nFrame;
+	err = dcimg_getparaml(hdcimg, DCIMG_IDPARAML_NUMBEROF_FRAME, &nFrame);
+	if (failed(err))
+	{
+		//dcimgcon_show_dcimgerr(err, "dcimg_getparaml(DCIMG_IDPARAML_NUMBEROF_FRAME)");
+		return false;
+	}
+
+	// prepare buffer to receive TIMESTAMP
+
+	//BOOL	bElapse = TRUE;
+	auto timestamps = std::make_unique<DCIMG_TIMESTAMP[]>(nFrame);
+
+	if (timestamps == NULL)
+	{
+		//printf("Error: fail to allocate %d TIMESTAMP.\n", nFrame);
+		return false;
+	}
+
+	bool ret = false;
+
+	DCIMG_TIMESTAMPBLOCK	block;
+	memset(&block, 0, sizeof(block));
+	block.hdr.size = sizeof(block);
+	block.hdr.iKind = DCIMG_METADATAKIND_TIMESTAMPS;
+
+	block.timestamps = timestamps.get();
+	block.timestampmax = nFrame;
+	block.timestampsize = sizeof(DCIMG_TIMESTAMP);  //sizeof(*timestamps);
+
+	err = dcimg_copymetadatablock(hdcimg, &block.hdr);
+	if (failed(err))
+	{
+		//dcimgcon_show_dcimgerr(err, "dcimg_copymetadatablock(DCIMG_TIMESTAMPBLOCK)");
+		ret = false;
+	}
+	else
+	{
+		if (block.timestampvalidsize < sizeof(DCIMG_TIMESTAMP))
+		{
+			//printf("dcimg_copymetadatablock(DCIMG_TIMESTAMPBLOCK) returns unknown time stamp that size is %d bytes. This is smaller than expected.\n", block.timestampvalidsize);
+			ret = false;
+		}
+		else
+		{
+			double firstFrameTime = 0;
+
+			// Detect dropped times by the unusually large time between frames
+			for (int i = 1; i < block.timestampcount; i++)
+			{
+				double current = 1.0e-6 * timestamps[i].microsec + timestamps[i].sec;
+				double previous = 1.0e-6 * timestamps[i-1].microsec + timestamps[i-1].sec;
+				double frameTime = current - previous;
+
+				if (i == 1)
+					firstFrameTime = frameTime;
+				else if (abs(frameTime - firstFrameTime) / firstFrameTime > 0.5)
+				{
+					std::cout.precision(2);
+					std::cout << std::fixed << "Dropped frame? Expected=" << firstFrameTime
+						<< " vs " << frameTime << "ms." << std::endl;
+				}
+			}
+		}
+	}
+
+	return ret;
 }
