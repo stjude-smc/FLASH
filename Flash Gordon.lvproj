@@ -25,12 +25,12 @@
 			<Item Name="Hardware Abstraction Layer" Type="Folder">
 				<Item Name="Camera.lvlib" Type="Library" URL="../Hardware/Camera/Camera.lvlib"/>
 				<Item Name="Device.lvlib" Type="Library" URL="../Hardware/Device/Device.lvlib"/>
-				<Item Name="Sync Device.lvlib" Type="Library" URL="../Hardware/Sync Device/Sync Device/Synchronization Device/Sync Device.lvlib"/>
+				<Item Name="Sync Device.lvlib" Type="Library" URL="../Hardware/Sync Device/Sync Device.lvlib"/>
 			</Item>
 			<Item Name="Hardware Devices" Type="Folder">
 				<Item Name="Hamamatsu Camera.lvlib" Type="Library" URL="../Hardware/Hamamatsu Camera/Hamamatsu Camera.lvlib"/>
 				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
-				<Item Name="DAQ.lvlib" Type="Library" URL="../Hardware/Synchronization Device/DAQ.lvlib"/>
+				<Item Name="NI DAQ.lvlib" Type="Library" URL="../Hardware/NI DAQ/NI DAQ.lvlib"/>
 				<Item Name="Laser.lvlib" Type="Library" URL="../Hardware/Laser/Laser.lvlib"/>
 				<Item Name="Microscope.lvlib" Type="Library" URL="../Hardware/Microscope/Microscope.lvlib"/>
 				<Item Name="Power Meter.lvlib" Type="Library" URL="../Hardware/Power Meter/Power Meter.lvlib"/>
@@ -474,9 +474,6 @@
 			<Item Name="RING EXPOSURE MODES.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Enum params values/RINGS/RING EXPOSURE MODES.ctl"/>
 			<Item Name="RoiMD.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/RoiMD.ctl"/>
 			<Item Name="Scan Mode Enum.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Scan Mode Enum.ctl"/>
-			<Item Name="Send Set All.vi" Type="VI" URL="../Hardware/Synchronization Device Messages/Set All Msg/Send Set All.vi"/>
-			<Item Name="Set All Msg.ctl" Type="VI" URL="../Hardware/Synchronization Device Messages/Set All Msg/Set All Msg.lvclass/Set All Msg.ctl"/>
-			<Item Name="Set All Msg.lvclass" Type="LVClass" URL="../Hardware/Synchronization Device Messages/Set All Msg/Set All Msg.lvclass"/>
 			<Item Name="String Params IDs.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/String Params IDs.ctl"/>
 			<Item Name="System" Type="VI" URL="System">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
