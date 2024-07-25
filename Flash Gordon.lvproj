@@ -21,21 +21,24 @@
 			<Item Name="Tiff Writer.lvlib" Type="Library" URL="../Hardware/Tiff Writer/Tiff Writer.lvlib"/>
 		</Item>
 		<Item Name="Hardware" Type="Folder">
-			<Property Name="NI.SortType" Type="Int">3</Property>
+			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Item Name="Hardware Abstraction Layer" Type="Folder">
+				<Property Name="NI.SortType" Type="Int">0</Property>
 				<Item Name="Camera.lvlib" Type="Library" URL="../Hardware/Camera/Camera.lvlib"/>
 				<Item Name="Device.lvlib" Type="Library" URL="../Hardware/Device/Device.lvlib"/>
 				<Item Name="Sync Device.lvlib" Type="Library" URL="../Hardware/Sync Device/Sync Device.lvlib"/>
 			</Item>
 			<Item Name="Hardware Devices" Type="Folder">
+				<Property Name="NI.SortType" Type="Int">0</Property>
+				<Item Name="Andor Camera.lvlib" Type="Library" URL="../Hardware/Andor Camera/Andor Camera.lvlib"/>
+				<Item Name="Arduino DAQ.lvlib" Type="Library" URL="../Hardware/Arduino DQ/Arduino DAQ.lvlib"/>
 				<Item Name="Hamamatsu Camera.lvlib" Type="Library" URL="../Hardware/Hamamatsu Camera/Hamamatsu Camera.lvlib"/>
-				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
-				<Item Name="NI DAQ.lvlib" Type="Library" URL="../Hardware/NI DAQ/NI DAQ.lvlib"/>
 				<Item Name="Laser.lvlib" Type="Library" URL="../Hardware/Laser/Laser.lvlib"/>
 				<Item Name="Microscope.lvlib" Type="Library" URL="../Hardware/Microscope/Microscope.lvlib"/>
-				<Item Name="Power Meter.lvlib" Type="Library" URL="../Hardware/Power Meter/Power Meter.lvlib"/>
-				<Item Name="Andor Camera.lvlib" Type="Library" URL="../Hardware/Andor Camera/Andor Camera.lvlib"/>
+				<Item Name="NI DAQ.lvlib" Type="Library" URL="../Hardware/NI DAQ/NI DAQ.lvlib"/>
 				<Item Name="Photometrics Camera.lvlib" Type="Library" URL="../Hardware/Photometrics Camera/Photometrics Camera.lvlib"/>
+				<Item Name="Power Meter.lvlib" Type="Library" URL="../Hardware/Power Meter/Power Meter.lvlib"/>
+				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
 			</Item>
 		</Item>
 		<Item Name="Resources" Type="Folder">
