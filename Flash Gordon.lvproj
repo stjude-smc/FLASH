@@ -477,6 +477,12 @@
 			<Item Name="RING EXPOSURE MODES.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Enum params values/RINGS/RING EXPOSURE MODES.ctl"/>
 			<Item Name="RoiMD.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/RoiMD.ctl"/>
 			<Item Name="Scan Mode Enum.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Scan Mode Enum.ctl"/>
+			<Item Name="Send Open Shutter.vi" Type="VI" URL="../Hardware/Sync Device Messages/Set Shutter Enable Msg/Send Open Shutter.vi"/>
+			<Item Name="Send Set ALEX.vi" Type="VI" URL="../Hardware/Sync Device Messages/Set ALEX Msg/Send Set ALEX.vi"/>
+			<Item Name="Send Set Duty Cycle.vi" Type="VI" URL="../Hardware/Sync Device Messages/Set Duty Cycle Msg/Send Set Duty Cycle.vi"/>
+			<Item Name="Send Set Interval.vi" Type="VI" URL="../Hardware/Sync Device Messages/Set Interval Msg/Send Set Interval.vi"/>
+			<Item Name="Send Start Streaming.vi" Type="VI" URL="../Hardware/Sync Device Messages/Set All Msg/Send Start Streaming.vi"/>
+			<Item Name="Send Stop Streaming.vi" Type="VI" URL="../Hardware/Sync Device Messages/Set Streaming Msg/Send Stop Streaming.vi"/>
 			<Item Name="String Params IDs.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/String Params IDs.ctl"/>
 			<Item Name="System" Type="VI" URL="System">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>

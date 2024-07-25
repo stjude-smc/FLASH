@@ -4,11 +4,8 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">587235328</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="Set ALEX Msg.lvclass" Type="LVClass" URL="../../Sync Device Messages/Set ALEX Msg/Set ALEX Msg.lvclass"/>
-	<Item Name="Set All Msg.lvclass" Type="LVClass" URL="../../Sync Device Messages/Set All Msg/Set All Msg.lvclass"/>
-	<Item Name="Set Duty Cycle Msg.lvclass" Type="LVClass" URL="../../Sync Device Messages/Set Duty Cycle Msg/Set Duty Cycle Msg.lvclass"/>
-	<Item Name="Set Interval Msg.lvclass" Type="LVClass" URL="../../Sync Device Messages/Set Interval Msg/Set Interval Msg.lvclass"/>
-	<Item Name="Set Shutter Enable Msg.lvclass" Type="LVClass" URL="../../Sync Device Messages/Set Shutter Enable Msg/Set Shutter Enable Msg.lvclass"/>
-	<Item Name="Set Streaming Msg.lvclass" Type="LVClass" URL="../../Sync Device Messages/Set Streaming Msg/Set Streaming Msg.lvclass"/>
+	<Item Name="Open Shutter Msg.lvclass" Type="LVClass" URL="../../Sync Device Messages/Open Shutter Msg/Open Shutter Msg.lvclass"/>
+	<Item Name="Start Streaming Msg.lvclass" Type="LVClass" URL="../../Sync Device Messages/Start Streaming Msg/Start Streaming Msg.lvclass"/>
+	<Item Name="Stop Streaming Msg.lvclass" Type="LVClass" URL="../../Sync Device Messages/Stop Streaming Msg/Stop Streaming Msg.lvclass"/>
 	<Item Name="Sync Device.lvclass" Type="LVClass" URL="../Sync Device.lvclass"/>
 </Library>

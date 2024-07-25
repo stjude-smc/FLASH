@@ -1,0 +1,21 @@
+May be helpful to simplify the interface to DAQ.
+
+1) Start acquisition with current settings (camera settings)  == Set All Msg.
+2) Manually open shutter (bool array) == Set Shutter Enable Msg.
+3) Close shutter and stop acquisition (if any) == Set Steaming Msg.
+
+
+Commands:
+L=Lasers (1=shutters, 2=ALEX bool)
+A=acquisition period in microseconds (uint32)
+E=exposure time in microseconds (uint32)
+C=Start continuous imaging w/ number of frames (uint32)
+D=shutter delay in microseconds (uint32) = 1ms
+I=camera readout time in microseconds (uint32) = 12ms
+S=Start stroboscopic imaging w/ number of frames (uint32)
+M=Manually open shutters
+Q=Stop acquiring
+
+**camera readout time is used to set the time of the first (discarded) frame.
+
+**Fluidics triggering is not currently supported.

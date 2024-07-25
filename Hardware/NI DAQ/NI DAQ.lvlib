@@ -4,5 +4,10 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">587235328</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Property Name="NI.SortType" Type="Int">1</Property>
+	<Item Name="ALEX.vi" Type="VI" URL="../ALEX.vi"/>
+	<Item Name="Check Shutter Rate.vi" Type="VI" URL="../Check Shutter Rate.vi"/>
 	<Item Name="NI DAQ.lvclass" Type="LVClass" URL="../NI DAQ.lvclass"/>
+	<Item Name="spin.vi" Type="VI" URL="../spin.vi"/>
+	<Item Name="sync_alex_iteration.vi" Type="VI" URL="../sync_alex_iteration.vi"/>
 </Library>
