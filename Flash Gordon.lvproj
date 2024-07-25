@@ -25,11 +25,12 @@
 			<Item Name="Hardware Abstraction Layer" Type="Folder">
 				<Item Name="Camera.lvlib" Type="Library" URL="../Hardware/Camera/Camera.lvlib"/>
 				<Item Name="Device.lvlib" Type="Library" URL="../Hardware/Device/Device.lvlib"/>
+				<Item Name="Sync Device.lvlib" Type="Library" URL="../Hardware/Sync Device/Sync Device/Synchronization Device/Sync Device.lvlib"/>
 			</Item>
 			<Item Name="Hardware Devices" Type="Folder">
 				<Item Name="Hamamatsu Camera.lvlib" Type="Library" URL="../Hardware/Hamamatsu Camera/Hamamatsu Camera.lvlib"/>
 				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
-				<Item Name="Synchronization Device.lvlib" Type="Library" URL="../Hardware/Synchronization Device/Synchronization Device.lvlib"/>
+				<Item Name="DAQ.lvlib" Type="Library" URL="../Hardware/Synchronization Device/DAQ.lvlib"/>
 				<Item Name="Laser.lvlib" Type="Library" URL="../Hardware/Laser/Laser.lvlib"/>
 				<Item Name="Microscope.lvlib" Type="Library" URL="../Hardware/Microscope/Microscope.lvlib"/>
 				<Item Name="Power Meter.lvlib" Type="Library" URL="../Hardware/Power Meter/Power Meter.lvlib"/>
@@ -46,6 +47,7 @@
 				<Item Name="ASI TG-1000.lvlib" Type="Library" URL="/&lt;instrlib&gt;/ASI TG-1000/ASI TG-1000.lvlib"/>
 				<Item Name="Camera.lvclass" Type="LVClass" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/Camera.lvclass"/>
 				<Item Name="PVCAM.lvclass" Type="LVClass" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/PVCAM/PVCAM.lvclass"/>
+				<Item Name="Stream-class&apos;Camera&apos;.lvlib" Type="Library" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Dependencies/Stream-class&apos;Camera&apos;.lvlib"/>
 				<Item Name="ti2lv.lvlib" Type="Library" URL="../Hardware/Microscope/ti2lv/ti2lv.lvlib"/>
 			</Item>
 			<Item Name="dll" Type="Folder" URL="../dll">
@@ -418,6 +420,7 @@
 				<Item Name="Write to XML File(string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Write to XML File(string).vi"/>
 				<Item Name="Write to XML File.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Write to XML File.vi"/>
 			</Item>
+			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="Acquisition Mode.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Acquisition Mode.ctl"/>
 			<Item Name="Acquisition Status.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Acquisition Status.ctl"/>
 			<Item Name="AF Debug.lvlib" Type="Library" URL="/&lt;resource&gt;/AFDebug/AF Debug.lvlib"/>
@@ -463,14 +466,17 @@
 			</Item>
 			<Item Name="Numeric Params IDs.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Numeric Params IDs.ctl"/>
 			<Item Name="Param Attributes.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Param Attributes.ctl"/>
+			<Item Name="PipeLogic.lvclass" Type="LVClass" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/PipeLogic/PipeLogic.lvclass"/>
 			<Item Name="PVCam Type Converter.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Conversion/PVCam Type Converter.vi"/>
 			<Item Name="PVCam Types.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/PVCam Types.ctl"/>
-			<Item Name="PVCamNET.dll" Type="Document" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Dependencies/PVCamNET.dll"/>
 			<Item Name="Region Index.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Region Index.ctl"/>
 			<Item Name="Region.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Region.ctl"/>
 			<Item Name="RING EXPOSURE MODES.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Enum params values/RINGS/RING EXPOSURE MODES.ctl"/>
 			<Item Name="RoiMD.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/RoiMD.ctl"/>
 			<Item Name="Scan Mode Enum.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Scan Mode Enum.ctl"/>
+			<Item Name="Send Set All.vi" Type="VI" URL="../Hardware/Synchronization Device Messages/Set All Msg/Send Set All.vi"/>
+			<Item Name="Set All Msg.ctl" Type="VI" URL="../Hardware/Synchronization Device Messages/Set All Msg/Set All Msg.lvclass/Set All Msg.ctl"/>
+			<Item Name="Set All Msg.lvclass" Type="LVClass" URL="../Hardware/Synchronization Device Messages/Set All Msg/Set All Msg.lvclass"/>
 			<Item Name="String Params IDs.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/String Params IDs.ctl"/>
 			<Item Name="System" Type="VI" URL="System">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -478,7 +484,9 @@
 			<Item Name="systemLogging.dll" Type="Document" URL="systemLogging.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="tmcamcon.dll" Type="Document" URL="../../../Windows/System32/tmcamcon.dll"/>
+			<Item Name="tmcamcon.dll" Type="Document" URL="tmcamcon.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Flash Gordon" Type="EXE">
@@ -492,7 +500,7 @@
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../Testing</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../testing</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
@@ -502,18 +510,18 @@
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">5</Property>
 				<Property Name="Destination[0].destName" Type="Str">Flash Gordon.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../Testing/NI_AB_PROJECTNAME.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../testing/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">../Testing</Property>
+				<Property Name="Destination[1].path" Type="Path">../testing</Property>
 				<Property Name="Destination[2].destName" Type="Str">Config</Property>
-				<Property Name="Destination[2].path" Type="Path">../Testing/Config</Property>
+				<Property Name="Destination[2].path" Type="Path">../testing/Config</Property>
 				<Property Name="Destination[3].destName" Type="Str">dll</Property>
-				<Property Name="Destination[3].path" Type="Path">../Testing/dll</Property>
+				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{A237ACDF-B650-4CDF-81D6-D70474B9A097}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{C87A8415-727C-407E-A53B-69FA5BBEA63A}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
