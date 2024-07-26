@@ -1,7 +1,7 @@
 May be helpful to simplify the interface to DAQ.
 
 1) Start acquisition with current settings (camera settings)  == Set All Msg.
-2) Manually open shutter (bool array) == Set Shutter Enable Msg.
+2) Manually set shutter states (bool array) == Set Shutter Enable Msg.
 3) Close shutter and stop acquisition (if any) == Set Steaming Msg.
 
 
@@ -23,11 +23,9 @@ Q=Stop acquiring
 **minimum exposure time is 6 ms by default (12/2)
   because the positive trigger width is (shutter time + readout time + 250us)/2
 
-**Long delay in manual shutter changes. Is this due to setting M (manual) mode?
-  Main Window sends "Open Shutter" when changing excitation cluster.
-  Ideally that would only send the L command not L+M?
-
 **M can only be called when IDLE and at least one shutter selected.
   This will force Sync Device to track the current state to avoid
   calling M twice (or during acquisition).
+
+
 

@@ -8,8 +8,8 @@
 
 </Property>
 	<Item Name="Arduino DAQ.lvclass" Type="LVClass" URL="../Arduino DAQ.lvclass"/>
-	<Item Name="Arduino Error.vi" Type="VI" URL="../Arduino Error.vi"/>
 	<Item Name="Arduino Notes.txt" Type="Document" URL="../Arduino Notes.txt"/>
+	<Item Name="Arduino Read Response.vi" Type="VI" URL="../Arduino Read Response.vi"/>
 	<Item Name="Arduino Write Bytes.vi" Type="VI" URL="../Arduino Write Bytes.vi"/>
 	<Item Name="Arduino Write Int.vi" Type="VI" URL="../Arduino Write Int.vi"/>
 	<Item Name="Test Arduino.vi" Type="VI" URL="../Test Arduino.vi"/>
