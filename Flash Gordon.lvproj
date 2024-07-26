@@ -70,6 +70,7 @@
 			</Item>
 			<Item Name="Type Defs" Type="Folder" URL="../Resources/Type Defs">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
+				<Property Name="NI.SortType" Type="Int">0</Property>
 			</Item>
 			<Item Name="Flash Gordon documentation.pdf" Type="Document" URL="../Flash Gordon documentation.pdf"/>
 			<Item Name="Init.xml" Type="Document" URL="../Init.xml"/>
@@ -87,6 +88,7 @@
 		<Item Name="Create Hardware Configuration UI.vi" Type="VI" URL="../Application/Create Hardware Configuration UI.vi"/>
 		<Item Name="Create Initialization File.vi" Type="VI" URL="../Application/Create Initialization File.vi"/>
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
+		<Item Name="Upgrade Hardware ConfigurationI.vi" Type="VI" URL="../Application/Upgrade Hardware ConfigurationI.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="AbortAcquisition.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/AbortAcquisition.vi"/>

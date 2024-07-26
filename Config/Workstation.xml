@@ -1,93 +1,9 @@
 <?xml version='1.0' standalone='yes' ?>
 <LVData xmlns="http://www.ni.com/LVData">
-<Version>23.3.3f3</Version>
+<Version>23.3.4f4</Version>
 <Cluster>
-<Name>Hardware Configuration</Name>
-<NumElts>8</NumElts>
-<Array>
-<Name>Shutters</Name>
-<Dimsize>4</Dimsize>
-<Cluster>
-<Name>Shutter Configuration</Name>
-<NumElts>4</NumElts>
-<DAQChannel>
-<Name>IO Line</Name>
-<Val>Dev1/port1/line0</Val>
-</DAQChannel>
-<String>
-<Name>Name</Name>
-<Val>Cy2</Val>
-</String>
-<U16>
-<Name>Wavelength</Name>
-<Val>473</Val>
-</U16>
-<DBL>
-<Name>Max rate (Hz)</Name>
-<Val>20.00000000000000</Val>
-</DBL>
-</Cluster>
-<Cluster>
-<Name>Shutter Configuration</Name>
-<NumElts>4</NumElts>
-<DAQChannel>
-<Name>IO Line</Name>
-<Val>Dev1/port1/line1</Val>
-</DAQChannel>
-<String>
-<Name>Name</Name>
-<Val>Cy3</Val>
-</String>
-<U16>
-<Name>Wavelength</Name>
-<Val>532</Val>
-</U16>
-<DBL>
-<Name>Max rate (Hz)</Name>
-<Val>20.00000000000000</Val>
-</DBL>
-</Cluster>
-<Cluster>
-<Name>Shutter Configuration</Name>
-<NumElts>4</NumElts>
-<DAQChannel>
-<Name>IO Line</Name>
-<Val>Dev1/port1/line2</Val>
-</DAQChannel>
-<String>
-<Name>Name</Name>
-<Val>Cy5</Val>
-</String>
-<U16>
-<Name>Wavelength</Name>
-<Val>640</Val>
-</U16>
-<DBL>
-<Name>Max rate (Hz)</Name>
-<Val>20.00000000000000</Val>
-</DBL>
-</Cluster>
-<Cluster>
-<Name>Shutter Configuration</Name>
-<NumElts>4</NumElts>
-<DAQChannel>
-<Name>IO Line</Name>
-<Val>Dev1/port1/line3</Val>
-</DAQChannel>
-<String>
-<Name>Name</Name>
-<Val>Cy7</Val>
-</String>
-<U16>
-<Name>Wavelength</Name>
-<Val>721</Val>
-</U16>
-<DBL>
-<Name>Max rate (Hz)</Name>
-<Val>20.00000000000000</Val>
-</DBL>
-</Cluster>
-</Array>
+<Name>New Hardware Configuration</Name>
+<NumElts>7</NumElts>
 <Cluster>
 <Name>Stage Configuration</Name>
 <NumElts>9</NumElts>
@@ -285,18 +201,14 @@
 </Cluster>
 <Cluster>
 <Name>Virtual Camera Configuration</Name>
-<NumElts>2</NumElts>
+<NumElts>1</NumElts>
 <EW>
 <Name>Camera Type</Name>
 <Choice>Hamamatsu</Choice>
 <Choice>Andor</Choice>
 <Choice>Photometrics</Choice>
-<Val>0</Val>
+<Val>2</Val>
 </EW>
-<DAQChannel>
-<Name>Sync Line</Name>
-<Val>Dev1/port2/line7</Val>
-</DAQChannel>
 </Cluster>
 <Array>
 <Name>Laser Configuration</Name>
@@ -422,14 +334,6 @@
 </U16>
 </Cluster>
 </Array>
-<Cluster>
-<Name>Fluidics Configuration</Name>
-<NumElts>1</NumElts>
-<DAQChannel>
-<Name>fluidics trigger line</Name>
-<Val>Dev1/port2/line6</Val>
-</DAQChannel>
-</Cluster>
 <Array>
 <Name>Installed Cameras</Name>
 <Dimsize>5</Dimsize>
@@ -661,6 +565,107 @@
 <Name>instrument handle</Name>
 <RefKind>VISA</RefKind>
 <Val>COM5</Val>
+</Refnum>
+</Cluster>
+<Cluster>
+<Name>DAQ Configuration</Name>
+<NumElts>4</NumElts>
+<Array>
+<Name>Shutters</Name>
+<Dimsize>4</Dimsize>
+<Cluster>
+<Name>Shutter Configuration</Name>
+<NumElts>4</NumElts>
+<DAQChannel>
+<Name>IO Line</Name>
+<Val>Dev1/port1/line0</Val>
+</DAQChannel>
+<String>
+<Name>Name</Name>
+<Val>Cy2</Val>
+</String>
+<U16>
+<Name>Wavelength</Name>
+<Val>473</Val>
+</U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
+</Cluster>
+<Cluster>
+<Name>Shutter Configuration</Name>
+<NumElts>4</NumElts>
+<DAQChannel>
+<Name>IO Line</Name>
+<Val>Dev1/port1/line1</Val>
+</DAQChannel>
+<String>
+<Name>Name</Name>
+<Val>Cy3</Val>
+</String>
+<U16>
+<Name>Wavelength</Name>
+<Val>532</Val>
+</U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
+</Cluster>
+<Cluster>
+<Name>Shutter Configuration</Name>
+<NumElts>4</NumElts>
+<DAQChannel>
+<Name>IO Line</Name>
+<Val>Dev1/port1/line2</Val>
+</DAQChannel>
+<String>
+<Name>Name</Name>
+<Val>Cy5</Val>
+</String>
+<U16>
+<Name>Wavelength</Name>
+<Val>640</Val>
+</U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
+</Cluster>
+<Cluster>
+<Name>Shutter Configuration</Name>
+<NumElts>4</NumElts>
+<DAQChannel>
+<Name>IO Line</Name>
+<Val>Dev1/port1/line3</Val>
+</DAQChannel>
+<String>
+<Name>Name</Name>
+<Val>Cy7</Val>
+</String>
+<U16>
+<Name>Wavelength</Name>
+<Val>721</Val>
+</U16>
+<DBL>
+<Name>Max rate (Hz)</Name>
+<Val>20.00000000000000</Val>
+</DBL>
+</Cluster>
+</Array>
+<DAQChannel>
+<Name>fluidics trigger line</Name>
+<Val>Dev1/port2/line6</Val>
+</DAQChannel>
+<DAQChannel>
+<Name>camera trigger line</Name>
+<Val>Dev1/port2/line7</Val>
+</DAQChannel>
+<Refnum>
+<Name>COM Port</Name>
+<RefKind>VISA</RefKind>
+<Val>COM3</Val>
 </Refnum>
 </Cluster>
 </Cluster>
