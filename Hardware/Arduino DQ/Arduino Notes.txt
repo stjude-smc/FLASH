@@ -13,9 +13,21 @@ C=Start continuous imaging w/ number of frames (uint32)
 D=shutter delay in microseconds (uint32) = 1ms
 I=camera readout time in microseconds (uint32) = 12ms
 S=Start stroboscopic imaging w/ number of frames (uint32)
-M=Manually open shutters
+M=Manual shutter mode.
 Q=Stop acquiring
 
 **camera readout time is used to set the time of the first (discarded) frame.
 
 **Fluidics triggering is not currently supported.
+
+**minimum exposure time is 6 ms by default (12/2)
+  because the positive trigger width is (shutter time + readout time + 250us)/2
+
+**Long delay in manual shutter changes. Is this due to setting M (manual) mode?
+  Main Window sends "Open Shutter" when changing excitation cluster.
+  Ideally that would only send the L command not L+M?
+
+**M can only be called when IDLE and at least one shutter selected.
+  This will force Sync Device to track the current state to avoid
+  calling M twice (or during acquisition).
+
