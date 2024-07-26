@@ -521,7 +521,7 @@
 </Cluster>
 <Cluster>
 <Name>DAQ Configuration</Name>
-<NumElts>4</NumElts>
+<NumElts>5</NumElts>
 <Array>
 <Name>Shutters</Name>
 <Dimsize>4</Dimsize>
@@ -619,6 +619,13 @@
 <RefKind>VISA</RefKind>
 <Val>COM3</Val>
 </Refnum>
+<EW>
+<Name>Device type</Name>
+<Choice>Disabled</Choice>
+<Choice>NI DAQ</Choice>
+<Choice>Arduino DAQ</Choice>
+<Val>1</Val>
+</EW>
 </Cluster>
 </Cluster>
 </LVData>
