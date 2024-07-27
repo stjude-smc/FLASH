@@ -27,5 +27,9 @@ Q=Stop acquiring
   This will force Sync Device to track the current state to avoid
   calling M twice (or during acquisition).
 
-
+**Camera class will need to know minimum trigger time of DAQ
+  to set the trigger mode (every frame vs. first only).
+  - One solution is to just make the hw config a global constant all actors can reference.
+  - But this would require each camera class to judge how fast each device type is.
+  - Would be better for the DAQ class to provide this info.
 
