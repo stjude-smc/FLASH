@@ -1,35 +1,27 @@
-May be helpful to simplify the interface to DAQ.
-
-1) Start acquisition with current settings (camera settings)  == Set All Msg.
-2) Manually set shutter states (bool array) == Set Shutter Enable Msg.
-3) Close shutter and stop acquisition (if any) == Set Steaming Msg.
-
-
 Commands:
-L=Lasers (1=shutters, 2=ALEX bool)
-A=acquisition period in microseconds (uint32)
-E=exposure time in microseconds (uint32)
-C=Start continuous imaging w/ number of frames (uint32)
-D=shutter delay in microseconds (uint32) = 1ms
-I=camera readout time in microseconds (uint32) = 12ms
-S=Start stroboscopic imaging w/ number of frames (uint32)
-M=Manual shutter mode.
-Q=Stop acquiring
+A=Acquisition period in microseconds (uint32)
+C=start Continuous imaging w/ number of frames (uint32)
+D=shutter Delay in microseconds (uint32)
+E=Exposure time in microseconds (uint32)
+F=Fluidics trigger frame number (uint32)
+I=camera readout time in microseconds (uint32)
+L=Lasers (uint8=shutters, uint8=ALEX bool)
+M=Manual shutter mode (no data)
+S=start Stroboscopic imaging w/ number of frames (uint32)
+Q=stop acquiring (no data)
 
-**camera readout time is used to set the time of the first (discarded) frame.
+Pins (defined in sys_globals.h):
+// Laser shutters
+const uint8_t CY2_PIN = PINF0; // aka Arduino pin A0
+const uint8_t CY3_PIN = PINF1; // aka Arduino pin A1
+const uint8_t CY5_PIN = PINF2; // aka Arduino pin A2
+const uint8_t CY7_PIN = PINF3; // aka Arduino pin A3
+// Fluidic system trigger
+const uint8_t FLUIDIC_PIN = PINE4; // aka Arduino pin 2
+// Camera trigger
+const uint8_t CAMERA_PIN = PINB7; // aka Arduino pin 13
 
-**Fluidics triggering is not currently supported.
-
-**minimum exposure time is 6 ms by default (12/2)
-  because the positive trigger width is (shutter time + readout time + 250us)/2
+In continuous mode only, the first frame has shutter closed and minimal time since it is discarded (charge build-up before acquisition start). In strobe/ALEX mode, the shutter is open in the first frame and in ALEX it starts with the first laser. This will be an issue in FG since the discard frame parameter (default 1) isn't changed between modes.
 
 **M can only be called when IDLE and at least one shutter selected.
-  This will force Sync Device to track the current state to avoid
-  calling M twice (or during acquisition).
-
-**Camera class will need to know minimum trigger time of DAQ
-  to set the trigger mode (every frame vs. first only).
-  - One solution is to just make the hw config a global constant all actors can reference.
-  - But this would require each camera class to judge how fast each device type is.
-  - Would be better for the DAQ class to provide this info.
-
+  C/S can be called after M though without issue.
