@@ -512,7 +512,7 @@
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
 				<Property Name="Bld_userLogFile" Type="Path">../Testing/build_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToCommon</Property>
-				<Property Name="Bld_version.build" Type="Int">711</Property>
+				<Property Name="Bld_version.build" Type="Int">802</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">5</Property>
 				<Property Name="Destination[0].destName" Type="Str">Flash Gordon.exe</Property>
@@ -527,7 +527,7 @@
 				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{B79AEEFF-1CF7-41D3-B53B-8AF4A6F06CBB}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{E7F1D680-C3C2-4B15-B75A-C37528348868}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
@@ -556,6 +556,22 @@
 				<Property Name="Source[15].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/NI DAQ.lvlib/NI DAQ.lvclass</Property>
 				<Property Name="Source[15].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[15].type" Type="Str">Library</Property>
+				<Property Name="Source[16].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[16].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/LQ Laser.lvlib/LQ Laser.lvclass</Property>
+				<Property Name="Source[16].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[16].type" Type="Str">Library</Property>
+				<Property Name="Source[17].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[17].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Coherent Laser.lvlib/Coherent Laser.lvclass</Property>
+				<Property Name="Source[17].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[17].type" Type="Str">Library</Property>
+				<Property Name="Source[18].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[18].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Thorlabs Polarizer.lvlib/Calibrate Polarizer Msg.lvclass</Property>
+				<Property Name="Source[18].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[18].type" Type="Str">Library</Property>
+				<Property Name="Source[19].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[19].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Thorlabs Polarizer.lvlib/Thorlabs Polarizer.lvclass</Property>
+				<Property Name="Source[19].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[19].type" Type="Str">Library</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Resources/dll/dcimg2tiff.dll</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
@@ -585,7 +601,7 @@
 				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Resources/release.txt</Property>
 				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="SourceCount" Type="Int">16</Property>
+				<Property Name="SourceCount" Type="Int">20</Property>
 				<Property Name="TgtF_companyName" Type="Str">St Jude Childrens Research Hospital</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Instrument control and data acquisition for TIRF-smFRET imaging</Property>
 				<Property Name="TgtF_internalName" Type="Str">Flash Gordon</Property>

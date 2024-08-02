@@ -8,6 +8,7 @@ Change log:
 ----------
 
 1.5.0 (2024-7-11) -- testing branch
+- Experimental support for using an Arduino as a triggering device.
 - Experimental support for Photometrics Kinetix cameras. Other Photometrics cameras may work but are untested. See documentation for limitations and known bugs.
 - Experimental support for Andor EMCCD cameras (SDK 2).
 - ADU to photoelectron conversion factor is now an array, with one value per camera readout mode; can't assume they are all the same.
@@ -15,6 +16,10 @@ Change log:
 - Live Viewer: status bar shows count of saturated pixles (important for low bitrate modes).
 - Fluidics trigger line can be adjusted in configuration file.
 - Lasers: automatically home PRM1Z8 on startup if not already homed.
+- Camera: save correct pixel size to file, assuming 60x mag.
+- Hamamatsu: increase jitter parameter to avoid rare missed frames.
+- Viewer: synchronization frame data b/t cameras.
+- Sync Device: add support for Arduino trigger device.
 - Update project to LabVIEW 2023 (SP3) from 2018 (SP1).
 - Improved error handling.
 - Avoid possible deadlock conditions when waiting for cameras to be ready for acquisition.
