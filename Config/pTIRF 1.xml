@@ -2,7 +2,7 @@
 <LVData xmlns="http://www.ni.com/LVData">
 <Version>23.3.4f4</Version>
 <Cluster>
-<Name>New Hardware Configuration</Name>
+<Name>Hardware Configuration</Name>
 <NumElts>7</NumElts>
 <Cluster>
 <Name>Stage Configuration</Name>
@@ -210,7 +210,7 @@
 </U16>
 <U16>
 <Name>Optical Path</Name>
-<Val>0</Val>
+<Val>4</Val>
 </U16>
 </Cluster>
 </Array>
@@ -223,7 +223,7 @@
 <Choice>Hamamatsu</Choice>
 <Choice>Andor</Choice>
 <Choice>Photometrics</Choice>
-<Val>2</Val>
+<Val>0</Val>
 </EW>
 </Cluster>
 <Array>
