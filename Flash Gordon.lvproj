@@ -27,6 +27,7 @@
 				<Item Name="Camera.lvlib" Type="Library" URL="../Hardware/Camera/Camera.lvlib"/>
 				<Item Name="Device.lvlib" Type="Library" URL="../Hardware/Device/Device.lvlib"/>
 				<Item Name="Laser.lvlib" Type="Library" URL="../Hardware/Laser/Laser.lvlib"/>
+				<Item Name="Microscope.lvlib" Type="Library" URL="../Hardware/Microscope/Microscope.lvlib"/>
 				<Item Name="Sync Device.lvlib" Type="Library" URL="../Hardware/Sync Device/Sync Device.lvlib"/>
 			</Item>
 			<Item Name="Hardware Devices" Type="Folder">
@@ -36,8 +37,8 @@
 				<Item Name="Coherent Laser.lvlib" Type="Library" URL="../Hardware/Coherent Laser/Coherent Laser.lvlib"/>
 				<Item Name="Hamamatsu Camera.lvlib" Type="Library" URL="../Hardware/Hamamatsu Camera/Hamamatsu Camera.lvlib"/>
 				<Item Name="LQ Laser.lvlib" Type="Library" URL="../Hardware/LQ Laser/LQ Laser.lvlib"/>
-				<Item Name="Microscope.lvlib" Type="Library" URL="../Hardware/Microscope/Microscope.lvlib"/>
 				<Item Name="NI DAQ.lvlib" Type="Library" URL="../Hardware/NI DAQ/NI DAQ.lvlib"/>
+				<Item Name="Nikon Stand.lvlib" Type="Library" URL="../Hardware/Nikon Stand/Nikon Stand.lvlib"/>
 				<Item Name="Photometrics Camera.lvlib" Type="Library" URL="../Hardware/Photometrics Camera/Photometrics Camera.lvlib"/>
 				<Item Name="Power Meter.lvlib" Type="Library" URL="../Hardware/Power Meter/Power Meter.lvlib"/>
 				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
@@ -393,6 +394,7 @@
 				<Item Name="ParseXMLFragments.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/ParseXMLFragments.vi"/>
 				<Item Name="Path to URL inner.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL inner.vi"/>
 				<Item Name="Path to URL.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL.vi"/>
+				<Item Name="Range Limits for Type.vim" Type="VI" URL="/&lt;vilib&gt;/numeric/Range Limits for Type.vim"/>
 				<Item Name="Read From XML File(array).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Read From XML File(array).vi"/>
 				<Item Name="Read From XML File(string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Read From XML File(string).vi"/>
 				<Item Name="Read From XML File.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Read From XML File.vi"/>
