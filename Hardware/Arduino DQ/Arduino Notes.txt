@@ -1,14 +1,17 @@
 Commands:
 A=Acquisition period in microseconds (uint32)
 C=start Continuous imaging w/ number of frames (uint32)
-D=shutter Delay in microseconds (uint32)
+D=shutter Delay in microseconds (uint32): **must be >1/clk (16 us)**
 E=Exposure time in microseconds (uint32)
-F=Fluidics trigger frame number (uint32)
+F=Fluidics trigger frame number (int32): -1 means no trigger.
 I=camera readout time in microseconds (uint32)
 L=Lasers (uint8=shutters, uint8=ALEX bool)
 M=Manual shutter mode (no data)
 S=start Stroboscopic imaging w/ number of frames (uint32)
 Q=stop acquiring (no data)
+
+**M can only be called when IDLE and at least one shutter selected.
+  C/S can be called after M though without issue.
 
 Pins (defined in sys_globals.h):
 // Laser shutters
@@ -21,7 +24,12 @@ const uint8_t FLUIDIC_PIN = PINE4; // aka Arduino pin 2
 // Camera trigger
 const uint8_t CAMERA_PIN = PINB7; // aka Arduino pin 13
 
-In continuous mode only, the first frame has shutter closed and minimal time since it is discarded (charge build-up before acquisition start). In strobe/ALEX mode, the shutter is open in the first frame and in ALEX it starts with the first laser. This will be an issue in FG since the discard frame parameter (default 1) isn't changed between modes.
+FIRST FRAME:
+In continuous mode, the shutters are closed and the frame time is as short as possible since it is later discarded (charge build-up before acquisition start). In strobe/ALEX mode, the shutter opens with the first frame since it is not discarded due to the "global reset" mode clearing the sensor for Hamamatsu cameras. For Photometrics, we may need to change this behavior?
 
-**M can only be called when IDLE and at least one shutter selected.
-  C/S can be called after M though without issue.
+SHUTTER DELAY:
+Do not set to zero or the first camera trigger will be missed.
+Must be set to less than frame time even in CW mode or camera triggers will be missed.
+Safest solution for now is to set this to a minimal value (100 us).
+This is a bug that should be fixed in the future.
+
