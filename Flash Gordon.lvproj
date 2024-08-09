@@ -488,8 +488,6 @@
 			<Item Name="RING EXPOSURE MODES.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Enum params values/RINGS/RING EXPOSURE MODES.ctl"/>
 			<Item Name="RoiMD.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/RoiMD.ctl"/>
 			<Item Name="Scan Mode Enum.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Scan Mode Enum.ctl"/>
-			<Item Name="Set Laser Power Msg.ctl" Type="VI" URL="../Hardware/Laser Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass/Set Laser Power Msg.ctl"/>
-			<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../Hardware/Laser Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
 			<Item Name="String Params IDs.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/String Params IDs.ctl"/>
 			<Item Name="System" Type="VI" URL="System">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -519,7 +517,7 @@
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
 				<Property Name="Bld_userLogFile" Type="Path">../Testing/build_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToCommon</Property>
-				<Property Name="Bld_version.build" Type="Int">806</Property>
+				<Property Name="Bld_version.build" Type="Int">809</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">5</Property>
 				<Property Name="Destination[0].destName" Type="Str">Flash Gordon.exe</Property>
@@ -534,7 +532,7 @@
 				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{82B70CEE-078D-4FB1-8AE2-112066B02117}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{A5FE6032-CC3E-4085-BC8F-17DF85B6A282}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
