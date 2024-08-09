@@ -83,6 +83,7 @@
 		</Item>
 		<Item Name="User Interface" Type="Folder">
 			<Item Name="Countdown.vi" Type="VI" URL="../User Interface/Countdown.vi"/>
+			<Item Name="Elapsed Time.vi" Type="VI" URL="../User Interface/Elapsed Time.vi"/>
 			<Item Name="Main Window.lvlib" Type="Library" URL="../User Interface/Main Window/Main Window.lvlib"/>
 			<Item Name="Splash Screen.lvlib" Type="Library" URL="../User Interface/Splash Screen/Splash Screen.lvlib"/>
 			<Item Name="Text Viewer.vi" Type="VI" URL="../User Interface/Text Viewer.vi"/>
@@ -487,6 +488,8 @@
 			<Item Name="RING EXPOSURE MODES.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Enum params values/RINGS/RING EXPOSURE MODES.ctl"/>
 			<Item Name="RoiMD.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/RoiMD.ctl"/>
 			<Item Name="Scan Mode Enum.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Scan Mode Enum.ctl"/>
+			<Item Name="Set Laser Power Msg.ctl" Type="VI" URL="../Hardware/Laser Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass/Set Laser Power Msg.ctl"/>
+			<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../Hardware/Laser Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
 			<Item Name="String Params IDs.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/String Params IDs.ctl"/>
 			<Item Name="System" Type="VI" URL="System">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
