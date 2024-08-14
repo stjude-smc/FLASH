@@ -28,6 +28,18 @@ extern "C" void resetCurrentFrame()
 }
 
 
+#ifdef _WINDLL
+std::ofstream fglog(LOGFILE);
+#else
+std::ostream& log = std::cout;
+#endif
+
+void log_dcimg_error(const char* fcn, DCIMG_ERR err)
+{
+	fglog << " *** " << fcn << " error: 0x" << std::hex << err << std::dec << std::endl;
+}
+
+
 
 // dcimg2tiff combines the data from 1 to 4 Hamamatsu HD recorder files (DCIMG raw image format)
 // into the data block of a BigTIFF file whose header and IFDs have been created 
@@ -50,14 +62,9 @@ extern "C" uint32_t dcimg2tiff(
 											// 			dcimg1	dcimg2		dcimg1	dcimg2
 											//		   	dcimg3 (dcimg4)	   (dcimg4) dcimg3
 {
-#ifdef _WINDLL
-	std::ofstream log(LOGFILE);
-#else
-	std::ostream& log = std::cout;
-#endif
-	log << "START: tiffPath=" << tiffPath << ", dcimgPath1=" << dcimgPath1 << ", frameWidth=" << frameWidth
-		<< ", frameHeight=" << frameHeight << ", nFrames=" << nFrames << ", skipFrames=" << skipFrames
-		<< ", nChannels=" << nChannels << ", ch3right=" << ch3right << ", tiffOffset=" << tiffOffset << std::endl;
+	fglog << "START: tiffPath=" << tiffPath << ", dcimgPath1=" << dcimgPath1 << ", frameWidth=" << frameWidth
+		  << ", frameHeight=" << frameHeight << ", nFrames=" << nFrames << ", skipFrames=" << skipFrames
+		  << ", nChannels=" << nChannels << ", ch3right=" << ch3right << ", tiffOffset=" << tiffOffset << std::endl;
 	auto startTime = std::chrono::system_clock::now();
 
 	currentFrame = 0;
@@ -75,24 +82,28 @@ extern "C" uint32_t dcimg2tiff(
 		hdcimg[i] = dcimgcon_init_open(dcimgPaths[i]);
 		if (hdcimg[i] == nullptr)
 		{
-			log << "Error opening dcimg input file: " << dcimgPaths[i] << std::endl;
+			fglog << "Error opening dcimg input file: " << dcimgPaths[i] << std::endl;
 			return FG_ERROR_INVALID_INPUT;
 		}
+
 		if (!dcimg_is_valid(hdcimg[i], frameWidth, frameHeight, nFrames+skipFrames))
 		{
-			log << "Mismatched dcimg metadata parameters: " << dcimgPaths[i] << std::endl;
+			fglog << "Mismatched dcimg metadata parameters: " << dcimgPaths[i] << std::endl;
 			return FG_ERROR_INVALID_INPUT;
 		}
-		// FIXME: does not close files already open, if any.
 
-		check_dcimg_timestamps(hdcimg[0]);
+		// Verify frame timestamps have no gaps (dropped frames)
+		if (!check_dcimg_timestamps(hdcimg[i]))
+			return FG_ERROR_DROPPED_FRAME;
+
+		// FIXME: close files already open, if any.
 	}
 	
 	// Open pre-formed TIFF file without destroying contents for writing frame data
 	std::fstream tiffFile(tiffPath, std::ios::binary | std::ios::in | std::ios::out);
 	if (!tiffFile)
 	{
-		log << "Error opening tif output file: " << tiffPath << std::endl;
+		fglog << "Error opening tif output file: " << tiffPath << std::endl;
 		for (auto& file : hdcimg)
 			dcimg_close(file);
 		return FG_ERROR_INVALID_OUTPUT;
@@ -113,7 +124,7 @@ extern "C" uint32_t dcimg2tiff(
 			// Read frame data from DCIMG file via API
 			err = dcimg_lockframe(hdcimg[ch], &frame);
 			if (failed(err))  {
-				log << "Error " << err << " acquiring frame data, frame #" << i << std::endl;
+				fglog << "dcimg_lockframe error " << std::hex << err << std::dec << " frame #" << i << std::endl;
 				for (auto& file : hdcimg)
 					dcimg_close(file);
 				return FG_ERROR_INVALID_INPUT;
@@ -159,9 +170,9 @@ extern "C" uint32_t dcimg2tiff(
 	std::chrono::duration<double> elapsed = std::chrono::system_clock::now() - startTime;
 	double outputBytes = static_cast<double>(nFrames) * movieWidth * movieHeight * frameWidth * frameHeight * sizeof(uint16_t);
 	double mbs = outputBytes / elapsed.count() / (1024.0 * 1024.0 * 1024.0);
-	log << std::fixed;
-	log.precision(2);
-	log << "FINISHED after " << elapsed.count() << " seconds (" << mbs << " GB/s)." << std::endl;
+	fglog << std::fixed;
+	fglog.precision(2);
+	fglog << "FINISHED after " << elapsed.count() << " seconds (" << mbs << " GB/s).\n\n" << std::endl;
 
 	return 0;
 }
@@ -187,22 +198,25 @@ HDCIMG dcimgcon_init_open(const char* filename)
 	initparam.size = sizeof(initparam);
 
 	err = dcimg_init(&initparam);
-	if (failed(err))
+	if (failed(err)) {
+		log_dcimg_error("dcimg_init", err);
 		return nullptr;
+	}
 
-	// open DCIMG file
+	// open DCIMG file, retrying a few times in case file is still saving.
 	DCIMG_OPEN	openparam;
 	memset(&openparam, 0, sizeof(openparam));
 	openparam.size = sizeof(openparam);
 	openparam.path = filename;
 
 	err = dcimg_open(&openparam);
-	if (failed(err))
+	if (failed(err)) {
+		log_dcimg_error("dcimg_open", err);
 		return nullptr;
+	}
 
 	return openparam.hdcimg;
 }
-
 
 
 // Return false if dcimg file doesn't match input parameters.
@@ -213,21 +227,45 @@ bool dcimg_is_valid(HDCIMG hdcimg, int32 width, int32 height, int32 nFrames)
 	int32 data;
 
 	err = dcimg_getparaml(hdcimg, DCIMG_IDPARAML_IMAGE_WIDTH, &data);
-	if (failed(err) || data != width)
+	if (failed(err)) {
+		log_dcimg_error("dcimg_getparaml(DCIMG_IDPARAML_IMAGE_WIDTH)", err);
 		return false;
+	}
+	else if (data != width) {
+		fglog << "dcimg width mismatch: " << data << " =/= " << width << std::endl;
+		return false;
+	}
 
 	err = dcimg_getparaml(hdcimg, DCIMG_IDPARAML_IMAGE_HEIGHT, &data);
-	if (failed(err) || data != height)
+	if (failed(err)) {
+		log_dcimg_error("dcimg_getparaml(DCIMG_IDPARAML_IMAGE_HEIGHT)", err);
 		return false;
+	}
+	else if (data != height) {
+		fglog << "dcimg height mismatch: " << data << " =/= " << height << std::endl;
+		return false;
+	}
 
 	//Options:DCIMG_PIXELTYPE_NONE, DCIMG_PIXELTYPE_MONO8, DCIMG_PIXELTYPE_MONO16
 	err = dcimg_getparaml(hdcimg, DCIMG_IDPARAML_IMAGE_PIXELTYPE, &data);
-	if (failed(err) || data != DCIMG_PIXELTYPE_MONO16)
+	if (failed(err)) {
+		log_dcimg_error("dcimg_getparaml(DCIMG_IDPARAML_IMAGE_HEIGHT)", err);
 		return false;
+	}
+	else if (data != DCIMG_PIXELTYPE_MONO16) {
+		fglog << "dcimg pixel type mismatch: " << data << " =/= " << DCIMG_PIXELTYPE_MONO16 << std::endl;
+		return false;
+	}
 
 	err = dcimg_getparaml(hdcimg, DCIMG_IDPARAML_NUMBEROF_FRAME, &data);
-	if (failed(err) || data < nFrames)
+	if (failed(err)) {
+		log_dcimg_error("dcimg_getparaml(DCIMG_IDPARAML_NUMBEROF_FRAME)", err);
 		return false;
+	}
+	else if (data < nFrames) {
+		fglog << "dcimg frame number mismatch: " << data << " =/= " << nFrames << std::endl;
+		return false;
+	}
 
 	return true;
 }
@@ -243,22 +281,13 @@ bool check_dcimg_timestamps(HDCIMG hdcimg)
 	err = dcimg_getparaml(hdcimg, DCIMG_IDPARAML_NUMBEROF_FRAME, &nFrame);
 	if (failed(err))
 	{
-		//dcimgcon_show_dcimgerr(err, "dcimg_getparaml(DCIMG_IDPARAML_NUMBEROF_FRAME)");
+		log_dcimg_error("dcimg_getparaml(DCIMG_IDPARAML_NUMBEROF_FRAME)", err);
 		return false;
 	}
 
-	// prepare buffer to receive TIMESTAMP
-
-	//BOOL	bElapse = TRUE;
 	auto timestamps = std::make_unique<DCIMG_TIMESTAMP[]>(nFrame);
-
 	if (timestamps == NULL)
-	{
-		//printf("Error: fail to allocate %d TIMESTAMP.\n", nFrame);
 		return false;
-	}
-
-	bool ret = false;
 
 	DCIMG_TIMESTAMPBLOCK	block;
 	memset(&block, 0, sizeof(block));
@@ -272,15 +301,18 @@ bool check_dcimg_timestamps(HDCIMG hdcimg)
 	err = dcimg_copymetadatablock(hdcimg, &block.hdr);
 	if (failed(err))
 	{
-		//dcimgcon_show_dcimgerr(err, "dcimg_copymetadatablock(DCIMG_TIMESTAMPBLOCK)");
-		ret = false;
+		log_dcimg_error("dcimg_copymetadatablock(DCIMG_TIMESTAMPBLOCK)", err);
+		return false;
 	}
 	else
 	{
+		//fglog << "TIME CHECK: ";
+		//fglog.precision(3);
 		if (block.timestampvalidsize < sizeof(DCIMG_TIMESTAMP))
 		{
-			//printf("dcimg_copymetadatablock(DCIMG_TIMESTAMPBLOCK) returns unknown time stamp that size is %d bytes. This is smaller than expected.\n", block.timestampvalidsize);
-			ret = false;
+			fglog << "dcimg_copymetadatablock(DCIMG_TIMESTAMPBLOCK) returns unknown time stamp that size is " <<
+					block.timestampvalidsize << " bytes.This is smaller than expected." << std::endl;
+			return false;
 		}
 		else
 		{
@@ -292,18 +324,21 @@ bool check_dcimg_timestamps(HDCIMG hdcimg)
 				double current = 1.0e-6 * timestamps[i].microsec + timestamps[i].sec;
 				double previous = 1.0e-6 * timestamps[i-1].microsec + timestamps[i-1].sec;
 				double frameTime = current - previous;
+				//fglog << frameTime << " ";
 
 				if (i == 1)
 					firstFrameTime = frameTime;
 				else if (abs(frameTime - firstFrameTime) / firstFrameTime > 0.5)
 				{
-					std::cout.precision(2);
-					std::cout << std::fixed << "Dropped frame? Expected=" << firstFrameTime
+					fglog.precision(2);
+					fglog << std::fixed << "Dropped frame? Expected=" << firstFrameTime
 						<< " vs " << frameTime << "ms." << std::endl;
+					//return false;
 				}
 			}
 		}
+		//fglog << std::endl;
 	}
 
-	return ret;
+	return true;
 }
