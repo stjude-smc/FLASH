@@ -53,13 +53,13 @@
 			<Property Name="NI.ClassItem.State" Type="Int">1342972432</Property>
 		</Item>
 		<Item Name="Get Most Recent Frame (if active).vi" Type="VI" URL="../Get Most Recent Frame (if active).vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;N!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!&amp;B!=!!?!!!X'6"I&lt;X2P&lt;76U=GFD=S"$97VF=G%O&lt;(:M;7)&lt;5'BP&gt;'^N:82S;7.T)%.B&lt;76S93ZM&gt;G.M98.T!"&gt;1;'^U&lt;WVF&gt;(*J9X-A1W&amp;N:8*B)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!&amp;B!=!!?!!!X'6"I&lt;X2P&lt;76U=GFD=S"$97VF=G%O&lt;(:M;7)&lt;5'BP&gt;'^N:82S;7.T)%.B&lt;76S93ZM&gt;G.M98.T!":1;'^U&lt;WVF&gt;(*J9X-A1W&amp;N:8*B)'FO!!"5!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!1!"Q-!!(A!!!U)!!!!!!!!!!!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!!!!!!EA!!!!!"!!A!!!!!</Property>
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;F!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!&amp;B!=!!?!!!X'6"I&lt;X2P&lt;76U=GFD=S"$97VF=G%O&lt;(:M;7)&lt;5'BP&gt;'^N:82S;7.T)%.B&lt;76S93ZM&gt;G.M98.T!"&gt;1;'^U&lt;WVF&gt;(*J9X-A1W&amp;N:8*B)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!&amp;"!=!!?!!!X'6"I&lt;X2P&lt;76U=GFD=S"$97VF=G%O&lt;(:M;7)&lt;5'BP&gt;'^N:82S;7.T)%.B&lt;76S93ZM&gt;G.M98.T!!^1;'^U&lt;WVF&gt;(*J9X-A;7Y!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!*)!!!!!!1!)!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
 		</Item>
 		<Item Name="Get Readout Modes.vi" Type="VI" URL="../Get Readout Modes.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;N!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!&amp;B!=!!?!!!X'6"I&lt;X2P&lt;76U=GFD=S"$97VF=G%O&lt;(:M;7)&lt;5'BP&gt;'^N:82S;7.T)%.B&lt;76S93ZM&gt;G.M98.T!"&gt;1;'^U&lt;WVF&gt;(*J9X-A1W&amp;N:8*B)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!&amp;B!=!!?!!!X'6"I&lt;X2P&lt;76U=GFD=S"$97VF=G%O&lt;(:M;7)&lt;5'BP&gt;'^N:82S;7.T)%.B&lt;76S93ZM&gt;G.M98.T!":1;'^U&lt;WVF&gt;(*J9X-A1W&amp;N:8*B)'FO!!"5!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!1!"Q-!!(A!!!U)!!!!!!!!!!!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!!!!!!EA!!!!!"!!A!!!!!</Property>
