@@ -61,7 +61,7 @@ int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uin
 
 			// place 3rd channel on the right side of the bottom row.
 			int movieCol = ch % 2;
-			if (ch >= 2 && ch3right) movieCol = 1;
+			if (nChannels==3 && ch == 2 && ch3right) movieCol = 1;
 
 			// Copy frame data row by row, flipping if needed.
 			for (int j = 0; j < frameHeight; j++)

@@ -31,7 +31,7 @@ extern "C" void resetCurrentFrame()
 #ifdef _WINDLL
 std::ofstream fglog(LOGFILE);
 #else
-std::ostream& log = std::cout;
+std::ostream& fglog = std::cout;
 #endif
 
 void log_dcimg_error(const char* fcn, DCIMG_ERR err)
@@ -134,7 +134,7 @@ extern "C" uint32_t dcimg2tiff(
 			int rowOffset = (ch >= 2) * movieWidth * frameWidth * frameHeight;
 
 			// place 3rd channel on the right side of the bottom row.
-			if (ch >= 2 && ch3right) movieCol = 1;
+			if (nChannels==3 && ch==2 && ch3right) movieCol = 1;
 
 			// Copy frame data row by row, flipping if needed.
 			for (int j = 0; j < frameHeight; j++)
