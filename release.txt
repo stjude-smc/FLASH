@@ -1,14 +1,14 @@
 Flash Gordon
 Copyright (c) Cornell University and St Jude Children's Research Hospital, 2014-2024
-Created by Manuel Juette and Daniel Terry.
+Created by Daniel Terry and Manuel Juette.
 ================================================================================
 
 
 Change log: 
 ----------
 
-1.5.0 (2024-8-9) -- testing branch
-- Experimental support for Arduino triggering device. Provides much better time resolution.
+1.5.1 (2024-8-16) -- testing branch
+- Support for Arduino triggering device. Provides much better time resolution.
 - Experimental support for Photometrics Kinetix cameras.
 - Experimental support for Andor EMCCD cameras (SDK 2).
 - ADU to photoelectron conversion factor is now an array (one per readout mode).
@@ -17,12 +17,13 @@ Change log:
 - Lasers: automatically home PRM1Z8 on startup if not already homed.
 - Camera: save correct pixel size to file, assuming 60x mag.
 - Hamamatsu: increase jitter parameter to avoid rare missed frames.
-- Hamamatsu: retrieve sensor size and readout parameters from DCAM to make it easier to support new cameras.
+- Hamamatsu: retrieve sensor size and readout parameters from driver to make it easier to support new cameras.
 - dcimg2tiff: refactor for modern C++ to avoid obscure memory bugs.
 - Viewer: synchronization frame data b/t cameras.
 - Update project to LabVIEW 2023 (SP3) from 2018 (SP1).
 - Improved support for adding new devices (dynamic dispatch).
 - Compiled version does not require all device drivers to be installed.
 - Improved error checking and reporting that does not bring down the whole application.
+- Many other bug fixes and performance improvements.
 
 
