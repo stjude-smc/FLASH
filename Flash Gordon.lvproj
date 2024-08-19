@@ -54,7 +54,6 @@
 				<Item Name="ASI TG-1000.lvlib" Type="Library" URL="/&lt;instrlib&gt;/ASI TG-1000/ASI TG-1000.lvlib"/>
 				<Item Name="Camera.lvclass" Type="LVClass" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/Camera.lvclass"/>
 				<Item Name="PVCAM.lvclass" Type="LVClass" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/PVCAM/PVCAM.lvclass"/>
-				<Item Name="Stream-class&apos;Camera&apos;.lvlib" Type="Library" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Dependencies/Stream-class&apos;Camera&apos;.lvlib"/>
 				<Item Name="ti2lv.lvlib" Type="Library" URL="../Hardware/Microscope/ti2lv/ti2lv.lvlib"/>
 			</Item>
 			<Item Name="dll" Type="Folder" URL="../dll">
@@ -76,6 +75,7 @@
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 				<Property Name="NI.SortType" Type="Int">0</Property>
 			</Item>
+			<Item Name="Flash Gordon Development Guide.pdf" Type="Document" URL="../Flash Gordon Development Guide.pdf"/>
 			<Item Name="Flash Gordon documentation.pdf" Type="Document" URL="../Flash Gordon documentation.pdf"/>
 			<Item Name="Init.xml" Type="Document" URL="../Init.xml"/>
 			<Item Name="release.txt" Type="Document" URL="../release.txt"/>
@@ -435,7 +435,6 @@
 				<Item Name="Write to XML File(string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Write to XML File(string).vi"/>
 				<Item Name="Write to XML File.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Write to XML File.vi"/>
 			</Item>
-			<Item Name="_ChannelSupport.lvlib" Type="Library" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/_ChannelSupport.lvlib"/>
 			<Item Name="Acquisition Mode.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Acquisition Mode.ctl"/>
 			<Item Name="Acquisition Status.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Acquisition Status.ctl"/>
 			<Item Name="AF Debug.lvlib" Type="Library" URL="/&lt;resource&gt;/AFDebug/AF Debug.lvlib"/>
@@ -481,7 +480,6 @@
 			</Item>
 			<Item Name="Numeric Params IDs.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Numeric Params IDs.ctl"/>
 			<Item Name="Param Attributes.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Param Attributes.ctl"/>
-			<Item Name="PipeLogic.lvclass" Type="LVClass" URL="/&lt;resource&gt;/ChannelSupport/_ChannelSupport/PipeLogic/PipeLogic.lvclass"/>
 			<Item Name="PVCam Type Converter.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Conversion/PVCam Type Converter.vi"/>
 			<Item Name="PVCam Types.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/PVCam Types.ctl"/>
 			<Item Name="Region Index.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Region Index.ctl"/>
@@ -518,7 +516,7 @@
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
 				<Property Name="Bld_userLogFile" Type="Path">../Testing/build_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToCommon</Property>
-				<Property Name="Bld_version.build" Type="Int">815</Property>
+				<Property Name="Bld_version.build" Type="Int">819</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">5</Property>
 				<Property Name="Bld_version.patch" Type="Int">1</Property>
@@ -534,82 +532,78 @@
 				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{7A3F0A46-4D6A-4F54-A6A6-8A09AA5410D2}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{0851BC51-085D-4554-BFF2-0188965A399D}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[10].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[10].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Photometrics Camera.lvlib/Photometrics Camera.lvclass</Property>
+				<Property Name="Source[10].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Andor Camera.lvlib/Andor Camera.lvclass</Property>
 				<Property Name="Source[10].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[10].type" Type="Str">Library</Property>
 				<Property Name="Source[11].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[11].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Andor Camera.lvlib/Andor Camera.lvclass</Property>
+				<Property Name="Source[11].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Hamamatsu Camera.lvlib/Hamamatsu Camera.lvclass</Property>
 				<Property Name="Source[11].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[11].type" Type="Str">Library</Property>
 				<Property Name="Source[12].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[12].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Hamamatsu Camera.lvlib/Hamamatsu Camera.lvclass</Property>
+				<Property Name="Source[12].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Arduino DAQ.lvlib/Arduino DAQ.lvclass</Property>
 				<Property Name="Source[12].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[12].type" Type="Str">Library</Property>
 				<Property Name="Source[13].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[13].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Arduino DAQ.lvlib/Arduino DAQ.lvclass</Property>
+				<Property Name="Source[13].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/NI DAQ.lvlib/NI DAQ.lvclass</Property>
 				<Property Name="Source[13].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[13].type" Type="Str">Library</Property>
 				<Property Name="Source[14].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[14].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/NI DAQ.lvlib/NI DAQ.lvclass</Property>
+				<Property Name="Source[14].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/LQ Laser.lvlib/LQ Laser.lvclass</Property>
 				<Property Name="Source[14].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[14].type" Type="Str">Library</Property>
 				<Property Name="Source[15].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[15].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/LQ Laser.lvlib/LQ Laser.lvclass</Property>
+				<Property Name="Source[15].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Coherent Laser.lvlib/Coherent Laser.lvclass</Property>
 				<Property Name="Source[15].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[15].type" Type="Str">Library</Property>
 				<Property Name="Source[16].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[16].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Coherent Laser.lvlib/Coherent Laser.lvclass</Property>
+				<Property Name="Source[16].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Thorlabs Polarizer.lvlib/Calibrate Polarizer Msg.lvclass</Property>
 				<Property Name="Source[16].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[16].type" Type="Str">Library</Property>
 				<Property Name="Source[17].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[17].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Thorlabs Polarizer.lvlib/Calibrate Polarizer Msg.lvclass</Property>
+				<Property Name="Source[17].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Thorlabs Polarizer.lvlib/Thorlabs Polarizer.lvclass</Property>
 				<Property Name="Source[17].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[17].type" Type="Str">Library</Property>
 				<Property Name="Source[18].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[18].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Thorlabs Polarizer.lvlib/Thorlabs Polarizer.lvclass</Property>
+				<Property Name="Source[18].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Camera.lvlib/Camera.lvclass</Property>
 				<Property Name="Source[18].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[18].type" Type="Str">Library</Property>
 				<Property Name="Source[19].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[19].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Camera.lvlib/Camera.lvclass</Property>
+				<Property Name="Source[19].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Device.lvlib/Device.lvclass</Property>
 				<Property Name="Source[19].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[19].type" Type="Str">Library</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Resources/dll/Ti2_Mic_Driver.dll</Property>
 				<Property Name="Source[20].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[20].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Device.lvlib/Device.lvclass</Property>
+				<Property Name="Source[20].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Laser.lvlib/Laser.lvclass</Property>
 				<Property Name="Source[20].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[20].type" Type="Str">Library</Property>
 				<Property Name="Source[21].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[21].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Laser.lvlib/Laser.lvclass</Property>
+				<Property Name="Source[21].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Microscope.lvlib/Microscope.lvclass</Property>
 				<Property Name="Source[21].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[21].type" Type="Str">Library</Property>
 				<Property Name="Source[22].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[22].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Microscope.lvlib/Microscope.lvclass</Property>
+				<Property Name="Source[22].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Sync Device.lvlib/Sync Device.lvclass</Property>
 				<Property Name="Source[22].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[22].type" Type="Str">Library</Property>
 				<Property Name="Source[23].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[23].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Sync Device.lvlib/Sync Device.lvclass</Property>
+				<Property Name="Source[23].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Stage Controller.lvlib/Stage Controller.lvclass</Property>
 				<Property Name="Source[23].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[23].type" Type="Str">Library</Property>
 				<Property Name="Source[24].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[24].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Stage Controller.lvlib/Stage Controller.lvclass</Property>
+				<Property Name="Source[24].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Power Meter.lvlib/Power Meter.lvclass</Property>
 				<Property Name="Source[24].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[24].type" Type="Str">Library</Property>
 				<Property Name="Source[25].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[25].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Power Meter.lvlib/Power Meter.lvclass</Property>
+				<Property Name="Source[25].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Nikon Stand.lvlib/Nikon Stand.lvclass</Property>
 				<Property Name="Source[25].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[25].type" Type="Str">Library</Property>
-				<Property Name="Source[26].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[26].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Nikon Stand.lvlib/Nikon Stand.lvclass</Property>
-				<Property Name="Source[26].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[26].type" Type="Str">Library</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Resources/dll/ti2wrap.dll</Property>
 				<Property Name="Source[4].Container.applyDestination" Type="Bool">true</Property>
@@ -627,18 +621,19 @@
 				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[5].type" Type="Str">Container</Property>
 				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Resources/Flash Gordon documentation.pdf</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Resources/Init.xml</Property>
 				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Resources/Init.xml</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Resources/release.txt</Property>
 				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[8].itemID" Type="Ref">/My Computer/Resources/release.txt</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/My Computer/Resources/slide diagram.png</Property>
 				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Resources/slide diagram.png</Property>
+				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Photometrics Camera.lvlib/Photometrics Camera.lvclass</Property>
 				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="SourceCount" Type="Int">27</Property>
+				<Property Name="Source[9].type" Type="Str">Library</Property>
+				<Property Name="SourceCount" Type="Int">26</Property>
 				<Property Name="TgtF_companyName" Type="Str">St Jude Childrens Research Hospital</Property>
 				<Property Name="TgtF_fastFileFormat" Type="Bool">true</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Instrument control and data acquisition for TIRF-smFRET imaging</Property>
