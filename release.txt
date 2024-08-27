@@ -7,7 +7,14 @@ Created by Daniel Terry and Manuel Juette.
 Change log: 
 ----------
 
-1.5.1 (2024-8-16) -- testing branch
+1.5.2 (2024-8-27)
+- Automatically set laser power to zero on startup for safety.
+- Hamamatsu cameras: read photoelectron/ADU conversion factors from camera instead of configuration.
+- Viewer: double-click resets zoom.
+- Main Window: reduce flicker in stage position indicator.
+- Improved error checking and other bugfixes.
+
+1.5.1 (2024-8-16)
 - Support for Arduino triggering device. Provides much better time resolution.
 - Experimental support for Photometrics Kinetix cameras.
 - Experimental support for Andor EMCCD cameras (SDK 2).
