@@ -228,6 +228,7 @@
 <Choice>Coherent OBIS</Choice>
 <Choice>PRM1-Z8</Choice>
 <Choice>Coherent HOPS</Choice>
+<Choice>Cobolt</Choice>
 <Val>1</Val>
 </EW>
 <DBL>
@@ -258,6 +259,7 @@
 <Choice>Coherent OBIS</Choice>
 <Choice>PRM1-Z8</Choice>
 <Choice>Coherent HOPS</Choice>
+<Choice>Cobolt</Choice>
 <Val>3</Val>
 </EW>
 <DBL>
@@ -288,6 +290,7 @@
 <Choice>Coherent OBIS</Choice>
 <Choice>PRM1-Z8</Choice>
 <Choice>Coherent HOPS</Choice>
+<Choice>Cobolt</Choice>
 <Val>4</Val>
 </EW>
 <DBL>
@@ -318,6 +321,7 @@
 <Choice>Coherent OBIS</Choice>
 <Choice>PRM1-Z8</Choice>
 <Choice>Coherent HOPS</Choice>
+<Choice>Cobolt</Choice>
 <Val>0</Val>
 </EW>
 <DBL>

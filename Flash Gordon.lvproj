@@ -34,6 +34,7 @@
 				<Property Name="NI.SortType" Type="Int">0</Property>
 				<Item Name="Andor Camera.lvlib" Type="Library" URL="../Hardware/Andor Camera/Andor Camera.lvlib"/>
 				<Item Name="Arduino DAQ.lvlib" Type="Library" URL="../Hardware/Arduino DQ/Arduino DAQ.lvlib"/>
+				<Item Name="Cobolt Laser.lvlib" Type="Library" URL="../Hardware/Cobolt Laser.lvlib"/>
 				<Item Name="Coherent Laser.lvlib" Type="Library" URL="../Hardware/Coherent Laser/Coherent Laser.lvlib"/>
 				<Item Name="Hamamatsu Camera.lvlib" Type="Library" URL="../Hardware/Hamamatsu Camera/Hamamatsu Camera.lvlib"/>
 				<Item Name="LQ Laser.lvlib" Type="Library" URL="../Hardware/LQ Laser/LQ Laser.lvlib"/>
