@@ -1,0 +1,9 @@
+{
+  "Refresh Timeout (ms)":100,
+  "Version String":"1.5.1",
+  "Hardware Configuration File":"",
+  "Config Hostname Map":{
+    "Hostname":["D200842","D191125","D191123","D242018"],
+    "Config File":["pTIRF 3","pTIRF 2","pTIRF 1","Workstation"]
+  }
+}
