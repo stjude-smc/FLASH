@@ -39,6 +39,7 @@
 		<Item Name="Update Camera Modes Msg.lvclass" Type="LVClass" URL="../../Application Messages/Update Camera Modes Msg/Update Camera Modes Msg.lvclass"/>
 	</Item>
 	<Item Name="Application.lvclass" Type="LVClass" URL="../Application.lvclass"/>
+	<Item Name="Get App Version.vi" Type="VI" URL="../Get App Version.vi"/>
 	<Item Name="laser power FGV.vi" Type="VI" URL="../laser power FGV.vi"/>
 	<Item Name="Mode.ctl" Type="VI" URL="../Mode.ctl"/>
 	<Item Name="Test Sync Device.vi" Type="VI" URL="../../Hardware/Sync Device/Test Sync Device.vi"/>
