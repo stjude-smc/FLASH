@@ -333,12 +333,14 @@ bool check_dcimg_timestamps(HDCIMG hdcimg)
 					fglog.precision(2);
 					fglog << std::fixed << "Dropped frame? Expected=" << firstFrameTime
 						<< " vs " << frameTime << "ms." << std::endl;
-					//return false;
+					return false;
 				}
 			}
 		}
 		//fglog << std::endl;
 	}
+
+	fglog << "Timestamps ok" << std::endl;
 
 	return true;
 }
