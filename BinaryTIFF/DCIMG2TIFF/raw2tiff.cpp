@@ -50,7 +50,7 @@ int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uin
 		// Copy frame data from dcimg file to TIFF frame.
 		for (int ch = 0; ch < nChannels; ++ch)
 		{
-			//std::cout << "Read frame #" << i << ", ch " << ch << ": " << readBuffer.size() << " pixels.\n";
+			//log << "Read frame #" << i << ", ch " << ch << ": " << readBuffer.size() << " pixels.\n";
 
 			rawfile[ch].read(reinterpret_cast<char*>(readBuffer.data()), readBuffer.size() * sizeof(T));
 			if (!rawfile[ch])
@@ -80,7 +80,7 @@ int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uin
 			}
 		} //for each input file
 
-		//std::cout << "Write frame #" << i << ": " << writeBuffer.size() << " pixels.\n";
+		//log << "Write frame #" << i << ": " << writeBuffer.size() << " pixels.\n";
 		tiffFile.write(reinterpret_cast<char*>(writeBuffer.data()), writeBuffer.size() * sizeof(T));
 		if (!tiffFile)
 			return FG_ERROR_INVALID_OUTPUT;
@@ -115,13 +115,11 @@ extern "C" uint32_t raw2tiff(
 	// 			dcimg1	dcimg2		dcimg1	dcimg2
 	//		   	dcimg3 (dcimg4)	   (dcimg4) dcimg3
 {
-	// Redirect console output to log file
 #ifdef _WINDLL
-	std::ofstream fglog(LOGFILE);
-	std::cout.rdbuf(fglog.rdbuf());
-	std::cerr.rdbuf(fglog.rdbuf());
+	std::ofstream log(LOGFILE);
+#else
+	std::ostream& log = std::cout;
 #endif
-
 	const int movieWidth = (nChannels > 1) ? 2 : 1;
 	const int movieHeight = (nChannels > 2) ? 2 : 1;
 	auto startTime = std::chrono::system_clock::now();
@@ -131,7 +129,7 @@ extern "C" uint32_t raw2tiff(
 
 	std::vector<char*> pathlist{ dcimgPath1, dcimgPath2, dcimgPath3, dcimgPath4 };
 
-	std::cout << "START: tiffPath=" << tiffPath << ", dcimgPath1=" << dcimgPath1 << " frameWidth=" << frameWidth
+	log << "START: tiffPath=" << tiffPath << ", dcimgPath1=" << dcimgPath1 << " frameWidth=" << frameWidth
 		<< ", frameHeight=" << frameHeight << ", nFrames=" << nFrames << ", skipFrames=" << skipFrames
 		<< ", nChannels=" << nChannels << ", ch3right=" << ch3right << ", tiffOffset=" << tiffOffset << std::endl;
 
@@ -148,9 +146,9 @@ extern "C" uint32_t raw2tiff(
 	double outputBytes = static_cast<double>(nFrames) * movieWidth * movieHeight * frameWidth * frameHeight * bytesPerSample;
 	std::chrono::duration<double> elapsed = std::chrono::system_clock::now() - startTime;
 	double mbs = outputBytes / elapsed.count() / (1024.0 * 1024.0 * 1024.0);
-	std::cout << std::fixed;
-	std::cout.precision(2);
-	std::cout << "FINISHED after " << elapsed.count() << " seconds (" << mbs << " GB/s).\n";
+	log << std::fixed;
+	log.precision(2);
+	log << "FINISHED after " << elapsed.count() << " seconds (" << mbs << " GB/s).\n";
 
 	return result;
 }

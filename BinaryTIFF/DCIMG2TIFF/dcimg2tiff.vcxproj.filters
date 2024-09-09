@@ -27,7 +27,7 @@
     <ClInclude Include="dcimg2tiff.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DcimgFile.h">
+    <ClInclude Include="..\..\..\dcimgsdk\inc\dcimgapi.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -279,8 +279,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\dcimgsdk\inc\dcimgapi.h" />
     <ClInclude Include="dcimg2tiff.h" />
-    <ClInclude Include="DcimgFile.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
