@@ -7,10 +7,15 @@ Created by Daniel Terry and Manuel Juette.
 Change log: 
 ----------
 
-1.5.2 (2024-8-27)
+1.5.3 (2024-9-11)
 - Use JSON for configuration files (avoids errors when using a config file from a previous version).
+- Preliminary support for Cobolt lasers
+- Cameras: use internal triggering if no sync device installed.
+- Hamamatsu: increase buffer size to avoid dropped frames.
+- Hamamatsu: examine frame timestamps to detect missed triggers or dropped frames.
+
+1.5.2 (2024-8-27)
 - Automatically set laser power to zero on startup for safety.
-- Use internal triggering if no triggering device installed.
 - Hamamatsu cameras: read photoelectron/ADU conversion factors from camera instead of configuration.
 - Viewer: double-click resets zoom.
 - Main Window: reduce flicker in stage position indicator.
