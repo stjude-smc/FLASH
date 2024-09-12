@@ -89,14 +89,21 @@ extern "C" uint32_t dcimg2tiff(
 		if (!dcimg_is_valid(hdcimg[i], frameWidth, frameHeight, nFrames+skipFrames))
 		{
 			fglog << "Mismatched dcimg metadata parameters: " << dcimgPaths[i] << std::endl;
+			for (auto& file : hdcimg)
+				dcimg_close(file);
 			return FG_ERROR_INVALID_INPUT;
 		}
 
 		// Verify frame timestamps have no gaps (dropped frames)
+		// FIXME: gives false errors for ALEX movies using Arduino.
+		/*
 		if (!check_dcimg_timestamps(hdcimg[i]))
+		{
+			for (auto& file : hdcimg)
+				dcimg_close(file);
 			return FG_ERROR_DROPPED_FRAME;
-
-		// FIXME: close files already open, if any.
+		}
+		*/
 	}
 	
 	// Open pre-formed TIFF file without destroying contents for writing frame data
@@ -156,7 +163,11 @@ extern "C" uint32_t dcimg2tiff(
 
 		tiffFile.write(reinterpret_cast<char*>(writeBuffer.data()), writeBuffer.size()*sizeof(uint16_t));
 		if (!tiffFile)
+		{
+			for (auto& file : hdcimg)
+				dcimg_close(file);
 			return FG_ERROR_INVALID_OUTPUT;
+		}
 
 		currentFrame++;
 	}
@@ -271,10 +282,13 @@ bool dcimg_is_valid(HDCIMG hdcimg, int32 width, int32 height, int32 nFrames)
 }
 
 
-// Raed all time stamps and verify there are no dropped frames
+// Raed all time stamps and verify there are no dropped frames.
+// Ignore any problems reader the metadata.
+// This should only be a warning; timestamps are not reliable.
 bool check_dcimg_timestamps(HDCIMG hdcimg)
 {
 	DCIMG_ERR	err;
+	bool ok = true;
 
 	// get number of frame
 	int32 nFrame;
@@ -282,12 +296,12 @@ bool check_dcimg_timestamps(HDCIMG hdcimg)
 	if (failed(err))
 	{
 		log_dcimg_error("dcimg_getparaml(DCIMG_IDPARAML_NUMBEROF_FRAME)", err);
-		return false;
+		return true;
 	}
 
 	auto timestamps = std::make_unique<DCIMG_TIMESTAMP[]>(nFrame);
 	if (timestamps == NULL)
-		return false;
+		return true;
 
 	DCIMG_TIMESTAMPBLOCK	block;
 	memset(&block, 0, sizeof(block));
@@ -302,17 +316,17 @@ bool check_dcimg_timestamps(HDCIMG hdcimg)
 	if (failed(err))
 	{
 		log_dcimg_error("dcimg_copymetadatablock(DCIMG_TIMESTAMPBLOCK)", err);
-		return false;
+		return true;
 	}
 	else
 	{
 		//fglog << "TIME CHECK: ";
-		//fglog.precision(3);
+		fglog.precision(3);
 		if (block.timestampvalidsize < sizeof(DCIMG_TIMESTAMP))
 		{
 			fglog << "dcimg_copymetadatablock(DCIMG_TIMESTAMPBLOCK) returns unknown time stamp that size is " <<
 					block.timestampvalidsize << " bytes.This is smaller than expected." << std::endl;
-			return false;
+			return ok;
 		}
 		else
 		{
@@ -330,17 +344,18 @@ bool check_dcimg_timestamps(HDCIMG hdcimg)
 					firstFrameTime = frameTime;
 				else if (abs(frameTime - firstFrameTime) / firstFrameTime > 0.5)
 				{
-					fglog.precision(2);
 					fglog << std::fixed << "Dropped frame? Expected=" << firstFrameTime
 						<< " vs " << frameTime << "ms." << std::endl;
-					return false;
+					ok = false;
 				}
 			}
 		}
 		//fglog << std::endl;
 	}
 
-	fglog << "Timestamps ok" << std::endl;
+	if (ok) {
+		fglog << "Timestamps ok" << std::endl;
+	}
 
-	return true;
+	return ok;
 }
