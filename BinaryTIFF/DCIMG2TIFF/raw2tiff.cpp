@@ -4,20 +4,73 @@
 
 
 
+#ifdef _WINDLL
+std::ofstream r2tlog(LOGFILE);
+#else
+std::ostream& r2tlog = std::cout;
+#endif
+
+
 // RAW format parameters used for disk streaming from Photometrics cameras
 #define PVCAM_FRAME_GAP_BYTES 4096
 #define PVCAM_OFFSET_TO_FIRST_FRAME 80
+#define PVCAM_INFO_FILE "ImageJ_import_Cam0.txt"
 
 
+inline void lowercase(std::string& line)
+{
+	std::transform(line.begin(), line.end(), line.begin(), [](unsigned char c) { return std::tolower(c); });
+}
+
+void extractNumber(std::string line, std::string target, int& output)
+{
+	lowercase(line);
+	lowercase(target);
+
+	if (line.find(target) != std::string::npos)
+	{
+		auto separator = line.find(':');
+		if (separator != std::string::npos)
+		{
+			line.erase(0, separator + 1);
+			output = atoi(line.c_str());
+		}
+	}
+}
+
+inline std::string extractPath(std::string input)
+{
+	return input.substr(0, input.find_last_of("\\/")+1);
+}
 
 template <class T>
 int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uint32_t nFrames,
 	uint32_t skipFrames, uint32_t nChannels, uint32_t* vFlip, uint32_t* hFlip, uint32_t ch3right,
 	int64_t tiffOffset, std::vector<char*> pathlist)
 {
+	// Load import parameters text file (should be identical for all cameras).
+	// FIXME: consider reading all values to check for consistency.
+	int frame_gap_bytes = PVCAM_FRAME_GAP_BYTES;
+	int raw_offset = PVCAM_OFFSET_TO_FIRST_FRAME;
+	{
+		std::ifstream infofile(extractPath(tiffPath) + PVCAM_INFO_FILE);
+		std::string line;
+
+		if (!infofile)
+			r2tlog << "Could not open " << PVCAM_INFO_FILE << ". Using defaults\n";
+
+		while (getline(infofile, line))
+		{
+			extractNumber(line, "Gap between images", frame_gap_bytes);
+			extractNumber(line, "Offset to first image", raw_offset);
+		}
+
+		r2tlog << "Raw offset=" << raw_offset << ", Frame gap=" << frame_gap_bytes << std::endl;
+	}
+
 	const int movieWidth = (nChannels > 1) ? 2 : 1;
 	const int movieHeight = (nChannels > 2) ? 2 : 1;
-	const int frameInputBytes = sizeof(T) * frameWidth * frameHeight + PVCAM_FRAME_GAP_BYTES;
+	const int frameInputBytes = sizeof(T) * frameWidth * frameHeight + frame_gap_bytes;
 
 	// Load raw data input files
 	std::vector<std::ifstream> rawfile;
@@ -25,7 +78,7 @@ int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uin
 		rawfile.emplace_back(pathlist[i], std::ios::binary);
 
 	for (auto& file : rawfile) {
-		const uint64_t offset = PVCAM_OFFSET_TO_FIRST_FRAME + skipFrames * frameInputBytes;
+		const uint64_t offset = raw_offset + skipFrames * frameInputBytes;
 
 		file.seekg(offset, std::ios::beg);
 		if (!file)
@@ -50,12 +103,12 @@ int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uin
 		// Copy frame data from dcimg file to TIFF frame.
 		for (int ch = 0; ch < nChannels; ++ch)
 		{
-			//log << "Read frame #" << i << ", ch " << ch << ": " << readBuffer.size() << " pixels.\n";
+			//r2tlog << "Read frame #" << i << ", ch " << ch << ": " << readBuffer.size() << " pixels.\n";
 
 			rawfile[ch].read(reinterpret_cast<char*>(readBuffer.data()), readBuffer.size() * sizeof(T));
 			if (!rawfile[ch])
 				return FG_ERROR_INVALID_INPUT;
-			rawfile[ch].seekg(PVCAM_FRAME_GAP_BYTES, std::ios::cur);  //fixed gap between images
+			rawfile[ch].seekg(frame_gap_bytes, std::ios::cur);  //fixed gap between images
 
 			int rowOffset = (ch >= 2) * movieWidth * frameWidth * frameHeight;
 
@@ -80,7 +133,7 @@ int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uin
 			}
 		} //for each input file
 
-		//log << "Write frame #" << i << ": " << writeBuffer.size() << " pixels.\n";
+		//r2tlog << "Write frame #" << i << ": " << writeBuffer.size() << " pixels.\n";
 		tiffFile.write(reinterpret_cast<char*>(writeBuffer.data()), writeBuffer.size() * sizeof(T));
 		if (!tiffFile)
 			return FG_ERROR_INVALID_OUTPUT;
@@ -115,11 +168,6 @@ extern "C" uint32_t raw2tiff(
 	// 			dcimg1	dcimg2		dcimg1	dcimg2
 	//		   	dcimg3 (dcimg4)	   (dcimg4) dcimg3
 {
-#ifdef _WINDLL
-	std::ofstream log(LOGFILE);
-#else
-	std::ostream& log = std::cout;
-#endif
 	const int movieWidth = (nChannels > 1) ? 2 : 1;
 	const int movieHeight = (nChannels > 2) ? 2 : 1;
 	auto startTime = std::chrono::system_clock::now();
@@ -129,7 +177,7 @@ extern "C" uint32_t raw2tiff(
 
 	std::vector<char*> pathlist{ dcimgPath1, dcimgPath2, dcimgPath3, dcimgPath4 };
 
-	log << "START: tiffPath=" << tiffPath << ", dcimgPath1=" << dcimgPath1 << " frameWidth=" << frameWidth
+	r2tlog << "START: tiffPath=" << tiffPath << ", dcimgPath1=" << dcimgPath1 << " frameWidth=" << frameWidth
 		<< ", frameHeight=" << frameHeight << ", nFrames=" << nFrames << ", skipFrames=" << skipFrames
 		<< ", nChannels=" << nChannels << ", ch3right=" << ch3right << ", tiffOffset=" << tiffOffset << std::endl;
 
@@ -146,9 +194,9 @@ extern "C" uint32_t raw2tiff(
 	double outputBytes = static_cast<double>(nFrames) * movieWidth * movieHeight * frameWidth * frameHeight * bytesPerSample;
 	std::chrono::duration<double> elapsed = std::chrono::system_clock::now() - startTime;
 	double mbs = outputBytes / elapsed.count() / (1024.0 * 1024.0 * 1024.0);
-	log << std::fixed;
-	log.precision(2);
-	log << "FINISHED after " << elapsed.count() << " seconds (" << mbs << " GB/s).\n";
+	r2tlog << std::fixed;
+	r2tlog.precision(2);
+	r2tlog << "FINISHED after " << elapsed.count() << " seconds (" << mbs << " GB/s).\n";
 
 	return result;
 }
