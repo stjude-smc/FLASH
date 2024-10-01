@@ -70,6 +70,26 @@ EXTERN TI2WRAP_API int32_t ti2_setZPos(const double zPos_um) {
 	return (int32_t)err;
 }
 
+// Escape Z motor  // [ 0:Normal(Refocus) , 1:Escape ]
+EXTERN TI2WRAP_API int32_t ti2_setZEsc(const int32_t setting) {
+	MIC_Data sDataIn, sDataOut;
+	sDataIn.uiDataUsageMask = MIC_DATA_MASK_ZESCAPE;
+	sDataIn.iZEscape = setting;
+
+	lx_result err = MIC_DataSet(sDataIn, sDataOut, TRUE);
+	return (int32_t)err;
+}
+
+// Get Z escape status
+EXTERN TI2WRAP_API int32_t ti2_getZEsc(int32_t * setting) {
+	MIC_Data sData;
+	sData.uiDataUsageMask = MIC_DATA_MASK_ZESCAPE;
+
+	lx_result err = MIC_DataGet(sData);
+	*setting = (int32_t)sData.iZEscape;
+	return (int32_t)err;
+}
+
 // Get custom Z speed
 EXTERN TI2WRAP_API int32_t ti2_getCustomZSpeed(const int32_t tableNumber, int32_t pUserOutParam[7]) {
 	MIC_Command sCommand;

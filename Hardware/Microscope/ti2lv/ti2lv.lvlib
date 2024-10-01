@@ -9,12 +9,14 @@
 </Property>
 	<Item Name="ti2_close.vi" Type="VI" URL="../ti2_close.vi"/>
 	<Item Name="ti2_err2msg.vi" Type="VI" URL="../ti2_err2msg.vi"/>
+	<Item Name="ti2_escapeZ.vi" Type="VI" URL="../ti2_escapeZ.vi"/>
 	<Item Name="ti2_filterPos.ctl" Type="VI" URL="../ti2_filterPos.ctl"/>
 	<Item Name="ti2_getCustomZSpeed.vi" Type="VI" URL="../ti2_getCustomZSpeed.vi"/>
 	<Item Name="ti2_getFilter.vi" Type="VI" URL="../ti2_getFilter.vi"/>
 	<Item Name="ti2_getLightPath.vi" Type="VI" URL="../ti2_getLightPath.vi"/>
 	<Item Name="ti2_getXPos.vi" Type="VI" URL="../ti2_getXPos.vi"/>
 	<Item Name="ti2_getYPos.vi" Type="VI" URL="../ti2_getYPos.vi"/>
+	<Item Name="ti2_getZEsc.vi" Type="VI" URL="../ti2_getZEsc.vi"/>
 	<Item Name="ti2_getZPos.vi" Type="VI" URL="../ti2_getZPos.vi"/>
 	<Item Name="ti2_home_fgv.vi" Type="VI" URL="../ti2_home_fgv.vi"/>
 	<Item Name="ti2_lightPath.ctl" Type="VI" URL="../ti2_lightPath.ctl"/>

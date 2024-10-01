@@ -28,6 +28,10 @@ EXTERN TI2WRAP_API int32_t ti2_getZPos(double* zPos_um);
 // Set Z position
 EXTERN TI2WRAP_API int32_t ti2_setZPos(const double zPos_um);
 
+// Escape Z  // [ 0:Normal(Refocus) , 1:Escape ]
+EXTERN TI2WRAP_API int32_t ti2_setZEsc(const int32_t setting);
+EXTERN TI2WRAP_API int32_t ti2_getZEsc(int32_t* setting);
+
 // Get custom Z speed
 EXTERN TI2WRAP_API int32_t ti2_getCustomZSpeed(const int32_t tableNumber, int32_t pUserOutParam[7]);
 
