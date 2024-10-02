@@ -13,6 +13,9 @@ Change log:
 - Cameras: use internal triggering if no sync device installed.
 - Hamamatsu: increase buffer size to avoid dropped frames.
 - Hamamatsu: examine frame timestamps to detect missed triggers or dropped frames.
+- Photometrics: read import tips text file when converting to tiff to avoid rare errors.
+- Nikon Ti2: automatically escape objective on shutdown.
+- Improved error checking and other bugfixes.
 
 1.5.2 (2024-8-27)
 - Automatically set laser power to zero on startup for safety.
