@@ -7,7 +7,6 @@
     "Stage Type":"Disabled",
     "Autofocus Steps":10,
     "Autofocus Range (um)":4,
-    "Extraneous Value":0,
     "Stage Limits":{
       "Y Min":-4.272,
       "Y Max":5.67,
@@ -57,7 +56,7 @@
       }
     ]
   },
-  "Virtual Camera Configuration":{"Camera Type":"Hamamatsu"},
+  "Virtual Camera Configuration":{"Camera Type":"Photometrics"},
   "Laser Configuration":[
     {
       "Serial Port":"COM3",
@@ -128,6 +127,14 @@
       "Flip Horizontally":false,
       "wavelength":473,
       "photonsPerCount":[1]
+    },
+    {
+      "Channel Name":"Cy3",
+      "Serial Number":"000121",
+      "Flip Vertically":false,
+      "Flip Horizontally":false,
+      "wavelength":532,
+      "photonsPerCount":[]
     }
   ],
   "Power Meter Configuration":{
@@ -162,6 +169,8 @@
         "Max rate (Hz)":20
       }
     ],
+    "fluidics trigger line":"Dev1/port2/line6",
+    "camera trigger line":"Dev1/port2/line7",
     "COM Port":"COM3",
     "Device type":"Arduino DAQ"
   }

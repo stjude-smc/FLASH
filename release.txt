@@ -7,6 +7,16 @@ Created by Daniel Terry and Manuel Juette.
 Change log: 
 ----------
 
+1.5.4 (2024-10-16)
+- Nikon Ti2: automatically escape objective on shutdown.
+- Photometrics Kinetix: use speed (12-bit) mode by default.
+- Photometrics: block special characters in filenames that cause streaming to fail.
+- Hamamatsu: fixed photonsPerCount metadata field with incorrect values.
+- Cameras: increase buffer size to 1000 frames to avoid dropped frames.
+- Cameras: more accurate test of available disk space before recording.
+- NI DAQ: send exactly the requested number of camera trigger pulses..
+- Improved error checking and other bugfixes.
+
 1.5.3 (2024-9-11)
 - Use JSON for configuration files (avoids errors when using a config file from a previous version).
 - Preliminary support for Cobolt lasers
@@ -14,7 +24,6 @@ Change log:
 - Hamamatsu: increase buffer size to avoid dropped frames.
 - Hamamatsu: examine frame timestamps to detect missed triggers or dropped frames.
 - Photometrics: read import tips text file when converting to tiff to avoid rare errors.
-- Nikon Ti2: automatically escape objective on shutdown.
 - Improved error checking and other bugfixes.
 
 1.5.2 (2024-8-27)

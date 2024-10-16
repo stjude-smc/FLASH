@@ -525,10 +525,10 @@
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
 				<Property Name="Bld_userLogFile" Type="Path">../Testing/build_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToCommon</Property>
-				<Property Name="Bld_version.build" Type="Int">102</Property>
+				<Property Name="Bld_version.build" Type="Int">110</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">5</Property>
-				<Property Name="Bld_version.patch" Type="Int">3</Property>
+				<Property Name="Bld_version.patch" Type="Int">4</Property>
 				<Property Name="Destination[0].destName" Type="Str">Flash Gordon.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../testing/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -541,7 +541,7 @@
 				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{E8A9D1B3-FE84-4BCA-88DB-F0E363888CA7}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{C2250FA0-2C1F-4FE5-B479-038EEE517397}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
