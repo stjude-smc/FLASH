@@ -1,4 +1,4 @@
-Flash Gordon
+Flash Gordon (SM-FIRE)
 Copyright (c) Cornell University and St Jude Children's Research Hospital, 2014-2024
 Created by Daniel Terry and Manuel Juette.
 ================================================================================
@@ -6,6 +6,15 @@ Created by Daniel Terry and Manuel Juette.
 
 Change log: 
 ----------
+
+1.5.5 (2024-11-19)
+* Time-lapse recording: viewer now displays frames as fast as possible instead of skipping some.
+* Autofocus: fixed race condition involving global variable that resulted in unnecessary stage movements.
+* Autofocus: revert to previous Z position if any frames were missed during Z stack, even if Guassian fit of scores succeeds.
+* Autofocus: increase Z stage settling time to 1s to improve accuracy.
+* Autofocus: failure returns Z stage to previous position and automatically cancels movie series.
+* Power meter: reduce polling rate to 2/s to reduce resource demands and stuttering, especially with NI-DAQ and Thorlabs polarizer.
+* Nikon stand: un-escape objective on startup.
 
 1.5.4 (2024-10-16)
 - Nikon Ti2: automatically escape objective on shutdown.
