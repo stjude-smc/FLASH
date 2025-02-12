@@ -38,9 +38,11 @@ void extractNumber(std::string line, std::string target, int& output)
 	}
 }
 
-inline std::string extractPath(std::string input)
+inline std::string extractIJPath(std::string input)
 {
-	return input.substr(0, input.find_last_of("\\/")+1);
+	//raw file name format: "E:/New folder/240925_test_of_a_movie000_CamX_0000001.raw"
+	char N = input[input.size() - 13];
+	return input.substr(0, input.find_last_of("\\/") + 1) + "ImageJ_import_Cam" + N + ".txt";
 }
 
 template <class T>
@@ -53,11 +55,12 @@ int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uin
 	int frame_gap_bytes = PVCAM_FRAME_GAP_BYTES;
 	int raw_offset = PVCAM_OFFSET_TO_FIRST_FRAME;
 	{
-		std::ifstream infofile(extractPath(tiffPath) + PVCAM_INFO_FILE);
+		std::string pvcam_info_file = extractIJPath(pathlist[0]);
+		std::ifstream infofile(pvcam_info_file);
 		std::string line;
 
 		if (!infofile)
-			r2tlog << "Could not open " << PVCAM_INFO_FILE << ". Using defaults\n";
+			r2tlog << "Could not open " << pvcam_info_file << ". Using defaults\n";
 
 		while (getline(infofile, line))
 		{
