@@ -14,6 +14,7 @@
 		<Item Name="Autofocus Finish Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Autofocus Finish Msg/Autofocus Finish Msg.lvclass"/>
 		<Item Name="Autofocus Step Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Autofocus Step Msg/Autofocus Step Msg.lvclass"/>
 		<Item Name="Enforce Limits Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Enforce Limits Msg/Enforce Limits Msg.lvclass"/>
+		<Item Name="Move From Double Click Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move From Double Click Msg/Move From Double Click Msg.lvclass"/>
 		<Item Name="Move Home Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Home Msg/Move Home Msg.lvclass"/>
 		<Item Name="Move Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Msg/Move Msg.lvclass"/>
 		<Item Name="Move Z Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Z Msg/Move Z Msg.lvclass"/>
