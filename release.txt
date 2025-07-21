@@ -7,6 +7,15 @@ Created by Daniel Terry and Manuel Juette.
 Change log: 
 ----------
 
+1.5.7 (2025-07-21)
+* Fix incorrect stage limit calculation before movie series.
+* Block photobleach command when light path is set to eyepieces for safety.
+* Stage: Save microscope Z position in TIFF metadata (Ti2 stand only).
+* Kinetix: always use default scan mode for autofocus. Speed mode has correlation properties that interfere with focus score metric.
+* Live viewer: clamp color scale range to selected bitrate.
+* Live viewer: fix image disappearing when repeatedly resizing window.
+* Laser: allow initialization to continue when a laser device is not found.
+
 1.5.6 (2025-05-05)
 * New multi-lane series movie acquisition mode with "..._A01.tif" numbering (letters are fields, numbers are lanes).
 * Add underscore before automatic movie numbering: "..._001.tif".
