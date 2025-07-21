@@ -79,6 +79,7 @@
 			<Item Name="Flash Gordon Development Guide.pdf" Type="Document" URL="../Flash Gordon Development Guide.pdf"/>
 			<Item Name="Flash Gordon documentation.pdf" Type="Document" URL="../Flash Gordon documentation.pdf"/>
 			<Item Name="Init.json" Type="Document" URL="../Init.json"/>
+			<Item Name="Post-Build Action.vi" Type="VI" URL="../Resources/Post-Build Action.vi"/>
 			<Item Name="release.txt" Type="Document" URL="../release.txt"/>
 			<Item Name="slide diagram.png" Type="Document" URL="../slide diagram.png"/>
 		</Item>
@@ -522,13 +523,14 @@
 				<Property Name="Bld_localDestDir" Type="Path">../testing</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/Resources/Post-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
-				<Property Name="Bld_userLogFile" Type="Path">../Testing/build_log.txt</Property>
+				<Property Name="Bld_userLogFile" Type="Path">../build_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToCommon</Property>
-				<Property Name="Bld_version.build" Type="Int">126</Property>
+				<Property Name="Bld_version.build" Type="Int">134</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">5</Property>
-				<Property Name="Bld_version.patch" Type="Int">6</Property>
+				<Property Name="Bld_version.patch" Type="Int">7</Property>
 				<Property Name="Destination[0].destName" Type="Str">Flash Gordon.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../testing/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -541,7 +543,7 @@
 				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{D637A39A-D974-4553-831F-DE1878255B38}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{D718619D-9D30-45A8-9100-5EDF5536B924}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
