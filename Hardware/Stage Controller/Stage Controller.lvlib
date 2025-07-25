@@ -22,6 +22,8 @@
 		<Item Name="Set Home Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Set Home Msg/Set Home Msg.lvclass"/>
 		<Item Name="Start Autofocus Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Start Autofocus Msg/Start Autofocus Msg.lvclass"/>
 		<Item Name="Status Update Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Status Update Msg/Status Update Msg.lvclass"/>
+		<Item Name="Z Stack Finish Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Z Stack Finish Msg/Z Stack Finish Msg.lvclass"/>
+		<Item Name="Z Stack Step Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Z Stack Step Msg/Z Stack Step Msg.lvclass"/>
 	</Item>
 	<Item Name="Stage Controller.lvclass" Type="LVClass" URL="../Stage Controller.lvclass"/>
 </Library>

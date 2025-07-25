@@ -26,7 +26,7 @@ EXTERN TI2WRAP_API int32_t ti2_setFilter(const int32_t filterPos);
 EXTERN TI2WRAP_API int32_t ti2_getZPos(double* zPos_um);
 
 // Set Z position
-EXTERN TI2WRAP_API int32_t ti2_setZPos(const double zPos_um);
+EXTERN TI2WRAP_API int32_t ti2_setZPos(const double zPos_um, const uint32_t speed, const uint32_t tolerance);
 
 // Escape Z  // [ 0:Normal(Refocus) , 1:Escape ]
 EXTERN TI2WRAP_API int32_t ti2_setZEsc(const int32_t setting);

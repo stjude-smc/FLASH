@@ -54,7 +54,7 @@ EXTERN TI2WRAP_API int32_t ti2_getZPos(double* zPos_um) {
 }
 
 // Set Z position
-EXTERN TI2WRAP_API int32_t ti2_setZPos(const double zPos_um) {
+EXTERN TI2WRAP_API int32_t ti2_setZPos(const double zPos_um, const uint32_t speed, const uint32_t tolerance) {
 	MIC_Data sDataIn, sDataOut;
 	sDataIn.uiDataUsageMask = MIC_DATA_MASK_ZPOSITION;
 	lx_int32 iDevVal;
@@ -63,8 +63,8 @@ EXTERN TI2WRAP_API int32_t ti2_setZPos(const double zPos_um) {
 	if (err) return (int32_t)err;
 
 	sDataIn.iZPOSITION = iDevVal;
-	sDataIn.iZPOSITIONSpeed = 1;
-	sDataIn.iZPOSITIONTolerance = 0;
+	sDataIn.iZPOSITIONSpeed = speed;
+	sDataIn.iZPOSITIONTolerance = tolerance;
 
 	err = MIC_DataSet(sDataIn, sDataOut, TRUE);
 	return (int32_t)err;
