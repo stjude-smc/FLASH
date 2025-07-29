@@ -94,3 +94,11 @@ uint32_t countParticlesInternal(const cv::Mat& image_t)
 }
 
 
+// Dummy function to force OpenCV startup on command
+extern "C" __declspec(dllexport) uint32_t init()
+{
+    cv::Mat temp = cv::Mat::zeros(100, 100, CV_16U);
+    return temp.at<uint16_t>(1, 1);
+}
+
+
