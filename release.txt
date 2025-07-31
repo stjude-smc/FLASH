@@ -7,6 +7,19 @@ Created by Daniel Terry and Manuel Juette.
 Change log: 
 ----------
 
+1.5.8 (2025-07-31)
+* Photobleaching command checks stage limits before starting.
+* Photobleaching command now includes speed and number of lanes.
+* Add leading zeros to multi-lane series acquisition numbering and use AA, AB, ... for more than 26 fields.
+* New Z-stack acquisition mode.
+* Improved autofocus speed and reliability.
+* Detect Cancel button press during laser power adjustment.
+* Only wait as long as needed for laser power adjustment (Coherent and Thorlabs polarizer).
+* Autofocus failure is a warning in log file, but allows series acquisition to continue.
+* Live Viewer: fixed ghost images in background pane in previous version.
+* Added logging of steps in series acquisition.
+* Use C++/OpenCV module for particle counting to reduce computational load and avoid requirement for MATLAB.
+
 1.5.7 (2025-07-21)
 * Fix incorrect stage limit calculation before movie series.
 * Block photobleach command when light path is set to eyepieces for safety.

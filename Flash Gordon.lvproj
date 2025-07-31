@@ -527,10 +527,10 @@
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
 				<Property Name="Bld_userLogFile" Type="Path">../build_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToCommon</Property>
-				<Property Name="Bld_version.build" Type="Int">136</Property>
+				<Property Name="Bld_version.build" Type="Int">138</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">5</Property>
-				<Property Name="Bld_version.patch" Type="Int">7</Property>
+				<Property Name="Bld_version.patch" Type="Int">8</Property>
 				<Property Name="Destination[0].destName" Type="Str">Flash Gordon.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../testing/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -543,7 +543,7 @@
 				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{57B794BF-B4CD-4BA1-877D-A9E0516539B4}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{AB155C67-3686-4EAF-AC5E-B79C17DB805F}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
@@ -650,7 +650,7 @@
 				<Property Name="SourceCount" Type="Int">27</Property>
 				<Property Name="TgtF_companyName" Type="Str">St Jude Childrens Research Hospital</Property>
 				<Property Name="TgtF_fastFileFormat" Type="Bool">true</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">faster autofocus and Z stack</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Flash Gordon</Property>
 				<Property Name="TgtF_internalName" Type="Str">Flash Gordon</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2014-2025 Blanchard Lab</Property>
 				<Property Name="TgtF_productName" Type="Str">Flash Gordon</Property>
