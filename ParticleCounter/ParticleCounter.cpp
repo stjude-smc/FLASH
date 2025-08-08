@@ -44,20 +44,20 @@ uint32_t countParticlesInternal(const cv::Mat& image_t)
     cv::Mat temp = cv::Mat::zeros(image_t.rows/den, image_t.cols/den, CV_16U);
     
     // Divide image into den-x-den squares and find 16% lowest value in each
-    for (int i = 0; i < temp.rows; ++i)
-    {
-        for (int j = 0; j < temp.cols; ++j)
-        {
-            //Extract square from original image
-            cv::Rect roi = cv::Rect( den*j, den*i, den, den);
+    for (int i = 0; i < temp.rows; ++i) {
+        for (int j = 0; j < temp.cols; ++j) {
+            cv::Rect roi(den * j, den * i, den, den);
             cv::Mat window = image_t(roi);
 
-            //Find the partition value
             cv::Mat sorted;
             window.copyTo(sorted);
-            sorted.reshape(1, 1);  //makes a row vector
+            sorted = sorted.reshape(1, 1); // flatten to 1 × (den*den)
             cv::sort(sorted, sorted, cv::SORT_ASCENDING);
-            temp.at<uint16_t>(i,j) = sorted.at<uint16_t>(partition);
+
+            const int N = static_cast<int>(sorted.total());
+            int idx = std::clamp(static_cast<int>(std::floor(0.167 * N)), 0, N - 1);
+
+            temp.at<uint16_t>(i, j) = sorted.at<uint16_t>(0, idx);
         }
     }
 
