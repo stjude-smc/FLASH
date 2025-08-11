@@ -7,18 +7,19 @@ Created by Daniel Terry and Manuel Juette.
 Change log: 
 ----------
 
-1.5.8 (2025-07-31)
+1.6.0 (2025-08-11)
+* Main Window: add "Log" tab to see the debug log without blocking the application.
+* Live Viewer: fixed image and histogram flipping and other visual artifacts when rapidly resizing.
 * Photobleaching command checks stage limits before starting.
 * Photobleaching command now includes speed and number of lanes.
 * Add leading zeros to multi-lane series acquisition numbering and use AA, AB, ... for more than 26 fields.
 * New Z-stack acquisition mode.
 * Improved autofocus speed and reliability.
 * Detect Cancel button press during laser power adjustment.
-* Only wait as long as needed for laser power adjustment (Coherent and Thorlabs polarizer).
 * Autofocus failure is a warning in log file, but allows series acquisition to continue.
 * Live Viewer: fixed ghost images in background pane in previous version.
 * Added logging of steps in series acquisition.
-* Use C++/OpenCV module for particle counting to reduce computational load and avoid requirement for MATLAB.
+* Use C++/OpenCV module for particle counting to reduce computational load, avoid requirement for MATLAB, and reduce startup time.
 
 1.5.7 (2025-07-21)
 * Fix incorrect stage limit calculation before movie series.
