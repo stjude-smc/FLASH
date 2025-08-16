@@ -1,4 +1,8 @@
 build/
+Hardware/Microscope/ti2wrap/.vs/
+Hardware/Microscope/ti2wrap/x64/
+Hardware/Microscope/ti2wrap/ti2wrap/Debug/
+Hardware/Microscope/ti2wrap/ti2wrap/x64/
 BinaryTIFF/DCIMG2TIFF/.vs/
 BinaryTIFF/DCIMG2TIFF/dcimg2tiff/x64/
 BinaryTIFF/DCIMG2TIFF/dcimg2tiff_debug/x64/
@@ -7,4 +11,6 @@ BinaryTIFF/DCIMG2TIFF/dcimg2tiff_debug/.vs/
 ParticleCounter/.vs/
 ParticleCounter/x64/
 ParticleCounter/ParticleCounter/
-
+*.aliases
+*.lvlps
+Config/
