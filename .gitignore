@@ -13,4 +13,4 @@ ParticleCounter/x64/
 ParticleCounter/ParticleCounter/
 *.aliases
 *.lvlps
-Config/
+Config/*.json
