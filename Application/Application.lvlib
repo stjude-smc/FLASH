@@ -38,6 +38,7 @@
 		<Item Name="Start Z stack Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Z stack Msg/Start Z stack Msg.lvclass"/>
 		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
 		<Item Name="Update Camera Modes Msg.lvclass" Type="LVClass" URL="../../Application Messages/Update Camera Modes Msg/Update Camera Modes Msg.lvclass"/>
+		<Item Name="Viewer Status Message Msg.lvclass" Type="LVClass" URL="../../Application Messages/Viewer Status Message Msg/Viewer Status Message Msg.lvclass"/>
 	</Item>
 	<Item Name="Application.lvclass" Type="LVClass" URL="../Application.lvclass"/>
 	<Item Name="Get App Version.vi" Type="VI" URL="../Get App Version.vi"/>

@@ -83,6 +83,9 @@
 			<Item Name="release.txt" Type="Document" URL="../release.txt"/>
 			<Item Name="slide diagram.png" Type="Document" URL="../slide diagram.png"/>
 		</Item>
+		<Item Name="Services" Type="Folder">
+			<Item Name="Particle Counter.lvlib" Type="Library" URL="../Services/Particle Counter/Particle Counter.lvlib"/>
+		</Item>
 		<Item Name="User Interface" Type="Folder">
 			<Item Name="Countdown.vi" Type="VI" URL="../User Interface/Countdown.vi"/>
 			<Item Name="Elapsed Time.vi" Type="VI" URL="../User Interface/Elapsed Time.vi"/>
