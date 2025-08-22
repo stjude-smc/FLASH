@@ -11,6 +11,6 @@
 	<Item Name="Messages for this Actor" Type="Folder">
 		<Item Name="get power Msg.lvclass" Type="LVClass" URL="../Power Meter Messages/get power Msg/get power Msg.lvclass"/>
 	</Item>
-	<Item Name="Power Meter.lvclass" Type="LVClass" URL="../Power Meter/Power Meter.lvclass"/>
+	<Item Name="Power Meter.lvclass" Type="LVClass" URL="../Power Meter.lvclass"/>
 	<Item Name="test power meter.vi" Type="VI" URL="../test power meter.vi"/>
 </Library>

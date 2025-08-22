@@ -20,7 +20,7 @@
 
 </Property>
 	<Item Name="Parent Libraries" Type="Parent Libraries">
-		<Item Name="Power Meter.lvlib:Power Meter.lvclass" Type="Parent" URL="../../Power Meter/Power Meter/Power Meter.lvclass"/>
+		<Item Name="Power Meter.lvlib:Power Meter.lvclass" Type="Parent" URL="../../Power Meter/Power Meter.lvclass"/>
 	</Item>
 	<Item Name="Thorlabs Power Meter.ctl" Type="Class Private Data" URL="Thorlabs Power Meter.ctl">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
@@ -34,7 +34,7 @@
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">3</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1115685392</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
 		</Item>
 		<Item Name="Read Power Impl.vi" Type="VI" URL="../Read Power Impl.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'1!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"V!#A!75G&amp;X)%2F&gt;GFD:3"3:7&amp;E;7ZH)#B8+1!!8%"Q!"Y!!$E;6'BP=GRB9H-A5'^X:8)A476U:8)O&lt;(:M;7)=6'BP=GRB9H-A5'^X:8)A476U:8)O&lt;(:D&lt;'&amp;T=Q!96'BP=GRB9H-A5'^X:8)A476U:8)A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!&amp;J!=!!?!!!Z'F2I&lt;X*M97*T)&amp;"P&gt;W6S)%VF&gt;'6S,GRW&lt;'FC(&amp;2I&lt;X*M97*T)&amp;"P&gt;W6S)%VF&gt;'6S,GRW9WRB=X-!&amp;V2I&lt;X*M97*T)&amp;"P&gt;W6S)%VF&gt;'6S)'FO!&amp;1!]!!-!!-!"!!&amp;!!9!"!!%!!1!"!!(!!1!"!!)!Q!!?!!!$1A!!!!!!!!*!!!!D1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!#1!!!!!!%!#1!!!!!</Property>
