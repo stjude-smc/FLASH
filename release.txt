@@ -7,6 +7,9 @@ Created by Daniel Terry and Manuel Juette.
 Change log: 
 ----------
 
+1.6.1 (2025-08-25)
+* Fixed photobleach command blocked even when within limits.
+
 1.6.0 (2025-08-11)
 * Main Window: add "Log" tab to see the debug log without blocking the application.
 * Live Viewer: fixed image and histogram flipping and other visual artifacts when rapidly resizing.
