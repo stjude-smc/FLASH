@@ -7,6 +7,7 @@
 	<Item Name="Messages for this actor" Type="Folder">
 		<Item Name="New Frame Msg.lvclass" Type="LVClass" URL="../../Viewer Messages/New Frame Msg/New Frame Msg.lvclass"/>
 		<Item Name="Set Visibility Msg.lvclass" Type="LVClass" URL="../../Viewer Messages/Set Visibility Msg/Set Visibility Msg.lvclass"/>
+		<Item Name="Status Update Msg.lvclass" Type="LVClass" URL="../../Viewer Messages/Status Update Msg/Status Update Msg.lvclass"/>
 	</Item>
 	<Item Name="Count Particles.vi" Type="VI" URL="../Count Particles.vi"/>
 	<Item Name="Viewer.lvclass" Type="LVClass" URL="../Viewer.lvclass"/>

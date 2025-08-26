@@ -28,6 +28,7 @@
 				<Item Name="Device.lvlib" Type="Library" URL="../Hardware/Device/Device.lvlib"/>
 				<Item Name="Laser.lvlib" Type="Library" URL="../Hardware/Laser/Laser.lvlib"/>
 				<Item Name="Microscope.lvlib" Type="Library" URL="../Hardware/Microscope/Microscope.lvlib"/>
+				<Item Name="Power Meter.lvlib" Type="Library" URL="../Hardware/Power Meter/Power Meter.lvlib"/>
 				<Item Name="Sync Device.lvlib" Type="Library" URL="../Hardware/Sync Device/Sync Device.lvlib"/>
 			</Item>
 			<Item Name="Hardware Devices" Type="Folder">
@@ -38,12 +39,13 @@
 				<Item Name="Coherent Laser.lvlib" Type="Library" URL="../Hardware/Coherent Laser/Coherent Laser.lvlib"/>
 				<Item Name="Hamamatsu Camera.lvlib" Type="Library" URL="../Hardware/Hamamatsu Camera/Hamamatsu Camera.lvlib"/>
 				<Item Name="LQ Laser.lvlib" Type="Library" URL="../Hardware/LQ Laser/LQ Laser.lvlib"/>
+				<Item Name="Newport Power Meter.lvlib" Type="Library" URL="../Hardware/Newport Power Meter/Newport Power Meter.lvlib"/>
 				<Item Name="NI DAQ.lvlib" Type="Library" URL="../Hardware/NI DAQ/NI DAQ.lvlib"/>
 				<Item Name="Nikon Stand.lvlib" Type="Library" URL="../Hardware/Nikon Stand/Nikon Stand.lvlib"/>
 				<Item Name="Photometrics Camera.lvlib" Type="Library" URL="../Hardware/Photometrics Camera/Photometrics Camera.lvlib"/>
-				<Item Name="Power Meter.lvlib" Type="Library" URL="../Hardware/Power Meter/Power Meter.lvlib"/>
 				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
 				<Item Name="Thorlabs Polarizer.lvlib" Type="Library" URL="../Hardware/Thorlabs Polarizer/Thorlabs Polarizer.lvlib"/>
+				<Item Name="Thorlabs Power Meter.lvlib" Type="Library" URL="../Hardware/Thorlabs Power Meter/Thorlabs Power Meter.lvlib"/>
 			</Item>
 		</Item>
 		<Item Name="Resources" Type="Folder">
@@ -82,6 +84,9 @@
 			<Item Name="Post-Build Action.vi" Type="VI" URL="../Resources/Post-Build Action.vi"/>
 			<Item Name="release.txt" Type="Document" URL="../release.txt"/>
 			<Item Name="slide diagram.png" Type="Document" URL="../slide diagram.png"/>
+		</Item>
+		<Item Name="Services" Type="Folder">
+			<Item Name="Particle Counter.lvlib" Type="Library" URL="../Services/Particle Counter/Particle Counter.lvlib"/>
 		</Item>
 		<Item Name="User Interface" Type="Folder">
 			<Item Name="Countdown.vi" Type="VI" URL="../User Interface/Countdown.vi"/>
@@ -489,6 +494,7 @@
 			</Item>
 			<Item Name="Numeric Params IDs.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Numeric Params IDs.ctl"/>
 			<Item Name="Param Attributes.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Param Attributes.ctl"/>
+			<Item Name="polarizer model.vi" Type="VI" URL="../Hardware/Thorlabs Polarizer/polarizer model.vi"/>
 			<Item Name="PVCam Type Converter.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Conversion/PVCam Type Converter.vi"/>
 			<Item Name="PVCam Types.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/PVCam Types.ctl"/>
 			<Item Name="Region Index.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Region Index.ctl"/>
@@ -604,7 +610,7 @@
 				<Property Name="Source[22].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[22].type" Type="Str">Library</Property>
 				<Property Name="Source[23].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[23].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Power Meter.lvlib/Power Meter.lvclass</Property>
+				<Property Name="Source[23].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Power Meter.lvlib/Power Meter.lvclass</Property>
 				<Property Name="Source[23].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[23].type" Type="Str">Library</Property>
 				<Property Name="Source[24].destinationIndex" Type="Int">0</Property>
