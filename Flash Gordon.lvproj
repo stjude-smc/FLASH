@@ -39,6 +39,7 @@
 				<Item Name="Coherent Laser.lvlib" Type="Library" URL="../Hardware/Coherent Laser/Coherent Laser.lvlib"/>
 				<Item Name="Hamamatsu Camera.lvlib" Type="Library" URL="../Hardware/Hamamatsu Camera/Hamamatsu Camera.lvlib"/>
 				<Item Name="LQ Laser.lvlib" Type="Library" URL="../Hardware/LQ Laser/LQ Laser.lvlib"/>
+				<Item Name="Microsync.lvlib" Type="Library" URL="../Hardware/Microsync/Microsync.lvlib"/>
 				<Item Name="Newport Power Meter.lvlib" Type="Library" URL="../Hardware/Newport Power Meter/Newport Power Meter.lvlib"/>
 				<Item Name="NI DAQ.lvlib" Type="Library" URL="../Hardware/NI DAQ/NI DAQ.lvlib"/>
 				<Item Name="Nikon Stand.lvlib" Type="Library" URL="../Hardware/Nikon Stand/Nikon Stand.lvlib"/>
