@@ -101,6 +101,7 @@
 		<Item Name="Create Hardware Configuration UI.vi" Type="VI" URL="../Application/Create Hardware Configuration UI.vi"/>
 		<Item Name="Create Initialization File.vi" Type="VI" URL="../Application/Create Initialization File.vi"/>
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
+		<Item Name="Microsync demo.vi" Type="VI" URL="../Hardware/Microsync/Microsync demo.vi"/>
 		<Item Name="Microsync pin command.vi" Type="VI" URL="../Hardware/Microsync/Microsync pin command.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
