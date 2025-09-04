@@ -4,5 +4,7 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">587235328</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Microsync demo.vi" Type="VI" URL="../Microsync demo.vi"/>
+	<Item Name="Microsync pin command.vi" Type="VI" URL="../Microsync pin command.vi"/>
 	<Item Name="Microsync.lvclass" Type="LVClass" URL="../Microsync.lvclass"/>
 </Library>
