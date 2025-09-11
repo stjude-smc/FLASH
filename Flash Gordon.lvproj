@@ -502,9 +502,6 @@
 			</Item>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
-			<Item Name="Microsync create packet.vi" Type="VI" URL="../Hardware/Microsync/Microsync create packet.vi"/>
-			<Item Name="Microsync send packet.vi" Type="VI" URL="../Hardware/Microsync/Microsync send packet.vi"/>
-			<Item Name="Microsync set property.vi" Type="VI" URL="../Hardware/Microsync/Microsync set property.vi"/>
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
