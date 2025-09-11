@@ -560,7 +560,7 @@
 				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{AB155C67-3686-4EAF-AC5E-B79C17DB805F}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{380E9585-3C2E-4ED0-82B6-643427F14924}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
@@ -634,8 +634,24 @@
 				<Property Name="Source[26].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[26].itemID" Type="Ref">/My Computer/Resources/Flash Gordon documentation.pdf</Property>
 				<Property Name="Source[26].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[27].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[27].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Microsync.lvlib/Microsync.lvclass</Property>
+				<Property Name="Source[27].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[27].type" Type="Str">Library</Property>
+				<Property Name="Source[28].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[28].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Cobolt Laser.lvlib/Cobolt Laser.lvclass</Property>
+				<Property Name="Source[28].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[28].type" Type="Str">Library</Property>
+				<Property Name="Source[29].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[29].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Newport Power Meter.lvlib/Newport Power Meter.lvclass</Property>
+				<Property Name="Source[29].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[29].type" Type="Str">Library</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Resources/dll/ti2wrap.dll</Property>
+				<Property Name="Source[30].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[30].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Thorlabs Power Meter.lvlib/Thorlabs Power Meter.lvclass</Property>
+				<Property Name="Source[30].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[30].type" Type="Str">Library</Property>
 				<Property Name="Source[4].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[4].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[4].Container.depDestIndex" Type="Int">0</Property>
@@ -664,7 +680,7 @@
 				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Andor Camera.lvlib/Andor Camera.lvclass</Property>
 				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[9].type" Type="Str">Library</Property>
-				<Property Name="SourceCount" Type="Int">27</Property>
+				<Property Name="SourceCount" Type="Int">31</Property>
 				<Property Name="TgtF_companyName" Type="Str">St Jude Childrens Research Hospital</Property>
 				<Property Name="TgtF_fastFileFormat" Type="Bool">true</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Flash Gordon</Property>
