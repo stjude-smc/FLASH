@@ -56,8 +56,6 @@
 			<Item Name="Dependencies" Type="Folder">
 				<Item Name="Actor Framework.lvlib" Type="Library" URL="/&lt;vilib&gt;/ActorFramework/Actor Framework.lvlib"/>
 				<Item Name="ASI TG-1000.lvlib" Type="Library" URL="/&lt;instrlib&gt;/ASI TG-1000/ASI TG-1000.lvlib"/>
-				<Item Name="Camera.lvclass" Type="LVClass" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/Camera.lvclass"/>
-				<Item Name="PVCAM.lvclass" Type="LVClass" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/PVCAM/PVCAM.lvclass"/>
 				<Item Name="ti2lv.lvlib" Type="Library" URL="../Hardware/Microscope/ti2lv/ti2lv.lvlib"/>
 			</Item>
 			<Item Name="dll" Type="Folder" URL="../dll">
@@ -101,21 +99,45 @@
 		<Item Name="Create Hardware Configuration UI.vi" Type="VI" URL="../Application/Create Hardware Configuration UI.vi"/>
 		<Item Name="Create Initialization File.vi" Type="VI" URL="../Application/Create Initialization File.vi"/>
 		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
-		<Item Name="Microsync demo.vi" Type="VI" URL="../Hardware/Microsync/Microsync demo.vi"/>
-		<Item Name="Microsync pin command.vi" Type="VI" URL="../Hardware/Microsync/Microsync pin command.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="AbortAcquisition.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/AbortAcquisition.vi"/>
+				<Item Name="Acquisition Mode.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Acquisition Mode.ctl"/>
+				<Item Name="Acquisition Status.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Acquisition Status.ctl"/>
 				<Item Name="AcquisitionMode_mode typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/AcquisitionMode_mode typedef.ctl"/>
 				<Item Name="Add ECO For DLL.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Add ECO For DLL.vi"/>
 				<Item Name="Add ECO For LabVIEW.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Add ECO For LabVIEW.vi"/>
+				<Item Name="All Params IDs.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/All Params IDs.ctl"/>
+				<Item Name="Bool Params IDs.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Bool Params IDs.ctl"/>
+				<Item Name="Buffer Index.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Buffer Index.ctl"/>
+				<Item Name="Buffer Size.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Buffer Size.ctl"/>
+				<Item Name="Callback Types.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Callback Types.ctl"/>
+				<Item Name="Camera Description.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Camera Description.ctl"/>
+				<Item Name="Camera Regions.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Camera Regions.ctl"/>
+				<Item Name="Camera Status.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Camera Status.ctl"/>
+				<Item Name="Camera.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/Camera/Camera.lvclass"/>
+				<Item Name="Convert File Format.vi" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Conversion/Convert File Format.vi"/>
+				<Item Name="Convert Fw Version.vi" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Conversion/Convert Fw Version.vi"/>
 				<Item Name="CoolerOFF.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/CoolerOFF.vi"/>
 				<Item Name="CoolerON.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/CoolerON.vi"/>
+				<Item Name="Disk Streaming File Name.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Disk Streaming File Name.ctl"/>
+				<Item Name="Disk Streaming File Size.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Disk Streaming File Size.ctl"/>
+				<Item Name="Disk Streaming Options.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Disk Streaming Options.ctl"/>
 				<Item Name="EMGainMode_mode typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/EMGainMode_mode typedef.ctl"/>
+				<Item Name="ENUM EXP RES MODES.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Enum params values/ENUMS/ENUM EXP RES MODES.ctl"/>
+				<Item Name="ENUM EXPOSE OUT MODES.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Enum params values/ENUMS/ENUM EXPOSE OUT MODES.ctl"/>
+				<Item Name="Enum Item.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Enum Item.ctl"/>
+				<Item Name="Enum Params IDs.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Enum Params IDs.ctl"/>
 				<Item Name="Error Code Enum typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/Error Code Enum typedef.ctl"/>
 				<Item Name="Error Code Handler.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Error Code Handler.vi"/>
 				<Item Name="Error Code Offset global.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Error Code Offset global.vi"/>
+				<Item Name="Error list.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Error list.ctl"/>
+				<Item Name="Exposure Time.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Exposure Time.ctl"/>
 				<Item Name="FanMode_mode typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/FanMode_mode typedef.ctl"/>
+				<Item Name="File Format.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/File Format.ctl"/>
+				<Item Name="Frame Metadata.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Frame Metadata.ctl"/>
+				<Item Name="Frames Captured.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Frames Captured.ctl"/>
+				<Item Name="Frames To Capture.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Frames To Capture.ctl"/>
 				<Item Name="Get Error Source.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Get Error Source.vi"/>
 				<Item Name="GetAcquisitionTimings.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetAcquisitionTimings.vi"/>
 				<Item Name="GetAvailableCameras.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/GetAvailableCameras.vi"/>
@@ -135,7 +157,18 @@
 				<Item Name="HSSpeed_type typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/HSSpeed_type typedef.ctl"/>
 				<Item Name="Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/Initialize.vi"/>
 				<Item Name="Join Strings.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Join Strings.vi"/>
+				<Item Name="Numeric Params IDs.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Numeric Params IDs.ctl"/>
+				<Item Name="Param Attributes.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Param Attributes.ctl"/>
+				<Item Name="PVCam Type Converter.vi" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Conversion/PVCam Type Converter.vi"/>
+				<Item Name="PVCam Types.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/PVCam Types.ctl"/>
+				<Item Name="PVCAM.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/PVCAM/PVCAM.lvclass"/>
+				<Item Name="PVCamNET.dll" Type="Document" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/Dependencies/PVCamNET.dll"/>
 				<Item Name="ReadMode_mode typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/ReadMode_mode typedef.ctl"/>
+				<Item Name="Region Index.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Region Index.ctl"/>
+				<Item Name="Region.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Region.ctl"/>
+				<Item Name="RING EXPOSURE MODES.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Enum params values/RINGS/RING EXPOSURE MODES.ctl"/>
+				<Item Name="RoiMD.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/RoiMD.ctl"/>
+				<Item Name="Scan Mode Enum.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/Scan Mode Enum.ctl"/>
 				<Item Name="SetAcquisitionMode.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetAcquisitionMode.vi"/>
 				<Item Name="SetADChannel.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetADChannel.vi"/>
 				<Item Name="SetCurrentCamera.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/SetCurrentCamera.vi"/>
@@ -158,6 +191,7 @@
 				<Item Name="Shutter_type typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/Shutter_type typedef.ctl"/>
 				<Item Name="Spool_method typedef.ctl" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/Spool_method typedef.ctl"/>
 				<Item Name="StartAcquisition.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/StartAcquisition.vi"/>
+				<Item Name="String Params IDs.ctl" Type="VI" URL="/&lt;userlib&gt;/TPM LabVIEW adapter/SDK/Controls/String Params IDs.ctl"/>
 				<Item Name="Subtract ECO For DLL.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d_internal.llb/Subtract ECO For DLL.vi"/>
 				<Item Name="tm_closecamera_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_closecamera_40.vi"/>
 				<Item Name="tm_deinitialize_40.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_deinitialize_40.vi"/>
@@ -392,6 +426,7 @@
 				<Item Name="IMAQ Image Bit Depth" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Image Bit Depth"/>
 				<Item Name="IMAQ Image.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/IMAQ Image.ctl"/>
 				<Item Name="IMAQ SetImageSize" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ SetImageSize"/>
+				<Item Name="Is Path and Not Empty.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Is Path and Not Empty.vi"/>
 				<Item Name="JDP Timestamp.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/Timestamp/JDP Timestamp.lvlib"/>
 				<Item Name="JDP Utility.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/JDP Utility.lvlib"/>
 				<Item Name="JSONtext LVClass Serializer.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JDP Science/JSONtext/LVClass Serializer/JSONtext LVClass Serializer.lvclass"/>
@@ -421,7 +456,6 @@
 				<Item Name="ParseXMLFragments.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/ParseXMLFragments.vi"/>
 				<Item Name="Path to URL inner.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL inner.vi"/>
 				<Item Name="Path to URL.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL.vi"/>
-				<Item Name="Range Limits for Type.vim" Type="VI" URL="/&lt;vilib&gt;/numeric/Range Limits for Type.vim"/>
 				<Item Name="Read From XML File(array).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Read From XML File(array).vi"/>
 				<Item Name="Read From XML File(string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Read From XML File(string).vi"/>
 				<Item Name="Read From XML File.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Read From XML File.vi"/>
@@ -459,72 +493,15 @@
 				<Item Name="Write to XML File(string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Write to XML File(string).vi"/>
 				<Item Name="Write to XML File.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Write to XML File.vi"/>
 			</Item>
-			<Item Name="Acquisition Mode.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Acquisition Mode.ctl"/>
-			<Item Name="Acquisition Mode.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Acquisition Mode.ctl"/>
-			<Item Name="Acquisition Status.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Acquisition Status.ctl"/>
 			<Item Name="AF Debug.lvlib" Type="Library" URL="/&lt;resource&gt;/AFDebug/AF Debug.lvlib"/>
-			<Item Name="All Params IDs.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/All Params IDs.ctl"/>
-			<Item Name="All Params IDs.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/All Params IDs.ctl"/>
-			<Item Name="Apply Camera Setup.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Apply Camera Setup.vi"/>
 			<Item Name="atmcd64d.dll" Type="Document" URL="atmcd64d.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Await Frame.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Await Frame.vi"/>
-			<Item Name="Bool Params IDs.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Bool Params IDs.ctl"/>
-			<Item Name="Buffer Index.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Buffer Index.ctl"/>
-			<Item Name="Buffer Size.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Buffer Size.ctl"/>
-			<Item Name="Buffer Size.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Buffer Size.ctl"/>
-			<Item Name="Callback Types.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Callback Types.ctl"/>
-			<Item Name="Camera Description.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Camera Description.ctl"/>
-			<Item Name="Camera Description.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Camera Description.ctl"/>
-			<Item Name="Camera Regions.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Camera Regions.ctl"/>
-			<Item Name="Camera Status.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Camera Status.ctl"/>
-			<Item Name="Camera.lvclass" Type="LVClass" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/Camera.lvclass"/>
-			<Item Name="Close Camera.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Close Camera.vi"/>
-			<Item Name="Configure Disk Streaming.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Configure Disk Streaming.vi"/>
-			<Item Name="Convert File Format.vi" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Conversion/Convert File Format.vi"/>
-			<Item Name="Convert Fw Version.vi" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Conversion/Convert Fw Version.vi"/>
-			<Item Name="Create IMAQ image.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Create IMAQ image.vi"/>
-			<Item Name="Disk Streaming File Name.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Disk Streaming File Name.ctl"/>
-			<Item Name="Disk Streaming File Name.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Disk Streaming File Name.ctl"/>
-			<Item Name="Disk Streaming File Size.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Disk Streaming File Size.ctl"/>
-			<Item Name="Disk Streaming File Size.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Disk Streaming File Size.ctl"/>
-			<Item Name="Disk Streaming Options.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Disk Streaming Options.ctl"/>
-			<Item Name="Disk Streaming Options.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Disk Streaming Options.ctl"/>
-			<Item Name="Enable Disk Streaming.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Enable Disk Streaming.vi"/>
-			<Item Name="ENUM EXP RES MODES.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Enum params values/ENUMS/ENUM EXP RES MODES.ctl"/>
-			<Item Name="ENUM EXP RES MODES.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Enum params values/ENUMS/ENUM EXP RES MODES.ctl"/>
-			<Item Name="ENUM EXPOSE OUT MODES.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Enum params values/ENUMS/ENUM EXPOSE OUT MODES.ctl"/>
-			<Item Name="ENUM EXPOSE OUT MODES.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Enum params values/ENUMS/ENUM EXPOSE OUT MODES.ctl"/>
-			<Item Name="Enum Item.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Enum Item.ctl"/>
-			<Item Name="Enum Params IDs.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Enum Params IDs.ctl"/>
-			<Item Name="Error list.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Error list.ctl"/>
-			<Item Name="Exposure Time.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Exposure Time.ctl"/>
-			<Item Name="File Format.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/File Format.ctl"/>
-			<Item Name="Frame Metadata.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Frame Metadata.ctl"/>
-			<Item Name="Frames Captured.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Frames Captured.ctl"/>
-			<Item Name="Frames Captured.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Frames Captured.ctl"/>
-			<Item Name="Frames To Capture.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Frames To Capture.ctl"/>
-			<Item Name="Frames To Capture.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Frames To Capture.ctl"/>
-			<Item Name="Get Bits Per Pixel.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Get Bits Per Pixel.vi"/>
-			<Item Name="Get Camera.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/PVCAM/VIs/Get Camera.vi"/>
-			<Item Name="Get Disk Streaming Dropped Frames.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Get Disk Streaming Dropped Frames.vi"/>
-			<Item Name="Get Disk Streaming Failed.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Get Disk Streaming Failed.vi"/>
-			<Item Name="Get Disk Streaming Queue Count.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Get Disk Streaming Queue Count.vi"/>
-			<Item Name="Get FPS.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Get FPS.vi"/>
-			<Item Name="Get Image.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Get Image.vi"/>
-			<Item Name="Get Param Numeric.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Get Param Numeric.vi"/>
-			<Item Name="Get Regions.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Get Regions.vi"/>
-			<Item Name="Get Sensor Size.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Get Sensor Size.vi"/>
-			<Item Name="Is Disk Queue Not Empty.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Is Disk Queue Not Empty.vi"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
-			<Item Name="Microsync create packet.vi" Type="VI" URL="../Hardware/Microsync/Microsync create packet.vi"/>
-			<Item Name="Microsync send packet.vi" Type="VI" URL="../Hardware/Microsync/Microsync send packet.vi"/>
-			<Item Name="Microsync set property.vi" Type="VI" URL="../Hardware/Microsync/Microsync set property.vi"/>
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -534,30 +511,6 @@
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Numeric Params IDs.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Numeric Params IDs.ctl"/>
-			<Item Name="Numeric Params IDs.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Numeric Params IDs.ctl"/>
-			<Item Name="Open Camera.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Open Camera.vi"/>
-			<Item Name="Param Attributes.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Param Attributes.ctl"/>
-			<Item Name="PVCam Init.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/PVCAM/VIs/PVCam Init.vi"/>
-			<Item Name="PVCam Type Converter.vi" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Conversion/PVCam Type Converter.vi"/>
-			<Item Name="PVCam Types.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/PVCam Types.ctl"/>
-			<Item Name="PVCAM.lvclass" Type="LVClass" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/PVCAM/PVCAM.lvclass"/>
-			<Item Name="Read Camera Name.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/Accessors/Read Camera Name.vi"/>
-			<Item Name="Region Index.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Region Index.ctl"/>
-			<Item Name="Region Index.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Region Index.ctl"/>
-			<Item Name="Region.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Region.ctl"/>
-			<Item Name="Release.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/PVCAM/VIs/Release.vi"/>
-			<Item Name="RING EXPOSURE MODES.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Enum params values/RINGS/RING EXPOSURE MODES.ctl"/>
-			<Item Name="RING EXPOSURE MODES.ctl" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Enum params values/RINGS/RING EXPOSURE MODES.ctl"/>
-			<Item Name="RoiMD.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/RoiMD.ctl"/>
-			<Item Name="Scan Mode Enum.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/Scan Mode Enum.ctl"/>
-			<Item Name="Send IMAQ buffer to PVCAM.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Send IMAQ buffer to PVCAM.vi"/>
-			<Item Name="Set Binning.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Set Binning.vi"/>
-			<Item Name="Set Buffer Size.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Set Buffer Size.vi"/>
-			<Item Name="Set Param.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Set Param.vi"/>
-			<Item Name="Start Acquisition.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Start Acquisition.vi"/>
-			<Item Name="Stop Acquisition.vi" Type="VI" URL="../../../Users/Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/Camera/VIs/Stop Acquisition.vi"/>
-			<Item Name="String Params IDs.ctl" Type="VI" URL="../../../../../Public/Documents/Photometrics/TPM-LabVIEWSamples BETA/TPM LabVIEW adapter/SDK/Controls/String Params IDs.ctl"/>
 			<Item Name="System" Type="VI" URL="System">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -604,7 +557,7 @@
 				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{AB155C67-3686-4EAF-AC5E-B79C17DB805F}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{380E9585-3C2E-4ED0-82B6-643427F14924}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
@@ -678,8 +631,24 @@
 				<Property Name="Source[26].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[26].itemID" Type="Ref">/My Computer/Resources/Flash Gordon documentation.pdf</Property>
 				<Property Name="Source[26].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[27].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[27].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Microsync.lvlib/Microsync.lvclass</Property>
+				<Property Name="Source[27].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[27].type" Type="Str">Library</Property>
+				<Property Name="Source[28].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[28].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Cobolt Laser.lvlib/Cobolt Laser.lvclass</Property>
+				<Property Name="Source[28].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[28].type" Type="Str">Library</Property>
+				<Property Name="Source[29].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[29].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Newport Power Meter.lvlib/Newport Power Meter.lvclass</Property>
+				<Property Name="Source[29].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[29].type" Type="Str">Library</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Resources/dll/ti2wrap.dll</Property>
+				<Property Name="Source[30].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[30].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Thorlabs Power Meter.lvlib/Thorlabs Power Meter.lvclass</Property>
+				<Property Name="Source[30].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[30].type" Type="Str">Library</Property>
 				<Property Name="Source[4].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[4].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[4].Container.depDestIndex" Type="Int">0</Property>
@@ -708,7 +677,7 @@
 				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Andor Camera.lvlib/Andor Camera.lvclass</Property>
 				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[9].type" Type="Str">Library</Property>
-				<Property Name="SourceCount" Type="Int">27</Property>
+				<Property Name="SourceCount" Type="Int">31</Property>
 				<Property Name="TgtF_companyName" Type="Str">St Jude Childrens Research Hospital</Property>
 				<Property Name="TgtF_fastFileFormat" Type="Bool">true</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Flash Gordon</Property>

@@ -4,5 +4,10 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">587235328</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Microsync create packet.vi" Type="VI" URL="../Microsync create packet.vi"/>
+	<Item Name="Microsync demo.vi" Type="VI" URL="../Microsync demo.vi"/>
+	<Item Name="Microsync pin command.vi" Type="VI" URL="../Microsync pin command.vi"/>
+	<Item Name="Microsync send packet.vi" Type="VI" URL="../Microsync send packet.vi"/>
+	<Item Name="Microsync set property.vi" Type="VI" URL="../Microsync set property.vi"/>
 	<Item Name="Microsync.lvclass" Type="LVClass" URL="../Microsync.lvclass"/>
 </Library>
