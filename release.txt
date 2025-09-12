@@ -7,6 +7,17 @@ Created by Daniel Terry and Manuel Juette.
 Change log: 
 ----------
 
+1.7.0 (2025-09-12)
+* Photometrics: transition to PVCam-LabView adapter version 2.6.2 from 2.3(beta) and link to userlib location instead of Public Documents. PVCamNet.dll version changed from 2.0.13 to 2.0.19.
+* Added support for Microsync (Aruindo Due) v2.5, a triggering device with higher timing precision, new features, and more flexibility.
+* Ensure shutter opening/closing in stroboscopic/ALEX mode only occurs during global exposure period for Kinetix cameras, which do not have the "global reset" readout scheme like Hamamatsu.
+* Add a fixed 1.9ms delay for shutter triggering (measured delay for Uniblitz LS6 shutter with VMM-D4 controller).
+* Allow new profile to be created even when config folder is empty.
+* Set laser power to NaN if power was not read during imaging (for example with an extremely short movie).
+* Advanced tab option to terminate streaming when particle count drops below a threshold.
+* Dynamic dispatch classes for power meter class.
+* Use "Separate source from code" option for all VIs to improve version control issues.
+
 1.6.1 (2025-08-25)
 * Fixed photobleach command blocked even when within limits.
 

@@ -1,6 +1,6 @@
 # SM-FIRE (formerly Flash Gordon)
 
-**Author:** Daniel Terry and Manuel Juette
+**Authors:** Daniel Terry, Manuel Juette, and Roman Kiselev
 **Institution:** St. Jude Children's Research Hospital  
 **Contact:** [scott.blanchard@stjude.org](mailto:scott.blanchard@stjude.org)  
 **License:** See [`license.txt`](./license.txt)  
