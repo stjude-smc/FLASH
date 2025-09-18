@@ -29,22 +29,27 @@
 				<Item Name="Laser.lvlib" Type="Library" URL="../Hardware/Laser/Laser.lvlib"/>
 				<Item Name="Microscope.lvlib" Type="Library" URL="../Hardware/Microscope/Microscope.lvlib"/>
 				<Item Name="Power Meter.lvlib" Type="Library" URL="../Hardware/Power Meter/Power Meter.lvlib"/>
+				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
 				<Item Name="Sync Device.lvlib" Type="Library" URL="../Hardware/Sync Device/Sync Device.lvlib"/>
 			</Item>
 			<Item Name="Hardware Devices" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">0</Property>
 				<Item Name="Andor Camera.lvlib" Type="Library" URL="../Hardware/Andor Camera/Andor Camera.lvlib"/>
 				<Item Name="Arduino DAQ.lvlib" Type="Library" URL="../Hardware/Arduino DQ/Arduino DAQ.lvlib"/>
+				<Item Name="ASI Stage.lvlib" Type="Library" URL="../Hardware/ASI Stage/ASI Stage.lvlib"/>
 				<Item Name="Cobolt Laser.lvlib" Type="Library" URL="../Hardware/Cobolt Laser.lvlib"/>
 				<Item Name="Coherent Laser.lvlib" Type="Library" URL="../Hardware/Coherent Laser/Coherent Laser.lvlib"/>
 				<Item Name="Hamamatsu Camera.lvlib" Type="Library" URL="../Hardware/Hamamatsu Camera/Hamamatsu Camera.lvlib"/>
 				<Item Name="LQ Laser.lvlib" Type="Library" URL="../Hardware/LQ Laser/LQ Laser.lvlib"/>
+				<Item Name="Ludl Stage.lvlib" Type="Library" URL="../Hardware/Ludl Stage/Ludl Stage.lvlib"/>
 				<Item Name="Microsync.lvlib" Type="Library" URL="../Hardware/Microsync/Microsync.lvlib"/>
+				<Item Name="Newport ESP301 Stage.lvlib" Type="Library" URL="../Hardware/Newport ESP301 Stage/Newport ESP301 Stage.lvlib"/>
 				<Item Name="Newport Power Meter.lvlib" Type="Library" URL="../Hardware/Newport Power Meter/Newport Power Meter.lvlib"/>
 				<Item Name="NI DAQ.lvlib" Type="Library" URL="../Hardware/NI DAQ/NI DAQ.lvlib"/>
 				<Item Name="Nikon Stand.lvlib" Type="Library" URL="../Hardware/Nikon Stand/Nikon Stand.lvlib"/>
+				<Item Name="Nikon Ti2 Stage.lvlib" Type="Library" URL="../Hardware/Nikon Ti2 Stage/Nikon Ti2 Stage.lvlib"/>
 				<Item Name="Photometrics Camera.lvlib" Type="Library" URL="../Hardware/Photometrics Camera/Photometrics Camera.lvlib"/>
-				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
+				<Item Name="Simulated Stage.lvlib" Type="Library" URL="../Hardware/Simulated Stage/Simulated Stage.lvlib"/>
 				<Item Name="Thorlabs Polarizer.lvlib" Type="Library" URL="../Hardware/Thorlabs Polarizer/Thorlabs Polarizer.lvlib"/>
 				<Item Name="Thorlabs Power Meter.lvlib" Type="Library" URL="../Hardware/Thorlabs Power Meter/Thorlabs Power Meter.lvlib"/>
 			</Item>
@@ -614,7 +619,7 @@
 				<Property Name="Source[21].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[21].type" Type="Str">Library</Property>
 				<Property Name="Source[22].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[22].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Stage Controller.lvlib/Stage Controller.lvclass</Property>
+				<Property Name="Source[22].itemID" Type="Ref">/My Computer/Hardware/Hardware Abstraction Layer/Stage Controller.lvlib/Stage Controller.lvclass</Property>
 				<Property Name="Source[22].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[22].type" Type="Str">Library</Property>
 				<Property Name="Source[23].destinationIndex" Type="Int">0</Property>
@@ -652,6 +657,26 @@
 				<Property Name="Source[31].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[31].itemID" Type="Ref">/My Computer/Resources/README.md</Property>
 				<Property Name="Source[31].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[32].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[32].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Nikon Ti2 Stage.lvlib/Nikon Ti2 Stage.lvclass</Property>
+				<Property Name="Source[32].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[32].type" Type="Str">Library</Property>
+				<Property Name="Source[33].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[33].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Simulated Stage.lvlib/Simulated Stage.lvclass</Property>
+				<Property Name="Source[33].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[33].type" Type="Str">Library</Property>
+				<Property Name="Source[34].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[34].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Newport ESP301 Stage.lvlib/Newport ESP301 Stage.lvclass</Property>
+				<Property Name="Source[34].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[34].type" Type="Str">Library</Property>
+				<Property Name="Source[35].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[35].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Ludl Stage.lvlib/Ludl Stage.lvclass</Property>
+				<Property Name="Source[35].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[35].type" Type="Str">Library</Property>
+				<Property Name="Source[36].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[36].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/ASI Stage.lvlib/ASI Stage.lvclass</Property>
+				<Property Name="Source[36].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[36].type" Type="Str">Library</Property>
 				<Property Name="Source[4].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[4].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[4].Container.depDestIndex" Type="Int">0</Property>
@@ -680,7 +705,7 @@
 				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Andor Camera.lvlib/Andor Camera.lvclass</Property>
 				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[9].type" Type="Str">Library</Property>
-				<Property Name="SourceCount" Type="Int">32</Property>
+				<Property Name="SourceCount" Type="Int">37</Property>
 				<Property Name="TgtF_companyName" Type="Str">St Jude Childrens Research Hospital</Property>
 				<Property Name="TgtF_fastFileFormat" Type="Bool">true</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">Flash Gordon</Property>
