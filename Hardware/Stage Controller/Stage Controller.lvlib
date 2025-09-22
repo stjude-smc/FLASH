@@ -17,7 +17,6 @@
 		<Item Name="Move From Double Click Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move From Double Click Msg/Move From Double Click Msg.lvclass"/>
 		<Item Name="Move Home Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Home Msg/Move Home Msg.lvclass"/>
 		<Item Name="Move Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Msg/Move Msg.lvclass"/>
-		<Item Name="Move Z Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Move Z Msg/Move Z Msg.lvclass"/>
 		<Item Name="Photobleach Custom Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Photobleach Custom Msg/Photobleach Custom Msg.lvclass"/>
 		<Item Name="Set Home Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Set Home Msg/Set Home Msg.lvclass"/>
 		<Item Name="Start Autofocus Msg.lvclass" Type="LVClass" URL="../../Stage Controller Messages/Start Autofocus Msg/Start Autofocus Msg.lvclass"/>
