@@ -15,6 +15,7 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Application" Type="Folder">
 			<Item Name="Application.lvlib" Type="Library" URL="../Application/Application.lvlib"/>
+			<Item Name="Automation.lvlib" Type="Library" URL="../Automation/Automation.lvlib"/>
 		</Item>
 		<Item Name="BinaryTIFF" Type="Folder">
 			<Item Name="BinaryTIFF.lvlib" Type="Library" URL="../BinaryTIFF/BinaryTIFF.lvlib"/>
