@@ -20,7 +20,6 @@
 		<Item Name="Set Detection Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Detection Msg/Set Detection Msg.lvclass"/>
 		<Item Name="Set Enabled Cameras Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Enabled Cameras Msg/Set Enabled Cameras Msg.lvclass"/>
 		<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
-		<Item Name="Set Laser Power Reply Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Laser Power Reply Msg/Set Laser Power Reply Msg.lvclass"/>
 		<Item Name="Shut Down Msg.lvclass" Type="LVClass" URL="../../Application Messages/Shut Down Msg/Shut Down Msg.lvclass"/>
 		<Item Name="Stage Abort Motion Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Abort Motion Msg/Stage Abort Motion Msg.lvclass"/>
 		<Item Name="Stage Back Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Back Msg/Stage Back Msg.lvclass"/>
