@@ -5,6 +5,8 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
+		<Item Name="Automation Timeout Msg.lvclass" Type="LVClass" URL="../../Application Messages/Automation Timeout Msg/Automation Timeout Msg.lvclass"/>
+		<Item Name="Automation_TaskCompleted Msg.lvclass" Type="LVClass" URL="../../Application Messages/Automation_TaskCompleted Msg/Automation_TaskCompleted Msg.lvclass"/>
 		<Item Name="Calibrate Polarizer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Calibrate Polarizer Msg/Calibrate Polarizer Msg.lvclass"/>
 		<Item Name="Cancel Operation Msg.lvclass" Type="LVClass" URL="../../Application Messages/Record Button Off Msg/Cancel Operation Msg.lvclass"/>
 		<Item Name="Close Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Shutter Msg/Close Shutter Msg.lvclass"/>
@@ -18,7 +20,6 @@
 		<Item Name="Set Detection Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Detection Msg/Set Detection Msg.lvclass"/>
 		<Item Name="Set Enabled Cameras Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Enabled Cameras Msg/Set Enabled Cameras Msg.lvclass"/>
 		<Item Name="Set Laser Power Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Laser Power Msg/Set Laser Power Msg.lvclass"/>
-		<Item Name="Set Laser Power Reply Msg.lvclass" Type="LVClass" URL="../../Application Messages/Set Laser Power Reply Msg/Set Laser Power Reply Msg.lvclass"/>
 		<Item Name="Shut Down Msg.lvclass" Type="LVClass" URL="../../Application Messages/Shut Down Msg/Shut Down Msg.lvclass"/>
 		<Item Name="Stage Abort Motion Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Abort Motion Msg/Stage Abort Motion Msg.lvclass"/>
 		<Item Name="Stage Back Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stage Back Msg/Stage Back Msg.lvclass"/>
