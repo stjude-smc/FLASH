@@ -12,6 +12,7 @@ Change log:
 * Split Stage Controller class into HAL and child classes.
 * Add "Simulated" stage controller for testing.
 * Automation series waits only as long as needed for laser power adjustments.
+* Fixed application freeze if release notes viewer window was closed.
 
 1.7.1 (2025-09-29)
 * Allow exposure times up to the limit of the Arduino DAQ (4 s).
