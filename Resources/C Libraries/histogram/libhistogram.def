@@ -1,3 +1,0 @@
-; c:\Program Files (x86)\Dev-Cpp\MinGW64\bin\dlltool --base-file C:\Users\MANUEL~1\AppData\Local\Temp\cca01700.base --output-exp histogram.exp --dllname histogram.dll --output-def libhistogram.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup --def C:\Users\MANUEL~1\AppData\Local\Temp\cca01700.def --output-lib libhistogram.a
-EXPORTS
-	histogram @ 1
