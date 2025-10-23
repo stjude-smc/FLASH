@@ -94,12 +94,26 @@ If you use FLASH in your research, please cite:
 For support, bug reports, or feature requests, please contact:  
 [scott.blanchard@stjude.org](mailto:scott.blanchard@stjude.org)
 
-When reporting issues, include:
+When reporting issues, please include:
 
 - Your institution, PI, and software version
 - Your hardware setup and configuration file
 - Any error messages or screenshots
 - Details on reproduction steps
+
+---
+
+## Telemetry and Privacy
+
+This software collects optional telemetry that is used for aggregate usage statistics to help us maintain funding and support. Any information you provide is used solely for research and software-improvement purposes. It will not be sold or disclosed to third parties.
+
+When telemetry is enabled, the following anonymous data are collected:
+- Basic usage events like software start.
+- Application version
+- Operating system and platform
+- Approximate geographic region (derived from IP address)
+
+Instrument configuration, image data, or other potentially sensitive information is never collected. Telemetry data are sent to PostHog, a hosted analytics service, and are retained for a period of one year. You can disable telemetry at any time by adding the line "opt_out = TRUE" at the end of the file "telemetry.ini" in the FLASH installation folder.
 
 ---
 
