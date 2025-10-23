@@ -1,4 +1,4 @@
-Flash Gordon (SM-FIRE)
+FLASH (formerly SM-FIRE)
 Copyright (c) Cornell University and St Jude Children's Research Hospital, 2014-2025
 Created by Daniel Terry and Manuel Juette.
 ================================================================================
@@ -6,6 +6,16 @@ Created by Daniel Terry and Manuel Juette.
 
 Change log: 
 ----------
+
+1.8.0 (2025-10-20)
+* Encapsulate all automation for Application actor into AutomationContext class.
+* Split Stage Controller class into HAL and child classes.
+* Add "Simulated" stage controller for testing.
+* Automation series waits only as long as needed for laser power adjustments.
+
+1.7.1 (2025-09-29)
+* Allow exposure times up to the limit of the Arduino DAQ (4 s).
+* Photometrics: fixed 10 second maximum frame interval in strobe/alex mode.
 
 1.7.0 (2025-09-12)
 * Photometrics: transition to PVCam-LabView adapter version 2.6.2 from 2.3(beta) and link to userlib location instead of Public Documents. PVCamNet.dll version changed from 2.0.13 to 2.0.19.

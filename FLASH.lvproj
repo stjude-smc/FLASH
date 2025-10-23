@@ -83,8 +83,8 @@
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 				<Property Name="NI.SortType" Type="Int">0</Property>
 			</Item>
-			<Item Name="Flash Gordon Development Guide.pdf" Type="Document" URL="../Flash Gordon Development Guide.pdf"/>
-			<Item Name="Flash Gordon documentation.pdf" Type="Document" URL="../Flash Gordon documentation.pdf"/>
+			<Item Name="FLASH Development Guide.pdf" Type="Document" URL="../FLASH Development Guide.pdf"/>
+			<Item Name="FLASH documentation.pdf" Type="Document" URL="../FLASH documentation.pdf"/>
 			<Item Name="Init.json" Type="Document" URL="../Init.json"/>
 			<Item Name="Post-Build Action.vi" Type="VI" URL="../Resources/Post-Build Action.vi"/>
 			<Item Name="README.md" Type="Document" URL="../README.md"/>
@@ -105,7 +105,7 @@
 		</Item>
 		<Item Name="Create Hardware Configuration UI.vi" Type="VI" URL="../Application/Create Hardware Configuration UI.vi"/>
 		<Item Name="Create Initialization File.vi" Type="VI" URL="../Application/Create Initialization File.vi"/>
-		<Item Name="Flash Gordon.vi" Type="VI" URL="../Flash Gordon.vi"/>
+		<Item Name="FLASH.vi" Type="VI" URL="../FLASH.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="AbortAcquisition.vi" Type="VI" URL="/&lt;userlib&gt;/atmcd64d.llb/AbortAcquisition.vi"/>
@@ -393,6 +393,8 @@
 				<Item Name="Draw Circle by Radius.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Draw Circle by Radius.vi"/>
 				<Item Name="Draw Flattened Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Flattened Pixmap.vi"/>
 				<Item Name="Draw Rectangle.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Rectangle.vi"/>
+				<Item Name="Draw Text at Point.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Text at Point.vi"/>
+				<Item Name="Draw Text in Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Text in Rect.vi"/>
 				<Item Name="DTbl Digital Size.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Digital Size.vi"/>
 				<Item Name="DTbl Uncompress Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Uncompress Digital.vi"/>
 				<Item Name="DWDT Uncompress Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DWDTOps.llb/DWDT Uncompress Digital.vi"/>
@@ -463,6 +465,7 @@
 				<Item Name="ParseXMLFragments.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/ParseXMLFragments.vi"/>
 				<Item Name="Path to URL inner.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL inner.vi"/>
 				<Item Name="Path to URL.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL.vi"/>
+				<Item Name="PCT Pad String.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/PCT Pad String.vi"/>
 				<Item Name="Read From XML File(array).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Read From XML File(array).vi"/>
 				<Item Name="Read From XML File(string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Read From XML File(string).vi"/>
 				<Item Name="Read From XML File.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/Read From XML File.vi"/>
@@ -485,6 +488,8 @@
 				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
 				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
 				<Item Name="Time-Delay Override Options.ctl" Type="VI" URL="/&lt;vilib&gt;/ActorFramework/Time-Delayed Send Message/Time-Delay Override Options.ctl"/>
+				<Item Name="Time-Delayed Send Message Core.vi" Type="VI" URL="/&lt;vilib&gt;/ActorFramework/Time-Delayed Send Message/Time-Delayed Send Message Core.vi"/>
+				<Item Name="Time-Delayed Send Message.vi" Type="VI" URL="/&lt;vilib&gt;/ActorFramework/Time-Delayed Send Message/Time-Delayed Send Message.vi"/>
 				<Item Name="Trim Whitespace One-Sided.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace One-Sided.vi"/>
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="Unflatten Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pixmap.llb/Unflatten Pixmap.vi"/>
@@ -529,7 +534,7 @@
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
-			<Item Name="Flash Gordon" Type="EXE">
+			<Item Name="FLASH" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_INI_aliasGUID" Type="Str">{6BEBD298-F68D-4CFA-AA16-7A25096881B5}</Property>
 				<Property Name="App_INI_GUID" Type="Str">{EF65907B-DF4D-4AE7-BA2D-819191B392D7}</Property>
@@ -537,7 +542,7 @@
 				<Property Name="App_serverType" Type="Int">1</Property>
 				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{E5A166F8-B122-4B59-844C-826515618897}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Flash Gordon</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">FLASH</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
@@ -548,11 +553,11 @@
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
 				<Property Name="Bld_userLogFile" Type="Path">../build_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToCommon</Property>
-				<Property Name="Bld_version.build" Type="Int">152</Property>
+				<Property Name="Bld_version.build" Type="Int">154</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">7</Property>
-				<Property Name="Destination[0].destName" Type="Str">Flash Gordon.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../testing/NI_AB_PROJECTNAME.exe</Property>
+				<Property Name="Destination[0].destName" Type="Str">FLASH.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../testing/FLASH.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
@@ -563,10 +568,10 @@
 				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{8DDFFE3D-874E-4853-B9D5-828E20FA770B}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{2464E603-1515-4952-8B46-A06A7DE99B5B}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Flash Gordon.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/FLASH.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[10].destinationIndex" Type="Int">0</Property>
@@ -635,49 +640,46 @@
 				<Property Name="Source[25].itemID" Type="Ref">/My Computer/Resources/Init.json</Property>
 				<Property Name="Source[25].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[26].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[26].itemID" Type="Ref">/My Computer/Resources/Flash Gordon documentation.pdf</Property>
+				<Property Name="Source[26].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Microsync.lvlib/Microsync.lvclass</Property>
 				<Property Name="Source[26].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[26].type" Type="Str">Library</Property>
 				<Property Name="Source[27].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[27].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Microsync.lvlib/Microsync.lvclass</Property>
+				<Property Name="Source[27].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Cobolt Laser.lvlib/Cobolt Laser.lvclass</Property>
 				<Property Name="Source[27].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[27].type" Type="Str">Library</Property>
 				<Property Name="Source[28].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[28].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Cobolt Laser.lvlib/Cobolt Laser.lvclass</Property>
+				<Property Name="Source[28].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Newport Power Meter.lvlib/Newport Power Meter.lvclass</Property>
 				<Property Name="Source[28].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[28].type" Type="Str">Library</Property>
 				<Property Name="Source[29].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[29].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Newport Power Meter.lvlib/Newport Power Meter.lvclass</Property>
+				<Property Name="Source[29].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Thorlabs Power Meter.lvlib/Thorlabs Power Meter.lvclass</Property>
 				<Property Name="Source[29].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[29].type" Type="Str">Library</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Resources/dll/ti2wrap.dll</Property>
 				<Property Name="Source[30].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[30].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Thorlabs Power Meter.lvlib/Thorlabs Power Meter.lvclass</Property>
+				<Property Name="Source[30].itemID" Type="Ref">/My Computer/Resources/README.md</Property>
 				<Property Name="Source[30].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[30].type" Type="Str">Library</Property>
 				<Property Name="Source[31].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[31].itemID" Type="Ref">/My Computer/Resources/README.md</Property>
+				<Property Name="Source[31].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Nikon Ti2 Stage.lvlib/Nikon Ti2 Stage.lvclass</Property>
 				<Property Name="Source[31].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[31].type" Type="Str">Library</Property>
 				<Property Name="Source[32].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[32].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Nikon Ti2 Stage.lvlib/Nikon Ti2 Stage.lvclass</Property>
+				<Property Name="Source[32].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Simulated Stage.lvlib/Simulated Stage.lvclass</Property>
 				<Property Name="Source[32].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[32].type" Type="Str">Library</Property>
 				<Property Name="Source[33].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[33].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Simulated Stage.lvlib/Simulated Stage.lvclass</Property>
+				<Property Name="Source[33].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Newport ESP301 Stage.lvlib/Newport ESP301 Stage.lvclass</Property>
 				<Property Name="Source[33].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[33].type" Type="Str">Library</Property>
 				<Property Name="Source[34].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[34].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Newport ESP301 Stage.lvlib/Newport ESP301 Stage.lvclass</Property>
+				<Property Name="Source[34].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Ludl Stage.lvlib/Ludl Stage.lvclass</Property>
 				<Property Name="Source[34].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[34].type" Type="Str">Library</Property>
 				<Property Name="Source[35].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[35].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Ludl Stage.lvlib/Ludl Stage.lvclass</Property>
+				<Property Name="Source[35].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/ASI Stage.lvlib/ASI Stage.lvclass</Property>
 				<Property Name="Source[35].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[35].type" Type="Str">Library</Property>
-				<Property Name="Source[36].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[36].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/ASI Stage.lvlib/ASI Stage.lvclass</Property>
-				<Property Name="Source[36].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[36].type" Type="Str">Library</Property>
 				<Property Name="Source[4].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[4].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[4].Container.depDestIndex" Type="Int">0</Property>
@@ -706,15 +708,15 @@
 				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Hardware/Hardware Devices/Andor Camera.lvlib/Andor Camera.lvclass</Property>
 				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[9].type" Type="Str">Library</Property>
-				<Property Name="SourceCount" Type="Int">37</Property>
+				<Property Name="SourceCount" Type="Int">36</Property>
 				<Property Name="TgtF_companyName" Type="Str">St Jude Childrens Research Hospital</Property>
 				<Property Name="TgtF_fastFileFormat" Type="Bool">true</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Flash Gordon</Property>
-				<Property Name="TgtF_internalName" Type="Str">Flash Gordon</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">FLASH</Property>
+				<Property Name="TgtF_internalName" Type="Str">FLASH</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2014-2025 Blanchard Lab</Property>
-				<Property Name="TgtF_productName" Type="Str">Flash Gordon</Property>
+				<Property Name="TgtF_productName" Type="Str">FLASH</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{06978C59-3946-4F24-A3A2-915601368EB6}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">Flash Gordon.exe</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">FLASH.exe</Property>
 			</Item>
 		</Item>
 	</Item>

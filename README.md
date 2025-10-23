@@ -1,4 +1,4 @@
-# SM-FIRE (formerly Flash Gordon)
+# FLASH (formerly SM-FIRE)
 
 **Authors:** Daniel Terry, Manuel Juette, and Roman Kiselev
 **Institution:** St. Jude Children's Research Hospital  
@@ -10,7 +10,7 @@
 
 ## Overview
 
-**SM-FIRE** is a high-performance instrument control and image acquisition platform for **single-molecule TIRF microscopy**. Built for precision, speed, and flexibility, it enables synchronized control of cameras, shutters, lasers, stages, and other devices — with seamless downstream compatibility with the SPARTAN analysis suite.
+**FLASH** is a high-performance instrument control and image acquisition platform for **single-molecule TIRF microscopy**. Built for precision, speed, and flexibility, it enables synchronized control of cameras, shutters, lasers, stages, and other devices — with seamless downstream compatibility with the SPARTAN analysis suite.
 
 > **WARNING**  
 > Flash Gordon does **not** include integrated laser safety mechanisms. Proper external safety systems and procedures are the responsibility of the user to maintain.
@@ -46,8 +46,8 @@
 
 1. Install all required drivers and runtimes listed above.
 2. Download the [latest stable release](https://github.com/stjude-smc/SM-FIRE/releases).
-2. Unzip the Flash Gordon package to `C:\FlashGordon`.
-3. Create a desktop shortcut to `FlashGordon.exe`.
+2. Unzip the Flash Gordon package to `C:\FLASH`.
+3. Create a desktop shortcut to `FLASH.exe`.
 4. Power on and initialize all hardware devices.
 5. Launch the application and customize the configuration to match your instrument.
 
@@ -57,7 +57,7 @@
 
 | Task                | How-To                                                                 |
 |---------------------|------------------------------------------------------------------------|
-| Launch Software     | Run `FlashGordon.exe`                                                  |
+| Launch Software     | Run `FLASH.exe`                                                  |
 | Select Configuration| Choose your instrument setup from the list                             |
 | Live View           | Click **Show Live** to preview images and align channels               |
 | Start Acquisition   | Use **Stream Acquisition** to record movies to disk                    |
@@ -68,7 +68,7 @@ Movies are saved as **16-bit BigTIFF** stacks with aligned montage layout and st
 
 ## Documentation
 
-The full user manual is included in [`Flash Gordon documentation.pdf`](./Flash%20Gordon%20documentation.pdf), covering:
+The full user manual is included in [`FLASH documentation.pdf`](./FLASH%20documentation.pdf), covering:
 
 - Hardware setup and supported devices
 - Configuration management
@@ -80,7 +80,7 @@ The full user manual is included in [`Flash Gordon documentation.pdf`](./Flash%2
 
 ## Citation
 
-If you use Flash Gordon in your research, please cite:
+If you use FLASH in your research, please cite:
 
 > Juette MF, Terry DS, Wasserman MR, et al.  
 > *Single-molecule imaging of non-equilibrium molecular ensembles on the millisecond timescale.*  
@@ -96,7 +96,7 @@ For support, bug reports, or feature requests, please contact:
 
 When reporting issues, include:
 
-- Your institution, PI, and Flash Gordon version
+- Your institution, PI, and software version
 - Your hardware setup and configuration file
 - Any error messages or screenshots
 - Details on reproduction steps
