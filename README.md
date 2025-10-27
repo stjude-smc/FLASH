@@ -1,10 +1,14 @@
-# FLASH (formerly SM-FIRE)
+# FLASH (FLuorescence Acquisition Software with High-throughput)
 
 **Authors:** Daniel Terry, Manuel Juette, and Roman Kiselev
-**Institution:** St. Jude Children's Research Hospital  
-**Contact:** [scott.blanchard@stjude.org](mailto:scott.blanchard@stjude.org)  
-**License:** See [`license.txt`](./license.txt)  
-**GitHub:** [stjude-smc/SM-FIRE](https://github.com/stjude-smc/SM-FIRE)
+
+**Institution:** St. Jude Children's Research Hospital
+
+**Contact:** [scott.blanchard@stjude.org](mailto:scott.blanchard@stjude.org)
+
+**License:** See [`license.txt`](./license.txt)
+
+**GitHub:** [stjude-smc/FLASH](https://github.com/stjude-smc/FLASH)
 
 ---
 
@@ -45,7 +49,7 @@
 ## Installation
 
 1. Install all required drivers and runtimes listed above.
-2. Download the [latest stable release](https://github.com/stjude-smc/SM-FIRE/releases).
+2. Download the [latest stable release](https://github.com/stjude-smc/FLASH/releases).
 2. Unzip the Flash Gordon package to `C:\FLASH`.
 3. Create a desktop shortcut to `FLASH.exe`.
 4. Power on and initialize all hardware devices.
