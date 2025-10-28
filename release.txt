@@ -7,6 +7,9 @@ Created by Daniel Terry and Manuel Juette.
 Change log: 
 ----------
 
+1.8.1 (2025-10-28)
+* Microsync v2.6.0 (red PCB v0.2); changed fluidics pin from D44 to D6.
+
 1.8.0 (2025-10-20)
 * Encapsulate all automation for Application actor into AutomationContext class.
 * Split Stage Controller class into HAL and child classes.
