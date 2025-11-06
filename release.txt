@@ -7,6 +7,10 @@ Created by Daniel Terry and Manuel Juette.
 Change log: 
 ----------
 
+1.8.2 (2025-11-6)
+* When movie is cancelled early, ensure it includes the same number of frames for each ALEX channel.
+* Fix autofocus failure with good Z stack data caused by Z units conflict.
+
 1.8.1 (2025-10-28)
 * Microsync v2.6.0 (red PCB v0.2); changed fluidics pin from D44 to D6.
 
