@@ -95,11 +95,14 @@
 			<Item Name="Particle Counter.lvlib" Type="Library" URL="../Services/Particle Counter/Particle Counter.lvlib"/>
 		</Item>
 		<Item Name="User Interface" Type="Folder">
-			<Item Name="Countdown.vi" Type="VI" URL="../User Interface/Countdown.vi"/>
-			<Item Name="Elapsed Time.vi" Type="VI" URL="../User Interface/Elapsed Time.vi"/>
+			<Item Name="Dialogs" Type="Folder">
+				<Item Name="Countdown.vi" Type="VI" URL="../User Interface/Countdown.vi"/>
+				<Item Name="Elapsed Time.vi" Type="VI" URL="../User Interface/Elapsed Time.vi"/>
+				<Item Name="Param Sweep Dialog.vi" Type="VI" URL="../User Interface/Param Sweep Dialog.vi"/>
+				<Item Name="Text Viewer.vi" Type="VI" URL="../User Interface/Text Viewer.vi"/>
+			</Item>
 			<Item Name="Main Window.lvlib" Type="Library" URL="../User Interface/Main Window/Main Window.lvlib"/>
 			<Item Name="Splash Screen.lvlib" Type="Library" URL="../User Interface/Splash Screen/Splash Screen.lvlib"/>
-			<Item Name="Text Viewer.vi" Type="VI" URL="../User Interface/Text Viewer.vi"/>
 			<Item Name="UI Window.lvlib" Type="Library" URL="../User Interface/UI Window/UI Window.lvlib"/>
 			<Item Name="Viewer.lvlib" Type="Library" URL="../User Interface/Viewer/Viewer.lvlib"/>
 		</Item>

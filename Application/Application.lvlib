@@ -42,6 +42,7 @@
 		<Item Name="Viewer Status Message Msg.lvclass" Type="LVClass" URL="../../Application Messages/Viewer Status Message Msg/Viewer Status Message Msg.lvclass"/>
 	</Item>
 	<Item Name="Application.lvclass" Type="LVClass" URL="../Application.lvclass"/>
+	<Item Name="Check Stage Limit.vi" Type="VI" URL="../Check Stage Limit.vi"/>
 	<Item Name="Get App Version.vi" Type="VI" URL="../Get App Version.vi"/>
 	<Item Name="laser power FGV.vi" Type="VI" URL="../laser power FGV.vi"/>
 	<Item Name="Mode.ctl" Type="VI" URL="../Mode.ctl"/>
