@@ -26,10 +26,9 @@
 - Up to 4 synchronized cameras with synchronized acquisition
 - Supports continuous, ALEX, and stroboscopic illumination
 - Real-time Live Viewer with particle alignment and particle preview
-- Auto-focus and staged scan automation
+- Auto-focus, stage scan, and parameter sweep automation
 - Integrated support for laser power control and photobleaching routines
 - Metadata-rich BigTIFF (.tif) output for analysis with [SPARTAN](https://github.com/stjude-smc/SPARTAN)
-- Built-in configuration management for multi-instrument labs
 
 ---
 
@@ -66,7 +65,7 @@
 | Live View           | Click **Show Live** to preview images and align channels               |
 | Start Acquisition   | Use **Stream Acquisition** to record movies to disk                    |
 
-Movies are saved as **16-bit BigTIFF** stacks with aligned montage layout and structured metadata.
+Movies are saved as **64-bit BigTIFF** stacks with aligned montage layout and structured metadata.
 
 ---
 
@@ -102,7 +101,7 @@ When reporting issues, please include:
 
 - Your institution, PI, and software version
 - Your hardware setup and configuration file
-- Any error messages or screenshots
+- Any error messages, screenshots, and log file.
 - Details on reproduction steps
 
 ---
