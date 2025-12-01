@@ -574,8 +574,8 @@
 				<Property Name="Destination[3].destName" Type="Str">dll</Property>
 				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
-				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/Icon.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{77056C15-6F4E-4275-873D-1D586C2DBE21}</Property>
+				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/FLASH.ico</Property>
+				<Property Name="Source[0].itemID" Type="Str">{CAE85BBC-0D6B-48F2-973E-62EBF3509B6E}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/FLASH.vi</Property>
