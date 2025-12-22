@@ -11,5 +11,6 @@
 		<Item Name="Parallel Block.ctl" Type="VI" URL="../Parallel Block.ctl"/>
 	</Item>
 	<Item Name="AutomationContext.lvclass" Type="LVClass" URL="../AutomationContext.lvclass"/>
+	<Item Name="Movie File Suffix.vi" Type="VI" URL="../helpers/Movie File Suffix.vi"/>
 	<Item Name="Protocol.lvclass" Type="LVClass" URL="../Protocol/Protocol.lvclass"/>
 </Library>
