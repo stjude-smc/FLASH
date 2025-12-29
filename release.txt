@@ -7,6 +7,20 @@ Created by Daniel Terry, Manuel Juette, and Roman Kiselev.
 Change log: 
 ----------
 
+1.9.1 (2025-12-29)
+* Injection countdown is displayed only on the first movie in a series.
+* Parameter sweep dialog is resizable for longer movie lists.
+* Particle counter avoids the first frame, which may have camera clearing and shutter opening artifacts.
+* New minimum number of frames for particle counter to avoid super-short movies.
+* Main Window cancel button prompts for whether to end current movie or entire series.
+* Viewer: Esc key does not stop recording (users found this unintuitive).
+* Viewer: new context menu for zooming, screenshots, and exporting (instead of obscure keyboard shortcuts).
+* Added new "laser line" sweep parameter.
+* Allow duplicate values in sweep list to allow repeats and combinations.
+* Automation: save RunPlan.json for each run for debugging and future programmability.
+* Automation: removed logging when building a run plan, replaced by the saved JSON file.
+* Fixed incomplete shutdown due to hidden viewer window left in memory.
+
 1.9.0 (2025-11-21)
 * New Parameter Sweep acquisition mode for automated acquisition of laser power series, etc.
 * Warn on startup about ALEX triggering issues when using Arduino MEGA microcontroller with Kinetix cameras.
