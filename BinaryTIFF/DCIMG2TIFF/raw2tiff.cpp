@@ -11,65 +11,12 @@ std::ostream& r2tlog = std::cout;
 #endif
 
 
-// RAW format parameters used for disk streaming from Photometrics cameras
-#define PVCAM_FRAME_GAP_BYTES 4096
-#define PVCAM_OFFSET_TO_FIRST_FRAME 80
-#define PVCAM_INFO_FILE "ImageJ_import_Cam0.txt"
-
-
-inline void lowercase(std::string& line)
-{
-	std::transform(line.begin(), line.end(), line.begin(), [](unsigned char c) { return std::tolower(c); });
-}
-
-void extractNumber(std::string line, std::string target, int& output)
-{
-	lowercase(line);
-	lowercase(target);
-
-	if (line.find(target) != std::string::npos)
-	{
-		auto separator = line.find(':');
-		if (separator != std::string::npos)
-		{
-			line.erase(0, separator + 1);
-			output = atoi(line.c_str());
-		}
-	}
-}
-
-inline std::string extractIJPath(std::string input)
-{
-	//raw file name format: "E:/New folder/240925_test_of_a_movie000_CamX_0000001.raw"
-	char N = input[input.size() - 13];
-	return input.substr(0, input.find_last_of("\\/") + 1) + "ImageJ_import_Cam" + N + ".txt";
-}
 
 template <class T>
 int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uint32_t nFrames,
 	uint32_t skipFrames, uint32_t nChannels, uint32_t* vFlip, uint32_t* hFlip, uint32_t ch3right,
-	int64_t tiffOffset, std::vector<char*> pathlist)
+	int64_t tiffOffset, uint32_t raw_offset, uint32_t frame_gap_bytes, std::vector<char*> pathlist)
 {
-	// Load import parameters text file (should be identical for all cameras).
-	// FIXME: consider reading all values to check for consistency.
-	int frame_gap_bytes = PVCAM_FRAME_GAP_BYTES;
-	int raw_offset = PVCAM_OFFSET_TO_FIRST_FRAME;
-	{
-		std::string pvcam_info_file = extractIJPath(pathlist[0]);
-		std::ifstream infofile(pvcam_info_file);
-		std::string line;
-
-		if (!infofile)
-			r2tlog << "Could not open " << pvcam_info_file << ". Using defaults\n";
-
-		while (getline(infofile, line))
-		{
-			extractNumber(line, "Gap between images", frame_gap_bytes);
-			extractNumber(line, "Offset to first image", raw_offset);
-		}
-
-		r2tlog << "Raw offset=" << raw_offset << ", Frame gap=" << frame_gap_bytes << std::endl;
-	}
 
 	const int movieWidth = (nChannels > 1) ? 2 : 1;
 	const int movieHeight = (nChannels > 2) ? 2 : 1;
@@ -150,8 +97,6 @@ int raw2tiff_impl(char* tiffPath, uint32_t frameWidth, uint32_t frameHeight, uin
 
 
 // Similar to dcimg2tiff but reads raw frame data from PVCam driver (photometrics).
-// These files contain 
-//
 //--------------------------------------------------------------------------------
 extern "C" uint32_t raw2tiff(
 	char* tiffPath, 						// TIFF file (prepared by BinaryTIFF.lvproj)
@@ -166,6 +111,8 @@ extern "C" uint32_t raw2tiff(
 	// (applies only if nChannels > 2)
 	int64_t tiffOffset,						// offset to TIFF data block
 	uint32_t bytesPerSample,				// number of bits per pixel (8 or 16).
+	uint32_t raw_offset,                    // byte offset to image data in raw file
+	uint32_t raw_frame_gap,					// byte gap between frames in raw file
 	char* dcimgPath1, char* dcimgPath2, 	// raw image stack file paths
 	char* dcimgPath3, char* dcimgPath4)		// Layout:	(ch3right == 0)		(ch3right == 1)
 	// 			dcimg1	dcimg2		dcimg1	dcimg2
@@ -182,15 +129,16 @@ extern "C" uint32_t raw2tiff(
 
 	r2tlog << "START: tiffPath=" << tiffPath << ", dcimgPath1=" << dcimgPath1 << " frameWidth=" << frameWidth
 		<< ", frameHeight=" << frameHeight << ", nFrames=" << nFrames << ", skipFrames=" << skipFrames
-		<< ", nChannels=" << nChannels << ", ch3right=" << ch3right << ", tiffOffset=" << tiffOffset << std::endl;
+		<< ", nChannels=" << nChannels << ", ch3right=" << ch3right << ", tiffOffset=" << tiffOffset
+		<< ", Raw offset=" << raw_offset << ", Frame gap=" << raw_frame_gap << std::endl;
 
 	// Load raw frame, combine, and save to tif file.
 	if (bytesPerSample == 2)
 		result = raw2tiff_impl<uint16_t>(tiffPath, frameWidth, frameHeight, nFrames,
-			skipFrames, nChannels, vFlip, hFlip, ch3right, tiffOffset, pathlist);
+			skipFrames, nChannels, vFlip, hFlip, ch3right, tiffOffset, raw_offset, raw_frame_gap, pathlist);
 	else
 		result = raw2tiff_impl<uint8_t>(tiffPath, frameWidth, frameHeight, nFrames, 
-			skipFrames, nChannels, vFlip, hFlip, ch3right, tiffOffset, pathlist);
+			skipFrames, nChannels, vFlip, hFlip, ch3right, tiffOffset, raw_offset, raw_frame_gap, pathlist);
 
 	currentFrame++; // final increment tells caller that conversion is done
 

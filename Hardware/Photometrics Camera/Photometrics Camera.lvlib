@@ -11,6 +11,7 @@
 		<Item Name="PmSetReadoutMode.vi" Type="VI" URL="../helper/PmSetReadoutMode.vi"/>
 		<Item Name="PmSetRegion.vi" Type="VI" URL="../helper/PmSetRegion.vi"/>
 		<Item Name="Prep Acquisition.vi" Type="VI" URL="../helper/Prep Acquisition.vi"/>
+		<Item Name="Read ImageJ Import File.vi" Type="VI" URL="../helper/Read ImageJ Import File.vi"/>
 	</Item>
 	<Item Name="testing" Type="Folder">
 		<Item Name="TestPVCam.vi" Type="VI" URL="../TestPVCam.vi"/>

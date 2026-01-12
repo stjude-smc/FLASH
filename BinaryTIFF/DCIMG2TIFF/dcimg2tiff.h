@@ -63,6 +63,8 @@ extern "C" DCIMG2TIFFDLL_API uint32_t raw2tiff(
 	// (applies only if nChannels > 2)
 	int64_t tiffOffset,						// offset to TIFF data block
 	uint32_t bytesPerSample,				// number of bytes per pixel (1 or 2).
+	uint32_t raw_offset,                    // byte offset to image data in raw file
+	uint32_t raw_frame_gap,					// byte gap between frames in raw file
 	char* dcimgPath1, char* dcimgPath2, 	// raw image stack file paths
 	char* dcimgPath3, char* dcimgPath4);	// (dcimgPath3/4 optional)
 // Layout:	(ch3right == 0)		(ch3right == 0)
