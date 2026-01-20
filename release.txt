@@ -7,6 +7,14 @@ Created by Daniel Terry, Manuel Juette, and Roman Kiselev.
 Change log: 
 ----------
 
+1.9.2 (2026-01-20)
+* Fixed laser power set to zero at the beginning of movie when not using autofocus.
+* Require filename to not be empty and base path to be valid before starting recording.
+* Fix incomplete shutdown when power meter not detected on startup.
+* Photometrics: extract raw data parameters from "ImageJ_import" text file immediately after acquisition completes to avoid reading an import file from another acquisition with different parameters. (fixes issue #87)
+* Photometrics: remove unnecessary delay nodes from Start Live and Start Streaming.
+* Ignore "file not found" errors when deleting raw files with a cancelled acquisition (they may not exist yet).
+
 1.9.1 (2025-12-29)
 * Injection countdown is displayed only on the first movie in a series.
 * Parameter sweep dialog is resizable for longer movie lists.
