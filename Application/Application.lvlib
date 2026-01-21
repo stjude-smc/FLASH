@@ -9,6 +9,7 @@
 		<Item Name="Automation_TaskCompleted Msg.lvclass" Type="LVClass" URL="../../Application Messages/Automation_TaskCompleted Msg/Automation_TaskCompleted Msg.lvclass"/>
 		<Item Name="Autosampler Move Needle Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Move Needle Msg/Autosampler Move Needle Msg.lvclass"/>
 		<Item Name="Autosampler Move To Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Move To Msg/Autosampler Move To Msg.lvclass"/>
+		<Item Name="Autosampler Prime Pump Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Prime Pump Msg/Autosampler Prime Pump Msg.lvclass"/>
 		<Item Name="Autosampler Set Fill Volume Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Set Fill Volume Msg/Autosampler Set Fill Volume Msg.lvclass"/>
 		<Item Name="Autosampler Set Valve Pos Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Set Valve Pos Msg/Autosampler Set Valve Pos Msg.lvclass"/>
 		<Item Name="Autosampler Shake Tray Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Shake Tray Msg/Autosampler Shake Tray Msg.lvclass"/>

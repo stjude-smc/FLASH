@@ -7,6 +7,7 @@
 	<Item Name="Messages for this actor" Type="Folder">
 		<Item Name="Move Needle Msg.lvclass" Type="LVClass" URL="../../Autosampler Messages/Move Needle Msg/Move Needle Msg.lvclass"/>
 		<Item Name="Move To Msg.lvclass" Type="LVClass" URL="../../Autosampler Messages/Move To Msg/Move To Msg.lvclass"/>
+		<Item Name="Prime Pump Msg.lvclass" Type="LVClass" URL="../../Autosampler Messages/Prime Pump Msg/Prime Pump Msg.lvclass"/>
 		<Item Name="Set Fill Volume Msg.lvclass" Type="LVClass" URL="../../Autosampler Messages/Set Fill Volume Msg/Set Fill Volume Msg.lvclass"/>
 		<Item Name="Set Valve Position Msg.lvclass" Type="LVClass" URL="../../Autosampler Messages/Set Valve Position Msg/Set Valve Position Msg.lvclass"/>
 		<Item Name="Shake Tray Msg.lvclass" Type="LVClass" URL="../../Autosampler Messages/Shake Tray Msg/Shake Tray Msg.lvclass"/>
