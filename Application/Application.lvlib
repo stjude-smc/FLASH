@@ -7,6 +7,14 @@
 	<Item Name="Messages for this actor" Type="Folder">
 		<Item Name="Automation Timeout Msg.lvclass" Type="LVClass" URL="../../Application Messages/Automation Timeout Msg/Automation Timeout Msg.lvclass"/>
 		<Item Name="Automation_TaskCompleted Msg.lvclass" Type="LVClass" URL="../../Application Messages/Automation_TaskCompleted Msg/Automation_TaskCompleted Msg.lvclass"/>
+		<Item Name="Autosampler Move Needle Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Move Needle Msg/Autosampler Move Needle Msg.lvclass"/>
+		<Item Name="Autosampler Move To Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Move To Msg/Autosampler Move To Msg.lvclass"/>
+		<Item Name="Autosampler Prime Pump Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Prime Pump Msg/Autosampler Prime Pump Msg.lvclass"/>
+		<Item Name="Autosampler Set Fill Volume Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Set Fill Volume Msg/Autosampler Set Fill Volume Msg.lvclass"/>
+		<Item Name="Autosampler Set Valve Pos Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Set Valve Pos Msg/Autosampler Set Valve Pos Msg.lvclass"/>
+		<Item Name="Autosampler Shake Tray Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Shake Tray Msg/Autosampler Shake Tray Msg.lvclass"/>
+		<Item Name="Autosampler Status Update Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Status Update Msg/Autosampler Status Update Msg.lvclass"/>
+		<Item Name="Autosampler Wash Needle Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Wash Needle Msg/Autosampler Wash Needle Msg.lvclass"/>
 		<Item Name="Calibrate Polarizer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Calibrate Polarizer Msg/Calibrate Polarizer Msg.lvclass"/>
 		<Item Name="Cancel Operation Msg.lvclass" Type="LVClass" URL="../../Application Messages/Record Button Off Msg/Cancel Operation Msg.lvclass"/>
 		<Item Name="Close Shutter Msg.lvclass" Type="LVClass" URL="../../Application Messages/Close Shutter Msg/Close Shutter Msg.lvclass"/>

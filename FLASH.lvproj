@@ -25,6 +25,7 @@
 			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Item Name="Hardware Abstraction Layer" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">0</Property>
+				<Item Name="Autosampler.lvlib" Type="Library" URL="../Hardware/Autosampler/Autosampler.lvlib"/>
 				<Item Name="Camera.lvlib" Type="Library" URL="../Hardware/Camera/Camera.lvlib"/>
 				<Item Name="Device.lvlib" Type="Library" URL="../Hardware/Device/Device.lvlib"/>
 				<Item Name="Laser.lvlib" Type="Library" URL="../Hardware/Laser/Laser.lvlib"/>
@@ -35,6 +36,7 @@
 			</Item>
 			<Item Name="Hardware Devices" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">0</Property>
+				<Item Name="Alltesta Autosampler.lvlib" Type="Library" URL="../Hardware/Alltesta Autosampler/Alltesta Autosampler.lvlib"/>
 				<Item Name="Andor Camera.lvlib" Type="Library" URL="../Hardware/Andor Camera/Andor Camera.lvlib"/>
 				<Item Name="Arduino DAQ.lvlib" Type="Library" URL="../Hardware/Arduino DQ/Arduino DAQ.lvlib"/>
 				<Item Name="ASI Stage.lvlib" Type="Library" URL="../Hardware/ASI Stage/ASI Stage.lvlib"/>
@@ -50,6 +52,7 @@
 				<Item Name="Nikon Stand.lvlib" Type="Library" URL="../Hardware/Nikon Stand/Nikon Stand.lvlib"/>
 				<Item Name="Nikon Ti2 Stage.lvlib" Type="Library" URL="../Hardware/Nikon Ti2 Stage/Nikon Ti2 Stage.lvlib"/>
 				<Item Name="Photometrics Camera.lvlib" Type="Library" URL="../Hardware/Photometrics Camera/Photometrics Camera.lvlib"/>
+				<Item Name="Simulated Autosampler.lvlib" Type="Library" URL="../Hardware/Simulated Autosampler/Simulated Autosampler.lvlib"/>
 				<Item Name="Simulated Stage.lvlib" Type="Library" URL="../Hardware/Simulated Stage/Simulated Stage.lvlib"/>
 				<Item Name="Thorlabs Polarizer.lvlib" Type="Library" URL="../Hardware/Thorlabs Polarizer/Thorlabs Polarizer.lvlib"/>
 				<Item Name="Thorlabs Power Meter.lvlib" Type="Library" URL="../Hardware/Thorlabs Power Meter/Thorlabs Power Meter.lvlib"/>
@@ -521,6 +524,7 @@
 			</Item>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
+			<Item Name="matscript.dll" Type="Document"/>
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -560,9 +564,10 @@
 				<Property Name="Bld_previewCacheID" Type="Str">{1236E784-5DC3-4F2B-9C31-606B26C263EE}</Property>
 				<Property Name="Bld_userLogFile" Type="Path">../build_log.txt</Property>
 				<Property Name="Bld_userLogFile.pathType" Type="Str">relativeToCommon</Property>
-				<Property Name="Bld_version.build" Type="Int">169</Property>
+				<Property Name="Bld_version.build" Type="Int">176</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">9</Property>
+				<Property Name="Bld_version.patch" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">FLASH.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../testing/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -575,7 +580,7 @@
 				<Property Name="Destination[3].path" Type="Path">../testing/dll</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/Resources/Images/FLASH.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{CAE85BBC-0D6B-48F2-973E-62EBF3509B6E}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{158245E2-DE85-4D5D-9217-FB69C6D2DD4D}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/FLASH.vi</Property>
