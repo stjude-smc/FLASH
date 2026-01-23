@@ -44,6 +44,7 @@
 		<Item Name="Start Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Live Mode Msg/Start Live Mode Msg.lvclass"/>
 		<Item Name="Start Recording Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Recording Msg/Start Recording Msg.lvclass"/>
 		<Item Name="Start Stream Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Stream Msg/Start Stream Msg.lvclass"/>
+		<Item Name="Start Timer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Timer Msg/Start Timer Msg.lvclass"/>
 		<Item Name="Start Z stack Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Z stack Msg/Start Z stack Msg.lvclass"/>
 		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
 		<Item Name="Update Camera Modes Msg.lvclass" Type="LVClass" URL="../../Application Messages/Update Camera Modes Msg/Update Camera Modes Msg.lvclass"/>
