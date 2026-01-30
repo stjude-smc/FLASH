@@ -17,6 +17,7 @@
 	<Item Name="Resources" Type="Folder">
 		<Item Name="Autosampler Needle Position.ctl" Type="VI" URL="../Autosampler Needle Position.ctl"/>
 		<Item Name="Autosampler State.ctl" Type="VI" URL="../Autosampler State.ctl"/>
+		<Item Name="Autosampler State2.ctl" Type="VI" URL="../Autosampler State2.ctl"/>
 		<Item Name="Autosampler Status.ctl" Type="VI" URL="../Autosampler Status.ctl"/>
 	</Item>
 	<Item Name="Autosampler.lvclass" Type="LVClass" URL="../Autosampler.lvclass"/>
