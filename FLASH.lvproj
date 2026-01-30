@@ -96,6 +96,7 @@
 		</Item>
 		<Item Name="Services" Type="Folder">
 			<Item Name="Particle Counter.lvlib" Type="Library" URL="../Services/Particle Counter/Particle Counter.lvlib"/>
+			<Item Name="Timer.lvlib" Type="Library" URL="../Timer/Timer.lvlib"/>
 		</Item>
 		<Item Name="User Interface" Type="Folder">
 			<Item Name="Dialogs" Type="Folder">
