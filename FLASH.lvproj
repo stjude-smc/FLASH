@@ -100,6 +100,7 @@
 		</Item>
 		<Item Name="User Interface" Type="Folder">
 			<Item Name="Dialogs" Type="Folder">
+				<Item Name="Autosampler Priming Settings Dialog.vi" Type="VI" URL="../User Interface/Dialogs/Autosampler Priming Settings Dialog.vi"/>
 				<Item Name="Countdown.vi" Type="VI" URL="../User Interface/Countdown.vi"/>
 				<Item Name="Elapsed Time.vi" Type="VI" URL="../User Interface/Elapsed Time.vi"/>
 				<Item Name="Param Sweep Dialog.vi" Type="VI" URL="../User Interface/Param Sweep Dialog.vi"/>
