@@ -1,0 +1,114 @@
+[
+  {
+    "Tasks":[
+      {
+        "Action":"AS Set Valve",
+        "Parameters":"2"
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Set Fill Vol",
+        "Parameters":"0"
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Raise Needle",
+        "Parameters":""
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Move To",
+        "Parameters":"{\"Area\":\"Well\",\"Index\":${WELL_ID}}"
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Lower Needle",
+        "Parameters":""
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Set Valve",
+        "Parameters":"1"
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Set Fill Vol",
+        "Parameters":"120"
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Raise Needle",
+        "Parameters":""
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Move To",
+        "Parameters":"{\"Area\":\"Home\",\"Index\":0}"
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Lower Needle",
+        "Parameters":""
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Set Fill Vol",
+        "Parameters":"20"
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Set Valve",
+        "Parameters":"2"
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"AS Set Fill Vol",
+        "Parameters":"0"
+      }
+    ]
+  },
+  {
+    "Tasks":[
+      {
+        "Action":"Delay",
+        "Parameters":"30"
+      }
+    ]
+  }
+]
