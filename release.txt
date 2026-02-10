@@ -7,7 +7,7 @@ Created by Daniel Terry, Manuel Juette, and Roman Kiselev.
 Change log: 
 ----------
 
-1.10.0 (2026-02-05)
+1.10.0 (2026-02-10)
 * Added support for SIELC Alltesta autosampler, simulated autosampler, and HAL.
 * Added "inject from well" parameter sweep for autosampler automation movie series.
 * Autosampler procedure is loaded from JSON file for power-user adjustments.
