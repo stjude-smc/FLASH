@@ -1,4 +1,4 @@
-FLASH (formerly SM-FIRE)
+FLASH (FLuorescence Acquisition Software with High-throughput)
 Copyright (c) Cornell University and St Jude Children's Research Hospital, 2014-2026
 Created by Daniel Terry, Manuel Juette, and Roman Kiselev.
 ================================================================================
@@ -6,6 +6,15 @@ Created by Daniel Terry, Manuel Juette, and Roman Kiselev.
 
 Change log: 
 ----------
+
+1.10.1 (2026-03-12)
+* Autosampler needle depth in wash port is configurable.
+* Autosampler fill/dispense rate is configurable.
+* Autosampler "inject from well" protocol is loaded from JSON file with every new acquisition.
+   This allows the workflow to be adjusted at run time.
+* Do not clamp exposure time to 2 ms in Main Window (only relevant to mechanical shutters).
+* Configurable shutter delay (to support AOTF/AOM/EOM with shorter delays).
+* Filename length check happens before movie series begins.
 
 1.10.0 (2026-02-10)
 * Added support for SIELC Alltesta autosampler, simulated autosampler, and HAL.
