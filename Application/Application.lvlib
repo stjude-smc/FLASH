@@ -5,8 +5,8 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Messages for this actor" Type="Folder">
-		<Item Name="Automation Timeout Msg.lvclass" Type="LVClass" URL="../../Application Messages/Automation Timeout Msg/Automation Timeout Msg.lvclass"/>
 		<Item Name="Automation_TaskCompleted Msg.lvclass" Type="LVClass" URL="../../Application Messages/Automation_TaskCompleted Msg/Automation_TaskCompleted Msg.lvclass"/>
+		<Item Name="Automation_TaskFailed Msg.lvclass" Type="LVClass" URL="../../Application Messages/Automation_TaskFailed Msg/Automation_TaskFailed Msg.lvclass"/>
 		<Item Name="Autosampler Move Needle Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Move Needle Msg/Autosampler Move Needle Msg.lvclass"/>
 		<Item Name="Autosampler Move To Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Move To Msg/Autosampler Move To Msg.lvclass"/>
 		<Item Name="Autosampler Prime Pump Msg.lvclass" Type="LVClass" URL="../../Application Messages/Autosampler Prime Pump Msg/Autosampler Prime Pump Msg.lvclass"/>
