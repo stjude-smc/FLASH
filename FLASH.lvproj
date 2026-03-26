@@ -33,6 +33,7 @@
 				<Item Name="Power Meter.lvlib" Type="Library" URL="../Hardware/Power Meter/Power Meter.lvlib"/>
 				<Item Name="Stage Controller.lvlib" Type="Library" URL="../Hardware/Stage Controller/Stage Controller.lvlib"/>
 				<Item Name="Sync Device.lvlib" Type="Library" URL="../Hardware/Sync Device/Sync Device.lvlib"/>
+				<Item Name="Temperature Controller.lvlib" Type="Library" URL="../Hardware/Temperature Controller/Temperature Controller.lvlib"/>
 			</Item>
 			<Item Name="Hardware Devices" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">0</Property>
