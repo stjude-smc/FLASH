@@ -47,6 +47,7 @@
 		<Item Name="Start Timer Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Timer Msg/Start Timer Msg.lvclass"/>
 		<Item Name="Start Z stack Msg.lvclass" Type="LVClass" URL="../../Application Messages/Start Z stack Msg/Start Z stack Msg.lvclass"/>
 		<Item Name="Stop Live Mode Msg.lvclass" Type="LVClass" URL="../../Application Messages/Stop Live Mode Msg/Stop Live Mode Msg.lvclass"/>
+		<Item Name="Temp Control Set Temp Msg.lvclass" Type="LVClass" URL="../../Application Messages/Temp Control Set Temp Msg/Temp Control Set Temp Msg.lvclass"/>
 		<Item Name="Update Camera Modes Msg.lvclass" Type="LVClass" URL="../../Application Messages/Update Camera Modes Msg/Update Camera Modes Msg.lvclass"/>
 		<Item Name="Viewer Status Message Msg.lvclass" Type="LVClass" URL="../../Application Messages/Viewer Status Message Msg/Viewer Status Message Msg.lvclass"/>
 	</Item>
